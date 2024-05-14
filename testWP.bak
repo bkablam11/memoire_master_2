@@ -23,7 +23,9 @@
 
 
 \documentclass[11pt, twoside]{article}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{amsfonts}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \usepackage[a4paper, width=150mm, top=25mm, bottom=25mm,headheight=15pt,bindingoffset=6mm]{geometry}
 \usepackage[open, openlevel=1]{bookmark}
 \usepackage{csquotes}
@@ -48,7 +50,7 @@
 %TCIDATA{Version=5.50.0.2890}
 %TCIDATA{<META NAME="SaveForMode" CONTENT="1">}
 %TCIDATA{BibliographyScheme=Manual}
-%TCIDATA{LastRevised=Sunday, May 12, 2024 18:35:07}
+%TCIDATA{LastRevised=Tuesday, May 14, 2024 21:16:17}
 %TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
 
 \bibliographystyle{agsm} 
@@ -56,10 +58,97 @@
 \definecolor{codegray} {rgb} {0.5,0.5,0.5}
 \definecolor{codepurple} {rgb} {0.58,0,0.82}
 \definecolor {backcolour} {rgb} {0.95,0.95,0.92}
-\input{tcilatex}
+%\input{tcilatex}
 \begin{document}
+* Réflexivité
+Posons $N=1$
+$\sum_{p=0}^{1}I_{n-p}I_{p}=I_{n}I_{0}+I_{n-1}I_{1}=I_{n-1}I_{1}=I_{n}$ \
+(car $I_{0}\subset I_{1}$)
+
+D'où $f \Re g$
 
 
-$M_{n}=\sum\limits_{p=0}^{N}I_{n-p}M_{p}$
+
+* Transitivité
+
+Soient $f=(I_{n})_{n\in \mathbb{N}}$ $,g=(J_{n})_{n\in \mathbb{N}}$ $,h=(H_{n})_{n\in \mathbb{N}}$ \ des filtrations de $A.$
+
+Supposons que $f \Re g$
+
+alors $f\leq g$ et il existe $N_{1}\geq 1,\forall m\geq N_{1},$ $J_{m}=\sum_{p=0}^{N_{1}}I_{m-p}J_{p}$
+
+Supposons que $g \Re h$
+
+alors $g\leq h$ et il existe $N_{2}\geq 1,\forall k\geq N_{2},$ $H_{k}=\sum_{p=0}^{N_{2}}J_{k-p}H_{p}$
+
+D'où $f\leq g\leq h.$ Donc $f\leq h$
+
+De plus posons $N=N_{1}+N_{2}$
+
+$H_{k}=\sum_{p=0}^{N_{2}}J_{k-p}H_{p}+\sum_{p=N_{2}+1}^{N}J_{k-p}H_{p}=\sum_{p=0}^{N_{2}}J_{k-p}H_{p}+\sum_{p=N_{2}+1}^{N_{1}+N_{2}}J_{k-p}H_{p}$ pour tout $k\geq N_{1}+N_{2}$
+
+Comme $k\geq N_{1}+N_{2}$ alors $k-N_{2}\geq N_{1}$ et $p\leq N_{2}$ alors $k-p\geq N_{1}$
+
+D'où $J_{k-p}=\sum_{i=0}^{N_{1}}I_{k-p-i}J_{i}$
+
+Ainsi $H_{k}=\sum_{p=0}^{N_{2}}(\sum_{i=0}^{N_{1}}I_{k-p-i}J_{i})H_{p}+%
+\sum_{p=N_{2}+1}^{N_{1}+N_{2}}J_{k-p}H_{p}$
+
+Donc $H_{k}\subset \sum_{p=0}^{N_{2}}\sum_{i=0}^{N_{1}}I_{k-p-i}J_{i}H_{p+i}+ \sum_{p=N_{2}+1}^{N_{1}+N_{2}}J_{k-p}H_{p}$ car $g\leq h$ d'où $ J_{i}\subset H_{i}\subset H_{i}H_{p}\subset H_{i+p}$
+
+Posons $l=p+i,$ ainsi $0\leq l\leq N_{1}+N_{2}$ car $0\leq p\leq N_{2}$ et $ 0\leq i\leq N_{1}$ 
+
+D'où $H_{k}\subset \sum_{l=0}^{N_{1}+N_{2}}I_{k-l}H_{l}+\sum_{p=N_{2}+1}^{N_{1}+N_{2}}J_{k-p}H_{p}$
+
+Posons $K=\sum_{p=N_{2}+1}^{N_{1}+N_{2}}J_{k-p}H_{p}$
+
+Comme $p\geq N_{2}$ alors $H_{p}=\sum_{p=0}^{N_{2}}J_{p-i}H_{i}$
+
+D'où $K=\sum_{p=N_{2}+1}^{N_{1}+N_{2}}J_{k-p}(%
+\sum_{p=0}^{N_{2}}J_{p-i}H_{i})=\sum_{p=N_{2}+1}^{N_{1}+N_{2}}%
+\sum_{p=0}^{N_{2}}J_{k-p}J_{p-i}H_{i}$
+
+Donc $K\subset
+\sum_{p=N_{2}+1}^{N_{1}+N_{2}}\sum_{p=0}^{N_{2}}J_{k-i}H_{i}=%
+\sum_{p=0}^{N_{2}}J_{k-i}H_{i}$
+
+$K\subset \sum_{p=0}^{N_{2}}J_{k-i}H_{i}$
+
+or $0\leq i\leq N_{2}$ et $N_{1}+N_{2}\leq k$ d'où $k-i\geq N_{1}$
+
+Ainsi $J_{k-i}=\sum_{l=0}^{N_{1}}I_{k-i-l}J_{l}$
+
+D'où $K\subset
+\sum_{p=0}^{N_{2}}(\sum_{l=0}^{N_{1}}I_{k-i-l}J_{l})H_{i}\subset
+\sum_{p=0}^{N_{2}}\sum_{l=0}^{N_{1}}I_{k-i-l}J_{l}H_{i}\subset $
+
+Posons $p=i+l$
+
+D'où $K\subset \sum_{p=0}^{N_{1}+N_{2}}I_{k-p}H_{p}$
+
+or $H_{k}\subset
+\sum_{l=0}^{N_{1}+N_{2}}I_{k-l}H_{l}+%
+\sum_{p=N_{2}+1}^{N_{1}+N_{2}}J_{k-p}H_{p}=%
+\sum_{l=0}^{N_{1}+N_{2}}I_{k-l}H_{l}+K\subset
+\sum_{l=0}^{N_{1}+N_{2}}I_{k-l}H_{l}$ car $K\subset
+\sum_{l=0}^{N_{1}+N_{2}}I_{k-l}H_{l}$
+
+Donc $H_{k}\subset H_{k-p}H_{p}\subset H_{k}$
+
+Finalement 
+
+$H_{k}=\sum_{l=0}^{N_{1}+N_{2}}I_{k-l}H_{l}$
+
+Par suite $fRh$
+
+* Anti-symétrie
+
+Soient $f=(I_{n})_{n\in \mathbb{N}}$ $,g=(J_{n})_{n\in \mathbb{N} }$\ des filtrations de $A$ telles que:
+
+$f \Re g$ alors $f\leq g$ et $g \Re f$ alors $g\leq f.$
+
+D'où $f=g$
+
+On en déduit que $R$ est une relation d'ordre. 
 
 \end{document}

@@ -316,6 +316,45 @@ On dit que $f$ est \textbf{intégralement fermée} si $f'=f$; ce qui signifie au
 	}.$
 \end{proof}
 \section{Réduction d'une filtration}
+\begin{madefinition}
+	Soient $f = (I_n)$ et $g=(J_n)$ des filtrations de $A$ telles que $f \leqslant g$.
+	$f$ est une réduction de $g$ s'il existe des entiers $r \geqslant 1$ et $n_0 \geqslant 0$ tels que:
+	\[ \forall n \geqslant n_0,\quad J_{r+n} = J_{r}I_{n}. \]
+\end{madefinition}
+\begin{maremarque}
+	\begin{enumerate}
+		\item[(1)] Soient $I,J$ des idéaux de $A$ tels que $I \subseteq J$. Alors $f_I$ est une réduction de $f_J$ $\Longleftrightarrow$ $I$ est une réduction de $J$.
+		\item[(2)] Soit $I$ un idéal de $A$.\\ Alors $f_I$ est une réduction de la filtration $g$ de $A$ $\Longleftrightarrow$ $g$ est $I-bonne$.
+	\end{enumerate}
+\end{maremarque}
+\begin{proof}
+	content...
+\end{proof}
+\begin{maproposition}
+	Soit $f,g \in \mathbb{F}(A),$ telles que $f \leqslant g$.
+	\begin{enumerate}
+		\item[(i)] $f$ est un réduction de $g$ si et seulement s'il existe un entier naturel $k \geqslant 1$ tel que $J_{k+n}  = J_{k}I_n$ pour tout $n \geqslant k$
+		\item[(ii)] si $f$ est une réduction de $g$ et que $g$ est une réduction de $h \in \mathbb{F}(A)$, alors $f$ est une réduction de $h$. 
+		\item[(iii)] si $f$ est une réduction de $g$ et si $h$ est une filtration telle que $f \leqslant h \leqslant g$ alors $h$ est une réduction de $g$
+	\end{enumerate}
+\end{maproposition}
+\begin{proof}
+	content...
+\end{proof}
+\begin{maproposition}
+	Si $f=(I_n)$ est une réduction de $g=(J_n)$ alors:
+	\begin{enumerate}
+		\item[(i)] $f$ est $A.P.$ et $g$ est fortement $A.P$
+		\item[(ii)] $g$ est $E.P$ et $f-bonne$
+		\item[(iii)] En plus, si $A$ est noethérien alors $f$ et $g$ sont noethérien et g est fortement intégrable sur $f$.
+	\end{enumerate}
+\end{maproposition}
+\begin{proof}
+	content...
+\end{proof}
+\begin{maremarque}
+	Soit $f \in \mathbb{F}(A)$. On suppose que A est noethérien. Alors $f$ est une réduction de $f$ $\Longleftrightarrow$ f est noethérienne.
+\end{maremarque}
 \subsection{Réduction au sens de Okon-Ratliff}
 \begin{madefinition}
 	($\alpha$-réduction ou réduction au sens de Okon-Ratliff)\\
@@ -327,10 +366,51 @@ On dit que $f$ est \textbf{intégralement fermée} si $f'=f$; ce qui signifie au
 	\end{enumerate}
 \end{madefinition}
 \begin{maremarque}
-	Soit $\Re$ la relation $f \Re g \Leftrightarrow$ $f$ est une $\alpha$-réduction de $g$. Notons que cette relation est une relation d'ordre.	
+	Soit $\Re$ la relation $f \Re g \Leftrightarrow$ $f$ est une $\alpha$-réduction de $g$. Notons que cette relation est une relation d'ordre sur l'ensemble des filtrations.	
 \end{maremarque}
 \begin{proof}
-	contenu...
+	(i) \textbf{Réflexivité} \\
+	Posons $N=1$. \\
+	$\displaystyle \sum_{p=0}^{1}I_{n-p}I_{p}=I_{n}I_{0}+I_{n-1}I_{1}=I_{n-1}I_{1}=I_{n}$ \
+	(car $I_{0}\subset I_{1}$).
+	
+	D'où $f \Re f$ \\
+	(ii) \textbf{Transitivité} \\
+	Soient $f=(I_{n})_{n\in \mathbb{N}}$ $,g=(J_{n})_{n\in \mathbb{N}}$ $,h=(H_{n})_{n\in \mathbb{N}}$ \ des filtrations de $A.$ \\
+	Supposons que $f \Re g$
+	alors $f\leq g$ et il existe $N_{1}\geq 1,\forall m\geq N_{1},$ $J_{m}=\displaystyle  \sum_{p=0}^{N_{1}}I_{m-p}J_{p}$.
+	Supposons que $g \Re h$ alors $g\leq h$ et il existe $N_{2}\geq 1,\forall k\geq N_{2},$ $H_{k}=\displaystyle  \sum_{p=0}^{N_{2}}J_{k-p}H_{p}$.
+	D'où $f\leq g\leq h.$ Donc $f\leq h$. \\
+	De plus posons $N=N_{1}+N_{2}$ \\
+	$H_{k}=\displaystyle  \sum_{p=0}^{N_{2}}J_{k-p}H_{p}+\displaystyle  \sum_{p=N_{2}+1}^{N}J_{k-p}H_{p}=\displaystyle  \sum_{p=0}^{N_{2}}J_{k-p}H_{p}+\displaystyle  \sum_{p=N_{2}+1}^{N_{1}+N_{2}}J_{k-p}H_{p}$ pour tout $k\geq N_{1}+N_{2}$ \\
+	Comme $k\geq N_{1}+N_{2}$ alors $k-N_{2}\geq N_{1}$ et $p\leq N_{2}$ alors $k-p\geq N_{1}$ \\
+	D'où $J_{k-p}=\displaystyle  \sum_{i=0}^{N_{1}}I_{k-p-i}J_{i}$ \\
+	Ainsi $H_{k}=\displaystyle  \sum_{p=0}^{N_{2}}(\displaystyle  \sum_{i=0}^{N_{1}}I_{k-p-i}J_{i})H_{p}+\displaystyle  \sum_{p=N_{2}+1}^{N_{1}+N_{2}}J_{k-p}H_{p}$ \\
+	Donc $H_{k}\subset \displaystyle  \sum_{p=0}^{N_{2}}\displaystyle  \sum_{i=0}^{N_{1}}I_{k-p-i}J_{i}H_{p+i}+\displaystyle  \sum_{p=N_{2}+1}^{N_{1}+N_{2}}J_{k-p}H_{p}$  car $g\leq h$ d'où $ J_{i}\subset H_{i}\subset H_{i}H_{p}\subset H_{i+p}$ \\
+	Posons $l=p+i,$ ainsi $0\leq l\leq N_{1}+N_{2}$ car $0\leq p\leq N_{2}$ et $ 0\leq i\leq N_{1}$ \\
+	D'où $H_{k}\subset \displaystyle  \sum_{l=0}^{N_{1}+N_{2}}I_{k-l}H_{l}+\displaystyle  \sum_{p=N_{2}+1}^{N_{1}+N_{2}}J_{k-p}H_{p}$ \\
+	Posons $K=\displaystyle  \sum_{p=N_{2}+1}^{N_{1}+N_{2}}J_{k-p}H_{p}$ \\
+	Comme $p\geq N_{2}$ alors $H_{p}=\displaystyle  \sum_{p=0}^{N_{2}}J_{p-i}H_{i}$ \\
+	D'où $K=\displaystyle  \sum_{p=N_{2}+1}^{N_{1}+N_{2}}J_{k-p}(\displaystyle  \sum_{p=0}^{N_{2}}J_{p-i}H_{i})=\displaystyle  \sum_{p=N_{2}+1}^{N_{1}+N_{2}}\displaystyle  \sum_{p=0}^{N_{2}}J_{k-p}J_{p-i}H_{i}$ \\
+	Donc $K\subset\displaystyle  \sum_{p=N_{2}+1}^{N_{1}+N_{2}}\displaystyle  \sum_{p=0}^{N_{2}}J_{k-i}H_{i}=\displaystyle  \sum_{p=0}^{N_{2}}J_{k-i}H_{i}$
+	$K\subset \displaystyle  \sum_{p=0}^{N_{2}}J_{k-i}H_{i}$
+	or $0\leq i\leq N_{2}$ et $N_{1}+N_{2}\leq k$ \\
+	d'où $k-i\geq N_{1}$ \\
+	Ainsi $J_{k-i}=\displaystyle  \sum_{l=0}^{N_{1}}I_{k-i-l}J_{l}$ \\
+	D'où $K\subset\displaystyle  \sum_{p=0}^{N_{2}}(\displaystyle  \sum_{l=0}^{N_{1}}I_{k-i-l}J_{l})H_{i}\subset\displaystyle  \sum_{p=0}^{N_{2}}\displaystyle  \sum_{l=0}^{N_{1}}I_{k-i-l}J_{l}H_{i}\subset $
+	Posons $p=i+l$ \\
+	D'où $K\subset \displaystyle  \sum_{p=0}^{N_{1}+N_{2}}I_{k-p}H_{p}$
+	or $H_{k}\subset
+	\displaystyle  \sum_{l=0}^{N_{1}+N_{2}}I_{k-l}H_{l}+\displaystyle  \sum_{p=N_{2}+1}^{N_{1}+N_{2}}J_{k-p}H_{p}=\displaystyle  \sum_{l=0}^{N_{1}+N_{2}}I_{k-l}H_{l}+K\subset \displaystyle  \displaystyle  \sum_{l=0}^{N_{1}+N_{2}}I_{k-l}H_{l}$ car $K\subset \displaystyle  \displaystyle  \sum_{l=0}^{N_{1}+N_{2}}I_{k-l}H_{l}$ \\
+	Donc $H_{k}\subset H_{k-p}H_{p}\subset H_{k}$ \\
+	Finalement $H_{k}=\displaystyle  \displaystyle  \sum_{l=0}^{N_{1}+N_{2}}I_{k-l}H_{l}$
+	Par suite $f \Re h$. \\
+	
+	(iii) \textbf{Anti-symétrie} \\
+	Soient $f=(I_{n})_{n\in \mathbb{N}}$ $,g=(J_{n})_{n\in \mathbb{N} }$\ des filtrations de $A$ telles que: \\
+	$f \Re g$ alors $f\leq g$ et $g \Re f$ alors $g\leq f.$ \\
+	D'où $f=g$ \\
+	On en déduit que $R$ est une relation d'ordre. 
 \end{proof}
 \begin{maproposition}
 	Soient $f=(I_n)_{n \in \mathbb{N}}$ et $g=(J_n)_{n \in \mathbb{N}}$ deux filtrations de $A$. $f \geq g$ et chaque $J_n$ est de type fini, alors $f$ est une $\alpha$-réduction de $g$ si et seulement si $R(A,g)$ est un $R(A,f)$-module de type fini.
@@ -525,9 +605,30 @@ On dit que $f$ est \textbf{intégralement fermée} si $f'=f$; ce qui signifie au
 	Soient $f=(I_n), g=(J_n) \in \mathbb{F}(A)$, tel que $f \leqslant g$ et $A$ est noethérien.\\ Si $f$ ou $g$ est noethérien alors $g$ est $f-bonne$ $\Longleftrightarrow$ $g$ est fortement intégrable sur $f$.
 \end{moncorollaire}
 \begin{maproposition}
-	Soit $A$ un anneau noethérien. Soient $f,g \in \mathbb{F}(A)$.\\ Si $f$ est noethérienne alors $g$ est fortement intégrale sur $f$ $\Longleftrightarrow$ il existe un entier naturel $N \geqslant 1$ tel que $t_{N}g \leqslant f \leqslant g$ .
+	Soit $A$ un anneau noethérien. Soient $f,g \in \mathbb{F}(A)$.\\ Si $f$ est noethérienne alors $g$ est fortement intégrale sur $f$ $\Longleftrightarrow$ il existe un entier naturel $N \geqslant 1$ tel que $t_{N}g \leqslant f \leqslant g$.
 \end{maproposition}
-
+\begin{proof}
+	content...
+\end{proof}
+\begin{maproposition}
+	Soient $f,g \in \mathbb{F}(A)$. Alors:
+	\[ g \text{ est intégrable sur } f \Longleftrightarrow \forall k \in \mathbb{N}^{*}, g^{(k)} \text{est intégrable sur } f^{(k)} \]
+\end{maproposition}
+\begin{proof}
+	content...
+\end{proof}
+\begin{maproposition}
+	Soit A un anneau noethérien et $g$ une filtration de $A$ fortement intégrable sur $f$ ou $g$ est fortement $A.P.$ de rang $r$, alors pour tout entier naturel $m \geqslant 1$, $g^{(rm)}$ est fortement intégrable sur $f^{(rm)}$.  
+\end{maproposition}
+\begin{proof}
+	content...
+\end{proof}
+\begin{moncorollaire}
+	Soient $f,g \in \mathbb{F}(A)$, tel que $f \leqslant g$. Si $A$ est noethérien et $g$ est fortement intégrable sur $f$. Alors $f$ est fortement $A.P$ $\Longleftrightarrow$ $g$ est fortement $A.P.$
+\end{moncorollaire}
+\begin{proof}
+	content...
+\end{proof}
 \begin{maproposition}
 	Si $f$ est une filtration I-adique alors nous avons les implications suivantes:\\
 	$f$ est fortement A.P $\Longleftrightarrow $ $f$ est A.P $\Longleftrightarrow $ $f$ est fortement noethérienne $\Longleftrightarrow $ $f$ est noethérienne $\Longleftrightarrow $ $f$ est E.P
