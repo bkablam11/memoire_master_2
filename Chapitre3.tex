@@ -468,6 +468,9 @@ On dit que $f$ est \textbf{intégralement fermée} si $f'=f$; ce qui signifie au
 		\[\forall n > N, M_{n}=\sum_{p=1}^{N}I_{n-p}M_{p} \]
 		\item[(c)] $\varphi$ est \textbf{$f-$ fine} s'il existe un entier naturel N $\geqslant 1$ tel que:
 		\[\forall n > N, M_{n}=\sum_{p=1}^{N}I_{p}M_{n-p} \]
+		\item[(d)] Soit $g \in \mathbb{F}(A)$. $g$ est \textbf{intégrale sur} $f$ si $g \leqslant P(f)$ (où $P(f)$ est la clôture prüférienne de $f$). C'est à dire:
+		\[\forall n \geqslant 1, J_n \subseteq P_{n}(f) \]
+		\item[(e)] Soit $g \in \mathbb{F}(A)$. $g$ est \textbf{fortement intégrale sur} $f$ si $f \leqslant g$ et si $R(A,g)$ est un $R(A,f)-module$ de type fini.
 	\end{itemize} 
 \end{madefinition}
 \begin{maremarque}
@@ -480,13 +483,51 @@ On dit que $f$ est \textbf{intégralement fermée} si $f'=f$; ce qui signifie au
 			\item g est fortement intégrale sur f $\implies$ g est faiblement $f-bonne$
 			\item  En d'autres termes, si $g$ est faiblement $f-bonne$ alors il existe un entier naturel $N \geqslant 1$ tel que $t_{N}g \leqslant f \leqslant g$
 		\end{itemize}
-		\item[(5)] Soient $\varphi \in \mathbb{F}(M)$ et $I$ un idéal de $A$. Alors $\varphi$ est $I-bonne$ $\Longleftrightarrow$ $\varphi$ est $f_{I}-bonne$, où $f_{I}$ est la filtration $I-adic$
+		\item[(5)] Soient $\varphi \in \mathbb{F}(M)$ et $I$ un idéal de $A$. Alors $\varphi$ est $I-bonne$ $\Longleftrightarrow$ $\varphi$ est $f_{I}-bonne$, où $f_{I}$ est la filtration $I-adique$.
 	\end{enumerate}
 \end{maremarque}
 \begin{maproposition}
-	Toute filtration $f-fine$ $\varphi$ de $M$ est $f-bonne$
+	Toute filtration $\varphi$ de $M$ $f-fine$ est $f-bonne$
 \end{maproposition}
-\section{Quelques propositions sur les filtrations f-bonnes}
+\begin{maproposition}
+	Soient $f,g \in \mathbb{F}(A)$ avec $f \leqslant g$.\\ Si $A$ est noethérien alors $g$ faiblement $f-bonne$ $\Longleftrightarrow$ $g$ est fortement intégrable sur $f$
+\end{maproposition}
+\begin{proof}
+	content...
+\end{proof}
+\begin{maproposition}
+	Soient $f=(I_n)$ une filtration $E.P.$ de $A$ et $\varphi=(M_n) \in \mathbb{F}(M)$. Nous avons les assertions suivantes:
+	\[ \varphi \text{ est } f-fine \Longleftrightarrow \varphi \text{ est } f-bonne \Longleftrightarrow \varphi \text{ est faiblement } f-bonne   \]
+\end{maproposition}
+\begin{proof}
+	content...
+\end{proof}
+\begin{moncorollaire}
+	Soient $f,g \in \mathbb{F}(A)$. Si $A$ est noethérien, $f \leqslant g$ et $f$ noethérien. Alors nous avons les assertions suivantes:
+	\[ g \text{ est } f-fine \Longleftrightarrow  g \text{ est } f-bonne \Longleftrightarrow  g \text{ est faiblement } f-bonne \Longleftrightarrow  g \text{ est fortement intégrale sur } f \]
+\end{moncorollaire}
+\begin{proof}
+	content...
+\end{proof}
+\begin{maproposition}
+	Soient $f=(I_n), g=(J_n) \in \mathbb{F}(A)$, tel que $f \leqslant g$.\\ Si $g$ est $f-bonne$, $E.P.$ et $A$ est noethérien alors $f$ et $g$ sont noethériennes.
+\end{maproposition}
+\begin{proof}
+	content...
+\end{proof}
+\begin{maproposition}
+	Soient $f=(I_n), g=(J_n) \in \mathbb{F}(A)$, tel que $f \leqslant g$.\\ Si $g$ est faiblement $f-bonne$ alors $f$ est $A.P$ $\Longleftrightarrow$ $g$ est $A.P$.
+\end{maproposition}
+\begin{proof}
+	content...
+\end{proof}
+\begin{moncorollaire}
+	Soient $f=(I_n), g=(J_n) \in \mathbb{F}(A)$, tel que $f \leqslant g$ et $A$ est noethérien.\\ Si $f$ ou $g$ est noethérien alors $g$ est $f-bonne$ $\Longleftrightarrow$ $g$ est fortement intégrable sur $f$.
+\end{moncorollaire}
+\begin{maproposition}
+	Soit $A$ un anneau noethérien. Soient $f,g \in \mathbb{F}(A)$.\\ Si $f$ est noethérienne alors $g$ est fortement intégrale sur $f$ $\Longleftrightarrow$ il existe un entier naturel $N \geqslant 1$ tel que $t_{N}g \leqslant f \leqslant g$ .
+\end{maproposition}
+
 \begin{maproposition}
 	Si $f$ est une filtration I-adique alors nous avons les implications suivantes:\\
 	$f$ est fortement A.P $\Longleftrightarrow $ $f$ est A.P $\Longleftrightarrow $ $f$ est fortement noethérienne $\Longleftrightarrow $ $f$ est noethérienne $\Longleftrightarrow $ $f$ est E.P
