@@ -471,12 +471,21 @@ On dit que $f$ est \textbf{intégralement fermée} si $f'=f$; ce qui signifie au
 	\end{itemize} 
 \end{madefinition}
 \begin{maremarque}
-	\begin{itemize}
+	\begin{enumerate}
 		\item[(1)] Toute filtration $f-$bonne est faiblement $f-$ bonne
 		\item[(2)] Soit $f \in \mathbb{F}(A)$. Alors f est faiblement $f-$bonne.
 		\item[(3)] Soit $f \in \mathbb{F}(A)$.Alors f est $f-$bonne si et seulement si f est $E.P.$
-	\end{itemize}
+		\item[(4)] Soient $g=(J_n) et f = (I_n) \in \mathbb{F}(A)$ telles que $f \leqslant g$ alors:
+		\begin{itemize}
+			\item g est fortement intégrale sur f $\implies$ g est faiblement $f-bonne$
+			\item  En d'autres termes, si $g$ est faiblement $f-bonne$ alors il existe un entier naturel $N \geqslant 1$ tel que $t_{N}g \leqslant f \leqslant g$
+		\end{itemize}
+		\item[(5)] Soient $\varphi \in \mathbb{F}(M)$ et $I$ un idéal de $A$. Alors $\varphi$ est $I-bonne$ $\Longleftrightarrow$ $\varphi$ est $f_{I}-bonne$, où $f_{I}$ est la filtration $I-adic$
+	\end{enumerate}
 \end{maremarque}
+\begin{maproposition}
+	Toute filtration $f-fine$ $\varphi$ de $M$ est $f-bonne$
+\end{maproposition}
 \section{Quelques propositions sur les filtrations f-bonnes}
 \begin{maproposition}
 	Si $f$ est une filtration I-adique alors nous avons les implications suivantes:\\
