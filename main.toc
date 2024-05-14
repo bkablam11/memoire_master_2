@@ -1,0 +1,58 @@
+\select@language {french}
+\contentsline {chapter}{\relax \fontsize {14.4}{18}\selectfont {Remerciements}}{ii}{Doc-Start}
+\contentsline {chapter}{\relax \fontsize {14.4}{18}\selectfont {R\IeC {\'e}sum\IeC {\'e}}}{iii}{Doc-Start}
+\contentsline {chapter}{\relax \fontsize {14.4}{18}\selectfont {Abstract}}{iv}{Doc-Start}
+\contentsline {chapter}{\relax \fontsize {14.4}{18}\selectfont {Introduction}}{1}{Doc-Start}
+\contentsline {chapter}{\numberline {1}G\IeC {\'E}N\IeC {\'E}RALIT\IeC {\'E}S}{3}{chapter.1}
+\contentsline {section}{\numberline {1.1}Relation d'\IeC {\'e}quivalence, groupe et sous-groupe}{3}{section.1.1}
+\contentsline {subsection}{\numberline {1.1.1}Relation d'\IeC {\'e}quivalence}{3}{subsection.1.1.1}
+\contentsline {subsection}{\numberline {1.1.2}Relation d'ordre}{4}{subsection.1.1.2}
+\contentsline {subsection}{\numberline {1.1.3}Groupe}{4}{subsection.1.1.3}
+\contentsline {subsection}{\numberline {1.1.4}Sous-groupe}{4}{subsection.1.1.4}
+\contentsline {section}{\numberline {1.2}Anneau, Corps, Espace vectoriel et Morphisme d'anneaux}{5}{section.1.2}
+\contentsline {subsection}{\numberline {1.2.1}Anneau}{5}{subsection.1.2.1}
+\contentsline {subsection}{\numberline {1.2.2}Corps}{5}{subsection.1.2.2}
+\contentsline {subsection}{\numberline {1.2.3}Espace vectoriel}{6}{subsection.1.2.3}
+\contentsline {subsection}{\numberline {1.2.4}Morphisme d'anneaux}{7}{subsection.1.2.4}
+\contentsline {subsection}{\numberline {1.2.5}Anneau gradu\IeC {\'e}}{7}{subsection.1.2.5}
+\contentsline {section}{\numberline {1.3}Module}{8}{section.1.3}
+\contentsline {section}{\numberline {1.4}Id\IeC {\'e}al}{9}{section.1.4}
+\contentsline {subsection}{\numberline {1.4.1}Id\IeC {\'e}al premier}{9}{subsection.1.4.1}
+\contentsline {subsection}{\numberline {1.4.2}Id\IeC {\'e}al primaire}{9}{subsection.1.4.2}
+\contentsline {subsection}{\numberline {1.4.3}Id\IeC {\'e}al maximal}{9}{subsection.1.4.3}
+\contentsline {subsection}{\numberline {1.4.4}Radical d'un id\IeC {\'e}al}{10}{subsection.1.4.4}
+\contentsline {section}{\numberline {1.5}Filtrations}{10}{section.1.5}
+\contentsline {subsection}{\numberline {1.5.1}Filtration sur un anneau}{10}{subsection.1.5.1}
+\contentsline {subsection}{\numberline {1.5.2}Filtration sur un module}{11}{subsection.1.5.2}
+\contentsline {section}{\numberline {1.6}Anneaux gradu\IeC {\'e}s associ\IeC {\'e}s \IeC {\`a} une filtration}{11}{section.1.6}
+\contentsline {subsection}{\numberline {1.6.1}Anneau de Rees d'une filtration}{11}{subsection.1.6.1}
+\contentsline {subsection}{\numberline {1.6.2}Anneau gradu\IeC {\'e} d'une filtration}{12}{subsection.1.6.2}
+\contentsline {subsection}{\numberline {1.6.3}Quelques exemples de filtration}{12}{subsection.1.6.3}
+\contentsline {subsubsection}{a) \relax $\@@underline {\hbox {Filtration I-adique}}\mathsurround \z@ $\relax }{12}{section*.1}
+\contentsline {subsubsection}{b) \relax $\@@underline {\hbox {Filtration extraite d'ordre k, $k \in \mathbb {N}$}}\mathsurround \z@ $\relax }{13}{section*.2}
+\contentsline {subsubsection}{c) \relax $\@@underline {\hbox {Filtration tronqu\IeC {\'e} d'ordre m de $f$}}\mathsurround \z@ $\relax }{13}{section*.3}
+\contentsline {subsubsection}{d) \relax $\@@underline {\hbox {Filtration d\IeC {\'e}finie par une graduation}}\mathsurround \z@ $\relax }{13}{section*.4}
+\contentsline {subsection}{\numberline {1.6.4}Classification des filtrations sur un anneau}{13}{subsection.1.6.4}
+\contentsline {subsubsection}{a) \relax $\@@underline {\hbox {Filtrations I-bonnes}}\mathsurround \z@ $\relax }{13}{section*.5}
+\contentsline {subsubsection}{b) \relax $\@@underline {\hbox {Filtrations A.P.}}\mathsurround \z@ $\relax }{14}{section*.6}
+\contentsline {subsubsection}{c) \relax $\@@underline {\hbox {Filtrations fortement A.P.}}\mathsurround \z@ $\relax }{14}{section*.7}
+\contentsline {subsubsection}{d) \relax $\@@underline {\hbox {Filtrations E.P}}\mathsurround \z@ $\relax }{14}{section*.8}
+\contentsline {subsubsection}{e) \relax $\@@underline {\hbox {Filtrations noeth\IeC {\'e}riennes}}\mathsurround \z@ $\relax }{14}{section*.9}
+\contentsline {subsubsection}{f) \relax $\@@underline {\hbox {Filtrations fortement noeth\IeC {\'e}riennes}}\mathsurround \z@ $\relax }{14}{section*.10}
+\contentsline {chapter}{\numberline {2}D\IeC {\'E}PENDANCE INT\IeC {\'E}GRALE, R\IeC {\'E}DUCTION ET FILTRATION I-BONNE}{15}{chapter.2}
+\contentsline {section}{\numberline {2.1}D\IeC {\'e}pendance int\IeC {\'e}grale}{15}{section.2.1}
+\contentsline {subsection}{\numberline {2.1.1}D\IeC {\'e}pendance int\IeC {\'e}grale sur les anneaux}{15}{subsection.2.1.1}
+\contentsline {subsection}{\numberline {2.1.2}D\IeC {\'e}pendance int\IeC {\'e}grale sur un id\IeC {\'e}al}{21}{subsection.2.1.2}
+\contentsline {section}{\numberline {2.2}R\IeC {\'e}duction d'un id\IeC {\'e}al}{23}{section.2.2}
+\contentsline {subsection}{\numberline {2.2.1}D\IeC {\'e}finitions et propri\IeC {\'e}t\IeC {\'e}s}{23}{subsection.2.2.1}
+\contentsline {subsection}{\numberline {2.2.2}R\IeC {\'e}duction minimale d'un id\IeC {\'e}al}{28}{subsection.2.2.2}
+\contentsline {chapter}{\numberline {3}D\IeC {\'E}PENDANCE, R\IeC {\'E}DUCTION ET FILTRATIONS BONNES}{29}{chapter.3}
+\contentsline {section}{\numberline {3.1}D\IeC {\'e}pendance int\IeC {\'e}grale de filtration}{29}{section.3.1}
+\contentsline {section}{\numberline {3.2}Cl\IeC {\^o}ture int\IeC {\'e}grale d'une filtration}{30}{section.3.2}
+\contentsline {section}{\numberline {3.3}R\IeC {\'e}duction d'une filtration}{33}{section.3.3}
+\contentsline {subsection}{\numberline {3.3.1}R\IeC {\'e}duction au sens de Okon-Ratliff}{33}{subsection.3.3.1}
+\contentsline {subsection}{\numberline {3.3.2}R\IeC {\'e}duction au sens de Dichi-Sangar\IeC {\'e}}{34}{subsection.3.3.2}
+\contentsline {section}{\numberline {3.4}Filtrations f-bonnes}{37}{section.3.4}
+\contentsline {section}{\numberline {3.5}Quelques propositions sur les filtrations f-bonnes}{37}{section.3.5}
+\contentsline {chapter}{\relax \fontsize {14.4}{18}\selectfont {Conclusion}}{38}{maproposition.3.14}
+\contentsline {chapter}{\relax \fontsize {14.4}{18}\selectfont {Bibliographie}}{40}{chapter*.12}
