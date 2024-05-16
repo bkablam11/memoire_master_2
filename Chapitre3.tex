@@ -315,6 +315,14 @@ On dit que $f$ est \textbf{intégralement fermée} si $f'=f$; ce qui signifie au
 	iii) De la m\^{e}me manière, on montre que $I^{\prime \prime }=I^{\prime
 	}.$
 \end{proof}
+\begin{madefinition}
+	Soit $f=(I_n)_{n \in \mathbb{N}} , g = (J_n)_{n \in \mathbb{N}}\in \mathbb{F}(A)$.  Alors:\\
+	\begin{enumerate}
+		\item[(a)]$g$ est \textbf{entière sur} $f$ si $g \leqslant P(f)$ (où $P(f)$ est la clôture prüférienne de $f$). C'est à dire:
+		\[\forall n \geqslant 1, J_n \subseteq P_{n}(f) \]
+		\item[(b)]$g$ est \textbf{fortement entière sur} $f$ si $f \leqslant g$ et si $R(A,g)$ est un $R(A,f)-module$ de type fini.
+	\end{enumerate}
+\end{madefinition}
 \section{Réduction d'une filtration}
 \begin{madefinition}
 	Soient $f = (I_n)$ et $g=(J_n)$ des filtrations de $A$ telles que $f \leqslant g$.
@@ -346,7 +354,7 @@ On dit que $f$ est \textbf{intégralement fermée} si $f'=f$; ce qui signifie au
 	\begin{enumerate}
 		\item[(i)] $f$ est $A.P.$ et $g$ est fortement $A.P$
 		\item[(ii)] $g$ est $E.P$ et $f-bonne$
-		\item[(iii)] En plus, si $A$ est noethérien alors $f$ et $g$ sont noethérien et g est fortement intégrable sur $f$.
+		\item[(iii)] En plus, si $A$ est noethérien alors $f$ et $g$ sont noethériennes et g est fortement entière sur $f$.
 	\end{enumerate}
 \end{maproposition}
 \begin{proof}
@@ -548,9 +556,6 @@ On dit que $f$ est \textbf{intégralement fermée} si $f'=f$; ce qui signifie au
 		\[\forall n > N, M_{n}=\sum_{p=1}^{N}I_{n-p}M_{p} \]
 		\item[(c)] $\varphi$ est \textbf{$f-$ fine} s'il existe un entier naturel N $\geqslant 1$ tel que:
 		\[\forall n > N, M_{n}=\sum_{p=1}^{N}I_{p}M_{n-p} \]
-		\item[(d)] Soit $g \in \mathbb{F}(A)$. $g$ est \textbf{intégrale sur} $f$ si $g \leqslant P(f)$ (où $P(f)$ est la clôture prüférienne de $f$). C'est à dire:
-		\[\forall n \geqslant 1, J_n \subseteq P_{n}(f) \]
-		\item[(e)] Soit $g \in \mathbb{F}(A)$. $g$ est \textbf{fortement intégrale sur} $f$ si $f \leqslant g$ et si $R(A,g)$ est un $R(A,f)-module$ de type fini.
 	\end{itemize} 
 \end{madefinition}
 \begin{maremarque}
@@ -558,9 +563,9 @@ On dit que $f$ est \textbf{intégralement fermée} si $f'=f$; ce qui signifie au
 		\item[(1)] Toute filtration $f-$bonne est faiblement $f-$ bonne
 		\item[(2)] Soit $f \in \mathbb{F}(A)$. Alors f est faiblement $f-$bonne.
 		\item[(3)] Soit $f \in \mathbb{F}(A)$.Alors f est $f-$bonne si et seulement si f est $E.P.$
-		\item[(4)] Soient $g=(J_n) et f = (I_n) \in \mathbb{F}(A)$ telles que $f \leqslant g$ alors:
+		\item[(4)] Soient $g=(J_n)$ et $  f = (I_n) \in \mathbb{F}(A)$ telles que $f \leqslant g$ alors:
 		\begin{itemize}
-			\item g est fortement intégrale sur f $\implies$ g est faiblement $f-bonne$
+			\item g est fortement entière sur f $\implies$ g est faiblement $f-bonne$
 			\item  En d'autres termes, si $g$ est faiblement $f-bonne$ alors il existe un entier naturel $N \geqslant 1$ tel que $t_{N}g \leqslant f \leqslant g$
 		\end{itemize}
 		\item[(5)] Soient $\varphi \in \mathbb{F}(M)$ et $I$ un idéal de $A$. Alors $\varphi$ est $I-bonne$ $\Longleftrightarrow$ $\varphi$ est $f_{I}-bonne$, où $f_{I}$ est la filtration $I-adique$.
@@ -570,7 +575,7 @@ On dit que $f$ est \textbf{intégralement fermée} si $f'=f$; ce qui signifie au
 	Toute filtration $\varphi$ de $M$ $f-fine$ est $f-bonne$
 \end{maproposition}
 \begin{maproposition}
-	Soient $f,g \in \mathbb{F}(A)$ avec $f \leqslant g$.\\ Si $A$ est noethérien alors $g$ faiblement $f-bonne$ $\Longleftrightarrow$ $g$ est fortement intégrable sur $f$
+	Soient $f,g \in \mathbb{F}(A)$ avec $f \leqslant g$.\\ Si $A$ est noethérien alors $g$ faiblement $f-bonne$ $\Longleftrightarrow$ $g$ est fortement entière sur $f$
 \end{maproposition}
 \begin{proof}
 	content...
@@ -584,7 +589,7 @@ On dit que $f$ est \textbf{intégralement fermée} si $f'=f$; ce qui signifie au
 \end{proof}
 \begin{moncorollaire}
 	Soient $f,g \in \mathbb{F}(A)$. Si $A$ est noethérien, $f \leqslant g$ et $f$ noethérien. Alors nous avons les assertions suivantes:
-	\[ g \text{ est } f-fine \Longleftrightarrow  g \text{ est } f-bonne \Longleftrightarrow  g \text{ est faiblement } f-bonne \Longleftrightarrow  g \text{ est fortement intégrale sur } f \]
+	\[ g \text{ est } f-fine \Longleftrightarrow  g \text{ est } f-bonne \Longleftrightarrow  g \text{ est faiblement } f-bonne \Longleftrightarrow  g \text{ est fortement entière sur } f \]
 \end{moncorollaire}
 \begin{proof}
 	content...
@@ -602,29 +607,29 @@ On dit que $f$ est \textbf{intégralement fermée} si $f'=f$; ce qui signifie au
 	content...
 \end{proof}
 \begin{moncorollaire}
-	Soient $f=(I_n), g=(J_n) \in \mathbb{F}(A)$, tel que $f \leqslant g$ et $A$ est noethérien.\\ Si $f$ ou $g$ est noethérien alors $g$ est $f-bonne$ $\Longleftrightarrow$ $g$ est fortement intégrable sur $f$.
+	Soient $f=(I_n), g=(J_n) \in \mathbb{F}(A)$, tel que $f \leqslant g$ et $A$ est noethérien.\\ Si $f$ ou $g$ est noethérien alors $g$ est $f-bonne$ $\Longleftrightarrow$ $g$ est fortement entière sur $f$.
 \end{moncorollaire}
 \begin{maproposition}
-	Soit $A$ un anneau noethérien. Soient $f,g \in \mathbb{F}(A)$.\\ Si $f$ est noethérienne alors $g$ est fortement intégrale sur $f$ $\Longleftrightarrow$ il existe un entier naturel $N \geqslant 1$ tel que $t_{N}g \leqslant f \leqslant g$.
+	Soit $A$ un anneau noethérien. Soient $f,g \in \mathbb{F}(A)$.\\ Si $f$ est noethérienne alors $g$ est fortement entière sur $f$ $\Longleftrightarrow$ il existe un entier naturel $N \geqslant 1$ tel que $t_{N}g \leqslant f \leqslant g$.
 \end{maproposition}
 \begin{proof}
 	content...
 \end{proof}
 \begin{maproposition}
 	Soient $f,g \in \mathbb{F}(A)$. Alors:
-	\[ g \text{ est intégrable sur } f \Longleftrightarrow \forall k \in \mathbb{N}^{*}, g^{(k)} \text{est intégrable sur } f^{(k)} \]
+	\[ g \text{ est entière sur } f \Longleftrightarrow \forall k \in \mathbb{N}^{*}, g^{(k)} \text{est entière sur } f^{(k)} \]
 \end{maproposition}
 \begin{proof}
 	content...
 \end{proof}
 \begin{maproposition}
-	Soit A un anneau noethérien et $g$ une filtration de $A$ fortement intégrable sur $f$ ou $g$ est fortement $A.P.$ de rang $r$, alors pour tout entier naturel $m \geqslant 1$, $g^{(rm)}$ est fortement intégrable sur $f^{(rm)}$.  
+	Soit A un anneau noethérien et $g$ une filtration de $A$ fortement entière sur $f$ ou $g$ est fortement $A.P.$ de rang $r$, alors pour tout entier naturel $m \geqslant 1$, $g^{(rm)}$ est fortement entière sur $f^{(rm)}$.  
 \end{maproposition}
 \begin{proof}
 	content...
 \end{proof}
 \begin{moncorollaire}
-	Soient $f,g \in \mathbb{F}(A)$, tel que $f \leqslant g$. Si $A$ est noethérien et $g$ est fortement intégrable sur $f$. Alors $f$ est fortement $A.P$ $\Longleftrightarrow$ $g$ est fortement $A.P.$
+	Soient $f,g \in \mathbb{F}(A)$, tel que $f \leqslant g$. Si $A$ est noethérien et $g$ est fortement entière sur $f$. Alors $f$ est fortement $A.P$ $\Longleftrightarrow$ $g$ est fortement $A.P.$
 \end{moncorollaire}
 \begin{proof}
 	content...
@@ -686,7 +691,7 @@ Le théorème principal de cet mémoire est le suivant:\\
 		
 		\item[(i)] $g$ est $f-bonne$
 
-		\item[(ii)] $g$ est fortement intégrale sur $f$
+		\item[(ii)] $g$ est fortement entière sur $f$
 		
 		\item[(iii)] $g$ est $f-fine$
 		
@@ -715,8 +720,8 @@ Le théorème principal de cet mémoire est le suivant:\\
 %		\item[(v)] $\exists k \geqslant 1$ un entier tel que $g^{(k)}$ est $I_k-bonne $
 %		\item[(vi)] $\exists r \geqslant 1$ un entier tel que $f^{(r)}$ est une réduction de $g^{(r)}$
 %		\item[(vii)] $\forall m \geqslant 1$ entier $f^{(m)}$ est une réduction de $g^{(m)}$
-%		\item[(viii)] $g$ est intégrale sur $f$
-%		\item[(xi)] $g$ est fortement intégrale sur $f$
+%		\item[(viii)] $g$ est entière sur $f$
+%		\item[(xi)] $g$ est fortement entière sur $f$
 %		\item[(x)] $g$ est $f-fine$
 %		\item[(xi)] $g$ est $f-bonne$
 %		\item[(xii)] $g$ est faiblement $f-bonne$
