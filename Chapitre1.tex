@@ -1,6 +1,6 @@
 \chapter{GÉNÉRALITÉS}
 \chaptermark{GÉNÉRALITÉS}
-Ce chapitre revêt la forme d'une rétrospective, visant à revisiter et consolider diverses définitions dans \cite{5} et propositions évoquées au sein des Unités d'Enseignement (U.E.) consacrées à l'Algèbre Commutative et à la Théorie des Filtrations. L'ensemble des résultats présentés dans ce chapitre s'enracine dans \cite{6}. Leur maîtrise s'avère incontournable pour une appréhension éclairée des sections à venir. Cependant, il convient de préciser que les démonstrations des propositions énoncées dans ce chapitre ne seront exposées que lorsqu'elles s'avéreront nécessaires. Il est donc impératif de mettre en exergue le fait que la plupart des résultats dans \cite{3} resteront sans démonstration. \\\\ Dans l'ensemble de ce mémoire, à sauf mention contraire, on présumera que tous les anneaux sont de nature \textbf{commutative et unitaire}.
+Ce chapitre revêt la forme d'une rétrospective, visant à revisiter et consolider diverses définitions dans \cite{5} et propositions évoquées au sein des Unités d'Enseignement (U.E.) consacrées à l'Algèbre Commutative et à la Théorie des Filtrations. L'ensemble des résultats présentés dans ce chapitre s'enracine dans \cite{6}. Leur maîtrise s'avère incontournable pour une appréhension éclairée des sections à venir. Cependant, il convient de préciser que les démonstrations des propositions énoncées dans ce chapitre ne seront exposées que lorsqu'elles s'avéreront nécessaires. \\\\ Dans l'ensemble de ce mémoire, sauf mention contraire, les anneaux considérés sont supposés \textbf{commutatifs et unitaires}.
 \section{Relation d'équivalence, groupe et sous-groupe}
 \subsection{Relation d'équivalence}
 \begin{madefinition}
@@ -229,7 +229,15 @@ $$
 		\item[(iii)] Tout ensemble non vide de sous-modules de $M$ admet un élément maximal pour l'inclusion.
 	\end{enumerate} 
 \end{maproposition}
-
+\begin{madefinition}(A-algèbre de type fini)\\
+	Soit $A$ un anneau. \\
+	On dit que $B$ est une $A-algèbre$ de type fini si:
+	\begin{enumerate}
+		\item[(i)] $B$ est un $A-module$
+		\item[(ii)] $B$ est un anneau
+		\item[(iii)] $B = A [b_1, \cdots, b_r] \simeq \dfrac{A[X_1, \cdots, X_r]}{J}, \quad b_i \in B , \quad J$ idéal de $A[X_1, \cdots, X_r]$
+	\end{enumerate}
+\end{madefinition}
 \section{Idéal}
 \begin{madefinition}
 	Soit $A$ un anneau.\\
@@ -295,7 +303,6 @@ $$
 	\end{enumerate}
 	L'ensemble des filtrations de l'anneau A est noté $\mathbb{F}(A)$. Pour tout $f,g \in \mathbb{F}(A)$, cet ensemble est ordonné par:
 	\[\forall n \in \mathbb{Z}, f = (I_n) \leqslant g = (J_n) \implies  I_n \subseteq J_n \]
-	
 \end{madefinition}
 
 \begin{maremarque}
@@ -313,8 +320,21 @@ Ainsi au lieu d'étudier la famille $f = (I_n)_{n \in \mathbb{Z}}$ nous pouvons 
 		$$I_1 = I_2 = (\bar{2})$$
 		$$I_n = (\bar{0})  \text{ pour tout} \quad n \geqslant 3 $$
 	\end{enumerate}
-
 \end{monexemple}
+\begin{madefinition}
+	On définit pour toutes filtrations $f=(I_n)$ et $g=(J_n)$ de $A$ les trois opérations suivantes: 
+	\begin{enumerate}
+		\item[(1)] le produit $fg=(I_nJ_n)$
+		\item[(2)] l'intersection $f \cap g = (I_n \cap J_n)$
+		\item[(3)] la somme $f+g=(K_n)$ où pour tout entier $n$, $K_n =\displaystyle  \sum_{k=0}^{n}I_{k}J_{n-k} $
+	\end{enumerate}
+	On vérifie que $fg, f \cap g , f + g$ sont des filtrations de $A$ et pour toutes filtrations \\ $f,g \in \mathbb{F}(A):$
+		\begin{enumerate}
+		\item[(4)] $\inf (f,g) = f \cap g$
+		\item[(5)] $\sup (f,g) = f+g $
+		\item[(6)] $fg \leqslant f \cap g \leqslant f \leqslant f+g$
+	\end{enumerate}
+\end{madefinition}
 
 \subsection{Filtration sur un module}
 \begin{madefinition}
@@ -330,8 +350,8 @@ Ainsi au lieu d'étudier la famille $f = (I_n)_{n \in \mathbb{Z}}$ nous pouvons 
 \section{Anneaux gradués associés à une filtration}
 \subsection{Anneau de Rees d'une filtration}
 \begin{madefinition}
-	Soit $f=(I_n)_{n \in \mathbb{Z}}$ une filtration de l'anneau A. X est une indéterminée.\\
-	On appelle \textbf{anneau de Rees droit} de f, l'anneau gradué noté R(A,f) tel que: 
+	Soit $f=(I_n)_{n \in \mathbb{Z}}$ une filtration de l'anneau A.\\ X est une indéterminée.\\
+	On appelle \textbf{anneau de Rees} de f, l'anneau gradué noté R(A,f) tel que: 
 	\[ R(A,f)  =\displaystyle \bigoplus_{n \in \mathbb{N}}{I_n X^n}  \]
 	
 	On appelle \textbf{anneau de Rees généralisé} de f, l'anneau gradué noté $\mathcal{R}(A,f)$ tel que: 
@@ -352,14 +372,14 @@ Ainsi au lieu d'étudier la famille $f = (I_n)_{n \in \mathbb{Z}}$ nous pouvons 
 	
 	$f=(I_{n})_{n\in \mathbb{Z}}\in \mathbb{F}(A),$ $\phi =(M_{n})_{n\in \mathbb{Z}}\in \mathbb{F}(M)$ telle que $\phi $ est $f-compatible$. On pose:
 	
-	$G_{f}(A)=\displaystyle \bigoplus_{n \in \mathbb{Z}}{\frac{I_{n}}{I_{n+1}}} = \displaystyle \bigoplus_{n \in \mathbb{N}}{\frac{I_{n}}{I_{n+1}}} $
+	$G(A,f)= G_{f}(A)=\displaystyle \bigoplus_{n \in \mathbb{Z}}{\frac{I_{n}}{I_{n+1}}} = \displaystyle \bigoplus_{n \in \mathbb{N}}{\frac{I_{n}}{I_{n+1}}} $
 	
-	$G_{\phi }(M)=\displaystyle \bigoplus_{n \in \mathbb{Z}}{\frac{M_{n}}{M_{n+1}}}$
+	$G(A, \phi)=G_{\phi }(M)=\displaystyle \bigoplus_{n \in \mathbb{Z}}{\frac{M_{n}}{M_{n+1}}}$
 	
 	$G_{f}(A)$ est muni d'une structure d'anneau gradué dont la
 	multiplication est définie par:
 	
-	Pour tout $a_{n}+I_{n+1},b_{p}+I_{p+1},$ deux éléments homogène
+	Pour tout $a_{n}+I_{n+1},b_{p}+I_{p+1},$ deux éléments homogènes de degré $n$
 	de $G_{f}(A),$ On pose:
 	
 	$(a_{n}+I_{n+1})(b_{p}+I_{p+1})=a_{n}b_{p}+I_{n+p+1}$
@@ -368,20 +388,21 @@ Ainsi au lieu d'étudier la famille $f = (I_n)_{n \in \mathbb{Z}}$ nous pouvons 
 	Soient A un anneau, I un idéal de A. Soient $f = (I_n)_{n \in \mathbb{Z}} \in \mathbb{F}(A)$ et $X$ une indéterminée.
 	\begin{enumerate}
 		\item[(i)] $A \subseteq R(A,f) \subseteq A[X]$
-		\item[(ii)] $R(A,f) \subseteq \mathcal{R}(A,f) \subseteq A[u,X]$ où $u = \dfrac{1}{X}$
-		\item[(iii)] $u^n\mathcal{R}(A,f) \cap  A = I_n, \forall n \in \mathbb{Z}$
-		\item[(iv)] $R(A,f) = A[I_1X,I_2X^2, \cdots, I_nX^n, \cdots] $
-		\item[(v)] $u=\dfrac{1}{X} = X ^{-1}$ est régulier de degré -1 dans $\mathcal{R}(A,f)$ et on a: \[ \mathcal{R}(A,f) = A[u,I_1X,I_2X^2, \cdots, I_nX^n, \cdots ] \]
-		\item[(vi)] $ \dfrac{R(A,I)}{IR(A,I)} \simeq G_I(A) $ avec $R(A,I) = R(A, f_I) $ et $G_I(A) = G_{f_{I}}(A) = \displaystyle \bigoplus_{n \in \mathbb{N}}{\frac{I^{n}}{I^{n+1}}} $
-		\item[(vii)] $ \dfrac{\mathcal{R}(A,I)}{u\mathcal{R}(A,I)} \simeq G_I(A) $
-		\item[(viii)] $ \dfrac{\mathcal{R}(A,I)}{(u-1)\mathcal{R}(A,I)} \simeq A $
+		\item[(ii)] $R(A,f) \subseteq \mathcal{R}(A,f) \subseteq A[u,X]$ où $u = \dfrac{1}{X} = X^{-1}$
+		\item[(iii)] $\mathcal{R}(A,f) = R(A,f)[u] $
+		\item[(iv)] $u^n\mathcal{R}(A,f) \cap  A = I_n, \forall n \in \mathbb{Z}$
+		\item[(v)] $R(A,f) = A[I_1X,I_2X^2, \cdots, I_nX^n, \cdots] $
+		\item[(vi)] $u=\dfrac{1}{X} = X ^{-1}$ est régulier de degré -1 dans $\mathcal{R}(A,f)$ et on a: \[ \mathcal{R}(A,f) = A[u,I_1X,I_2X^2, \cdots, I_nX^n, \cdots ] \]
+		\item[(vii)] $ \dfrac{R(A,I)}{IR(A,I)} \simeq G_I(A) $ avec $R(A,I) = R(A, f_I) $ et $G_I(A) = G_{f_{I}}(A) = \displaystyle \bigoplus_{n \in \mathbb{N}}{\frac{I^{n}}{I^{n+1}}} $
+		\item[(viii)] $ \dfrac{\mathcal{R}(A,I)}{u\mathcal{R}(A,I)} \simeq G_I(A) $
+		\item[(ix)] $ \dfrac{\mathcal{R}(A,I)}{(u-1)\mathcal{R}(A,I)} \simeq A $
 	\end{enumerate} 
 \end{maproposition}
 \subsection{Quelques exemples de filtration}
 \subsubsection{a) \underline{Filtration I-adique}}
 \begin{madefinition}
 	Soient $A$ un anneau et $I$ un idéal de A.\\
-	La famille $f = (I^n)_{n\in \mathbb{Z}}$ telle que pour tout $n \leqslant 0, I^n = A$ est une filtration de A appelé \textbf{filtration I-adique} et noté $f_I$
+	La famille $f_I = (I^n)_{n\in \mathbb{Z}}$ telle que pour tout $n \leqslant 0, I^n = A$ est une filtration de A appelé \textbf{filtration I-adique} et noté $f_I$
 \end{madefinition}
 Soit I un idéal de l'anneau $A$ si $f_I$ est la filtration $I-adique$ alors l'anneau de Rees de $f_I$ sera simplement noté $R(A,I)$.
 \begin{maproposition}
@@ -396,28 +417,33 @@ Soit I un idéal de l'anneau $A$ si $f_I$ est la filtration $I-adique$ alors l'a
 	En effet, supposons que $A$ n'est pas noethérien.
 	Posons $I = (0)$, l'idéal nul. Alors $R(A,I) = A$ et donc $R(A,I)$ n'est pas noethérien
 \end{monexemple}
-\subsubsection{b) \underline{Filtration extraite d'ordre k, $k \in \mathbb{N}$}}
+%\subsubsection{b) \underline{Filtration extraite d'ordre k, $k \in \mathbb{N}$}}
+%\begin{madefinition}
+%	Soient $A$ un anneau et $I$ un idéal de A.\\
+%	$f = (I_n)_{n\in \mathbb{Z}}$ une filtration de l'anneau A.\\
+%	On pose $f^{(k)} = (I_{nk})_{n\in \mathbb{Z}}$.\\
+%	$f^{(k)} $ est une filtration de A appelé \textbf{filtration extraite d'ordre k}.
+%\end{madefinition}
+
+\subsubsection{b) \underline{Filtration tronqué d'ordre k de $f$}}
 \begin{madefinition}
 	Soient $A$ un anneau et $I$ un idéal de A.\\
 	$f = (I_n)_{n\in \mathbb{Z}}$ une filtration de l'anneau A.\\
-	On pose $f^{(k)} = (I_{nk})_{n\in \mathbb{Z}}$.\\
-	$f^{(k)} $ est une filtration de A appelé \textbf{filtration extraite d'ordre k}.
+	Soit $k \in \mathbb{N}^{*}$, on pose $f^{(k)} = (I_{nk})_{n\in \mathbb{N}}$ et $t_{k}f=(K_n)$ avec $K_n = I_{n+k}$ si $n \geqslant 1 $ et $K_n = A$ si $n \leqslant 0$.\\
+	Ainsi $t_{k}f$ est une filtration de $A$ appelé \textbf{filtration tronqué d'ordre k de $f$}.
 \end{madefinition}
 
-\subsubsection{c) \underline{Filtration tronqué d'ordre m de $f$}}
-\begin{madefinition}
-	Soient $A$ un anneau, $f = (I_n)_{n\in \mathbb{Z}}$ une filtration de l'anneau A.\\
-	Soit $m$ un nombre entier naturel.\\
-	On pose $t_{m}f=(K_n)$ avec $K_n = I_{n+m}$ si $n \geqslant 1 $ et $K_n = A$ si $n \leqslant 0$.\\
-	Ainsi $t_{m}f$ est une filtration de $A$ appelé \textbf{filtration tronqué d'ordre m de $f$}.
-\end{madefinition}
-
-\subsubsection{d) \underline{Filtration définie par une graduation}}
+\subsubsection{c) \underline{Filtration définie par une graduation}}
 \begin{madefinition}
 	Soit $A = \displaystyle \bigoplus_{n \in \mathbb{N}}{A_n}$ un anneau gradué de type $n$.\\ Posons $J_n = \displaystyle \bigoplus_{n \geqslant p }{A_p}$.\\
 	$f=(J_n)_{n \in \mathbb{N}}$ est une filtration de A. 
 \end{madefinition}
-
+\subsubsection{d) \underline{Filtration de type fini}}
+\begin{madefinition}
+	Soient $A$ un anneau et $I$ un idéal de A.\\
+	$f = (I_n)_{n\in \mathbb{Z}}$ une filtration de l'anneau A.\\
+	On dit que $f$ est de type fini si $I_n$ est de type fini pour tout $n \in \mathbb{N}$ assez grand.
+\end{madefinition}
 
 \subsection{Classification des filtrations sur un anneau}
 \subsubsection{a) \underline{Filtrations I-bonnes}} 
@@ -453,13 +479,24 @@ Soit I un idéal de l'anneau $A$ si $f_I$ est la filtration $I-adique$ alors l'a
 \end{madefinition}
 \subsubsection{e) \underline{Filtrations noethériennes}}
 \begin{madefinition}
-	La filtration $f = (I_n)_{n \in \mathbb{Z}}$ de l'anneau $A$ est dite \textbf{noethérienne} si $\mathcal{R}(A,f)$ est noethérien.
+	La filtration $f = (I_n)_{n \in \mathbb{Z}}$ de l'anneau $A$ est dite \textbf{noethérienne} si son anneau de Rees ${R}(A,f)$ est noethérien.
 \end{madefinition}
 \subsubsection{f) \underline{Filtrations fortement noethériennes}}
 \begin{madefinition}
 	La filtration $f = (I_n)_{n \in \mathbb{Z}}$ de l'anneau $A$ est dite \textbf{fortement noethérienne} s'il existe un entier $k \geqslant 1$ tel que:
 	\[ \forall \, m, n \in \mathbb{Z}, \ m, n \geqslant k, I_m I_n = I_{m+n} \]
 \end{madefinition}
+\begin{maremarque}
+	Il résulte des références \cite{4} , \cite{5}, \cite{6} que si $A$ est un anneau noethérien et $f=(I_n)_{n \in \mathbb{Z}} \in \mathbb{F}(A)$, les assertions suivantes sont équivalentes : 
+		\begin{enumerate}
+				\item[(a)] $f$ est une $E.P.$ filtration
+				\item[(b)] $\exists k \in \mathbb{N}^{*}$ tel que $f$ soit la plus petite filtration ayant pour $k+1$ premiers $I_0, I_1,\dots, I_k $
+				\item[(c)] $f$ est noethérienne
+				\item[(d)] $\exists m \in \mathbb{N}^{*}$ tel que $\forall j \geqslant m, I_{j+m} = I_{j}I_{m}$
+				\item[(e)] L'anneau de Rees $R(A,f)$ de $f$ est une $A-algèbre$ de type fini
+				\item[(f)] L'anneau de Rees généralisé $\mathcal{R}(A,f)$ de $f$ est une $A-algèbre$ de type fini
+		\end{enumerate}
+\end{maremarque}
 \begin{maremarque}(\cite{2})\\
 	$\mathcal{R}(A,f)$ est noethérien si et seulement si $R(A,f)$ est noethérien.
 \end{maremarque}
