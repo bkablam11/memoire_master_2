@@ -325,7 +325,7 @@ On dit que $f$ est \textbf{intégralement fermée} si $f'=f$; ce qui signifie au
 \end{madefinition}
 \section{Réduction d'une filtration}
 \begin{madefinition}
-	Soient $f = (I_n)$ et $g=(J_n)$ des filtrations de $A$ telles que $f \leqslant g$.
+	Soient $f = (I_n)$ et $g=(J_n)$ des filtrations de $A$ telles que $f \leqslant g$. \\
 	$f$ est une réduction de $g$ s'il existe des entiers $r \geqslant 1$ et $n_0 \geqslant 0$ tels que:
 	\[ \forall n \geqslant n_0,\quad J_{r+n} = J_{r}I_{n}. \]
 \end{madefinition}
@@ -335,19 +335,55 @@ On dit que $f$ est \textbf{intégralement fermée} si $f'=f$; ce qui signifie au
 		\item[(2)] Soit $I$ un idéal de $A$.\\ Alors $f_I$ est une réduction de la filtration $g$ de $A$ $\Longleftrightarrow$ $g$ est $I-bonne$.
 	\end{enumerate}
 \end{maremarque}
-\begin{proof}
-	content...
-\end{proof}
+
 \begin{maproposition}
 	Soit $f,g \in \mathbb{F}(A),$ telles que $f \leqslant g$.
 	\begin{enumerate}
 		\item[(i)] $f$ est un réduction de $g$ si et seulement s'il existe un entier naturel $k \geqslant 1$ tel que $J_{k+n}  = J_{k}I_n$ pour tout $n \geqslant k$
-		\item[(ii)] si $f$ est une réduction de $g$ et que $g$ est une réduction de $h \in \mathbb{F}(A)$, alors $f$ est une réduction de $h$. 
-		\item[(iii)] si $f$ est une réduction de $g$ et si $h$ est une filtration telle que $f \leqslant h \leqslant g$ alors $h$ est une réduction de $g$
+		\item[(ii)] Si $f$ est une réduction de $g$ et que $g$ est une réduction de $h \in \mathbb{F}(A)$, alors $f$ est une réduction de $h$. 
+		\item[(iii)] Si $f$ est une réduction de $g$ et si $h$ est une filtration $A$ telle que $f \leqslant h \leqslant g$ alors $h$ est une réduction de $g$
 	\end{enumerate}
 \end{maproposition}
 \begin{proof}
-	content...
+	i) Supposons que $f$ soit une réduction de $g$. Alors:
+	\begin{enumerate}
+		\item[(a)] $f \leqslant g$
+		\item[(b)] $\exists r \geqslant 1,n_o \geqslant 0 ,\quad \forall n \geqslant n_0,\quad J_{r+n}= J_r I_n $
+	\end{enumerate}
+	Soit $m_{0}\in \mathbb{N},$ tel que $m_{0}r\geq n_{0}$
+	
+	Posons $k=m_{0}r$
+	
+	Alors $J_{k+n}=J_{m_{0}r+n}=J_{m_{0}r}I_{n}=J_{k}I_{n}$ car $k\geq n_{0}.$
+	
+	La réciproque est évidente.
+	
+	\bigskip 
+	
+	ii) Supposons que $f$ est une réduction de $g$ et $g$ une réduction
+	de $h.$
+	
+	* $f\leq g\leq h\Rightarrow f\leq h$
+	
+	* Comme $\ g$ est une réduction de $h$ alors, il existe $k^{\prime }\geq
+	1,$ $H_{k^{\prime }+n}=H_{k^{\prime }}J_{n},$ pour tout $n\geq k^{\prime }.$
+	
+	Posons $k^{\prime \prime }=k^{\prime }(k^{\prime }+1)$ comme dans (i)
+	
+	Ainsi en utilisant (i) car $f$ est une réduction de $g$, il vient  $H_{k^{^{\prime \prime }}+n}=H_{k^{^{\prime \prime }}}I_{n},$ pour tout $n\geq k^{^{\prime \prime }}.$
+	
+	Par suite $f$ est une réduction de $h$. \\
+	
+	iii) Supposons que $f$ réduction de $g$ et que $f\leq h\leq g.$
+	
+	Soit $k$ comme dans (i).
+	
+	Comme $h\leq g$ alors pour tout $n\geq k,$ $J_{k}H_{n}\subseteq
+	J_{k}J_{n}=J_{k+n}\subseteq J_{k}H_{n}$ car $f\leq h.$
+	
+	Donc $J_{k+n}=J_{k}H_{n}$ $,$ pour tout $n\geq k.$
+	
+	Par suite $h$ est réduction de $g.$
 \end{proof}
 \begin{maproposition}
 	Si $f=(I_n)$ est une réduction de $g=(J_n)$ alors:
@@ -385,8 +421,7 @@ On dit que $f$ est \textbf{intégralement fermée} si $f'=f$; ce qui signifie au
 	On vérifie que $g$ est noethérienne et que $f\leq g$. De plus, la
 	filtration $g$ est entière sur $f$. 
 	
-	En effet pour tout élément $b\in J_{n}$, $b^{2}\in J_{2n}$ et on a $%
-	(bY^{n})^{2}=b^{2}Y^{2n}\in R(A,f)$. 
+	En effet pour tout élément $b\in J_{n}$, $b^{2}\in J_{2n}$ et on a $(bY^{n})^{2}=b^{2}Y^{2n}\in R(A,f)$. 
 	
 	L'anneau $R(A,g)$ est donc entier sur $R(A,f)$. De plus, comme $g$ est noethérienne, il résulte que $g$ est fortement
 	
@@ -497,9 +532,6 @@ On dit que $f$ est \textbf{intégralement fermée} si $f'=f$; ce qui signifie au
 \begin{maremarque}
 	Si $f$ est une $\beta$-réduction de $g$ alors $f$ est une $\alpha$-réduction de $g$.\\	
 \end{maremarque}
-\begin{proof}
-	contre-exemple...
-\end{proof}
 \begin{proof}
 	Supposons que $f$ est une $\beta$-réduction de $g$.\\
 	Alors $f \leq g$ et $\exists \, k \geq 1$ tel que $I_{n+k} = I_n J_k , \forall n \geq k$.\\
