@@ -27,13 +27,9 @@
 %{\newline}{}%
 %\theoremstyle{break}
 %Redéfinir le format du numéro de chapitre 
-
 \renewcommand{\cftchappresnum}{Chapitre } \renewcommand{\cftchapaftersnum}{:}
-
 % Ajuster l’espace entre le numéro et le titre 
-
 \newlength{\mylen} \settowidth{\mylen}{\cftchappresnum\cftchapaftersnum} \addtolength{\cftchapnumwidth}{\mylen}
-
 
 \newtheorem{maremarque}{Remarque}[chapter]
 \newtheorem{montheoreme}{Théorème}[chapter]

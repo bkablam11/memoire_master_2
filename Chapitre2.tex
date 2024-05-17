@@ -431,7 +431,7 @@ On admet la proposition suivante:
 	
 	il existe $n\in \mathbb{N}^{\ast },X^{n}[x^{n}+\sum\limits_{i=1}^{n}\alpha _{i}x^{n-i}]=0,$avec $\alpha _{i}\in I^{i}.$
 	
-	Par identification des polyn\^{o}mes, il existe $n\in \mathbb{N}^{\ast },x^{n}+\sum\limits_{i=1}^{n}\alpha _{i}x^{n-i}=0,$avec $\alpha_{i}\in I^{i}.$
+	Par identification des polynômes, il existe $n\in \mathbb{N}^{\ast },x^{n}+\sum\limits_{i=1}^{n}\alpha _{i}x^{n-i}=0,$avec $\alpha_{i}\in I^{i}.$
 	
 	Donc $x$ est entier sur $I.$
 \end{proof}
@@ -685,10 +685,96 @@ On dit que $I$ est une réduction de $J$ si :\\
 	$I \subseteq J \Rightarrow I \hat{I}^n \subseteq J \hat{I}^n$ or $\hat{I}^{n+1} = I \hat{I}^n$ donc $\hat{I}^{n+1} \subseteq J \hat{I}^n$. De plus $J \subseteq \hat{I} \Rightarrow  J \hat{I}^n \subseteq \hat{I}^{n+1}$, ainsi $\hat{I}^{n+1} = J \hat{I}^n$ par conséquent $J$ devient également une réduction de $\hat{I}$. Il s'ensuit que $\hat{I} \subseteq \hat{J}$, on obtient donc le résultat souhaité.
 \end{proof}
 \subsection{Réduction minimale d'un idéal}
+La notion d'idéal basique à été introduite et étudiée par Northcott et Rees \cite{4}.
 \begin{madefinition}
-	Soit $I$ un idéal de $A$. Une réduction minimale de $I$ est une réduction de $I$ qui est minimale pour la relation ( $\subseteq$ ) dans l'ensemble des réductions de $I$.\\
-	Notons que tout idéal qui n'a d'autre réduction que lui-même est dit basique.
+	Un idéal $I$ de l'anneau local noethérien $(A,m)$ est basique si la seule réduction de $I$ est $I$ lui-m\^{e}me. 
+	Northcott et Rees ont aussi défini la notion de réduction minimale
+	d'un idéal $J$:
+	
+	Un idéal $I$ est une réduction minimale de $J$ si $I$ est une réduction de $J$ et si I est $minimal$ au sens de l'inclusion ( $\subseteq$ ) parmi l'ensemble des réductions de J. 
 \end{madefinition}
 \begin{maremarque}
 	On prouve dans \cite{2} que la réduction minimale des filtrations $I$-bonne existe toujours dans un anneau local noethérien. Ce qui n'est pas le cas en générale pour une filtration quelconque.
 \end{maremarque}
+Ces notions s'étendent sans difficulté aux filtrations noethériennes d'un anneau noethérien $A$, non nécessairement local \cite{2}. 
+
+Les questions naturelles qui se posent sont alors les suivantes :
+\begin{enumerate}
+	\item[(a)] Quelles sont les filtrations basiques de $A$ si elles existent ?
+	\item[(b)] Toute filtration de $A$ admet-elle une réduction minimale?
+\end{enumerate}
+
+Nous avons obtenu une caractérisation des filtrations basiques et avons
+montré que la réponse à la question (b) est négative.
+
+Pour (a) nous avons obtenu le résultat suivant:
+\begin{maproposition}
+	Une filtration noethérienne $f $ de l'anneau noethérien A est
+	basique si et seulement si $f$ est $I-adique$ avec $I$ idempotent ($I^{2}=I$).
+\end{maproposition}
+\begin{proof}
+	Pour le voir, considérons une filtration $f=(I_{n})$ noethérienne et
+	basique. 
+	
+	Il existe alors un entier $k\geq 1$ tel que pour tout entier $n\geq k,$ on
+	ait $I_{n+k}=I_{k}I_{n}.$ Considérons la filtration $h=(H_{n})$ de $A$ définie par:
+	
+	$H_{n}=\left\{ 
+	\begin{array}{c}
+		I_{k-1}\text{ si }1\leq n\leq k-1 \\ 
+		I_{n}\text{ pour }n\geq k%
+	\end{array}%
+	\right. $ 
+	
+	On a alors pour tout $n\geq k$, $I_{n+k}=I_{k}H_{n},$ et par conséquent $h$ est une réduction de $f.$
+	
+	Comme $f$ est basique, on en déduit que $I_{n}=I_{k}$ pour tout $n.$
+	
+	D'autre part, $I_{2k}=I_{k}^{2}$ donc $f=f_{I}$ avec $I=I_{k}$ et $I^{2}=I.$
+	
+	Réciproquement, si $f$ est $I-adique$ avec $I=I^{2}$ et si $h=(H_{n})$
+	est une réduction de $f,$ on a pour tout $n\geq 1,$ $I=I^{n}$ et $%
+	H_{n}\subseteq I.$
+	
+	De plus $h$ étant une réduction de $f,$ il existe un entier $k\geq 1$
+	tel que $I=I^{k+n}=I^{k}H_{n}\subseteq H_{n}\subseteq I$ pour tout $n\geq k.$
+	
+	D'où $\forall n\geq k$ ,$I=H_{n}.$ Or pour tout entier $n$ tel que $1\leq n\leq k-1,$ on a $H_{k}=I\subseteq H_{n}\subseteq I.$
+	
+	D'où $H_{n}=I,$ $f_{I}=h$ et $f_{I}$ est basique.
+\end{proof}
+
+Concernant la question (b), nous avons obtenu le résultat suivant:
+
+\begin{maproposition}
+	Une filtration noethérienne $f=(I_{n})$ de l'anneau noethérien $A$
+	admet une réduction minimale si et seulement s'il existe un entier $r\geq 1$ tel que $I_{r}$ soit un idéal idempotent.
+\end{maproposition}
+\begin{proof}
+	Il est facile de voir que la condition est nécessaire. Supposons en effet que $h=(H_{n})$ soit une réduction minimale de $f$. Alors $f $ est noethérienne et basique et d'après le résultat précédent énonce plus haut, il existe un idéal idempotent $I$ tel que $h=f_{I}$. 
+	
+	Or l'une des caractérisations de réduction d'une filtration sur une
+	autre assure l'existence d'un entier $N\geq 1$ tel que $I_{n}^{2}=I_{n}H_{n}=I_{n}I$ pour tout $n\geq N$. 
+	
+	De plus, $f$ étant noethérienne, elle est fortement $A.P.$ et il
+	existe un entier $k\geq N$ tel que $I_{nk}=I_{k}^{n}$ pour tout entier $n$. 
+	
+	Ainsi $I_{2k}=I_{k}^{2}=I_{k}I$ et \ $I_{2k}^{2}=I_{2k}I=I_{k}I^{2}=I_{k}I=I_{2k}$ donc $I_{2k}$ est idempotent.
+	
+	La réciproque est plus technique et nous renvoyons aux références citées plus haut. La preuve de la réciproque demande
+	l'utilisation de critères assurant que l'anneau de Rees d'une filtration $g$ soit entier (respectivement soit une algèbre de type fini) sur l'anneau de Rees d'une filtration $f.$ Or, suivant les références, les auteurs ont utilisé soit l'anneau de Rees classique soit l'anneau de Rees généralisé associé à une filtration pour définir et caractériser la dépendance intégrale ou la dépendance intégrale forte d'une filtration sur une autre. 
+	
+	Pour montrer que les propriétés utilisées, portant tantôt sur l'un ou l'autre des anneaux de
+	Rees sont équivalentes, nous avons montré les résultats suivants:
+	
+	Étant données deux filtrations $f,g$ de A vérifiant $f\leq g$, on a:
+	\begin{enumerate}
+		\item[(i)]  $\mathcal{R}(A,g)$ est entier sur $\mathcal{R}(A,f)\Longleftrightarrow $ R(A,g) est entier
+		sur R(A,f)
+		\item[(ii)] $\mathcal{R}(A,g)$ est entier sur $\mathcal{R}(A,f)-$ algèbre de type fini $\Longleftrightarrow $ R(A,g) est entier sur $R(A,f)-algèbre$ de type fini
+	\end{enumerate}
+	Concernant la noethérianité des anneaux de Rees, une preuve astucieuse de l'équivalence entre la noethérianité de l'anneau $\mathcal{R}(A,f)$ et celle de l'anneau $R(A,f)$ pour toute filtration $f$ de l'anneau noethérien $A$ a été donnée dans \cite{6}. Nous l'exposons brièvement ici. Il est clair que si l'anneau de Rees de $f$ est noethérien, il en est de m\^{e}me de son anneau de Rees généralisé. La réciproque est donc triviale. Par conséquent, l'anneau de Rees $R(A,f)$ de $f$ est noethérien.
+	
+\end{proof}
+
+
