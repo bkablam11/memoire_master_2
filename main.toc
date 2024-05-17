@@ -51,7 +51,7 @@
 \contentsline {section}{\numberline {3.2}Cl\IeC {\^o}ture int\IeC {\'e}grale d'une filtration}{31}{section.3.2}
 \contentsline {section}{\numberline {3.3}R\IeC {\'e}duction d'une filtration}{34}{section.3.3}
 \contentsline {subsection}{\numberline {3.3.1}R\IeC {\'e}duction au sens de Okon-Ratliff}{35}{subsection.3.3.1}
-\contentsline {subsection}{\numberline {3.3.2}R\IeC {\'e}duction au sens de Dichi-Sangar\IeC {\'e}}{37}{subsection.3.3.2}
+\contentsline {subsection}{\numberline {3.3.2}R\IeC {\'e}duction au sens de Dichi-Sangar\IeC {\'e}}{38}{subsection.3.3.2}
 \contentsline {section}{\numberline {3.4}Filtrations f-bonnes}{40}{section.3.4}
-\contentsline {chapter}{\relax \fontsize {14.4}{18}\selectfont {Conclusion}}{43}{maproposition.3.24}
-\contentsline {chapter}{\relax \fontsize {14.4}{18}\selectfont {Bibliographie}}{45}{chapter*.12}
+\contentsline {chapter}{\relax \fontsize {14.4}{18}\selectfont {Conclusion}}{44}{maproposition.3.26}
+\contentsline {chapter}{\relax \fontsize {14.4}{18}\selectfont {Bibliographie}}{46}{chapter*.12}

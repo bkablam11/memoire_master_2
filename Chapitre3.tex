@@ -357,9 +357,44 @@ On dit que $f$ est \textbf{intégralement fermée} si $f'=f$; ce qui signifie au
 		\item[(iii)] En plus, si $A$ est noethérien alors $f$ et $g$ sont noethériennes et g est fortement entière sur $f$.
 	\end{enumerate}
 \end{maproposition}
-\begin{proof}
-	content...
-\end{proof}
+\begin{maremarque}
+	Cependant, le fait que $g$ soit fortement entière sur $f$ n'implique pas
+	nécessairement que $f$ soit une réduction de $g$, m\^{e}me si $f$ et 
+	$g$ sont noethériennes. Or peut le voir sur l'exemple suivant : 
+	
+	Soit $A=k[X]$ l'anneau des polynômes à une indéterminée sur le
+	corps $k$. Soit $I=XA$. 
+	
+	On considère les filtrations $f=(I_{n})$ et $g=(J_{n})$ définies par
+	:
+	
+	$I_{n}=\left\{ 
+	\begin{array}{c}
+		I^{\frac{3n}{2}}\text{ si }n\text{ pair} \\ 
+		I^{\frac{3n+3}{2}}\text{ si }n\text{ impair}%
+	\end{array}%
+	\right. $
+	
+	$J_{n}=\left\{ 
+	\begin{array}{c}
+		I^{\frac{3n}{2}}\text{ si }n\text{ pair} \\ 
+		I^{\frac{3n+1}{2}}\text{ si }n\text{ impair}
+	\end{array}
+	\right. $
+	
+	On vérifie que $g$ est noethérienne et que $f\leq g$. De plus, la
+	filtration $g$ est entière sur $f$. 
+	
+	En effet pour tout élément $b\in J_{n}$, $b^{2}\in J_{2n}$ et on a $%
+	(bY^{n})^{2}=b^{2}Y^{2n}\in R(A,f)$. 
+	
+	L'anneau $R(A,g)$ est donc entier sur $R(A,f)$. De plus, comme $g$ est noethérienne, il résulte que $g$ est fortement
+	
+	entière sur $f$ et que $f$ est noethérienne. 
+	
+	Néanmoins, $f$ n'est pas une réduction de $g$ puisqu'on n'a pas $J_{2p+1}^{2}=I_{2p+1}J_{2p+1}$, pour $p$ suffisamment grand, condition nécessaire pour qu'une filtration $f$ soit une réduction de $g$ quand
+	l'anneau A est noethérien. 
+\end{maremarque}
 \begin{maremarque}
 	Soit $f \in \mathbb{F}(A)$. On suppose que A est noethérien. Alors $f$ est une réduction de $f$ $\Longleftrightarrow$ f est noethérienne.
 \end{maremarque}
@@ -683,8 +718,53 @@ $g$ est $f-bonne$ $\Longleftrightarrow $ $g$ est fortement intégral sur $f$
 \begin{proof}
 	contenu...
 \end{proof}
-Le théorème principal de cet mémoire est le suivant:\\
-\begin{montheoreme}
+\begin{maproposition}
+	Lorsque $f$ est une filtration fortement noethérienne et $g$ est une
+	filtration noethérienne de l'anneau noethérien A vérifiant $
+	f=(I_{n})\leq g=(J_{n})$, on montre que les assertions suivantes sont équivalentes:
+	
+	(i) $f$ est une réduction de $g$
+	
+	(ii) $J_{n}^{2}=I_{n}J_{n},\forall n>>0$
+	
+	(iii) L'idéal $I_{n}$ est une réduction de l'idéal $J_{n}$ pour
+	tout $n>>0$
+	
+	(iv) Il existe un entier $k\geq 1$ tel que $g^{k}$ soit $I_{k}-bonne$
+	
+	(v) $\forall m\geq 1$, $f^{(m)}$ est une réduction de $g^{(m)}$
+	
+	(vi) $\exists m\geq 1,$ tel que $f^{(m)}$ soit une réduction de $g^{(m)}$
+	
+	(vii) $g$ est entière sur $f$
+	
+	(viii) $g$ est fortement entière sur $f$
+	
+	(ix) $g$ est $f-fine$
+	
+	(xi) $g$ est faiblement $f-bonne$
+	
+	(x) $g$ est $f-bonne$
+	
+	(xii) $\exists m\geq 1,$ tel que $t_{m}f\leq f\leq g$
+	
+	(iii) $(P_{k}(f))=(P_{k}(g))$ pour tout $k\in\mathbb{N}$
+	
+	En particulier, il résulte des équivalences ci-dessus que si $f$ est une filtration $I-adique$ de l'anneau noethérien $A$ et si $g$ est
+	une filtration noethérienne dominée par $g$, les notions suivantes
+	sont équivalentes :
+	
+	(1) $f_{I}$ est une réduction de $g$
+	
+	(2) $g$ est entière sur $f_{I}$.
+	
+	(3) $g$ est fortement entière sur $f_{I}$
+	
+	(4) $g$ est $I-bonne$
+	
+\end{maproposition}
+
+\begin{maproposition}
 	\label{th1}
 	Soient $f=(I_n)_{n \in \mathbb{N}}$ et $g=(J_n)_{n \in \mathbb{N}}$ deux filtrations de $A$,\\ tel que $f \leqslant  g$. Nous considérons les assertions suivantes:\\
 	\begin{enumerate}
@@ -699,7 +779,7 @@ Le théorème principal de cet mémoire est le suivant:\\
 		
 		\item[(v)]  $\exists N \geqslant 1$ un entier tel que $t_Ng \leqslant f \leqslant g$.
 	\end{enumerate}
-\end{montheoreme}
+\end{maproposition}
 \begin{maproposition}
 	Sous les hypothèses du théorème \eqref{th1} en admettant que $A$ est noethérien
 	et $f$ est noethérienne alors:
