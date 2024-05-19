@@ -641,37 +641,99 @@ On dit que $f$ est \textbf{intégralement fermée} si $f'=f$; ce qui signifie au
 \begin{maproposition}
 	Toute filtration $\varphi$ de $M$ $f-fine$ est $f-bonne$
 \end{maproposition}
-\begin{maproposition}
-	Soient $f,g \in \mathbb{F}(A)$ avec $f \leqslant g$.\\ Si $A$ est noethérien alors $g$ faiblement $f-bonne$ $\Longleftrightarrow$ $g$ est fortement entière sur $f$
-\end{maproposition}
 \begin{proof}
-	content...
+	Supposons que $\varphi =(M_{n})$ est une filtration de $M$ qui est $f-fine$,
+	où $f=(I_{n})$ une filtration de $A.$
+	
+	Alors il existe $N\geq 1$ tel que pour tout $n>N,M_{n}=$ $%
+	\sum\limits_{p=1}^{N}I_{p}M_{n-p}.$
+	
+	Comme $n>N,$ posons $n=N+1$, ainsi
+	
+	$M_{N+1}=$ $\sum\limits_{p=1}^{N}I_{p}M_{N+1-p}=$ $\sum\limits_{q=1}^{N}I_{N+1-q}M_{q},$ avec $q=N+1-p.$
+	
+	Ainsi, il vient de proche en proche que $M_{N+j}=$  $\sum\limits_{p=1}^{N}I_{N+j-p}M_{p}\,\ ,$ pour tout $j$ avec $1\leq j\leq m.$
+	
+	Alors $M_{N+m}=$ $\sum\limits_{p=1}^{N}I_{p}M_{N+m-p}\,=\sum\limits_{q=m}^{N+m-1}I_{N+m-q}M_{q}\,=\sum\limits_{q=m}^{N}I_{N+m-q}M_{q}\,+\sum\limits_{q=N+1}^{N+m-1}I_{N+m-q}M_{q}=\sum\limits_{q=m}^{N}I_{N+m-q}M_{q}\,+\sum\limits_{q=N+1}^{N+m-1}I_{N+m-q}(\sum\limits_{p=1}^{N}I_{q-p}M_{p}).$
+	
+	Or $\sum\limits_{q=m}^{N}I_{N+m-q}M_{q}\,\subseteq
+	\sum\limits_{p=1}^{N}I_{N+m-p}M_{p}\,$\ et $\sum\limits_{q=N+1}^{N+m-1}I_{N+m-q}(\sum\limits_{p=1}^{N}I_{q-p}M_{p})=\sum\limits_{p=1}^{N}(\sum\limits_{q=N+1}^{N+m-1}I_{N+m-p})M_{p}=\sum\limits_{p=1}^{N}I_{N+m-p}M_{p}\subseteq M_{N+m}$
+	
+	Par suite $\varphi $ est $f-bonne,$ l'inclusion inverse étant évidente.
 \end{proof}
+\begin{moncorollaire}
+	Soient $f,g \in \mathbb{F}(A)$ avec $f \leqslant g$. Si $A$ est noethérien alors:\\ 
+	$g$ faiblement $f-bonne$ $\Longleftrightarrow$ $g$ est fortement entière sur $f$
+\end{moncorollaire}
 \begin{maproposition}
 	Soient $f=(I_n)$ une filtration $E.P.$ de $A$ et $\varphi=(M_n) \in \mathbb{F}(M)$. Nous avons les assertions suivantes:
 	\[ \varphi \text{ est } f-fine \Longleftrightarrow \varphi \text{ est } f-bonne \Longleftrightarrow \varphi \text{ est faiblement } f-bonne   \]
 \end{maproposition}
 \begin{proof}
-	content...
+	Il suffit de montrer que $\varphi$ est faiblement $f-bonne$ si $\varphi$ est $f-fine$.\\ Supposons que $\varphi$ est faiblement $f-bonne$.\\
+	Soient $N, N' \geqslant 1$ des entiers tels que pour tout $n \geqslant N,$
+	$M_{n}=$ $\sum\limits_{p=0}^{N}I_{n-p}M_{p}$ et pour tout $n\geq
+	1,I_{n}=\sum\limits_{p=1}^{N^{\prime }}I_{n-p}I_{p}.$ Alors pour $n>N^{\prime \prime }=N+N^{\prime},$
+	
+	$M_{n}=$ $\sum\limits_{p=0}^{N}I_{n-p}M_{p}=\sum\limits_{p=0}^{N}(%
+	\sum\limits_{q=1}^{N^{\prime
+	}}I_{n-p-q}I_{p})M_{p}=\sum\limits_{q=1}^{N^{\prime
+	}}I_{q}(\sum\limits_{p=0}^{N}I_{n-p-q}M_{p})=\sum\limits_{q=1}^{N^{\prime
+	}}I_{q}M_{n-q}\subseteq \sum\limits_{q=1}^{N^{^{\prime \prime }}}I_{q}M_{n-q}
+	$
+	
+	Donc $M_{n}=\sum\limits_{q=1}^{N^{^{\prime \prime }}}I_{q}M_{n-q}$ ,
+	l'inclusion inverse étant triviale. 
 \end{proof}
 \begin{moncorollaire}
 	Soient $f,g \in \mathbb{F}(A)$. Si $A$ est noethérien, $f \leqslant g$ et $f$ noethérien. Alors nous avons les assertions suivantes:
 	\[ g \text{ est } f-fine \Longleftrightarrow  g \text{ est } f-bonne \Longleftrightarrow  g \text{ est faiblement } f-bonne \Longleftrightarrow  g \text{ est fortement entière sur } f \]
 \end{moncorollaire}
-\begin{proof}
-	content...
-\end{proof}
 \begin{maproposition}
 	Soient $f=(I_n), g=(J_n) \in \mathbb{F}(A)$, tel que $f \leqslant g$.\\ Si $g$ est $f-bonne$, $E.P.$ et $A$ est noethérien alors $f$ et $g$ sont noethériennes.
 \end{maproposition}
 \begin{proof}
-	content...
+	Il existe un entier $N\geq 1$ tel que pour tout $n>N,J_{n}=\sum%
+	\limits_{p=1}^{N}I_{n-p}J_{p}\subseteq
+	\sum\limits_{p=1}^{N}J_{n-p}J_{p}\subseteq J_{n}$
+	
+	Donc $J_{n}=\sum\limits_{p=1}^{N}J_{n-p}J_{p}$ pour tout $n>N.$
+	
+	Cette égalité est valable si $1\leq n\leq N.$
+	
+	Comme $g$ est $E.P$ et $A$ noethérien alors $g$ est fortement entière sur $f.$ 
+	
+	Par suite $g$ est noethérien et d'après le théorème de
+	Eakin, $f$ est noethérien. 
 \end{proof}
 \begin{maproposition}
-	Soient $f=(I_n), g=(J_n) \in \mathbb{F}(A)$, tel que $f \leqslant g$.\\ Si $g$ est faiblement $f-bonne$ alors $f$ est $A.P$ $\Longleftrightarrow$ $g$ est $A.P$.
+	Soient $f=(I_n), g=(J_n) \in \mathbb{F}(A)$, tel que $f \leqslant g$.\\Si $g$ est faiblement $f-bonne$ alors:\\ $f$ est $A.P$ $\Longleftrightarrow$ $g$ est $A.P$.
 \end{maproposition}
 \begin{proof}
-	content...
+	Soient $f=(I_{n})_{_{n\in \mathbb{N}}},g=(J_{n})_{_{n\in\mathbb{N}}}\in F(A).$
+	
+	Alors il existe un entier $N\geq 1$ tel que $I_{n}\subseteq J_{n}\subseteq
+	I_{n-N}\subseteq J_{n-N}$ pour tout $N\geq 1.$
+	
+	Si $f$ est $A.P.$ alors il existe une suite d'entiers $(k_{n})_{n\in \mathbb{N}}$ telle que $\underset{n\longrightarrow \infty }{\lim }\frac{k_{n}}{n}=1$
+	et $I_{k_{n}m}\subseteq I_{n}^{m}$
+	
+	pour tout $m,n\in \mathbb{N}.$
+	
+	Par suite, $J_{(k_{n}+N)m}\subseteq J_{k_{n}m+Nm}\subseteq
+	J_{k_{n}m+N}\subseteq I_{k_{n}m+N}\subseteq I_{k_{n}m}\subseteq
+	I_{n}^{m}\subseteq J_{n}^{m}.$
+	
+	D'où $\underset{n\longrightarrow \infty }{\lim }\frac{k_{n}+N}{n%
+	}=1,$ $g$ est $A.P.$
+	
+	Réciproquement si $g$ est $A.P.$ alors il existe une suite d'entiers $(k_{n}^{^{\prime }})_{n\in \mathbb{N}}$ associée à $g.$
+	
+	Alors $I_{k_{n}^{\prime }+N.m}\subseteq J_{k_{n}^{\prime }+N.m}\subseteq
+	J_{n+N}^{m}\subseteq I_{n}^{m}$ pour tout $m,n\in \mathbb{N}.$
+	
+	Et $\underset{n\longrightarrow \infty }{\lim }\frac{k_{n}^{\prime }+N}{n}=1,f
+	$ est $A.P.$
 \end{proof}
 \begin{moncorollaire}
 	Soient $f=(I_n), g=(J_n) \in \mathbb{F}(A)$, tel que $f \leqslant g$ et $A$ est noethérien.\\ Si $f$ ou $g$ est noethérien alors $g$ est $f-bonne$ $\Longleftrightarrow$ $g$ est fortement entière sur $f$.
@@ -679,77 +741,49 @@ On dit que $f$ est \textbf{intégralement fermée} si $f'=f$; ce qui signifie au
 \begin{maproposition}
 	Soit $A$ un anneau noethérien. Soient $f,g \in \mathbb{F}(A)$.\\ Si $f$ est noethérienne alors $g$ est fortement entière sur $f$ $\Longleftrightarrow$ il existe un entier naturel $N \geqslant 1$ tel que $t_{N}g \leqslant f \leqslant g$.
 \end{maproposition}
-\begin{proof}
-	content...
-\end{proof}
 \begin{maproposition}
 	Soient $f,g \in \mathbb{F}(A)$. Alors:
-	\[ g \text{ est entière sur } f \Longleftrightarrow \forall k \in \mathbb{N}^{*}, g^{(k)} \text{est entière sur } f^{(k)} \]
+	\[ g \text{ est entière sur } f \Longleftrightarrow \forall k \in \mathbb{N}^{*}, g^{(k)} \text{est entière sur } f^{(k)} \Longleftrightarrow \exists k \in \mathbb{N}^{*}, g^{(k)} \text{est entière sur } f^{(k)} \]
 \end{maproposition}
-\begin{proof}
-	content...
-\end{proof}
 \begin{maproposition}
 	Soit A un anneau noethérien et $g$ une filtration de $A$ fortement entière sur $f$ ou $g$ est fortement $A.P.$ de rang $r$, alors pour tout entier naturel $m \geqslant 1$, $g^{(rm)}$ est fortement entière sur $f^{(rm)}$.  
 \end{maproposition}
 \begin{proof}
-	content...
+Si $g$ est fortement $A.P.$ alors $f$ est fortement $A.P.$
+Alors Supposons que seulement $f$ est fortement $A.P.$ de rang $r.$
+	
+Il existe un entier $N\geq 0$ tel que $t_{N}g\leq f\leq g.$\\
+Posons $f=(I_{n}),g=(J_{n}),f_{1}=f^{(rm)},g_{1}=g^{(rm)}.$
+	
+Nous avons $J_{N+n}\subseteq I_{n}$ pour tout $n\in \mathbb{N}.$
+	
+De même $J_{rm(N+n)}\subseteq J_{N+rmn}$ $\subseteq I_{rmn}$  pour tout $n\in \mathbb{N}.$
+	
+D'où $t_{N}g_{1}\leq f_{1}\leq g_{1}.$
+	
+Or par hypothèse, $f^{(r)}=f_{I_{r}\text{ }}$alors $f^{(rm)}=f_{I_{rm}}$ qui est noethérienne.
+	
+Donc $g_{1}$ est fortement entière sur $f_{1}.$
+	
 \end{proof}
 \begin{moncorollaire}
 	Soient $f,g \in \mathbb{F}(A)$, tel que $f \leqslant g$. Si $A$ est noethérien et $g$ est fortement entière sur $f$. Alors $f$ est fortement $A.P$ $\Longleftrightarrow$ $g$ est fortement $A.P.$
 \end{moncorollaire}
-\begin{proof}
-	content...
-\end{proof}
 \begin{maproposition}
 	Si $f$ est une filtration I-adique alors nous avons les implications suivantes:\\
 	$f$ est fortement A.P $\Longleftrightarrow $ $f$ est A.P $\Longleftrightarrow $ $f$ est fortement noethérienne $\Longleftrightarrow $ $f$ est noethérienne $\Longleftrightarrow $ $f$ est E.P
 \end{maproposition}
-\begin{proof}
-	content...
-\end{proof}
-\begin{maproposition}
-	Soient $f=(I_n)_{n \in \mathbb{N}}$ une filtration E.P. de A et $\varphi=(M_n)_{n \in \mathbb{N}}$ une filtration sur un $A-module$ M qui est compatible avec $f$.\\
-	Les assertions suivantes sont équivalentes:\\
-	$\varphi$ est $f-fine$ $\Longleftrightarrow $ $\varphi$ est $f-bonne$ $\Longleftrightarrow $ $\varphi$ est faiblement $f-bonne$
-\end{maproposition}
-\begin{proof}
-	contenu...
-\end{proof}
-\begin{moncorollaire}
-	Soient $f=(I_n)_{n \in \mathbb{N}}$ et $g=(J_n)_{n \in \mathbb{N}}$ deux filtrations de $A$,\\ tel que $f \leqslant  g$ et $f$ est noethérienne.\\
-	Les assertions suivantes sont équivalentes:\\
-	$g$ est $f-fine$ $\Longleftrightarrow $ $g$ est $f-bonne$ $\Longleftrightarrow $  $g$ est faiblement $f-bonne$ $\Longleftrightarrow $ $g$ est fortement intégral sur $f$
-\end{moncorollaire}
-\begin{maproposition}
-	Soient $f=(I_n)_{n \in \mathbb{N}}$ et $g=(J_n)_{n \in \mathbb{N}}$ deux filtrations de $A$ tel que $f \leqslant  g$ et $g$ est $f-bonne$.\\
-	Si $g$ est E.P. et que $A$ est noethérien alors $f$ et $g$ sont noethériennes.
-\end{maproposition}
-\begin{proof}
-	contenu...
-\end{proof}
-\begin{maproposition}
-	Soient $f=(I_n)_{n \in \mathbb{N}}$ et $g=(J_n)_{n \in \mathbb{N}}$ deux filtrations de $A$ tel que $f \leqslant  g$ et $g$ est faiblement $f-bonne$.\\
-	Si $g$ est A.P. si et seulement si $f$ est A.P.
-\end{maproposition}
-\begin{proof}
-	contenu...
-\end{proof}
+
 \begin{moncorollaire}
 Soient $f=(I_n)_{n \in \mathbb{N}}$ et $g=(J_n)_{n \in \mathbb{N}}$ deux filtrations de $A$,\\ tel que $f \leqslant  g$.
 Si $f$ ou $g$ est noethérienne. Alors: \\
 $g$ est $f-bonne$ $\Longleftrightarrow $ $g$ est fortement intégral sur $f$
 \end{moncorollaire}
-\begin{proof}
-	contenu...
-\end{proof}
 \begin{maproposition}
 	Soient $f=(I_n)_{n \in \mathbb{N}}$ et $g=(J_n)_{n \in \mathbb{N}}$ deux filtrations de $A$ tel que $f$ est une réduction de $g$ alors:\\
 	$g$ est E.P et $g$ est $f-bonne$.
 \end{maproposition}
-\begin{proof}
-	contenu...
-\end{proof}
+
 \begin{maproposition}
 	Lorsque $f$ est une filtration fortement noethérienne et $g$ est une
 	filtration noethérienne de l'anneau noethérien A vérifiant $
@@ -800,7 +834,6 @@ $g$ est $f-bonne$ $\Longleftrightarrow $ $g$ est fortement intégral sur $f$
 	\label{th1}
 	Soient $f=(I_n)_{n \in \mathbb{N}}$ et $g=(J_n)_{n \in \mathbb{N}}$ deux filtrations de $A$,\\ tel que $f \leqslant  g$. Nous considérons les assertions suivantes:\\
 	\begin{enumerate}
-		
 		\item[(i)] $g$ est $f-bonne$
 
 		\item[(ii)] $g$ est fortement entière sur $f$
@@ -817,38 +850,3 @@ $g$ est $f-bonne$ $\Longleftrightarrow $ $g$ est fortement intégral sur $f$
 	et $f$ est noethérienne alors:
 	(i) $\Longleftrightarrow $ (ii) $\Longleftrightarrow $ (iii) $\Longleftrightarrow $ (vi) $\Longleftrightarrow $ (v). 
 \end{maproposition}
-\begin{proof}
-	contenu...
-\end{proof}
-
-%\begin{montheoreme}
-%	\label{th1}
-%	Soient $f=(I_n)_{n \in \mathbb{N}}$ et $g=(J_n)_{n \in \mathbb{N}}$ deux filtrations de $A$,\\ tel que $f \leqslant  g$. Nous considérons les assertions suivantes:\\
-%	\begin{enumerate}
-%		\item[(i)] $f$ est une réduction de $g$.
-%		\item[(ii)] $J_n^2 = I_nJ_n, \quad \forall n \in \mathbb{N}$ 
-%		\item[(iii)] $I_n$ est une réduction de $J_n,\quad \forall n \in \mathbb{N}$
-%		\item[(iv)] $\exists k \geqslant 1$ un entier tel que $\forall n \geqslant s,$\\$ J_{s+n} = J_sJ_n,\quad I_{s+n} = I_sI_n, \quad J_s^2=I_sJ_s, J_{s+p}I_s=I_{s+p}J_s, \quad \forall \quad p =1,2,\cdots, s-1 $.
-%		\item[(v)] $\exists k \geqslant 1$ un entier tel que $g^{(k)}$ est $I_k-bonne $
-%		\item[(vi)] $\exists r \geqslant 1$ un entier tel que $f^{(r)}$ est une réduction de $g^{(r)}$
-%		\item[(vii)] $\forall m \geqslant 1$ entier $f^{(m)}$ est une réduction de $g^{(m)}$
-%		\item[(viii)] $g$ est entière sur $f$
-%		\item[(xi)] $g$ est fortement entière sur $f$
-%		\item[(x)] $g$ est $f-fine$
-%		\item[(xi)] $g$ est $f-bonne$
-%		\item[(xii)] $g$ est faiblement $f-bonne$
-%		\item[(xiii)]  $\exists N \geqslant 1$ un entier tel que $t_Ng \leqslant f \leqslant g$.
-%		\item[(xiv)]$\exists N \geqslant 1$ un entier tel que $t_Ng'=t_Nf'$ où $f'$ est la clôture intégrale de $f$. 
-%		\item[(xv)]  $P(f) = P(g)$ où $P(f)$ est la clôture pruférienne de $f.$
-%	\end{enumerate}
-%\end{montheoreme}
-%\begin{maproposition}
-%	Sous les hypothèses du théorème \eqref{th1} en admettant que $A$ est noethérien
-%	et $f$ est noethérienne alors:
-%	(xi) $\Longleftrightarrow $ (ix) $\Longleftrightarrow $ (x) $\Longleftrightarrow $ (xii) $\Longleftrightarrow $ (xiii). 
-%\end{maproposition}
-%\begin{proof}
-%	contenu...
-%\end{proof}
-
-
