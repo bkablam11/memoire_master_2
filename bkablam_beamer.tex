@@ -1,0 +1,572 @@
+\documentclass[10pt]{beamer}
+\mode<presentation>
+\usetheme{Madrid}
+\usepackage[utf8]{inputenc}
+\usepackage[french]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{fourier}
+\usepackage{mathrsfs}
+\usepackage{lipsum}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{moreverb}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usetikzlibrary{shadows}
+\usetikzlibrary{shapes.misc}
+\usepackage{wrapfig}
+\usepackage{xspace}
+\usepackage{pgf,tikz}
+\usepackage{animate}
+\usepackage{pgfpages}
+\usepackage{times}
+\usetikzlibrary{arrows}
+
+
+
+%\newtheorem{Def}{Définition}[section]
+%\newtheorem{Theo}{Théorème}[section]
+%\newtheorem{Prop}{Proposition}[section]
+%\newtheorem{Cor}{Corollaire}[section]
+%\newtheorem{Lem}{Lemme}[section]
+%\newtheorem*{Pre}{Preuve}
+
+\author[ASSOVIE BOKA GEDEON RUBEN]{Présenté par  ASSOVIE BOKA GEDEON RUBEN \\  Superviseur: Dr YORO Gozo \\ Encadrant : Dr N'GUESSAN Koffi}
+\title[UNA UFR-SFA LMI Mémoire de Master]{APPROXIMATION NUMÉRIQUE DU TEMPS D'EXTINCTION POUR UNE ÉQUATION DE REACTION-DIFFUSION SOUMISE A DES CONDITIONS AUX LIMITES NON LINÉAIRES}
+\setbeamercovered{transparent} 
+\setbeamertemplate{navigation symbols}{} 
+%\logo{} 
+\institute[]{
+\transdissolve[duration=3]
+\begin{minipage}{0.2\textwidth}
+\centering
+\includegraphics[scale=0.17]{UNA}
+\DeclareGraphicsExtensions{.png,.jpg}
+\end{minipage}
+\hfill
+\begin{minipage}{0.3\textwidth}
+\begin{center}
+LMI \\ Laboratoire \\ de \\ Mathématiques \\ et \\ Informatique  
+\end{center}
+\end{minipage}
+\hfill
+\begin{minipage}{0.2\textwidth}
+\centering
+\includegraphics[scale=0.4000]{SFA}
+\DeclareGraphicsExtensions{.png,.jpg} 
+\end{minipage}
+}
+%\date{} 
+%\subject{} 
+
+\begin{document}
+
+
+\begin{frame}
+\titlepage
+\end{frame}
+
+\begin{frame}
+\tableofcontents
+\end{frame}
+
+
+\section{Introduction}
+\begin{frame}{Introduction}
+ 
+Les équations aux dérivées partielles (en abrégé EDP) peuvent être considérée  comme l'extension des équations différentielles ordinaires (en abrégé EDO) aux fonctions de plusieurs variables. Elles expriment, sous forme d’égalités, des relations que doivent satisfaire les dérivées partielles d’une certaine fonction inconnue $u$ d'une ou de plusieurs variables afin de décrire un phénomène physique, satisfaire une propriété prescrite, ...etc ... On rencontre de telles équations dès qu’on s’intéresse à des questions de modélisation : en physique, en électromagnétisme, en mécanique du solide et des fluides bien sûr, mais aussi en biologie, en chimie, en économie, en finance... \\
+Les EDP sont classées en fontion de leur type ( elliptiques, paraboliques et hyperboliques) et de leur linéarité (linéaire, non-linéaire,semi-linéaire et quasi-linéaire). De ce fait, Les équation de réaction-diffusion sont des EDP paraboliques semi-linéaires
+
+ \end{frame}
+ 
+ \begin{frame}
+Une équation de réaction-diffusion est un modèle de phénomènes irréversibles dans le temps.
+      Dans ce mémoire, nous étudions une EDP de réaction-diffusion à deux variables que sont l'espace et le temps. Il s'agit de faire une approximation numérique du temps d'extinction de la solution d'une équation de diffusion non-linéaire soumise à des conditions aux limites non-linéaires.
+      A cette fin, nous étudions le phénomène d'extinction pour le problème suivant:\\
+    \begin{block}
+    
+   \begin{eqnarray}
+   \begin{cases}
+  u_{t}(x,t)=u_{xx}(x,t)+f(x)(1-u(x,t))^{-p}, \quad 0<x<1, \quad 0<t<T\\
+      		u_{x}(0,t)=u^{-q}(0,t) 		, \\ u_{x}(1,t)=0, \quad 0<t<T\\ \label{eq1}
+      		u(x,0)=u_{0}(x), \quad 0 \le x\le 1
+   \end{cases}
+   \end{eqnarray}
+   
+ \end{block}
+ 
+ \end{frame}
+ 
+\begin{frame}
+    où \ $p,$\ \ $q$\ sont des constantes positives et \ $T$ est fini ou infini.\\
+   La donnée initiale $u_{0}(x):[0 ,1]\mapsto(0,1)$  satisfait les conditions de compatibilité 
+	\begin{eqnarray*}
+		u_{0}^{'}(0)=u^{-q}(0),\qquad u_{0}^{'}(1)=0.
+	\end{eqnarray*}
+	et $f$ est une fonction positive.\\
+	
+%\begin{comment}
+
+	Tout au long de ce mémoire, nous supposons également que la donnée initiale  satisfait les inégalités
+	 \begin{eqnarray}
+		u_{xx}(x,0)+f(x)(1-u(x,0))^{-p}\geq 0,  \label{eq2}\\ 
+		u_{x}(x,0)\geq 0.  \label{eq3}
+	\end{eqnarray}
+  On dit qu'une solution $u$ du problème \eqref{eq1} s'éteint en un temps fini s'il existe un temps fini $T$ tel que
+           $$\lim\limits_{t \to T^{-}} \displaystyle \max_{0\leq x\leq 1} \lbrace u(x,t)\rbrace =0.$$
+     Dans la suite, on désignera par $T$ le temps fini pour l'extinction du problème \eqref{eq1}.
+\end{frame}												 						
+
+
+\section{Chapitre 1: ÉTUDE DU PROBLÈME SEMI-DISCRET EN ESPACE}
+\begin{frame}{Chapitre 1: ÉTUDE DU PROBLÈME SEMI-DISCRET EN ESPACE}
+
+\subsection{1.1 Schéma semi-discret en espace}
+\begin{block}{1.1 Schéma semi-discret en espace}\end{block}
+\begin{block}{1.1.1 Choix du maillage}\end{block}
+  Soient \ $I$ \ un entier supérieur ou égale à $3$ et \ $h= \dfrac{1}{I} ,$ \ le pas constant de subdivision de l'intervalle \ $ [0, 1] .$ \ Définissons la grille \ $x_i=ih$ \ avec \ $0\leqslant i \leqslant I$ \ telle que \ $h=x_{i+1}-x_i .$\ \\
+  
+\end{frame}
+\begin{frame}
+\begin{block}{1.1.2 Construction du schéma semi-discret}\end{block}
+ Dans un premier temps, on remplace $x$ par $x_i$ dans le problème continu (1). Puis, on utilise des développements limités de type TAYLOR en espace et en approximant \ $u(x_i,t)$ \  par \ $U_i(t)$ \  \quad $i=0,...,I$. \ On obtient le schéma semi-discret en espace associé au problème continu \ $(1)$ \ suivant: \\
+\begin{block}
+
+  \begin{eqnarray}
+    %\begin{cases}
+   \frac{dU_{i}}{dt}(t)-\delta^{2}U_{i}(t)&=&f(x_{i})(1-U_{i}(t)) ^{-p},\quad 1\leqslant i\leqslant I, \quad t\in [0,T[, \label{eqq4}\\
+		\dfrac{dU_0}{dt}(t)-\delta^{2}U_0(t)&=& f(x_{0})(1-U_{0}(t))^{-p}-\frac{2}{h} U_{0}^{-p}(t) ,\quad t\in [0,T[,\label{eqq5}\\       
+		U_{i}(0)&=&\varphi_{i}, \quad 0\leqslant i\leqslant I,\label{eqq6}
+    %\end{cases}
+    \end{eqnarray}
+   \end{block}
+      
+    \end{frame}
+
+  \begin{frame}
+  où
+ \begin{eqnarray*}
+ %\varphi_{i+1} &\geqslant & \varphi_{i}\quad 0\leqslant i\leqslant I, \\
+		\delta^{2}U_{i}(t)&=&\frac{U_{i+1}(t)-2U_{i}(t)+U_{i-1}(t)}{h^{2}}, \ 1\leqslant i\leqslant I-1,\\ \delta^{2}U_{0}(t)&=&\frac{2U_{1}(t)-2U_{0}(t)}{h^{2}},\\
+		\delta^{2}U_{I}(t)&=&\frac{2U_{I-1}(t)-2U_{I}(t)}{h^{2}},
+\end{eqnarray*}
+avec \ $ U_{h}(t)=\big(U_{0}(t),U_{1}(t),\ldots,U_{I}(t)\big)^{T}$ \ et \ $\varphi_h=\left(\varphi_0,\varphi_1,...,\varphi_I\right)^{T}. $ \
+
+     
+
+\end{frame}
+
+\begin{frame}
+\subsection{1.2 Existence et unicité de la solution semi-discrète en espace - Nouvelle écriture du schéma semi-discret}
+\begin{block}{1.2 Existence et unicité de la solution semi-discrète en espace - Nouvelle écriture du schéma semi-discret}\end{block}
+%\subsection{1.2.1 Existence et unicité de la solution semi-discrète en espace }
+\begin{block}{1.2.1 Existence et unicité de la solution semi-discrète en espace }\end{block} 
+  \begin{block}{Théorème 1.2.1 }
+Le problème semi-discret en espace \eqref{eqq4}-\eqref{eqq6} admet une unique solution maximale
+	$\left(\left[0,T_{q}^{h}\right[,U_{h}(\cdot)\right)$, où
+	$T_{q}^{h}>0$ désigne le temps d'existence maximal de la solution
+	maximale $U_{h}$.
+\end{block}
+\end{frame}
+
+
+\begin{frame}
+\begin{block}
+     \ $[0,T^{h}_{q}[$ \ est l'intervalle de temps maximal sur lequel \ $\lVert U_h(t) \rVert_\infty >0$ \ où \ $\lVert U_h(t) \rVert_\infty= \displaystyle\min_{ 0\leqslant i\leqslant I}\lvert U_h(t)\rvert.$ \ \\ 
+\noindent\text{Le temps \ $T_q^{h}$ \ peut-être fini ou infini.}\\
+  \end{block}
+\end{frame}
+
+\begin{frame}
+\subsection{1.3 Propriétés du schéma semi-discret en espace}
+\begin{block}{1.3  Propriétés du schéma semi-discret en espace}\end{block}
+Dans cette section, nous donnons quelques lemmes qui seront utilisés tout au long de notre étude.\\
+  Le lemme suivant est une forme semi-discrète du principe du maximum.\\
+    \begin{block}{Lemme 1.3.1}
+    Soit \ $\alpha_h \in C^0\left([0,T[,\mathbb{R}^{I+1}\right)$ \ et soit \ $V_h \in C^1\left([0,T[,\mathbb{R}^{I+1}\right)$ \ tels que:\\
+     \begin{eqnarray}
+    \dfrac{dV_i(t)}{dt}-\delta^2V_i(t)+\alpha_i(t)V_i(t)\geqslant 0,\quad 0\leqslant i\leqslant I,\quad t\in ]0,T[,\\ 
+		V_i(0)\geqslant 0,\quad 0\leqslant i\leqslant I.
+    \end{eqnarray}
+   Alors, on a \ $V_i(t)\geqslant 0,$ \ \ $0\leqslant i\leqslant I ,$ \ \ $t\in [0,T[.$  \
+    \end{block}
+\end{frame}
+ \begin{frame}
+       Une autre forme du principe du maximum pour les équations semi-discrètes est le lemme de comparaison suivant:\\
+    
+ \begin{block}{Lemme 1.3.2}
+    Soit \ $f\in C^0( \mathbb{R},\mathbb{R}).$ \ Si \ $V_h, W_h \in C^1\left([0,T[,\mathbb{R}^{I+1}\right)$ \ sont tels que:
+    \begin{equation} 
+ \begin{cases} 
+  \dfrac{dV_i}{dt}(t)-\delta^2V_i(t)+f\left(V_i(t),\right)< \dfrac{dW_i}{dt}(t)-\delta^2W_i(t)+f\left(W_i(t),\right),\quad 0\leqslant i\leqslant I,\quad t\in ]0,T[,\\ 
+			V_i(0)< W_i(0),\quad 0\leqslant i\leqslant I,
+     \end{cases}
+ \end{equation}
+   
+    alors, on a \ $ V_i(t)< W_i(t),$ \ \ $ 0\leqslant i\leqslant I ,$ \ \ $t\in [0,T[.$ \
+ \end{block}
+ \end{frame}
+\begin{frame}
+  Maintenant, énonçons une propriété sur l'opérateur \ $ \delta^{2} .$ \
+ \begin{block}{Lemme 1.3.3}
+   Soit \ $f\in C^0(\mathbb{R},\mathbb{R}).$ \ Si \ $V_h, W_h \in C^1\left([0,T[,\mathbb{R}^{I+1}\right)$ \ sont tels que:
+    \begin{equation} 
+ \begin{cases} 
+  \dfrac{dV_i}{dt}(t)-\delta^2V_i(t)+f\left(V_i(t)\right)\leqslant \dfrac{dW_i}{dt}(t)-\delta^2W_i(t)+f\left(W_i(t)\right),\quad 0\leqslant i\leqslant I,\quad t\in ]0,T[,\\ 
+			V_i(0)\leqslant W_i(0),\quad 0\leqslant i\leqslant I,
+     \end{cases}
+ \end{equation}
+   
+    alors, on a \ $ V_i(t)\leqslant W_i(t),$ \ \ $ 0\leqslant i\leqslant I ,$ \ \ $t\in [0,T[.$ \ \\
+ \end{block}
+ \end{frame}
+ 
+   \begin{frame}
+      \subsection{1.4 Convergence de la solution semi-discrète en espace }
+         \begin{block}{1.4 Convergence de la solution semi-discrète}\end{block}
+
+Dans cette section, nous prouvons que la solution du problème semi-discret en espace converge vers la solution du problème continu lorsque le pas du maillage tend vers zéro.
+    
+    \begin{block}{Théorème 1.4.1}
+ Supposons que le problème \eqref{eq1} a une solution $u\in C^{4,1}([0,1]\times [0,T_{0}])$ telle que $ \displaystyle \sup_{t \in [0,T_{0}]}\Vert u(.,t)\Vert_{\infty}=\zeta <1$. Supposons que la donnée initiale \eqref{eqq6}  vérifie
+\begin{eqnarray}  
+\| \varphi_{h}- u_{h}(0)  \| _{\infty}= o(1) & lorsque & h \longrightarrow 0.
+\end{eqnarray}
+   Alors, pour $ h $ suffisamment petit, le problème semi-discret \eqref{eqq4}-\eqref{eqq6} a une unique solution 
+$ U_{h}\in C^{1}([0,T_{0}],\mathbb{R}^{I+1})  $ telle que
+\begin{eqnarray*}
+\max_{t \in [0,T_{0}]}\| U_{h}(t)-u_{h}(t) \|_{\infty}= O(\|
+\varphi_{h}- u_{h}(0)  \| _{\infty}+ h) & lorsque & h \longrightarrow 0,
+\end{eqnarray*}
+Avec $T_{0} < \min \{T; T_{q}^{h}\}$.
+  
+   \end{block}
+   \end{frame}  		
+ 
+  \begin{frame}
+  \subsection{1.5 Extinction de la solution semi-discrète en espace en un temps fini}
+\begin{block}{1.5 Extinction de la solution semi-discrète}\end{block}
+ Dans cette section, sous certaines hypothèses, nous montrons que la solution du problème semi-discret éxplose en un temps fini et nous estimons son temps d'extinction semi-discret.\\ 
+%Notons \ $u_h(t)=(u(x_0,t),...,u(x_I,t))^{T} .$ \
+  \begin{block}{Théorème 1.5.1}
+  Soit  $ U_{h} $ la solution du problème semi-discret \eqref{eqq4}-\eqref{eqq6}. Supposons qu'il existe une constante  $ \lambda \in ]0,1[$ telle que la donnée initiale en \eqref{eqq6}
+satisfait
+\begin{eqnarray}
+\delta^{2}\varphi_{i}+f_i(1-\varphi_{i})^{-p}\leq -\lambda \varphi_{i}^{-q}  , & 1\leq i \leq I,\label{eq16}
+\end{eqnarray}
+\begin{eqnarray} 
+\delta^{2}\varphi_{0}-\dfrac{2}{h}\varphi_{0}^{-q}+f_0(1-\varphi_{0})^{-p} \leq -\lambda \varphi_{0}^{-q}.\label{eq17}
+\end{eqnarray}
+Alors la solution $ U_{h} $ s'éteint en un temps fini   $ T_{q}^{h} $ et nous avons l'estimation suivante
+$$ T_{q}^{h} \leq \dfrac{ \| \varphi_{h} \|_{\infty}^{q+1}}{\lambda(q+1)}. $$
+    \end{block}
+
+\end{frame}
+\begin{frame}
+Le résultat suivant concerne la borne inférieure du taux d'extinction.
+\begin{block}{Théorème 1.5.2}
+  Supposons que \eqref{eq16}-\eqref{eq17} reste vrai ,alors près du temps d'extinction $T_{q}^{h}$, la solution $U_h$ au problème \eqref{eqq4}-\eqref{eqq6}  a une estimation du taux d'extinction suivante$ U_{0}(t)\sim \left( T_{q}^{h} - t \right) ^{\dfrac{1}{q+1}}$ en ce sens qu'il existe deux constante positive $C_1$ et $C_2$ tel que 
+\begin{eqnarray}
+ C_{1}\left( T_{q}^{h}-t\right) ^{\dfrac{1}{q+1}}\leq U_0(t) \leq  C_{2}\left( T_{q}^{h}-t\right) ^{\dfrac{1}{q+1}}, pour t\in [0,T_{q}^{h}[
+\end{eqnarray}
+    \end{block}
+ \end{frame}
+ 
+ 
+ \begin{frame}
+   \subsection{1.6 Convergence du temps d'extinction semi-discret en espace}
+   \begin{block}{1.6 Convergence du temps d'extinction semi-discret}\end{block}
+     Dans cette section, nous montrons la Convergence du temps d'extinction semi-discret. Nous voyons que pour chaque intervalle de temps \ $[0,T]$ \ où \ $u$ \ est défini, la solution \ $U_h$ \  du problème  semi-discret \eqref{eqq4}-\eqref{eqq6} se rapproche de 
+\ $u,$ \ lorsque le pas du maillage \ $h$ \ tend vers zéro.\\
+%Notons \ $u_h(t)=(u(x_0,t),...,u(x_I,t))^{T}$ et $\lVert U_{h}(t)\rVert_{\infty}=\displaystyle\max_{\atop 0\leqslant i\leqslant I}\lvert U_{i}(t)\rvert.$ \
+\begin{block}{Théorème 1.6.1}
+Supposons que la solution $u$ du problème continu \eqref{eq1} s'éteint   en un temps fini $ T $ tel que $ u \in C^{4,1}([0,1] \times[0,T[) tel que \| u_{h}(.,t)  \| _{\infty}=\alpha >0 $ et la donnée initiale \eqref{eqq6} du problème semi-discret satisfait
+\begin{eqnarray}  
+\| \varphi_{h}- u_{h}(0)  \| _{\infty}=o(1) & lorsque & h \longrightarrow 0.\label{eq18}
+\end{eqnarray}
+où $u_{h}(t)=\left( u_{h}(x_{0},t),......,u_{h}(x_{I},t)\right)^{T}, t \in [0,T[$ puis pour $h$ assez petit ,le problème sémi-discret \eqref{eqq4}-\eqref{eqq6} a une solution $u_h \in  C^1\left([0,T[,\mathbb{R}^{I+1}\right)$ tel que 
+\begin{eqnarray*}
+\max_{t \in [0,T]}\left(\| U_{h}(t)- u_{h}(t)(0)  \| _{\infty}\right)=O\left(\| \varphi_{h}- u_{h}(0)  \| _{\infty}+ h^{2}\right)& lorsque & h \longrightarrow 0
+\end{eqnarray*}
+	
+ \end{block}
+ %On voit bien qu'à partir de ce théorème, le temps \ $T^{h}_b$ \ converge vers le temps \ $T_b$ \.
+
+  \end{frame}
+   
+\section{Chapitre 2: RÉSULTATS NUMÉRIQUES ET REPRÉSENTATION GRAPHIQUES}
+\begin{frame}{Chapitre 2:RÉSULTATS NUMÉRIQUES ET REPRÉSENTATION GRAPHIQUES }
+Dans ce chapitre nous construisons tout d'abord le schéma discret associé au problème continu (1) en utilisant la méthode des différences finies. Ensuite, nous prouvons l'existence et l'unicité de la solution discrète. De plus, nous donnons le schéma explicite et le schéma implicite.  Enfin, nous illustrons notre étude par des tableaux et graphiques obtenus par des programmes MATLAB.
+
+\end{frame}
+
+
+\begin{frame}
+\subsection{2.1 Schéma discret}
+\begin{block}{2.1 Schéma discret}\end{block}
+ Soit \ $I\geqslant 3$ \ un entier.\\ 
+Considérons des subdivisions sur \ $[0,1]$ \ et \ $[0,T[,$ \ \ $T>0,$ \ \\
+\ $0=x_{0}<x_{1}<...<x_{I}=1,$ \ \\
+\ $0=t_{0}<t_{1}<...<t_{n+1}<...$\ \ .\\
+Soit \ $h=x_{i+1}-x_{i}=\dfrac{1}{I},$ \ le pas de la discrétisation uniforme en espace et \ $\Delta t_{n}$ \ le pas de discrétisation en temps tel que \ $\Delta t_{n}=t_{n+1}-t_{n}$ \ avec \ $x_{i}=ih$ \ et \ $t_{n+1}=t_{n}+\Delta t_{n},$ \ \ $n>0$. \\
+
+
+Dans un premier temps, on remplace $x$ par $x_i$  et t par $t_{n}$ dans le problème continu (1). Puis, on utilise des développements limités de type TAYLOR et on  approxime \ $u(x_i,t_n)$ \  par \ $U_i^{(n)}, $ \  \quad $i=0,...,I$\ $n>0$. \ On obtient le schéma discret associé au problème continu \ $(1)$ \ suivant: \\
+\end{frame}
+
+\begin{frame}
+
+\begin{block}
+
+
+\begin{eqnarray}
+	\begin{cases}
+		u_{t}(x_{i},t_{n})=u_{xx}(x_{i},t_{n})+ f(x_{i})(1-u(x_{i},t_{n}))^{-p}, \quad  1\leqslant i\leqslant I-1, \quad n\geqslant 0,\\ 
+		u_{x}(x_0,t_{n})=u^{-q}(x_{0},t_{n}),\quad  n\geqslant 0, \\ 
+		u_{x}(x_I,t_{n})=0,\quad   n\geqslant 0,\\
+		u(x_{i},0)=u_{0}(x_{i}),\quad 0\leqslant i\leqslant I,
+	\end{cases}
+\end{eqnarray}
+  \end{block}
+  
+\end{frame}
+
+\begin{frame}
+\text{où}
+\begin{eqnarray}
+	\begin{cases}
+		\delta_t U_i^{(n)}=\dfrac{U_i^{(n+1)}-U_i^{(n)}}{\Delta t_n};\quad 0\leqslant i\leqslant I,\\
+		\delta^{2}U_i^{(n)}=\dfrac{U_{i-1}^{(n)}-2U_i^{(n)}+U_{i+1}^{(n)}}{h^2};\quad 1\leqslant i\leqslant I-1,\\
+		\delta^{2}U^{(n)}_{0}=\dfrac{2U^{(n)}_{1}-2U^{(n)}_{0}}{h^{2}},\\
+		\delta^{2}U^{(n)}_{I}=\dfrac{2U^{(n)}_{I-1}-2U^{(n)}_{I}}{h^{2}}.   
+	\end{cases}
+\end{eqnarray}
+et 
+%\ $\displaystyle\Delta t_{n}= h^{2}\left(1-\|{U_{h}^{(n)}}\|_{\infty}\right)^{b_k+1} ,$ \
+\ $$U_h^{(n)}=(U^{(n)}_0,U^{(n)}_1,...,U^{(n)}_I)^T .$$\\
+
+où  \ $ n\geqslant 0$ \ \text{et}
+\begin{eqnarray*} 
+	\Delta t_n= \min\left\lbrace  \frac{h^2}{2},\tau\Vert U_h^{(n)}\Vert_\infty ^{1+q} \right\rbrace, \quad 0<\tau < 1
+\end{eqnarray*} 
+Remarquons que la restriction sur le pas de temps \ $ \Delta t_n\leq \dfrac{h^2}{2} $ \ assure la positivité de la solution discrète.   
+\end{frame} 
+ 
+
+
+\begin{frame}
+\subsection{2.2 Schéma explicite}
+\begin{block}{2.2 Schéma explicite}\end{block}
+Le schéma explicite suivant découle du schéma totalement discrétisé où nous avons approximé la solution \ $u$ \ de \eqref{eq1} par la solution $U_h^{(n)}=\left(U^{(n)}_0,U^{(n)}_1,...,U^{(n)}_I\right)^T$.\\  
+
+   On a donc :
+    \begin{block}
+    
+    \begin{eqnarray*}
+	U^{(n+1)}_{i}&=&\dfrac{\Delta t_{n}}{h^{2}}U^{(n)}_{i-1}+\left(1-\dfrac{2\Delta t_{n}}{h^{2}}\right)U^{(n)}_{i}+\dfrac{\Delta t_{n}}{h^{2}}U^{(n)}_{i+1}+\Delta t_{n} f_{i}\left(1-U^{(n)}_{i}\right)^{-p},\ 1\leqslant i\leqslant I-1, \label{cha2equ5} \\
+	U^{(n+1)}_{0}&=&\left(1-\dfrac{2\Delta t_{n}}{h^{2}}\right)U^{(n)}_{0}+\dfrac{2\Delta t_{n}}{h^{2}}U^{(n)}_{1}+f_{0}\Delta t_{n}\left(1-U^{(n)}_{0}\right)^{-p}-2\frac{\Delta t_{n}}{h}\left(U^{(n)}_{0}\right)^{-q}, \label{cha2equ6}\\
+	U^{(n+1)}_{I}&=&\dfrac{2\Delta t_{n}}{h^{2}}U^{(n)}_{I-1}+\left(1-\dfrac{2\Delta t_{n}}{h^{2}}\right)U^{(n)}_{I}+\Delta t_{n}f_{I}\left(1-U^{(n)}_{I}\right)^{-p},\label{cha2equ7} \\
+	U_i^{(0)}&=&\varphi_i,\ 0\leqslant i\leqslant I,\label{cha2equ8}
+\end{eqnarray*}  
+     
+     \end{block}
+   
+       \end{frame}
+\begin{frame}
+ 
+\subsection{2.3 Schéma implicite }
+\begin{block}{2.3 Schéma implicite}\end{block}
+     En évaluant la dérivée en espace à l'ordre \ $ (n+1) $ \  du schéma totalement discrétisé,  on obtient le schéma implicite suivant:   
+        
+        \begin{block}
+        
+       
+        \begin{eqnarray*} 
+	U^{(n)}_{i}&=&-k_{0}U^{(n+1)}_{i-1}+(1+2k_{0}) U^{(n+1)}_{i}-k_{0}U^{(n+1)}_{i+1}-\Delta t_{n}f_{i}\left(1-U^{(n)}_{i}\right)^{-p},\ 1\leqslant i\leqslant I-1, \label{cha2equ9} \\
+	U^{(n)}_{0}&=& (1+2k_{0})U^{(n+1)}_{0} -2k_{0}U^{(n+1)}_{1}-\Delta t_{n}f_{0}\left(1-U^{(n)}_{0}\right)^{-p}-\dfrac{2\Delta t_{n}}{h}\left(U^{(n)}_{0}\right)^{-q},\label{cha2equ10}\\
+	U^{(n)}_{I}&=&-2k_{0}U^{(n+1)}_{I-1}+ (1+2k_{0})U^{(n+1)}_{I}-\Delta t_{n}f_{I}\left(1-U^{(n)}_{I}\right)^{-p},  \label{cha2equ11}\\
+	U_i^{(0)}&=&\varphi_i,\quad  0\leqslant i\leqslant I, \label{cha2equ12}
+        \end{eqnarray*}
+        
+      \end{block}
+        où \ $k_0=\dfrac{2\Delta t_{n}}{h^{2}}$ \ pour  \ $ 0\leqslant i\leqslant I,$ \  \ $n\geqslant 0$ \ et\ $\Delta t_n= \tau\Vert U_h^{(n)}\Vert_{\infty}^{{1+q}},$  $0\leq\tau \leq 1 .$\ \\
+    
+      \end{frame} 
+      
+   \begin{frame}
+   
+  \subsection{2.4 Définition de l'extinction de la solution discrète  }
+  \begin{block}{2.4 Définition de l'extinction de la solution discrète }\end{block}
+  
+  \begin{block}{ Définition 2.4.1 }
+     On dit que la solution \ $U_h^{(n)}$ \ de \eqref{cha2equ5}-\eqref{cha2equ8}  ou   \eqref{cha2equ9}-\eqref{cha2equ12}  s'éteint en un temps fini si \ $\Vert U_h^{(n)}\Vert_\infty>0$ \ pour \ $n\geqslant 0 ,$ \  \ $\lim_{n\rightarrow\infty}\Vert U_h^{(n)}\Vert_\infty=0 $ \ et \ $T(\infty)=\lim_{n\rightarrow\infty}T^n=\lim_{n\rightarrow\infty}\sum_{j=0}^{n-1}\Delta t_j<\infty .$ \ La valeur \ $T(\infty)$ \ est appelée le temps d'extinction numérique de la solution \ $U_h^{(n)} .$ \
+    \end{block}
+     \end{frame}
+ \begin{frame}
+  \subsection{2.5 Tableaux des résultats}
+  \begin{block}{2.5 Tableaux des résultats}\end{block}
+  Dans les tableaux sous cette forme, 
+  $$ \begin{tabular}{|c|c|c|c|c|}
+         \hline 
+         I \quad& \quad $T^n$ \quad& \quad n \quad& \quad CPUt \quad& \quad $s$ \\ 
+         \hline 
+      \end{tabular} $$ 
+      nous présentons :
+    \begin{enumerate}
+    \item[•] \ $T^n,$ \  les temps d'extinction numériques; 
+    \item[•] \ $ n ,$ \  les nombres d'itération;
+    \item[•] \ $ CPUt,$ \ qui est le temps que met la machine avant d'afficher un résultat;
+    \item[•] \ $s$ \ les ordres des approximations  correspondant aux mailles de \  $I=16, 32, 64, 128, 256 , 512, 1024 .$ \  
+ \end{enumerate} 
+ 
+Notons que le temps d'extinction numérique \ $T^n=\sum_{j=0}^{n-1}\Delta t_j$ \ est calculé pour la première fois lorsque : \ $ \vert T^{n+1}-T^{n}\vert<10^{-16} $ \ 
+et l'ordre \ $ s $ \ de la méthode est calculé à partir de :
+  
+ 
+   \begin{block}
+   
+  \begin{eqnarray}
+         s=\dfrac{\log \left((T_{4h}-T_{2h})/(T_{2h}-T_h)\right)}{\log(2)}.
+        \end{eqnarray}
+    
+    \end{block}
+    \end{frame}
+    \begin{frame}
+  
+  \begin{table}[h]
+ \textbf{Tableau 2.1.} Temps d'extinction numérique  $T^n$, nombre d'itérations $n$, le temps CPU(en secondes) et les ordres d'approximation $(s)$ obtenus avec la méthode explicite d'Euler pour  $p=0.5 et q=0.5$ 
+   $$ \begin{tabular}{|c|c|c|c|c|}
+		\hline 
+		I \quad& \quad $T^n$ \quad& \quad n \quad& \quad CPUt \quad& \quad $(s)$ \\ 
+		\hline 
+		16 \quad& \quad 0.059068546557882 \quad& \quad 579 \quad& \quad 0.015625 \quad& \quad - \\ 
+		\hline 
+		32 \quad& \quad 0.057539149428317 \quad& \quad 1665 \quad& \quad 0.06250 \quad& \quad - \\ 
+		\hline 
+		64 \quad& \quad 0.057043227476775 \quad& \quad 5395 \quad& \quad 0.234375 \quad& \quad 1.62
+\\ 
+		\hline 
+		128 \quad& \quad 0.056889270441384 \quad& \quad 19176 \quad& \quad 1.796875 \quad& \quad1.68
+\\ 
+		\hline 
+		256 \quad& \quad 0.056843051208125 \quad& \quad 72192 \quad& \quad 17.078125 \quad& \quad 1.73
+\\ 
+		\hline   
+	\end{tabular} $$
+   \end{table} 
+   \end{frame} 
+    
+   \begin{frame}
+    \begin{table}[h]
+    \textbf{Tableau 2.2.}Temps d'extinction numérique  $T^n$, nombre d'itérations $n$, le temps CPU(en secondes) et les ordres d'approximation $(s)$ obtenus avec la méthode implicite d'Euler pour $p=0.25 et q=0.5$ 
+       $$ \begin{tabular}{|c|c|c|c|c|}
+		\hline 
+		I \quad& \quad $T^n$ \quad& \quad n \quad& \quad CPUt \quad& \quad $(s)$ \\ 
+		\hline 
+		16 \quad& \quad 0.059376372119527 \quad& \quad 580 \quad& \quad 0.12500 \quad& \quad ...... \\ 
+		\hline 
+		32 \quad& \quad 0.057622095147511 \quad& \quad 1666 \quad& \quad 0.26562 \quad& \quad ..... \\ 
+		\hline 
+		64 \quad& \quad 0.057064819407938 \quad& \quad 5397 \quad& \quad 7.1562 \quad& \quad 1.65
+\\ 
+		\hline 
+		128 \quad& \quad 0.056894784829930 \quad& \quad 19178 \quad& \quad 88.265625 \quad& \quad 1.71
+\\ 
+		\hline 
+	\end{tabular} $$
+   \end{table}
+   \end{frame}
+   
+   
+   \begin{frame} 
+  \subsection{2.6 Représentations graphiques}
+  \begin{block}{2.6 Représentations graphiques}\end{block}
+  Dans ce qui suit, nous donnons quelques figures pour illustrer notre analyse. Il faut souligner que les représentations graphiques sont faites pour $I=16$.
+
+  \end{frame}
+  
+\begin{comment}
+  
+    \begin{frame}
+   \begin{figure}[ht]
+ \begin{center}
+ \includegraphics[width=10cm]{p01q05MeshExp}
+ \end{center}
+ \DeclareGraphicsExtensions{.PNG,.JPG}
+ \end{figure}
+ \textbf{Figure 2.1.} Evolution de la solution discrète, $p=0.1$ et $q=0.5$ (schéma explicite)
+    \end{frame}
+    
+      \begin{frame}
+       \begin{figure}[ht]
+ \begin{center}
+ \includegraphics[width=10cm]{p01q05MeshImp}
+ \end{center}
+ \DeclareGraphicsExtensions{.PNG,.JPG}
+ \end{figure}
+ \textbf{Figure 2.2.} Evolution de la solution discrète,  $p=0.1$ et $q=0.5$ (schéma implicite)
+      \end{frame} 
+      
+      \begin{frame}
+      \begin{figure}[ht]
+ \begin{center}
+ \includegraphics[width=10cm]{p01q05NodeExp}
+ \end{center}
+ \DeclareGraphicsExtensions{.PNG,.JPG}
+ \end{figure}
+ \textbf{Figure 2.3.}Evolution de $U^{(n)}_i$ en fonction de l'espace $x_i$ , $p=0.1$ et $q=0.5$ (schéma explicite)
+      \end{frame}
+      
+   \begin{frame}
+   
+   \begin{figure}[ht]
+ \begin{center}
+ \includegraphics[width=10cm]{p01q05NodeImp}
+ \end{center}
+ \DeclareGraphicsExtensions{.PNG,.JPG}
+ \end{figure}
+ \textbf{Figure 2.4.}Evolution de $U^{(n)}_i$ en fonction de l'espace $x_i$ , $p=0.1$ et $q=0.5$ (schéma implicite)
+    \end{frame} 
+    
+     \begin{frame}
+ \begin{figure}[ht]
+ \begin{center}
+ \includegraphics[width=10cm]{p01q05TimeExp}
+ \end{center}
+ \DeclareGraphicsExtensions{.PNG,.JPG}
+ \end{figure}	
+ \textbf{Figure 2.5.}Evolution de la norme de $U^{(n)}_i$ en fonction du temps $t_n$,  $p=0.1$ et $q=0.5$ (schéma explicite)
+     \end{frame}
+     
+     
+     \begin{frame}
+      \begin{figure}[ht]
+ \begin{center}
+ \includegraphics[width=10cm]{p01q05TimeImp}
+ \end{center}
+ \DeclareGraphicsExtensions{.PNG,.JPG}
+ \end{figure}
+ \textbf{Figure 2.6.}Évolution de la norme de $U_h^{(n)}$  en fonction du temps  $t_n$,  $p=0.1$ et $q=0.5$ (schéma implicite)
+     \end{frame}
+\end{comment}      
+      
+     \section{Conclusion}
+     \begin{frame}{Conclusion}
+      Ce mémoire a abordé l'approximation numérique du temps d'extinction pour une équation de réaction-diffusion soumise à des conditions aux limites non linéaires  à travers le problème \eqref{eq1}.Nous avons réalisé une étude numérique de l'extinction des solutions du problème \eqref{eq1} considéré et avons obtenu de bonnes approximations du temps d'extinction.\\
+ Au delà de notre travail, en appliquant les méthodes utilisées dans ce mémoire au même problème,nous pouvons déterminer l'extinction mais avec un pas $h$ qui varie dans l’espace pour voir leurs impacts sur l’extinction.
+ 
+        \end{frame}
+       \begin{frame}
+        \begin{block}
+        
+        \centering
+        \Huge
+        MERCI POUR VOTRE ATTENTION
+        
+        \end{block}
+        \end{frame}
+
+
+\end{document}
+

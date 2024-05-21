@@ -1,0 +1,18 @@
+\beamer@endinputifotherversion {3.26pt}
+\select@language {french}
+\beamer@sectionintoc {1}{Introduction}{3}{0}{1}
+\beamer@sectionintoc {2}{Chapitre 1: \IeC {\'E}TUDE DU PROBL\IeC {\`E}ME SEMI-DISCRET EN ESPACE}{6}{0}{2}
+\beamer@subsectionintoc {2}{1}{Sch\IeC {\'e}ma semi-discret en espace}{6}{0}{2}
+\beamer@subsectionintoc {2}{2}{1.2 Existence et unicit\IeC {\'e} de la solution semi-discr\IeC {\`e}te en espace - Nouvelle \IeC {\'e}criture du sch\IeC {\'e}ma semi-discret}{9}{0}{2}
+\beamer@subsectionintoc {2}{3}{1.3 Propri\IeC {\'e}t\IeC {\'e}s du sch\IeC {\'e}ma semi-discret en espace}{11}{0}{2}
+\beamer@subsectionintoc {2}{4}{1.4 Convergence de la solution semi-discr\IeC {\`e}te en espace }{14}{0}{2}
+\beamer@subsectionintoc {2}{5}{1.5 Extinction de la solution semi-discr\IeC {\`e}te en espace en un temps fini}{15}{0}{2}
+\beamer@subsectionintoc {2}{6}{1.6 Convergence du temps d'extinction semi-discret en espace}{17}{0}{2}
+\beamer@sectionintoc {3}{Chapitre 2: R\IeC {\'E}SULTATS NUM\IeC {\'E}RIQUES ET REPR\IeC {\'E}SENTATION GRAPHIQUES}{18}{0}{3}
+\beamer@subsectionintoc {3}{1}{2.1 Sch\IeC {\'e}ma discret}{19}{0}{3}
+\beamer@subsectionintoc {3}{2}{2.2 Sch\IeC {\'e}ma explicite}{22}{0}{3}
+\beamer@subsectionintoc {3}{3}{2.3 Sch\IeC {\'e}ma implicite }{23}{0}{3}
+\beamer@subsectionintoc {3}{4}{2.4 D\IeC {\'e}finition de l'extinction de la solution discr\IeC {\`e}te }{24}{0}{3}
+\beamer@subsectionintoc {3}{5}{2.5 Tableaux des r\IeC {\'e}sultats}{25}{0}{3}
+\beamer@subsectionintoc {3}{6}{2.6 Repr\IeC {\'e}sentations graphiques}{28}{0}{3}
+\beamer@sectionintoc {4}{Conclusion}{29}{0}{4}

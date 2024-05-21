@@ -1,0 +1,397 @@
+\documentclass[11pt,a4paper]{beamer}
+\usepackage[utf8]{inputenc}
+\usepackage[francais]{babel}
+\usepackage{stmaryrd}
+\usepackage[T1]{fontenc}
+\usepackage{fancyhdr}
+\usetheme{Boadilla}
+\author{\textit{\textbf{KABLAM Edjabrou Ulrich Blanchard}}}
+\title{\textbf{SOUTENANCE DE MÉMOIRE DE MASTER \\ OPTION: ALGÈBRE COMMUTATIVE ET CRYPTOGRAPHIE\\ SPÉCIALITÉ: THÉORIE DES FILTRATIONS}}
+\institute{\textcolor{red}{\textbf{Université NANGUI ABROGOUA \\ UFR Sciences Fondamentales Appliquées}}}
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\usepackage{mwe}
+\logo{\includegraphics[width=0.7cm]{./img/UNA.png}}
+\date{10 Juillet 2024}
+
+\begin{document}
+\begin{frame}
+\maketitle
+\begin{block}{\begin{center}
+\emph{THÈME:\pause} \textbf{DÉPENDANCE INTÉGRALE, RÉDUCTION ET FILTRATIONS BONNES \pause}
+\end{center}}
+\begin{center}
+Directeur de Mémoire: Mr. ASSAN Abdoulaye \\
+Encadrant scientifique: Mr. BROU Kouadjo Pierre
+\end{center}
+\end{block}
+\end{frame}
+
+\begin{frame}{
+PLAN DE PRÉSENTATION}
+\begin{enumerate}
+\item \textcolor{blue}{INTRODUCTION}\\
+\item \textcolor{blue}{DÉPENDANCE INTÉGRALE, RÉDUCTION ET FILTRATION I-BONNE }\\
+\item \textcolor{blue}{DÉPENDANCE INTÉGRALE, RÉDUCTION ET FILTRATION BONNES }\\
+\item \textcolor{blue}{CONCLUSION}\\
+\end{enumerate}
+\end{frame}
+\setbeamercovered{transparent}
+\begin{frame}
+\begin{enumerate}
+\item<1> \textcolor{blue}{INTRODUCTION}\\
+\item<2> \textcolor{blue}{DÉPENDANCE INTÉGRALE, RÉDUCTION ET FILTRATION I-BONNE }\\
+\item<3> \textcolor{blue}{DÉPENDANCE INTÉGRALE, RÉDUCTION ET FILTRATIONS BONNES }\\
+\item<4> \textcolor{blue}{CONCLUSION}\\
+\end{enumerate}
+\end{frame}
+
+\part{INTRODUCTION}
+
+\begin{frame}{INTRODUCTION}
+\begin{block}{}
+La notion d'élément entier sur un idéal $I$ d'un anneau noethérien $A$ a été introduit par Prüfer dans les années 1930. Un élément $x \in A $ est dit entier sur l'idéal $I$ de $A$ s'il vérifie une équation de la forme $x^n + a_1 x^{n-1} +a_2 x^{n-2}+ \cdots + a_n = 0$ où $a_j$ appartient à $I^j$ pour tout entier $j$. La clôture intégrale de l'idéal $I$ est l'idéal $I'$ des éléments $x \in A$ qui sont entiers sur $I$. L'idéal $J$ de $A$ est dit entier sur l'idéal $I$ si $J \subseteq I'$.
+\end{block}
+\end{frame}
+\begin{frame}{INTRODUCTION}
+	\begin{block}{}
+		Northcott D.G. et Rees D. ont défini dans un anneau local noethérien la notion de réduction d'un idéal sur un autre qui est voisine de la notion d'élément entier sur un idéal introduit par Prüfer. L'idéal $I$ est une réduction de l'idéal $J$ si $I$ est contenu dans $J$ et s'il existe un entier $N \geqslant 1$ tel que $J^N = IJ^{N-1}$. Les réductions de l'idéal $J$ sont exactement les idéaux de $I$ contenus dans $J$ et ayant la même clôture intégrale que $J$.\\
+	\end{block}
+\end{frame}
+
+\begin{frame}{INTRODUCTION}
+	\begin{block}{}
+		Une filtration de l'anneau $A$ est une suite $f=(I_n)_{n \in \mathbb{Z}}$ d'idéaux de $A$, décroissante pour l'inclusion et vérifiant $I_0 = A$ et $I_n I_m \subseteq I_{n+m}$. On note $\mathbb{F}(A)$ l'ensemble des filtrations de l'anneau A. Soit $I$ un idéal de $A$, une filtration $f=(I_n)_{n \in \mathbb{Z}}$ est dite $I-bonne$ si pour tout $n \in \mathbb{N}, \quad II_n \subseteq I_{n+1}$ et s'il existe $k$ un entier tel que pour tout $n \geqslant k$, $II_n = I_{n+1}$. Les filtrations les plus courantes sont les filtrations $adiques$. En particulier, toute filtrations $I-adiques$ est $I-bonne$ pour tout $I$ idéal de $A$.
+	\end{block}
+\end{frame}
+
+\begin{frame}{INTRODUCTION}
+	\begin{block}{}
+		Comment étendre de manière rigoureuse les résultats obtenus dans le contexte restreint de la filtration I-adique à des filtrations de nature plus générale, telles que les filtrations bonnes ? Comment ces notions interagissent-elles dans des environnements mathématiques variés, et quelles applications peuvent en découler dans des domaines tels que la géométrie algébrique ou encore la théorie des nombres ? 
+	\end{block}
+\end{frame}
+
+\begin{frame}{INTRODUCTION}
+	\begin{block}{}
+		Afin de répondre à ces interrogations, notre démarche s'articulera autour de trois axes majeurs. Dans un premier temps, nous plongerons dans l'étude approfondie de la dépendance intégrale, en explorant ses origines historiques et en analysant ses implications dans le contexte des anneaux commutatifs. Nous poursuivrons ensuite notre exploration en examinant la réduction au sein de la filtration I-adique, avant d'élargir notre perspective à des filtrations bonnes, mettant en lumière les liens conceptuels et les différences inhérentes à ces contextes variés.
+	\end{block}
+\end{frame}
+
+
+\begin{frame}
+\begin{enumerate}
+\item<0> \textcolor{blue}{INTRODUCTION}\\
+\item<1> \textcolor{blue}{DÉPENDANCE INTÉGRALE, RÉDUCTION ET FILTRATION I-BONNE }\\
+\item<0> \textcolor{blue}{DÉPENDANCE INTÉGRALE, RÉDUCTION ET FILTRATIONS BONNES }\\
+\item<0> \textcolor{blue}{CONCLUSION}\\
+\end{enumerate}
+\end{frame}
+\begin{frame}{DÉPENDANCE INTÉGRALE, RÉDUCTION ET FILTRATION I-BONNE}
+	\framesubtitle{ANNEAU}
+	\begin{block}{1.1. Définition}
+			Soit $A$ un ensemble non vide muni de deux lois de compositions interne, $(A, +, \times)$. On dit que $(A, +, \times)$ est un anneau si :
+		\begin{enumerate}
+			\item[(i)] $(A,+)$ est un groupe abélien \pause
+			\item[(ii)] La loi $\times$ est distributive par rapport à la loi $+$ \pause
+			\item[(iii)] La loi $\times$ est associative.
+		\end{enumerate}
+		\textcolor{red}{L'anneau est dit commutatif si la loi $\times$ est commutatif.} \pause
+	
+		\textbf{Exemple:} $(\mathbb{Z}, +, .), (\mathbb{R}, +, .), \cdots$  sont des anneaux commutatifs unitaires.
+	\end{block}
+\end{frame}
+
+\begin{frame}{DÉPENDANCE INTÉGRALE, RÉDUCTION ET FILTRATION I-BONNE}
+	\framesubtitle{ANNEAU}
+	\begin{alertblock}{1.2. Remarque}
+		L'élément neutre de la loi $+$ dans $A$ est noté $0_A$. Si de plus il existe un élément neutre pour la loi $\times$ dans $A$, cet élément est appelé l'élément unité et est noté $1_A$. On dit alors que l'anneau $A$ est unitaire.
+	\end{alertblock}
+\end{frame}
+
+\begin{frame}{DÉPENDANCE INTÉGRALE, RÉDUCTION ET FILTRATION I-BONNE}
+	\framesubtitle{DÉPENDANCE INTÉGRALE SUR LES ANNEAUX}
+	\begin{block}{1.3. Définition \textbf{(Élément Entier)}}
+		Soient $B$ un anneau et $A$ un sous-anneau de $B$ ($A \subseteq B$).\\
+		Un élément $x$ de $B$ est dit \textbf{entier} sur $A$ s'il est \textbf{racine d'un polynôme unitaire à coefficient dans} $A$.\\
+		En d'autres termes, s'ils existent $a_1, a_2, \cdots , a_n$ éléments de $A$ tels que :\\
+		\begin{equation}
+			x^n + a_1 x^{n-1} +\cdots+a_i x^{n-i} +\cdots + a_n = x^n + \sum_{i=1}^{n} a_i x^{n-i} = 0, \; n \in \mathbb{N^*}
+		\end{equation}
+	\end{block}
+\end{frame}
+
+\begin{frame}{DÉPENDANCE INTÉGRALE, RÉDUCTION ET FILTRATION I-BONNE}
+	\framesubtitle{DÉPENDANCE INTÉGRALE SUR LES ANNEAUX}
+	\begin{alertblock}{1.4. Remarque}
+	Cette équation (1) est appelée \textbf{équation de dépendance intégrale} de $x$ sur $A$.\\
+	On dit que $B$ est entier sur $A$ lorsque tous les éléments de $B$ sont entiers sur $A$.
+	\end{alertblock}
+\end{frame}
+
+\begin{frame}{DÉPENDANCE INTÉGRALE, RÉDUCTION ET FILTRATION I-BONNE}
+	\framesubtitle{DÉPENDANCE INTÉGRALE SUR LES ANNEAUX}
+	\begin{block}{1.5. Exemple}
+		Posons $B = \mathbb{R}$ et $A = \mathbb{Z}$. $A$ est un sous-anneau de $B$.
+		\begin{enumerate}
+			\item[(i)] $x = \sqrt{5}$ est solution de l'équation $x^2 - 5$. Donc $\sqrt{5}$ est entier sur $\mathbb{Z}$. \pause
+			\item[(ii)] $x = \sqrt{2}+1$ est solution de l'équation $x^2 - 2x -1$. Donc $x = \sqrt{2}+1$ est entier sur $\mathbb{Z}$. \pause
+			\item[(iii)]$\dfrac{1}{2}$ n'est pas entier sur $\mathbb{Z}$.
+		\end{enumerate}
+	\end{block}
+\end{frame}
+
+\begin{frame}{DÉPENDANCE INTÉGRALE, RÉDUCTION ET FILTRATION I-BONNE}
+	\framesubtitle{DÉPENDANCE INTÉGRALE SUR LES ANNEAUX}
+	\begin{block}{Preuve}
+	En effet, si $\dfrac{1}{2}$ est entier sur $\mathbb{Z}$ alors $\dfrac{1}{2}$ est solution d'une équation de dépendance intégrale. Alors: \\
+	$\exists$ n $\geq 1 , \left(\dfrac{1}{2} \right)^n + \sum_{i=1}^{n} a_i \left(\dfrac{1}{2} \right)^{n-i} = 0$ , $a_i \in\mathbb{Z}$\\
+	D'où $\left(\dfrac{1}{2} \right)^n \left[1+\sum_{i=1}^{n} a_i \left(\dfrac{1}{2} \right)^{-i}\right] = 0$\\
+	Comme $\left(\dfrac{1}{2} \right)^n \neq 0$ alors $1+\sum_{i=1}^{n} a_i2^{i} = 0\Longrightarrow 1+\sum_{i=1}^{n} a_i2^{i} = 0 \Longrightarrow 1 = 2\left(\sum_{i=1}^{n} -a_i 2^{i-1}\right) \Longrightarrow 1\in 2\mathbb{Z}.$ Ce qui est \textbf{Absurde}. 
+	\end{block}
+\end{frame}
+
+\begin{frame}{DÉPENDANCE INTÉGRALE, RÉDUCTION ET FILTRATION I-BONNE}
+	\framesubtitle{DÉPENDANCE INTÉGRALE SUR LES ANNEAUX}
+	\begin{block}{1.6. Définition \textbf{(Module)}}
+	Soit $A$ un anneau commutatif unitaire.\\
+	Un $A$-module ou module sur $A$ est un groupe abélien $(M,+)$ muni d'une multiplication externe $A \times M \rightarrow M, (a,x) \mapsto ax$ vérifiant les propriétés suivantes:
+	\begin{enumerate}
+		\item[(i)]$ \forall a, b \in A, \forall x \in M,(a+b)x = ax+bx$; \pause
+		\item[(ii)] $ \forall a \in A, \forall x, y \in M,a(x+y) = ax+ay$; \pause
+		\item[(iii)] $ \forall x \in M, \,1_A x = x$; \pause
+		\item[(iv)] $\forall a, b \in A, \forall x \in M, \, a(bx)=(ab)x$.
+	\end{enumerate}
+	\end{block}
+\end{frame}
+
+\begin{frame}{DÉPENDANCE INTÉGRALE, RÉDUCTION ET FILTRATION I-BONNE}
+	\framesubtitle{DÉPENDANCE INTÉGRALE SUR LES ANNEAUX}
+	\begin{block}{1.7. Exemple}
+		\begin{enumerate}
+	\item[(i)] $M={0}$ est un $A-module$ pour tout Anneau $A$, appelé \textbf{module nul} \pause
+	\item[(ii)] L'anneau $A$ est un $A-module$. Les sous $A-modules$ sont les idéaux de $A$. \pause
+	\item[(iii)] Si $A= \mathbb{Z}$, tout sous groupe abélien peut être vu comme un $\mathbb{Z}-module$ \pause
+	\item[(iv)] Soit $k$ un corps.  Alors tout $k-espace$ $vectoriel$ est un $k-module$. 
+	\end{enumerate}
+	\end{block}
+\end{frame}
+
+\begin{frame}{DÉPENDANCE INTÉGRALE, RÉDUCTION ET FILTRATION I-BONNE}
+	\framesubtitle{DÉPENDANCE INTÉGRALE SUR LES ANNEAUX}
+	\begin{block}{1.8. Définition \textbf{(Module de type fini)}}
+	Soit $M$ un $A$-module. $M$ est dit de type fini s'il admet un système générateur fini, $\exists \, \, x_1, \cdots ,x_r \in M$ tel que $\forall \,  x \in M, x = \displaystyle \sum_{i=1}^{r}{a_i x_i}$, $a_i \in A$.	
+	\end{block}
+\end{frame}
+
+\begin{frame}{DÉPENDANCE INTÉGRALE, RÉDUCTION ET FILTRATION I-BONNE}
+	\framesubtitle{DÉPENDANCE INTÉGRALE SUR LES ANNEAUX}
+	\begin{block}{1.9. Définition \textbf{(A-algèbre de type fini)}}
+		Soit $A$ un anneau. \\
+		On dit que $B$ est une $A-algèbre$ de type fini si:
+		\begin{enumerate}
+			\item[(i)] $B$ est un $A-module$ \pause
+			\item[(ii)] $B$ est un anneau \pause
+			\item[(iii)] $B = A [b_1, \cdots, b_r] \simeq \dfrac{A[X_1, \cdots, X_r]}{J}, \quad b_i \in B , \quad J$ idéal de $A[X_1, \cdots, X_r]$
+		\end{enumerate}	
+	\end{block}
+\end{frame}
+
+\begin{frame}{DÉPENDANCE INTÉGRALE, RÉDUCTION ET FILTRATION I-BONNE}
+	\framesubtitle{DÉPENDANCE INTÉGRALE SUR LES ANNEAUX}
+	\begin{block}{1.10 Proposition}
+		Soient $B$ un anneau et $A$ un sous-anneau de $B$ ($A \subseteq B$).\\
+		Soit $x \in B$. \\
+		Les assertions suivantes sont équivalentes:
+		\begin{enumerate}
+			\item[i)]$x$ est entier sur $A$; \pause
+			\item[ii)]$A\left[ x\right]$ est un $A$-module de type fini; \pause
+			\item[iii)]Il existe $C$ un sous-anneau de $B$ contenant $A\left[ x\right]$ tel que $C$ soit un $A$-module de type fini.
+		\end{enumerate}
+	\end{block}
+\end{frame}
+
+\begin{frame}{DÉPENDANCE INTÉGRALE, RÉDUCTION ET FILTRATION I-BONNE}
+	\framesubtitle{DÉPENDANCE INTÉGRALE SUR LES ANNEAUX}
+	\begin{block}{1.11 Corollaire}
+	Soient $A$ et $B$ deux anneaux tels que $A \subseteq  B$ et $x_1, x_2, \cdots, x_n \in B$.\\
+	Alors les assertions suivantes sont équivalentes:
+\begin{enumerate}
+	\item[i)]$\forall \ 1 \leqslant i \leqslant n, x_i$ est entier sur $A$, \pause
+	\item[ii)]$A[x_1, x_2, \cdots, x_n]$ est un $A$-module de type fini, \pause
+	\item[iii)]Il existe un $A-module$ de type fini $C \subseteq  B$ tel que $x_i C \subseteq  C, \forall \ 1 \leqslant i \leqslant n$.
+\end{enumerate}
+	\end{block}
+\end{frame}
+
+\begin{frame}{DÉPENDANCE INTÉGRALE, RÉDUCTION ET FILTRATION I-BONNE}
+	\framesubtitle{DÉPENDANCE INTÉGRALE SUR LES ANNEAUX}
+	\begin{block}{1.12. Proposition \textbf{(Clôture intégrale d'anneaux)}}
+	Soit $A \subseteq B$ une inclusion d'anneaux.\\
+	L'ensemble des éléments de B entiers sur A est un sous anneau de B contenant A appelé \textbf{clôture intégrale} de $B$ dans $A$ notée $A'$.
+	\end{block}
+\end{frame}
+
+\begin{frame}{DÉPENDANCE INTÉGRALE, RÉDUCTION ET FILTRATION I-BONNE}
+	\framesubtitle{DÉPENDANCE INTÉGRALE SUR LES ANNEAUX}
+	\begin{block}{1.13. Proposition}
+	Soit $A \subseteq B$ une inclusion d'anneaux tel que $B$ entier sur $A$.
+	\[ B \text{ corps} \textbf{ si et seulement si }  A \text{ corps} \]
+	\end{block}
+\end{frame}
+
+\begin{frame}{DÉPENDANCE INTÉGRALE, RÉDUCTION ET FILTRATION I-BONNE}
+	\framesubtitle{DÉPENDANCE INTÉGRALE SUR LES ANNEAUX}
+	\begin{block}{Preuve}
+		$i) \implies  ii)$ Supposons $B$ corps.
+		
+		Soit $x\in A\backslash \{0\}.$
+		
+		Comme $A\subseteq B$ alors $x\in B\backslash \{0\}$. Donc $x$ est inversible d'inverse $x^{-1}\in B.$
+		
+		De plus $B$ entier sur $A,$ alors il existe $n\in \mathbb{N}^{\ast },(x^{-1})^{n}+\sum\limits_{i=1}^{n}a_{i}(x^{-1})^{n-i}=0,$ pour tout 
+		$a_{i}\in A,i\in \llbracket 1, n \rrbracket.$
+		
+		Ainsi $(x^{-1})^{n}=\sum\limits_{i=1}^{n}(-a_{i})(x^{-1})^{n-i},$ pour tout $%
+		a_{i}\in A,i\in \llbracket 1, n \rrbracket.$
+		
+		$(x^{-1})\times (x^{-1})^{n-1}=\sum\limits_{i=1}^{n}(-a_{i})(x^{-1})^{n-i},$
+		pour tout $a_{i}\in A,i\in \llbracket 1, n \rrbracket.$
+	\end{block}
+\end{frame}
+
+\begin{frame}{DÉPENDANCE INTÉGRALE, RÉDUCTION ET FILTRATION I-BONNE}
+	\framesubtitle{DÉPENDANCE INTÉGRALE SUR LES ANNEAUX}
+	\begin{block}{Preuve}
+		$(x^{-1})=\sum\limits_{i=1}^{n}(-a_{i})(x^{-1})^{n-i}(x^{-1})^{-n+1},$ pour
+		tout $a_{i}\in A,i\in \llbracket 1, n \rrbracket.$
+		
+		$x^{-1}=\sum\limits_{i=1}^{n}(-a_{i})x^{i-1},$ pour tout $a_{i}\in A,i\in
+		\llbracket 1, n \rrbracket.$
+		
+		Comme  $1\leq i\leq n$ alors $0\leq i-1\leq n-1$
+		
+		Donc $x^{i-1}\in A$.
+		
+		Par stabilité $x^{-1}\in A$
+		
+		Donc $A$ corps.
+	\end{block}
+\end{frame}
+
+\begin{frame}{DÉPENDANCE INTÉGRALE, RÉDUCTION ET FILTRATION I-BONNE}
+	\framesubtitle{DÉPENDANCE INTÉGRALE SUR LES ANNEAUX}
+	\begin{block}{Preuve}
+			$ii)\Longleftarrow i)$ Supposons que $A$ corps.
+		
+		Soit $x\in B\backslash \{0\}.$
+		
+		Comme $B$ entier sur $A,$ alors il existe $n\in \mathbb{N}^{\ast },x^{n}+\sum\limits_{i=1}^{n}a_{i}x^{n-i}=0,$\\ pour tout $a_{i}\in
+		A,i\in \llbracket 1, n \rrbracket.$
+		
+		Par récurrence sur $n$, montrons que $x\in A.$
+		
+		\underline{Initialisation} $(n=1)$
+		
+		l'équation de dépendance intégrale devient, $x+a_{1}=0%
+		\Rightarrow x=-a_{1}\in A\backslash \{0\}$
+		
+		Donc $x$ est inversible dans $A\subset B.$ Donc $x$ est inversible dans $B.$
+	\end{block}
+\end{frame}
+
+\begin{frame}{DÉPENDANCE INTÉGRALE, RÉDUCTION ET FILTRATION I-BONNE}
+	\framesubtitle{DÉPENDANCE INTÉGRALE SUR LES ANNEAUX}
+	\begin{block}{Preuve}
+		\underline{Hérédité} $(n\geq 1)$
+		
+		Supposons que la propriété est vraie jusqu'à l'ordre $n.$
+		
+		Alors $x^{n}+\sum\limits_{i=1}^{n}a_{i}x^{n-i}=0\Rightarrow x\in A.$
+		
+		Ainsi $x^{n+1}+\sum\limits_{i=1}^{n+1}a_{i}x^{n+1-i}=0\Rightarrow 
+		x(x^{n}+\sum\limits_{i=1}^{n}a_{i}x^{n-i})+a_{n+1}=0\Rightarrow x(x^{n}+\sum\limits_{i=1}^{n}a_{i}x^{n-i})=-a_{n+1}$
+		
+		* Si $-a_{n+1}\neq 0$ alors $x$ est inversible dans $A\subset B.$ Donc $x$
+		est inversible dans $B.$
+		
+		* Si $-a_{n+1}=0,$ alors $x(x^{n}+\sum\limits_{i=1}^{n}a_{i}x^{n-i})=0\Rightarrow x^{n}+\sum\limits_{i=1}^{n}a_{i}x^{n-i}=0$ (car $x\neq 0$ et $B$ intègre)
+	\end{block}
+\end{frame}
+
+\begin{frame}{DÉPENDANCE INTÉGRALE, RÉDUCTION ET FILTRATION I-BONNE}
+	\framesubtitle{DÉPENDANCE INTÉGRALE SUR LES ANNEAUX}
+	\begin{block}{Preuve}
+			Ainsi $x^{n}+\sum\limits_{i=1}^{n}a_{i}x^{n-i}=0\Rightarrow
+		x(x^{n-1}+\sum\limits_{i=1}^{n-1}a_{i}x^{n-1-i})=-a_{n+2}$
+		
+		* Si $-a_{n+2}\neq 0$ alors $x$ est inversible dans $A\subset B.$ Donc $x$
+		est inversible dans $B.$
+		
+		* Sinon de proche en proche, il vient $x+a_{1}=0\Rightarrow x=-a_{1}\in
+		A\backslash \{0\}$
+		
+		Donc $x$ est inversible dans $A\subset B.$ Donc $x$ est inversible dans $B$
+		
+		Dans tous les cas, il vient $B$ corps. D'où l'équivalence.
+	\end{block}
+\end{frame}
+
+
+\begin{frame}{DÉPENDANCE INTÉGRALE, RÉDUCTION ET FILTRATION I-BONNE}
+	\framesubtitle{DÉPENDANCE INTÉGRALE SUR LES IDÉAUX}
+	\begin{block}{2.1. Définition}
+		Soit $A$ un anneau.\\
+		Un idéal de $A$ est une partie $I$ de $A$ vérifiant les propriétés suivantes : \\
+		\begin{enumerate}
+			\item[(i)] $0_A \in I$, \pause
+			\item[(ii)]$ Pour \ tout \ x, y \in I, x+y \in I$ \pause
+			\item[(iii)]$ Pour \ tout \ a \in A$ et $x \in I , ax \in I$.
+		\end{enumerate}
+		\textbf{Exemple:} Les idéaux de $\mathbb{Z}$ sont de la forme $n\mathbb{Z}$, avec $n \in \mathbb{N}$. \pause
+	\end{block}
+\end{frame}
+
+\begin{frame}{DÉPENDANCE INTÉGRALE, RÉDUCTION ET FILTRATION I-BONNE}
+	\framesubtitle{DÉPENDANCE INTÉGRALE SUR LES IDÉAUX}
+	\begin{block}{2.2. Définition}
+		Soient $A$ un anneau commutatif unitaire et $I$ un idéal de $A$.\\ Un élément $x$ de $A$ est dit entier sur $I$ s'il existe un entier $m \in \mathbb{N}$ tel que : 
+		\[ 	x^m + a_1 x^{m-1} + \cdots + a_m = 0\text{, avec} \ a_i \in I^i,\, \forall i=1, \cdots ,m. \]	\pause
+	\end{block}
+\end{frame}
+
+
+
+%\begin{frame}{DÉPENDANCE INTÉGRALE, RÉDUCTION ET FILTRATION I-BONNE}
+%	\framesubtitle{FILTRATION}
+%	\begin{block}{3.1. Définition}
+%		Soit $A$ un anneau. On appelle filtration de $A$ toute famille $f = (I_n)_{n \in \mathbb{Z}}$ d'idéaux de $A$ telle que:
+%		\begin{enumerate}
+%			\item[(i)] $I_0 = A$ \pause
+%			\item[(ii)] Pour tout $n \in \mathbb{Z}, I_{n+1} \subseteq I_n$.\pause
+%			\item[(iii)] Pour tout $p,q \in \mathbb{Z}, I_pI_q \subseteq I_{p+q}$.\pause
+%		\end{enumerate}
+%		L'ensemble des filtrations de l'anneau A est noté $\mathbb{F}(A)$.\\ Pour tout $f,g \in \mathbb{F}(A)$, cet ensemble est ordonné par: \pause
+%		\[\forall n \in \mathbb{Z}, f = (I_n) \leqslant g = (J_n) \implies  I_n \subseteq J_n \] 
+%	\end{block}
+%\end{frame}
+%
+%\begin{frame}{FILTRATION}
+%	\begin{block}{3.2. Exemple}
+%			\begin{enumerate}
+%			\item 	Soit $I$ un idéal de $A$ et $f=(I_n)_{n \in \mathbb{Z}}$ telle que pour tout $n \in \mathbb{Z}$:
+%			$$I_{3n} = I_{3n-1} = I_{3n-2} =I^{n} $$ \pause
+%			\item 	Soit $A = \dfrac{\mathbb{Z}}{4 \mathbb{Z}} $ et $f=(I_n)_{n \in \mathbb{Z}}$ telle que pour tout $n \in \mathbb{Z}$:
+%			$$I_1 = I_2 = (\bar{2})$$ \pause
+%			$$I_n = (\bar{0})  \text{ pour tout} \quad n \geqslant 3 $$ \pause
+%		\end{enumerate}
+%	\end{block}
+%\end{frame}
+
+
+\begin{frame}
+\bigskip
+{\textcolor{blue}{\Large \textit{\textbf{\begin{center}
+MERCI POUR VOTRE AIMABLE ATTENTION
+\end{center}}}}}
+\end{frame}
+\end{document}
