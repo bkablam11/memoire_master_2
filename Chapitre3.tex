@@ -226,10 +226,10 @@
 	
 	Par suite $P(f)=P(f^{\prime })$
 \end{proof}
-\begin{madefinition}
-	Soit $f=(I_n)_{n \in \mathbb{N}} \in \mathbb{F}(A)$. Alors:\\
-	On dit que $f$ est \textbf{intégralement fermée} si $f'=f$; ce qui signifie aussi que $I_n$ est intégralement fermé pour tout $n$.
-\end{madefinition}
+%\begin{madefinition}
+%	Soit $f=(I_n)_{n \in \mathbb{N}} \in \mathbb{F}(A)$. Alors:\\
+%	On dit que $f$ est \textbf{intégralement fermée} si $f'=f$; ce qui signifie aussi que $I_n$ est intégralement fermé pour tout $n$.
+%\end{madefinition}
 \begin{maproposition}
 	Soit $f=(I_n)_{n \in \mathbb{N}} \in \mathbb{F}(A)$. Alors:\\
 	\begin{enumerate}
@@ -436,7 +436,7 @@
 	On déduit donc de tout ce qui précède que $f$ est une $\alpha$-réduction de $g$.
 \end{proof}
 \begin{maproposition}
-	Soient $I$ et $J$ deux idéaux de $A$.\\
+	Soient $A$ un anneau et $I$ , $J$ deux idéaux de $A$.\\
 	Alors les assertions suivantes sont équivalentes.\\
 	$i)$ $I$ est une réduction de $J$.\\
 	$ii)$ $f_I$ est une $\alpha$-réduction de $f_J$.\\
@@ -483,7 +483,7 @@
 	D'où $\forall n \geq 2N_0$, $IJ_n = J_{n+1}$, $g$ est donc $I$-bonne. 
 \end{proof}
 \begin{maremarque}
-	En effet bien qu'on puisse parler de réduction minimale pour un idéal quelconque sur un anneau local, cela n'est pas possible pour toutes les filtrations. On montre ainsi dans cet exemple que toutes les filtrations n'admettent pas de réduction minimale.\\	
+	En effet bien qu'on puisse parler de réduction minimale pour un idéal quelconque sur un anneau local, cela n'est pas possible pour toutes les filtrations. On montre ainsi dans cet exemple que toutes les filtrations n'admettent pas de réduction minimale.
 \end{maremarque}
 \begin{monexemple}
 	Soient l'anneau $A = k\left[ X\right]$ où $k$ est un corps et $I = (X)$ un idéal de $A$.\\
@@ -504,12 +504,7 @@
 	\end{align*}
 	Ainsi on a donc $X$ inversible ce qui est absurde, par suite la filtration $f$ n'est pas noethérienne. Comme la filtration $f$ n'est pas noethérienne alors elle n'est pas $I$-bonne.\\ De plus il existe pas d'entier $r \geq 1$ tel que $I_r$ soit idempotent, par conséquent notre filtration $f$ n'admet pas de réduction minimale.
 \end{monexemple}
-\begin{maremarque}
-	\begin{enumerate}
-		\item[(1)] Soient $I,J$ des idéaux de $A$ tels que $I \subseteq J$. Alors $f_I$ est une réduction de $f_J$ $\Longleftrightarrow$ $I$ est une réduction de $J$.
-		\item[(2)] Soit $I$ un idéal de $A$.\\ Alors $f_I$ est une réduction de la filtration $g$ de $A$ $\Longleftrightarrow$ $g$ est $I-bonne$.
-	\end{enumerate}
-\end{maremarque}
+
 
 \begin{maproposition}
 	Soit $f,g \in \mathbb{F}(A),$ telles que $f \leqslant g$.
@@ -532,8 +527,6 @@
 	Alors $J_{k+n}=J_{m_{0}r+n}=J_{m_{0}r}I_{n}=J_{k}I_{n}$ car $k\geq n_{0}.$
 	
 	La réciproque est évidente.
-	
-	\bigskip 
 	
 	ii) Supposons que $f$ est une réduction de $g$ et $g$ une réduction
 	de $h.$
@@ -560,14 +553,7 @@
 	
 	Par suite $h$ est réduction de $g.$
 \end{proof}
-\begin{maproposition}
-	Si $f=(I_n)$ est une réduction de $g=(J_n)$ alors:
-	\begin{enumerate}
-		\item[(i)] $f$ est $A.P.$ et $g$ est fortement $A.P$
-		\item[(ii)] $g$ est $E.P$ et $f-bonne$
-		\item[(iii)] En plus, si $A$ est noethérien alors $f$ et $g$ sont noethériennes et g est fortement entière sur $f$.
-	\end{enumerate}
-\end{maproposition}
+
 \begin{maremarque}
 	Cependant, le fait que $g$ soit fortement entière sur $f$ n'implique pas
 	nécessairement que $f$ soit une réduction de $g$, m\^{e}me si $f$ et 
@@ -634,6 +620,46 @@
 		\item[(5)] Soient $\varphi \in \mathbb{F}(M)$ et $I$ un idéal de $A$. Alors $\varphi$ est $I-bonne$ $\Longleftrightarrow$ $\varphi$ est $f_{I}-bonne$, où $f_{I}$ est la filtration $I-adique$.
 	\end{enumerate}
 \end{maremarque}
+\begin{maproposition}
+	Si $f=(I_n)$ est une réduction de $g=(J_n)$ alors:
+	\begin{enumerate}
+		\item[(i)] $f$ est $A.P.$ et $g$ est fortement $A.P$
+		\item[(ii)] $g$ est $E.P$ et $f-bonne$
+		\item[(iii)] En plus, si $A$ est noethérien alors $f$ et $g$ sont noethériennes et g est fortement entière sur $f$.
+	\end{enumerate}
+\end{maproposition}
+\begin{proof}
+	Supposons que $f=(I_{n})$ est une réduction de $g=(J_{n}).$
+	
+	Alors $f\leq g$ et il existe $k\geq 1,$ tel que pour tout $n\geq k,J_{n+k}=I_{n}J_{k}=J_{k}J_{n}$
+	
+	i) Nous avons $J_{nk}=J_{k}^{n}$ pour tout $n.$ Donc $g$ est $fortement$ $A.P.$
+	
+	De plus la division euclidienne de $n$ par $k$ donne $n=kq_{n}+r_{n}$, avec $0\leq r_{n}<k.$
+	
+	Posons $k_{n}=k(q_{n}+1).$
+	
+	Alors $\underset{n\longrightarrow +\infty }{\lim }\frac{k_{n}}{n}=\underset{n\longrightarrow +\infty }{\lim }\frac{kq_{n}+r_{n}+k-r_{n}}{n}=\underset{n\longrightarrow +\infty }{\lim }1+\frac{k-r_{n}}{n}=1.$
+	
+	Par ailleurs, $J_{k_{n}m}=J_{k_{n}}^{m}=J_{k(q_{n}+1)}^{m}\subseteq J_{n}^{m}.$
+	
+	Posons $k_{n}^{\prime }=k_{2k+n}.$
+	
+	Alors $I_{k_{n}^{\prime }m}\subseteq J_{k_{n}^{\prime }m}\subseteq
+	J_{(k_{2k+n})m}=J_{k_{2k+n}}^{m}=J_{k}^{m}I_{k+n}^{m}\subseteq I_{n}^{m}.$
+	
+	Par suite $\underset{n\longrightarrow +\infty }{\lim }\frac{k_{n}^{\prime }}{n}=1$
+	
+	Donc $f$ est $A.P.$
+	
+	
+	ii) Posons $N=2k.$ Alors si $n\geq N,$ $n-k\geq k$ et $J_{n}=I_{n-k}J_{k}\subseteq \sum\limits_{p=1}^{2k}I_{n-p}J_{p}$
+	
+	Donc $J_{n}=\sum\limits_{p=1}^{2k}I_{n-p}J_{p}$ et $g$ est $f-bonne$ et donc $g$ est $E.P.$
+	
+	iii) Si $A$ est noethérien alors d'après ii) $g$ et $f$ sont noethérienne. Et donc $g$ est $fortement$ $entière$ sur $f.$
+	
+\end{proof}
 \begin{maproposition}
 	Toute filtration $\varphi$ de $M$ $f-fine$ est $f-bonne$
 \end{maproposition}

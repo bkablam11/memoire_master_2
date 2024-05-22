@@ -25,6 +25,7 @@
 %\input{tcilatex}
 %\input{tcilatex}
 %\input{tcilatex}
+%\input{tcilatex}
 
 
 \documentclass[11pt, twoside]{article}
@@ -54,7 +55,7 @@
 %TCIDATA{Version=5.50.0.2890}
 %TCIDATA{<META NAME="SaveForMode" CONTENT="1">}
 %TCIDATA{BibliographyScheme=Manual}
-%TCIDATA{LastRevised=Sunday, May 19, 2024 11:41:59}
+%TCIDATA{LastRevised=Wednesday, May 22, 2024 22:35:36}
 %TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
 
 \bibliographystyle{agsm} 
@@ -63,153 +64,10 @@
 \definecolor{codepurple} {rgb} {0.58,0,0.82}
 \definecolor {backcolour} {rgb} {0.95,0.95,0.92}
 
-\input{tcilatex}
+%\input{tcilatex}
 
 \begin{document}
 
 
-3.3.
-
-Supposons que $\varphi =(M_{n})$ est une filtration de $M$ qui est $f-fine$,
-o\~{A}%
-%TCIMACRO{\U{b9} }%
-%BeginExpansion
-${{}^1}$
-%EndExpansion
-$f=(I_{n})$ une filtration de $A.$
-
-Alors il existe $N\geq 1$ tel que pour tout $n>N,M_{n}=$ $%
-\sum\limits_{p=1}^{N}I_{p}M_{n-p}.$
-
-Comme $n>N,$ posons $n=N+1$, ainsi
-
-$M_{N+1}=$ $\sum\limits_{p=1}^{N}I_{p}M_{N+1-p}=$ $\sum%
-\limits_{q=1}^{N}I_{N+1-q}M_{q},$ avec $q=N+1-p.$
-
-Ainsi, il vient de proche en proche que $M_{N+j}=$ $\sum%
-\limits_{p=1}^{N}I_{N+j-p}M_{p}\,\ ,$ pour tout $j$ avec $1\leq j\leq m.$
-
-Alors $M_{N+m}=$ $\sum\limits_{p=1}^{N}I_{p}M_{N+m-p}\,=\sum%
-\limits_{q=m}^{N+m-1}I_{N+m-q}M_{q}\,=\sum\limits_{q=m}^{N}I_{N+m-q}M_{q}\,+%
-\sum\limits_{q=N+1}^{N+m-1}I_{N+m-q}M_{q}=\sum%
-\limits_{q=m}^{N}I_{N+m-q}M_{q}\,+\sum\limits_{q=N+1}^{N+m-1}I_{N+m-q}(\sum%
-\limits_{p=1}^{N}I_{q-p}M_{p}).$
-
-Or $\sum\limits_{q=m}^{N}I_{N+m-q}M_{q}\,\subseteq
-\sum\limits_{p=1}^{N}I_{N+m-p}M_{p}\,$\ et $\sum%
-\limits_{q=N+1}^{N+m-1}I_{N+m-q}(\sum\limits_{p=1}^{N}I_{q-p}M_{p})=\sum%
-\limits_{p=1}^{N}(\sum\limits_{q=N+1}^{N+m-1}I_{N+m-p})M_{p}=\sum%
-\limits_{p=1}^{N}I_{N+m-p}M_{p}\subseteq M_{N+m}$
-
-Par suite $\varphi $ est $f-bonne,$ l'inclusion inverse \~{A}\copyright tant 
-\~{A}\copyright vidente.
-
-\bigskip
-
-3.5
-
-$M_{n}=$ $\sum\limits_{p=0}^{N}I_{n-p}M_{p}$ et pour tout $n\geq
-1,I_{n}=\sum\limits_{p=1}^{N^{\prime }}I_{n-p}I_{p}.$ Alors pour $%
-n>N^{\prime \prime }=N+N^{\prime},$
-
-$M_{n}=$ $\sum\limits_{p=0}^{N}I_{n-p}M_{p}=\sum\limits_{p=0}^{N}(\sum%
-\limits_{q=1}^{N^{\prime }}I_{n-p-q}I_{p})M_{p}=\sum\limits_{q=1}^{N^{\prime
-}}I_{q}(\sum\limits_{p=0}^{N}I_{n-p-q}M_{p})=\sum\limits_{q=1}^{N^{\prime
-}}I_{q}M_{n-q}\subseteq \sum\limits_{q=1}^{N^{^{\prime \prime
-}}}I_{q}M_{n-q} $
-
-Donc $M_{n}=\sum\limits_{q=1}^{N^{^{\prime \prime }}}I_{q}M_{n-q}$ ,
-l'inclusion inverse \~{A}\copyright tant triviale.
-
-\bigskip
-
-3.7
-
-Il existe un entier $N\geq 1$ tel que pour tout $n>N,J_{n}=\sum%
-\limits_{p=1}^{N}I_{n-p}J_{p}\subseteq
-\sum\limits_{p=1}^{N}J_{n-p}J_{p}\subseteq J_{n}$
-
-Donc $J_{n}=\sum\limits_{p=1}^{N}J_{n-p}J_{p}$ pour tout $n>N.$
-
-Cette \~{A}\copyright galit\~{A}\copyright\ est valable si $1\leq n\leq N.$
-
-Comme $g$ est $E.P$ et $A$ noeth\~{A}\copyright rien alors $g$ est fortement
-enti\~{A}%
-%TCIMACRO{\U{a8}}%
-%BeginExpansion
-\"{}%
-%EndExpansion
-re sur $f.$
-
-Par suite $g$ est noeth\~{A}\copyright rien et d'apr\~{A}%
-%TCIMACRO{\U{a8}}%
-%BeginExpansion
-\"{}%
-%EndExpansion
-s le th\~{A}\copyright or\~{A}%
-%TCIMACRO{\U{a8}}%
-%BeginExpansion
-\"{}%
-%EndExpansion
-me de Eakin $f$ est noeth\~{A}\copyright rien.
-
-3.8
-
-Soient $f=(I_{n})_{_{n\in \mathbb{N}}},g=(J_{n})_{_{n\in\mathbb{N}}}\in F(A).
-$
-
-Alors il existe un entier $N\geq 1$ tel que $I_{n}\subseteq J_{n}\subseteq
-I_{n-N}\subseteq J_{n-N}$ pour tout $N\geq 1.$
-
-Si $f$ est $A.P.$ alors il existe une suite d'entiers $(k_{n})_{n\in \mathbb{%
-N}}$ telle que $\underset{n\longrightarrow \infty }{\lim }\frac{k_{n}}{n}=1$
-et $I_{k_{n}m}\subseteq I_{n}^{m}$
-
-pour tout $m,n\in \mathbb{N}.$
-
-Par suite, $J_{(k_{n}+N)m}\subseteq J_{k_{n}m+Nm}\subseteq
-J_{k_{n}m+N}\subseteq I_{k_{n}m+N}\subseteq I_{k_{n}m}\subseteq
-I_{n}^{m}\subseteq J_{n}^{m}.$
-
-D'o\~{A}%
-%TCIMACRO{\U{b9} }%
-%BeginExpansion
-${{}^1}$
-%EndExpansion
-$\underset{n\longrightarrow \infty }{\lim }\frac{k_{n}+N}{n}=1,$ $g$ est $%
-A.P.$
-
-R\~{A}\copyright ciproquement si $g$ est $A.P.$ alors il existe une suite
-d'entiers $(k_{n}^{^{\prime }})_{n\in \mathbb{N}}$ associ\~{A}\copyright e 
-\~{A}~ $g.$
-
-Alors $I_{k_{n}^{\prime }+N.m}\subseteq J_{k_{n}^{\prime }+N.m}\subseteq
-J_{n+N}^{m}\subseteq I_{n}^{m}$ pour tout $m,n\in \mathbb{N}.$
-
-Et $\underset{n\longrightarrow \infty }{\lim }\frac{k_{n}^{\prime }+N}{n}=1,f
-$ est $A.P.$
-
-\bigskip 
-
-3.14
-
-Si $g$ est fortement $A.P.$ alors $f$ est fortement $A.P.$
-
-Alors Supposons que seulement $f$ est fortement $A.P.$ de rang $r.$
-
-Il existe un entier $N\geq 0$ tel que $t_{N}g\leq f\leq g.$
-
-Posons $f=(I_{n}),g=(J_{n}),f_{1}=f^{(rm)},g_{1}=g^{(rm)}.$
-
-Nous avons $J_{N+n}\subseteq I_{n}$ pour tout $n\in \mathbb{N}.$
-
-De même $J_{rm(N+n)}\subseteq J_{N+rmn}$ $\subseteq I_{rmn}$  pour tout $n\in \mathbb{N}.$
-
-D'où $t_{N}g_{1}\leq f_{1}\leq g_{1}.$
-
-Or par hypothèse, $f^{(r)}=f_{I_{r}\text{ }}$alors $f^{(rm)}=f_{I_{rm}}$
-qui est noethérienne.
-
-Donc $g_{1}$ est fortement entière sur $f_{1}.$
 
 \end{document}
