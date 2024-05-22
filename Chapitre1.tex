@@ -4,24 +4,24 @@ Ce chapitre revêt la forme d'une rétrospective, visant à revisiter et consoli
 \section{Relation d'équivalence, groupe et sous-groupe}
 \subsection{Relation d'équivalence}
 \begin{madefinition}
-	On appelle relation d’équivalence sur un ensemble non vide E , une relation
+	On appelle relation d’équivalence sur un ensemble non vide E, une relation
 	$\mathcal{R}$ sur E vérifiant les conditions suivantes :
 	\begin{enumerate}
-		\item[a) ] $\forall x \in E, x\mathcal{R}x$ (réflexivité)
-		\item[b) ] $\forall x,y \in E, x\mathcal{R}y \Longleftrightarrow y\mathcal{R}x $ (symétrie)
-		\item[c) ] $\forall x,y,z \in E, (x\mathcal{R}y)$ et $(y\mathcal{R}z)$ $\Longrightarrow (x\mathcal{R}z)$  (transitivité)
+		\item[a)] $\forall x \in E, x\mathcal{R}x$ (réflexivité)
+		\item[b)] $\forall x,y \in E, x\mathcal{R}y \Longleftrightarrow y\mathcal{R}x $ (symétrie)
+		\item[c)] $\forall x,y,z \in E, (x\mathcal{R}y)$ et $(y\mathcal{R}z)$ $\Longrightarrow (x\mathcal{R}z)$  (transitivité)
 	\end{enumerate}
-	La partie $C_x = \{y \in E,\quad x\mathcal{R}y\}  $ de E est appelée la classe d’équivalence modulo $\mathcal{R}$ de $x \in E$. Les	classes d’équivalence constituent une partition de E . Notons $\mathcal{P}(E)$ l’ensemble des parties de E. La famille $(C_x)_{x \in E}$ constitue un sous-ensemble de $\mathcal{P}(E)$ appelé l’ensemble quotient de E par R. On le note $E/\mathcal{R}$. 
+	La partie $C_x = \{y \in E,\quad x\mathcal{R}y\}  $ de E est appelée la classe d’équivalence modulo $\mathcal{R}$ de $x \in E$. Les	classes d’équivalence constituent une partition de E. Notons $\mathcal{P}(E)$ l’ensemble des parties de E. La famille $(C_x)_{x \in E}$ constitue un sous-ensemble de $\mathcal{P}(E)$ appelé l’ensemble quotient de E par R. On le note $E/\mathcal{R}$. 
 	Dans la suite, la classe de $x \in E$ sera vue essentiellement comme élément de ce nouvel ensemble $E/\mathcal{R}$ et sera notée $\bar{x}$
 \end{madefinition}
 \subsection{Relation d'ordre}
 \begin{madefinition}
-	On appelle relation d’ordre sur un ensemble non vide E , une relation
+	On appelle relation d’ordre sur un ensemble non vide E, une relation
 	$\mathcal{R}$ sur E vérifiant les conditions suivantes :
 	\begin{enumerate}
-		\item[a) ] $\forall x \in E, x\mathcal{R}x$ (réflexivité)
-		\item[b) ] $\forall x,y \in E, x\mathcal{R}y $ et $y\mathcal{R}x$ $ \Longleftrightarrow y = x $ (anti-symétrie)
-		\item[c) ] $\forall x,y,z \in E, (x\mathcal{R}y)$ et $(y\mathcal{R}z)$ $\Longrightarrow (x\mathcal{R}z)$  (transitivité)
+		\item[a)] $\forall x \in E, x\mathcal{R}x$ (réflexivité)
+		\item[b)] $\forall x,y \in E, x\mathcal{R}y $ et $y\mathcal{R}x$ $ \Longleftrightarrow y = x $ (anti-symétrie)
+		\item[c)] $\forall x,y,z \in E, (x\mathcal{R}y)$ et $(y\mathcal{R}z)$ $\Longrightarrow (x\mathcal{R}z)$  (transitivité)
 	\end{enumerate}
 	L'ensemble $(E, \mathcal{R})$ s'appelle alors ensemble ordonné. L'ordre est dit total si deux éléments sont toujours comparables (on dit aussi que l'ensemble est totalement ordonné). Dans le cas contraire, il est dit partiel.
 \end{madefinition}
@@ -107,9 +107,7 @@ Ce chapitre revêt la forme d'une rétrospective, visant à revisiter et consoli
 	Soit $\mathbb{K}$ un corps et soit $E$ un ensemble (non vide). On appelle \textbf{loi externe} sur $E$ la donnée d'une application définie sur le produit cartésien $\mathbb{K} \times E$ et à valeur dans $E$.
 \end{madefinition}
 \begin{madefinition}
-	Soit $\mathbb{K}$ un corps. On dit qu’un ensemble $E$ est un $\mathbb{K}$-espace vectoriel
-	lorsqu’il est muni d’une loi de composition interne commutative, notée + et d’une
-	loi externe de $\mathbb{K}$, notée $\times$, telle que:
+	Soit $\mathbb{K}$ un corps. On dit qu’un ensemble $E$ est un $\mathbb{K}$-espace vectoriel lorsqu’il est muni d’une loi de composition interne commutative, notée + et d’une loi externe de $\mathbb{K}$, notée $\times$, telle que:
 	\begin{enumerate}
 		\item (E, $+$) est un groupe additif d'élément neutre noté $0_E$ ou $0$.
 		\item Les lois $+$ et $\times$ sont compatibles entre elles et avec les lois de la structure de corps de $\mathbb{K}$. C'est-à-dire qu'elle vérifient:
@@ -135,9 +133,7 @@ Ce chapitre revêt la forme d'une rétrospective, visant à revisiter et consoli
 \end{maremarque}
 
 \begin{madefinition}
-	Soient $E$ et $F$ deux $\mathbb{K}$-espaces vectoriels. Une application f :$E \longrightarrow F$
-	est dite linéaire si elle est compatible avec les structures de $\mathbb{K}$-espaces sur $E$ et
-	sur $F$. Autrement dit si $f$ vérifie : 
+	Soient $E$ et $F$ deux $\mathbb{K}$-espaces vectoriels. Une application f :$E \longrightarrow F$ est dite linéaire si elle est compatible avec les structures de $\mathbb{K}$-espaces sur $E$ et sur $F$. Autrement dit si $f$ vérifie : 
 	\begin{enumerate}
 		\item $\forall \lambda \in \mathbb{K}, \forall u \in E, f(\lambda \times u) = \lambda \times f(u)$
 		\item $\forall u,v \in E, f(u+v) = f(u)+f(v)$
@@ -157,7 +153,7 @@ Ce chapitre revêt la forme d'une rétrospective, visant à revisiter et consoli
 	- Isomorphisme lorsque $f$ admet une fonction réciproque $g$ telle que $f \circ g = Id_B$ et $g \circ f = Id_A$ 
 \end{madefinition}
 \begin{maproposition}
-	(Théorème d'isomorphisme d'anneaux)\\
+	(Théorème d'isomorphisme d’anneaux) \\
 	Soit $\varphi:A \longrightarrow B$ un morphisme d'anneaux.\\
 	Son noyau Ker($\varphi$) est un idéal de $A$ et son image Im($\varphi$) est un sous-anneau de B.\\ De plus, on a que:
 	\[ \dfrac{A}{Ker(\varphi)} \simeq  Im(\varphi).\]
@@ -177,20 +173,20 @@ Ce chapitre revêt la forme d'une rétrospective, visant à revisiter et consoli
 	\[ \forall x \in A, \exists x_i \in A, \text{tel que } x = \sum_{finie}^{} x_i \text{ (Existence et Unicité)}. \]
 \end{madefinition} 
 \begin{maremarque}
-Si $ A =\displaystyle \bigoplus_{n \in \mathbb{N}}{A_n} $ alors:
-$$  
-\begin{cases}
-	1_A \in A_0,\\
-	A_0 \text{ est un sous-anneau de }A. 
-\end{cases}
-$$
-\newline
-\begin{monexemple}
-	(Exemple d'anneau gradué)\\
-	\item[1)] $A[X] =  A =\displaystyle \bigoplus_{n \in \mathbb{N}}{A_n} =\displaystyle \bigoplus_{n \in \mathbb{N}}{A}X^n $,
-	avec $A_n=AX^n = \left\{\alpha X^n, \alpha \in A \right\}$.
-	\item[2)] $A[\dfrac{1}{X}, X] = A[X^{-1}, X] = \displaystyle \bigoplus_{n \in \mathbb{Z}}{A_n}$, avec $A_n=AX^n, n \in \mathbb{Z}$
-\end{monexemple}
+	Si $ A =\displaystyle \bigoplus_{n \in \mathbb{N}}{A_n} $ alors:
+	$$  
+	\begin{cases}
+		1_A \in A_0,\\
+		A_0 \text{ est un sous-anneau de }A. 
+	\end{cases}
+	$$
+	\newline
+	\begin{monexemple}
+		(Exemple d'anneau gradué)\\
+		\item[1)] $A[X] =  A =\displaystyle \bigoplus_{n \in \mathbb{N}}{A_n} =\displaystyle \bigoplus_{n \in \mathbb{N}}{A}X^n $,
+		avec $A_n=AX^n = \left\{\alpha X^n, \alpha \in A \right\}$.
+		\item[2)] $A[\dfrac{1}{X}, X] = A[X^{-1}, X] = \displaystyle \bigoplus_{n \in \mathbb{Z}}{A_n}$, avec $A_n=AX^n, n \in \mathbb{Z}$
+	\end{monexemple}
 \end{maremarque}
 \section{Module}
 \begin{madefinition}
@@ -211,10 +207,10 @@ $$
 	\end{enumerate}
 \end{maremarque}
 \begin{monexemple}
-		\begin{enumerate}
-		\item[(i)] $M={0}$ est un $A-module$ pour tout Anneau $A$, appelé \textbf{module nul}
+	\begin{enumerate}
+		\item[(i)] $M= {0} $ est un $A-module$ pour tout Anneau $A$, appelé \textbf{module nul}
 		\item[(ii)] L'anneau $A$ est un $A-module$. Les sous $A-modules$ sont les idéaux de $A$.
-		\item[(iii)] Si $A= \mathbb{Z}$, tout sous groupe abélien peut être vu comme un $\mathbb{Z}-module$
+		\item[(iii)] Si $A= \mathbb{Z}$, tout sous-groupe abélien peut être vu comme un $\mathbb{Z}-module$
 		\item[(iv)] Soit $k$ un corps.  Alors tout $k-espace$ $vectoriel$ est un $k-module$. 
 	\end{enumerate}
 \end{monexemple}
@@ -230,8 +226,8 @@ $$
 	Soit $M$ un $A$-module. $M$ est dit de type fini s'il admet un système générateur fini, $\exists \, \, x_1, \cdots ,x_r \in M$ tel que $\forall \,  x \in M, x = \displaystyle \sum_{i=1}^{r}{a_i x_i}$, $a_i \in A$.
 \end{madefinition}
 \begin{maproposition}
-	(Module noethérien)\\
-	Soient $A$ une anneau et $M$ un $A-module$. On dit que $M$ est un module noethérien si l'une des trois assertions équivalentes sont vérifiée:
+	(Module noethérien) \\
+	Soient $A$ un anneau et $M$ un $A-module$. On dit que $M$ est un module noethérien si l'une des trois assertions équivalentes sont vérifiée:
 	\begin{enumerate}
 		\item[(i)] Tout sous-module de $M$ est de type fini,
 		\item[(ii)] Toute suite croissante de sous-modules de $M$ est stationnaire,
@@ -253,18 +249,18 @@ $$
 	Un idéal de $A$ est une partie $I$ de $A$ vérifiant les propriétés suivantes : \\
 	\begin{enumerate}
 		\item[(i)] $0_A \in I$,
-		\item[(ii)]$ pour \ tout \ x, y \in I, x+y \in I$
-		\item[(iii)]$pour \ tout \ a \in A$ et $x \in I , ax \in I$.
+		\item[(ii)] $ Pour \ tout \ x, y \in I, x+y \in I$
+		\item[(iii)] $ Pour \ tout \ a \in A$ et $x \in I , ax \in I$.
 	\end{enumerate}
 \end{madefinition}
 \begin{monexemple}
 	\item[(i)] Les idéaux de $\mathbb{Z}$ sont de la forme $n\mathbb{Z}$, avec $n \in \mathbb{N}$.
-	\item[(ii)] Si $A$ est un corps (un anneau dans lequel tout élément non nul est inversible) alors $I=(0)$ ou $I=A$
+	\item[(ii)] Si $A$ est un corps (un anneau dans lequel tout élément non nul est inversible) alors $I= (0) $ ou $I=A$
 \end{monexemple}
 \subsection{Idéal premier}
 \begin{madefinition}
 	Soit $A$ un anneau. Un idéal $P$ de $A$ est dit \textbf{premier} s'il est strict et si pour tout $x,y$ deux éléments de $A$ tels que $xy \in P$ alors: $$x \in P \text{ \quad ou \quad} y\in P$$
-	On note $Spec(A)$  l'ensemble des idéaux premiers de l'anneau A. 
+	On note $Spec(A)$ l’ensemble des idéaux premiers de l'anneau A. 
 \end{madefinition}
 \subsection{Idéal primaire}
 \begin{madefinition}
@@ -285,11 +281,11 @@ $$
 \begin{maproposition}
 	Soient $A$ un anneau et $I$ un idéal de $A$.
 	\begin{enumerate}
-		\item[(i)] $\sqrt{\sqrt{I}}=\sqrt{I}$
+		\item[(i)] $\sqrt{\sqrt{I}} = \sqrt{I}$
 		
-		\item[(ii)] $\sqrt{IJ}=\sqrt{I\cap J}=\sqrt{I}\cap \sqrt{J}$
+		\item[(ii)] $\sqrt{IJ} = \sqrt{I\cap J}=\sqrt{I}\cap \sqrt{J}$
 		
-		\item[(iii)] $\sqrt{I+J}=\sqrt{\sqrt{I}+\sqrt{J}}$
+		\item[(iii)] $\sqrt{I+J} = \sqrt{\sqrt{I}+\sqrt{J}}$
 		
 		\item[(iv)] Si $P$ $\in Spec(A),\sqrt{P}=P$
 	\end{enumerate}
@@ -315,7 +311,7 @@ $$
 \end{madefinition}
 
 \begin{maremarque}
-	Dans la définition précédente, il est facile de remarquer que\\ $\forall n \leq 0, I^n = A$.\\ En effet, en utilisant la décroissance des idéaux (ii) et que $I_0 = A$ (i), il vient d'une part que:\\ $I_0 \subseteq I_n , \forall n \leq 0$ (ii). Ainsi $A \subseteq I_n$.\\
+	Dans la définition précédente, il est facile de remarquer que\\ $\forall n \leq 0, I^n = A$.\\ En effet, en utilisant la décroissance des idéaux (ii) et que $I_0 = A$ (i), il vient d'une part que: \\ $I_0 \subseteq I_n , \forall n \leq 0$ (ii). Ainsi $A \subseteq I_n$.\\
 	D'autre part, comme $\forall n \in \mathbb{Z}$, les $I_n$ sont des idéaux de $A$, alors $I_n \subseteq A$.\\
 	Donc $I_n = A, n \leq 0$.
 \end{maremarque}
@@ -337,8 +333,8 @@ Ainsi au lieu d'étudier la famille $f = (I_n)_{n \in \mathbb{Z}}$ nous pouvons 
 		\item[(2)] l'intersection $f \cap g = (I_n \cap J_n)$
 		\item[(3)] la somme $f+g=(K_n)$ où pour tout entier $n$, $K_n =\displaystyle  \sum_{k=0}^{n}I_{k}J_{n-k} $
 	\end{enumerate}
-	On vérifie que $fg, f \cap g , f + g$ sont des filtrations de $A$ et pour toutes filtrations \\ $f,g \in \mathbb{F}(A):$
-		\begin{enumerate}
+	On vérifie que $fg, f \cap g, f + g$ sont des filtrations de $A$ et pour toutes filtrations \\ $f,g \in \mathbb{F}(A):$
+	\begin{enumerate}
 		\item[(4)] $\inf (f,g) = f \cap g$
 		\item[(5)] $\sup (f,g) = f+g $
 		\item[(6)] $fg \leqslant f \cap g \leqslant f \leqslant f+g$
@@ -378,18 +374,14 @@ Ainsi au lieu d'étudier la famille $f = (I_n)_{n \in \mathbb{Z}}$ nous pouvons 
 \subsection{Anneau gradué d'une filtration}
 \begin{madefinition}
 	Soient A un anneau, $M$ un A-module
-	
 	$f=(I_{n})_{n\in \mathbb{Z}}\in \mathbb{F}(A),$ $\phi =(M_{n})_{n\in \mathbb{Z}}\in \mathbb{F}(M)$ telle que $\phi $ est $f-compatible$. On pose:
 	
 	$G(A,f)= G_{f}(A)=\displaystyle \bigoplus_{n \in \mathbb{Z}}{\frac{I_{n}}{I_{n+1}}} = \displaystyle \bigoplus_{n \in \mathbb{N}}{\frac{I_{n}}{I_{n+1}}} $
 	
 	$G(A, \phi)=G_{\phi }(M)=\displaystyle \bigoplus_{n \in \mathbb{Z}}{\frac{M_{n}}{M_{n+1}}}$
 	
-	$G_{f}(A)$ est muni d'une structure d'anneau gradué dont la
-	multiplication est définie par:
-	
-	Pour tout $a_{n}+I_{n+1},b_{p}+I_{p+1},$ deux éléments homogènes de degré $n$
-	de $G_{f}(A),$ On pose:
+	$G_{f}(A)$ est muni d'une structure d'anneau gradué dont la multiplication est définie par:
+	Pour tout $a_{n}+I_{n+1},b_{p}+I_{p+1},$ deux éléments homogènes de degré $n$ de $G_{f}(A),$ On pose:
 	
 	$(a_{n}+I_{n+1})(b_{p}+I_{p+1})=a_{n}b_{p}+I_{n+p+1}$
 \end{madefinition}
@@ -426,13 +418,7 @@ Soit I un idéal de l'anneau $A$ si $f_I$ est la filtration $I-adique$ alors l'a
 	En effet, supposons que $A$ n'est pas noethérien.
 	Posons $I = (0)$, l'idéal nul. Alors $R(A,I) = A$ et donc $R(A,I)$ n'est pas noethérien
 \end{monexemple}
-%\subsubsection{b) \underline{Filtration extraite d'ordre k, $k \in \mathbb{N}$}}
-%\begin{madefinition}
-%	Soient $A$ un anneau et $I$ un idéal de A.\\
-%	$f = (I_n)_{n\in \mathbb{Z}}$ une filtration de l'anneau A.\\
-%	On pose $f^{(k)} = (I_{nk})_{n\in \mathbb{Z}}$.\\
-%	$f^{(k)} $ est une filtration de A appelé \textbf{filtration extraite d'ordre k}.
-%\end{madefinition}
+
 
 \subsubsection{b) \underline{Filtration tronqué d'ordre k de $f$}}
 \begin{madefinition}
@@ -497,50 +483,42 @@ Soit I un idéal de l'anneau $A$ si $f_I$ est la filtration $I-adique$ alors l'a
 \end{madefinition}
 \begin{maremarque}
 	Il résulte des références \cite{4} , \cite{5}, \cite{6} que si $A$ est un anneau noethérien et $f=(I_n)_{n \in \mathbb{Z}} \in \mathbb{F}(A)$, les assertions suivantes sont équivalentes : 
-		\begin{enumerate}
-				\item[(a)] $f$ est une $E.P.$ filtration
-				\item[(b)] $\exists k \in \mathbb{N}^{*}$ tel que $f$ soit la plus petite filtration ayant pour $k+1$ premiers $I_0, I_1,\dots, I_k $
-				\item[(c)] $f$ est noethérienne
-				\item[(d)] $\exists m \in \mathbb{N}^{*}$ tel que $\forall j \geqslant m, I_{j+m} = I_{j}I_{m}$
-				\item[(e)] L'anneau de Rees $R(A,f)$ de $f$ est une $A-algèbre$ de type fini
-				\item[(f)] L'anneau de Rees généralisé $\mathcal{R}(A,f)$ de $f$ est une $A-algèbre$ de type fini
-		\end{enumerate}
+	\begin{enumerate}
+		\item[(a)] $f$ est une $E.P.$ filtration
+		\item[(b)] $\exists k \in \mathbb{N}^{*}$ tel que $f$ soit la plus petite filtration ayant pour $k+1$ premiers $I_0, I_1,\dots, I_k $
+		\item[(c)] $f$ est noethérienne
+		\item[(d)] $\exists m \in \mathbb{N}^{*}$ tel que $\forall j \geqslant m, I_{j+m} = I_{j}I_{m}$
+		\item[(e)] L'anneau de Rees $R(A,f)$ de $f$ est une $A-algèbre$ de type fini
+		\item[(f)] L'anneau de Rees généralisé $\mathcal{R}(A,f)$ de $f$ est une $A-algèbre$ de type fini
+	\end{enumerate}
 \end{maremarque}
 \begin{maremarque}(\cite{2})\\
 	$\mathcal{R}(A,f)$ est noethérien si et seulement si $R(A,f)$ est noethérien.
 \end{maremarque}
 
 \begin{maremarque}(\cite{2})\\
-%	\begin{enumerate}
-%		\item[(1)] Si $f$ est $I-adique$ alors $f$ est $I-bonne$
-%		\item[(2)] $f$ est $I-bonne$ si et seulement si f est $f_I - bonne$
-%		\item[(3)] Si $f$ est $I-bonne$ alors $f$ est fortement A.P. 
-%		\item[(4)] Si $f$ est $I-bonne$ alors $f$ est A.P.
-%		\item[(5)] Si $f$ est $I-bonne$ alors $f$ est fortement noethérienne.
-%		\item[(5)] Si $f$ est $I-bonne$ alors $f$ est E.P.
-%	\end{enumerate}
-Dans un anneau noethérien, nous avons la classification suivantes des filtrations \\ classiques $f$ où $I$ est un idéal de l'anneau $A$:
-\begin{center}
-	\begin{tikzpicture}
-		% Création des nœuds
-		\node (A) at (0,0) {f I-adique};
-		\node (B) at (4,0) {f I-bonne};
-		\node (C) at (4,-2) {f fortement noethérienne};
-		\node (D) at (10,-2) {f noethérienne};
-		\node (E) at (14,0) {f A.P};
-		\node (F) at (10,0) {f fortement A.P};
-		
-		% Dessin des flèches avec des modifications pour les rendre plus visibles
-		\draw[->, ultra thick, >=stealth] (A) -- (B);
-		\draw[->, ultra thick, >=stealth] (B) -- (C);
-		\draw[->, ultra thick, >=stealth] (B) -- (F);
-		\draw[->, ultra thick, >=stealth] (C) -- (D);
-		\draw[->, ultra thick, >=stealth] (F) -- (E);
-		\draw[<->, ultra thick, >=stealth] (F) -- (D);
-	\end{tikzpicture}
-\end{center}
-
-
+	Dans un anneau noethérien, nous avons la classification suivantes des filtrations \\ classiques $f$ où $I$ est un idéal de l'anneau $A$:
+	\begin{center}
+		\begin{tikzpicture}
+			% Création des nœuds
+			\node (A) at (0,0) {f I-adique};
+			\node (B) at (4,0) {f I-bonne};
+			\node (C) at (4,-2) {f fortement noethérienne};
+			\node (D) at (10,-2) {f noethérienne};
+			\node (E) at (14,0) {f A.P};
+			\node (F) at (10,0) {f fortement A.P};
+			
+			% Dessin des flèches avec des modifications pour les rendre plus visibles
+			\draw[->, ultra thick, >=stealth] (A) -- (B);
+			\draw[->, ultra thick, >=stealth] (B) -- (C);
+			\draw[->, ultra thick, >=stealth] (B) -- (F);
+			\draw[->, ultra thick, >=stealth] (C) -- (D);
+			\draw[->, ultra thick, >=stealth] (F) -- (E);
+			\draw[<->, ultra thick, >=stealth] (F) -- (D);
+		\end{tikzpicture}
+	\end{center}
+	
+	
 \end{maremarque}
 
 
