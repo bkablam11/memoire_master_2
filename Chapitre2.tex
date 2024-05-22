@@ -167,7 +167,7 @@ Dans ce second chapitre, notre étude se concentre sur les filtrations I-adiques
 		\item[iii)]Il existe un $A-module$ de type fini $C \subseteq  B$ tel que $x_i C \subseteq  C, \forall \ 1 \leqslant i \leqslant n$.
 	\end{enumerate}
 \end{moncorollaire}
-\newpage
+
 \begin{madefinition}
 	Soit $A \subseteq B$ une inclusion d'anneaux.\\
 	On qualifie $B$ d'une \textbf{A-algèbre} lorsque $B$ peut être appréhendé simultanément en tant que module sur A et en tant qu'anneau.\\
@@ -209,7 +209,7 @@ On admet la proposition suivante:
 	
 	Par suite, $C$ est un $A-$module de type fini.
 \end{proof}
-\newpage
+
 \begin{moncorollaire}
 	Soient $A \subseteq B \subseteq C $ deux inclusions d'anneaux.\\
 	Si $C$ est entier sur $B$ et $B$ est entier sur $A$ alors $C$ est entier sur $A$.
@@ -277,9 +277,9 @@ On admet la proposition suivante:
 		\[ S^{-1}B \text{ est entier sur } S^{-1}A.\]
 	\end{enumerate}
 \end{maproposition}
-\newpage
+
 \begin{proof}
-	$i)$ Supposons $B$ entier sur $A$ 
+	$i)$ $B$ entier sur $A$ 
 	
 	Soit $x\in B,$ alors il existe $n\in \mathbb{N}^{\ast },x^{n}+\sum\limits_{i=1}^{n}a_{i}x^{n-i}=0,$ pour tout $a_{i}\in
 	A,i\in \llbracket 1, n \rrbracket.$
@@ -394,12 +394,12 @@ On admet la proposition suivante:
 	Soient $A$ un anneau commutatif unitaire et $I$ un idéal de $A$.\\ Un élément $x$ de $A$ est dit entier sur $I$ s'il existe un entier $m \in \mathbb{N}$ tel que : 
 	\[ 	x^m + a_1 x^{m-1} + \cdots + a_m = 0\text{, avec} \ a_i \in I^i,\, \forall i=1, \cdots ,m. \]	
 \end{madefinition}
-\begin{monlemme}
+\begin{maproposition}
 	Soient $A$ un anneau et $I$ un idéal de $A$.
 	\[ x \ entier \ sur \ I \Longleftrightarrow Le \ monôme \ xX \ \in A[x] \ est \ entier \ sur \ R(A, I) = \displaystyle \bigoplus_{n \in \mathbb{N}}{I^nX^n} \]
-\end{monlemme}
+\end{maproposition}
 \begin{proof}
-	$i)=>ii)$
+	$i) \implies ii)$
 	
 	Supposons $x$ entier sur $I.$ Alors il existe $n\in \mathbb{N}^{\ast },x^{n}+\sum\limits_{i=1}^{n}a_{i}x^{n-i}=0,$ $a_{i}\in I^{i}.$
 	
@@ -408,7 +408,7 @@ On admet la proposition suivante:
 	
 	D'où  $xX$ est entier sur $R(A,I).$
 	
-	$ii)=>i)$
+	$ii)\implies i)$
 	
 	Supposons que  $xX\in A[X]$ est entier sur $R(A,I).$
 	
@@ -418,8 +418,7 @@ On admet la proposition suivante:
 	Alors il existe $n\in \mathbb{N}^{\ast },(xX)^{n}=\sum\limits_{i=1}^{n}(-a_{i})(xX)^{n-i},$ $a_{i}\in
 	R(A,I).$
 	
-	Comme $(xX)^{n}$ est homogène de dégré $n,$ alors pour tout $%
-	i\in \llbracket 1, n \rrbracket,$
+	Comme $(xX)^{n}$ est homogène de degré $n,$ alors pour tout $i\in \llbracket 1, n \rrbracket,$
 	
 	$\deg [a_{i}(xX)^{n-i}]=n\Rightarrow \deg (a_{i})+n-i=n\Rightarrow \deg
 	(a_{i})=i.$
@@ -465,7 +464,8 @@ On admet la proposition suivante:
 	
 	Par suite, $I^{\prime }$ est un idéal de $A.$
 \end{proof}
-\begin{maremarque}\textbf{(Clôture intégrale d'idéaux et radical)}\cite{2}\\
+\begin{maremarque}\textbf{(Clôture intégrale d'idéaux et radical)}\cite{2}
+		Soient $A$ un anneau et $I$ et $J$ des idéaux de $A$.
 	\begin{enumerate}
 		\item[1] ) $I \subseteq J \implies I' \subseteq J' $.
 		\item[2] ) $I \subseteq I' \subseteq \sqrt[]{I} $.
