@@ -1,0 +1,125 @@
+\documentclass[12pt, a4paper, oneside]{book}
+\usepackage[utf8]{inputenc}
+\usepackage[francais]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{arial}
+\usepackage{setspace}
+\usepackage{amsthm}
+\usepackage{hyperref}
+\usepackage{mathrsfs}
+\usepackage{amssymb}
+\usepackage{makeidx}
+\usepackage{graphicx}
+\usepackage{lmodern}
+\usepackage[left=2.8cm,right=2.8cm,top=3.5cm,bottom=3.5cm]{geometry}
+\usepackage{tocloft}
+\usepackage{stmaryrd}
+\hypersetup{colorlinks=true, urlcolor=blue,linkcolor=blue, breaklinks=true}
+\usepackage{tikz}
+\newtheorem{maremarque}{Remarque}[chapter]
+\newtheorem{montheoreme}{Théorème}[chapter]
+\newtheorem{madefinition}{Définition}[chapter]
+\newtheorem{maproposition}{Proposition}[chapter]
+\newtheorem{moncorollaire}{Corollaire}[chapter]
+\newtheorem{monlemme}{Lemme}[chapter]
+\newtheorem{monexemple}{Exemple}[chapter]
+\newtheorem{maconsequence}{Consequence}[chapter]
+\begin{document}
+\begin{moncorollaire}
+	Soient $f=(I_n), g=(J_n) \in \mathbb{F}(A)$, tel que $f \leqslant g$ et $A$ est noethérien.\\ Si $f$ ou $g$ est noethérien alors $g$ est $f-bonne$ $\Longleftrightarrow$ $g$ est fortement entière sur $f$.
+\end{moncorollaire}
+\begin{maproposition}
+	Soit $A$ un anneau noethérien. Soient $f,g \in \mathbb{F}(A)$.\\ Si $f$ est noethérienne alors $g$ est fortement entière sur $f$ $\Longleftrightarrow$ il existe un entier naturel $N \geqslant 1$ tel que $t_{N}g \leqslant f \leqslant g$.
+\end{maproposition}
+\begin{maproposition}
+	Soient $f,g \in \mathbb{F}(A)$. Alors:
+	\[ g \text{ est entière sur } f \Longleftrightarrow \forall k \in \mathbb{N}^{*}, g^{(k)} \text{est entière sur } f^{(k)} \Longleftrightarrow \exists k \in \mathbb{N}^{*}, g^{(k)} \text{est entière sur } f^{(k)} \]
+\end{maproposition}
+
+\begin{moncorollaire}
+	Soient $f,g \in \mathbb{F}(A)$, tel que $f \leqslant g$. Si $A$ est noethérien et $g$ est fortement entière sur $f$. Alors $f$ est fortement $A.P$ $\Longleftrightarrow$ $g$ est fortement $A.P.$
+\end{moncorollaire}
+\begin{maproposition}
+	Si $f=f_I$ alors:\\
+	$f$ est fortement A.P $\Longleftrightarrow $ $f$ est A.P $\Longleftrightarrow $ $f$ est fortement noethérienne $\Longleftrightarrow $ $f$ est noethérienne $\Longleftrightarrow $ $f$ est E.P
+\end{maproposition}
+
+\begin{moncorollaire}
+	Soient $f=(I_n)_{n \in \mathbb{N}}$ et $g=(J_n)_{n \in \mathbb{N}}$ deux filtrations de $A$,\\ tel que $f \leqslant  g$.
+	Si $f$ ou $g$ est noethérienne. Alors: \\
+	$g$ est $f-bonne$ $\Longleftrightarrow $ $g$ est fortement intégral sur $f$
+\end{moncorollaire}
+\begin{maproposition}
+	Soient $f=(I_n)_{n \in \mathbb{N}}$ et $g=(J_n)_{n \in \mathbb{N}}$ deux filtrations de $A$ tel que $f$ est une réduction de $g$ alors:	$g$ est E.P et $g$ est $f-bonne$.
+\end{maproposition}
+
+\begin{maproposition}
+	Lorsque $f$ est une filtration fortement noethérienne et $g$ est une
+	filtration noethérienne de l'anneau noethérien A vérifiant $
+	f=(I_{n})\leq g=(J_{n})$, on montre que les assertions suivantes sont équivalentes:
+	
+	(i) $f$ est une réduction de $g$
+	
+	(ii) $J_{n}^{2}=I_{n}J_{n},\forall n>>0$
+	
+	(iii) L'idéal $I_{n}$ est une réduction de l'idéal $J_{n}$ pour
+	tout $n>>0$
+	
+	(iv) Il existe un entier $k\geq 1$ tel que $g^{k}$ soit $I_{k}-bonne$
+	
+	(v) $\forall m\geq 1$, $f^{(m)}$ est une réduction de $g^{(m)}$
+	
+	(vi) $\exists m\geq 1,$ tel que $f^{(m)}$ soit une réduction de $g^{(m)}$
+	
+	(vii) $g$ est entière sur $f$
+	
+	(viii) $g$ est fortement entière sur $f$
+	
+	(ix) $g$ est $f-fine$
+	
+	(xi) $g$ est faiblement $f-bonne$
+	
+	(x) $g$ est $f-bonne$
+	
+	(xii) $\exists m\geq 1,$ tel que $t_{m}f\leq f\leq g$
+	
+	(iii) $(P_{k}(f))=(P_{k}(g))$ pour tout $k\in\mathbb{N}$
+	
+	En particulier, il résulte des équivalences ci-dessus que si $f$ est une filtration $I-adique$ de l'anneau noethérien $A$ et si $g$ est
+	une filtration noethérienne dominée par $g$, les notions suivantes
+	sont équivalentes :
+	
+	(1) $f_{I}$ est une réduction de $g$
+	
+	(2) $g$ est entière sur $f_{I}$.
+	
+	(3) $g$ est fortement entière sur $f_{I}$
+	
+	(4) $g$ est $I-bonne$
+	
+\end{maproposition}
+
+\begin{maproposition}
+	\label{th1}
+	Soient $f=(I_n)_{n \in \mathbb{N}}$ et $g=(J_n)_{n \in \mathbb{N}}$ deux filtrations de $A$,\\ tel que $f \leqslant  g$. Nous considérons les assertions suivantes:\\
+	\begin{enumerate}
+			\item[(i)] $g$ est $f-bonne$
+			
+			\item[(ii)]  $g$ est $f-fine$
+			
+			\item[(iii)] $g$ est fortement entière sur $f$
+			
+			\item[(iv)] $g$ est faiblement $f-bonne$
+			
+			\item[(v)]  $\exists N \geqslant 1$ un entier tel que $t_Ng \leqslant f \leqslant g$.
+		\end{enumerate}
+\end{maproposition}
+\begin{maproposition}
+	Sous les hypothèses du théorème \eqref{th1} en admettant que $A$ est noethérien
+	et $f$ est noethérienne alors:
+	(i) $\Longleftrightarrow $ (ii) $\Longleftrightarrow $ (iii) $\Longleftrightarrow $ (vi) $\Longleftrightarrow $ (v). 
+\end{maproposition}
+
+\end{document}

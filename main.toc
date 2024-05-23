@@ -28,7 +28,7 @@
 \contentsline {section}{\numberline {1.6}Anneaux gradu\IeC {\'e}s associ\IeC {\'e}s \IeC {\`a} une filtration}{12}{section.1.6}
 \contentsline {subsection}{\numberline {1.6.1}Anneau de Rees d'une filtration}{12}{subsection.1.6.1}
 \contentsline {subsection}{\numberline {1.6.2}Anneau gradu\IeC {\'e} d'une filtration}{12}{subsection.1.6.2}
-\contentsline {subsection}{\numberline {1.6.3}Quelques exemples de filtration}{13}{subsection.1.6.3}
+\contentsline {subsection}{\numberline {1.6.3}Quelques exemples de filtrations}{13}{subsection.1.6.3}
 \contentsline {subsubsection}{a) \relax $\@@underline {\hbox {Filtration I-adique}}\mathsurround \z@ $\relax }{13}{section*.1}
 \contentsline {subsubsection}{b) \relax $\@@underline {\hbox {Filtration tronqu\IeC {\'e} d'ordre k de $f$}}\mathsurround \z@ $\relax }{13}{section*.2}
 \contentsline {subsubsection}{c) \relax $\@@underline {\hbox {Filtration d\IeC {\'e}finie par une graduation}}\mathsurround \z@ $\relax }{13}{section*.3}
@@ -40,9 +40,12 @@
 \contentsline {subsubsection}{d) \relax $\@@underline {\hbox {Filtrations E.P}}\mathsurround \z@ $\relax }{14}{section*.8}
 \contentsline {subsubsection}{e) \relax $\@@underline {\hbox {Filtrations noeth\IeC {\'e}riennes}}\mathsurround \z@ $\relax }{15}{section*.9}
 \contentsline {subsubsection}{f) \relax $\@@underline {\hbox {Filtrations fortement noeth\IeC {\'e}riennes}}\mathsurround \z@ $\relax }{15}{section*.10}
-\contentsline {chapter}{\numberline {2}D\IeC {\'E}PENDANCE INT\IeC {\'E}GRALE, R\IeC {\'E}DUCTION ET FILTRATION I-BONNE}{16}{chapter.2}
-\contentsline {section}{\numberline {2.1}D\IeC {\'e}pendance int\IeC {\'e}grale}{16}{section.2.1}
-\contentsline {subsection}{\numberline {2.1.1}D\IeC {\'e}pendance int\IeC {\'e}grale sur les anneaux}{16}{subsection.2.1.1}
+\contentsline {subsection}{\numberline {1.6.5}Caract\IeC {\'e}risation des filtrations}{15}{subsection.1.6.5}
+\contentsline {subsubsection}{a) \relax $\@@underline {\hbox {Caract\IeC {\'e}risation des filtrations noeth\IeC {\'e}riennes}}\mathsurround \z@ $\relax }{15}{section*.11}
+\contentsline {subsubsection}{b) \relax $\@@underline {\hbox {Caract\IeC {\'e}risation des filtrations E.P.}}\mathsurround \z@ $\relax }{16}{section*.12}
+\contentsline {chapter}{\numberline {2}D\IeC {\'E}PENDANCE INT\IeC {\'E}GRALE, R\IeC {\'E}DUCTION ET FILTRATION I-BONNE}{17}{chapter.2}
+\contentsline {section}{\numberline {2.1}D\IeC {\'e}pendance int\IeC {\'e}grale}{17}{section.2.1}
+\contentsline {subsection}{\numberline {2.1.1}D\IeC {\'e}pendance int\IeC {\'e}grale sur les anneaux}{17}{subsection.2.1.1}
 \contentsline {subsection}{\numberline {2.1.2}D\IeC {\'e}pendance int\IeC {\'e}grale sur un id\IeC {\'e}al}{22}{subsection.2.1.2}
 \contentsline {section}{\numberline {2.2}R\IeC {\'e}duction d'un id\IeC {\'e}al}{24}{section.2.2}
 \contentsline {subsection}{\numberline {2.2.1}D\IeC {\'e}finitions et propri\IeC {\'e}t\IeC {\'e}s}{24}{subsection.2.2.1}
@@ -50,9 +53,9 @@
 \contentsline {chapter}{\numberline {3}D\IeC {\'E}PENDANCE, R\IeC {\'E}DUCTION ET FILTRATIONS BONNES}{31}{chapter.3}
 \contentsline {section}{\numberline {3.1}D\IeC {\'e}pendance int\IeC {\'e}grale de filtration}{31}{section.3.1}
 \contentsline {section}{\numberline {3.2}Cl\IeC {\^o}ture int\IeC {\'e}grale d'une filtration}{32}{section.3.2}
-\contentsline {section}{\numberline {3.3}R\IeC {\'e}duction d'une filtration}{35}{section.3.3}
-\contentsline {subsection}{\numberline {3.3.1}R\IeC {\'e}duction au sens de Okon-Ratliff}{35}{subsection.3.3.1}
-\contentsline {subsection}{\numberline {3.3.2}R\IeC {\'e}duction au sens de Dichi-Sangar\IeC {\'e}}{38}{subsection.3.3.2}
-\contentsline {section}{\numberline {3.4}Filtrations f-bonnes}{41}{section.3.4}
-\contentsline {chapter}{\relax \fontsize {14.4}{18}\selectfont {Conclusion}}{46}{maproposition.3.22}
-\contentsline {chapter}{\relax \fontsize {14.4}{18}\selectfont {Bibliographie}}{48}{chapter*.12}
+\contentsline {section}{\numberline {3.3}R\IeC {\'e}duction d'une filtration}{37}{section.3.3}
+\contentsline {subsection}{\numberline {3.3.1}R\IeC {\'e}duction au sens de Okon-Ratliff}{37}{subsection.3.3.1}
+\contentsline {subsection}{\numberline {3.3.2}R\IeC {\'e}duction au sens de Dichi-Sangar\IeC {\'e}}{39}{subsection.3.3.2}
+\contentsline {section}{\numberline {3.4}Filtrations f-bonnes}{43}{section.3.4}
+\contentsline {chapter}{\relax \fontsize {14.4}{18}\selectfont {Conclusion}}{49}{montheoreme.3.1}
+\contentsline {chapter}{\relax \fontsize {14.4}{18}\selectfont {Bibliographie}}{51}{chapter*.14}

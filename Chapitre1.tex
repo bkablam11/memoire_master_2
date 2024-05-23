@@ -5,25 +5,25 @@ Ce chapitre revêt la forme d'une rétrospective, visant à revisiter et consoli
 \subsection{Relation d'équivalence}
 \begin{madefinition}
 	On appelle relation d’équivalence sur un ensemble non vide E, une relation
-	$\mathcal{R}$ sur E vérifiant les conditions suivantes :
+	$\Re $ sur E vérifiant les conditions suivantes :
 	\begin{enumerate}
-		\item[a)] $\forall x \in E, x\mathcal{R}x$ (réflexivité)
-		\item[b)] $\forall x,y \in E, x\mathcal{R}y \Longleftrightarrow y\mathcal{R}x $ (symétrie)
-		\item[c)] $\forall x,y,z \in E, (x\mathcal{R}y)$ et $(y\mathcal{R}z)$ $\Longrightarrow (x\mathcal{R}z)$  (transitivité)
+		\item[a)] $\forall x \in E, x\Re x$ (réflexivité)
+		\item[b)] $\forall x,y \in E, x\Re y \Longleftrightarrow y\Re x $ (symétrie)
+		\item[c)] $\forall x,y,z \in E, (x\Re y)$ et $(y\Re z)$ $\Longrightarrow (x\Re z)$  (transitivité)
 	\end{enumerate}
-	La partie $C_x = \{y \in E,\quad x\mathcal{R}y\}  $ de E est appelée la classe d’équivalence modulo $\mathcal{R}$ de $x \in E$. Les	classes d’équivalence constituent une partition de E. Notons $\mathcal{P}(E)$ l’ensemble des parties de E. La famille $(C_x)_{x \in E}$ constitue un sous-ensemble de $\mathcal{P}(E)$ appelé l’ensemble quotient de E par R. On le note $E/\mathcal{R}$. 
-	Dans la suite, la classe de $x \in E$ sera vue essentiellement comme élément de ce nouvel ensemble $E/\mathcal{R}$ et sera notée $\bar{x}$
+	La partie $C_x = \{y \in E,\quad x\Re y\}  $ de E est appelée la classe d’équivalence modulo $\Re $ de $x \in E$. Les	classes d’équivalence constituent une partition de E. Notons $\mathcal{P}(E)$ l’ensemble des parties de E. La famille $(C_x)_{x \in E}$ constitue un sous-ensemble de $\mathcal{P}(E)$ appelé l’ensemble quotient de E par R. On le note $E/\Re $. 
+	Dans la suite, la classe de $x \in E$ sera vue essentiellement comme élément de ce nouvel ensemble $E/\Re $ et sera notée $\bar{x}$
 \end{madefinition}
 \subsection{Relation d'ordre}
 \begin{madefinition}
 	On appelle relation d’ordre sur un ensemble non vide E, une relation
-	$\mathcal{R}$ sur E vérifiant les conditions suivantes :
+	$\Re $ sur E vérifiant les conditions suivantes :
 	\begin{enumerate}
-		\item[a)] $\forall x \in E, x\mathcal{R}x$ (réflexivité)
-		\item[b)] $\forall x,y \in E, x\mathcal{R}y $ et $y\mathcal{R}x$ $ \Longleftrightarrow y = x $ (anti-symétrie)
-		\item[c)] $\forall x,y,z \in E, (x\mathcal{R}y)$ et $(y\mathcal{R}z)$ $\Longrightarrow (x\mathcal{R}z)$  (transitivité)
+		\item[a)] $\forall x \in E, x\Re x$ (réflexivité)
+		\item[b)] $\forall x,y \in E, x\Re y $ et $y\Re x$ $ \Longleftrightarrow y = x $ (anti-symétrie)
+		\item[c)] $\forall x,y,z \in E, (x\Re y)$ et $(y\Re z)$ $\Longrightarrow (x\Re z)$  (transitivité)
 	\end{enumerate}
-	L'ensemble $(E, \mathcal{R})$ s'appelle alors ensemble ordonné. L'ordre est dit total si deux éléments sont toujours comparables (on dit aussi que l'ensemble est totalement ordonné). Dans le cas contraire, il est dit partiel.
+	L'ensemble $(E, \Re )$ s'appelle alors ensemble ordonné. L'ordre est dit total si deux éléments sont toujours comparables (on dit aussi que l'ensemble est totalement ordonné). Dans le cas contraire, il est dit partiel.
 \end{madefinition}
 
 \subsection{Groupe}
@@ -399,7 +399,7 @@ Ainsi au lieu d'étudier la famille $f = (I_n)_{n \in \mathbb{Z}}$ nous pouvons 
 		\item[(ix)] $ \dfrac{\mathcal{R}(A,I)}{(u-1)\mathcal{R}(A,I)} \simeq A $
 	\end{enumerate} 
 \end{maproposition}
-\subsection{Quelques exemples de filtration}
+\subsection{Quelques exemples de filtrations}
 \subsubsection{a) \underline{Filtration I-adique}}
 \begin{madefinition}
 	Soient $A$ un anneau et $I$ un idéal de A.\\
@@ -495,6 +495,60 @@ Soit I un idéal de l'anneau $A$ si $f_I$ est la filtration $I-adique$ alors l'a
 \begin{maremarque}(\cite{2})\\
 	$\mathcal{R}(A,f)$ est noethérien si et seulement si $R(A,f)$ est noethérien.
 \end{maremarque}
+
+\subsection{Caractérisation des filtrations}
+\subsubsection{a) \underline{Caractérisation des filtrations noethériennes}} 
+\begin{maproposition}
+	Soit $f=(I_{n})_{n \in \mathbb{Z}}\in \mathbb{F}(A),$ si $A$ est noethérien, alors les assertions suivantes sont équivalentes:
+	\begin{enumerate}
+		\item[(i)] $\mathcal{R}(A,f)$ est noethérien
+		\item[(ii)] $\mathbb{R}(A,f)$ est noethérien
+		\item[(iii)] $f$ est $E.P.$
+		\item[(iv)] $\exists n \geqslant 1,\forall n \geqslant k, I_{n+k} = I_nI_k$
+	\end{enumerate}
+\end{maproposition}
+\begin{monexemple}
+	Soit $A$ un anneau noethérien et $I$ un idéal de $A$.\\
+	Posons \ $(I_{n})_{n\in \mathbb{N}}$ telle que $\left\{ 
+	\begin{array}{c}
+		I_{0}=A \\ 
+		I_{2n}=I_{2n-1}=I^{n}\text{ , }\forall n\geq 1
+	\end{array}
+	\right. $
+	
+	Montrons que pour tout $n\geq 1,I_{n+2}=I_{n}I_{2}$
+	
+	Suivant la parité de $n,$ il vient $n=2p$ ou $n=2p+1,$ $p\in \mathbb{N}.$
+	
+	* Si $n=2p$ \\
+	$I_{2p+2}=I_{2(p+1)}=I^{p+1}=I^{p}I=I_{2p}I_{2}$ (car $I^{k}\subseteq I_{k}$) \\
+	* Si $n=2p+1$ \\
+	$I_{2p+1+2}=I_{2(p+1)+1}=I_{2(p+2)-1}=I^{p+2}=I^{p+1}I^{1}=I_{2(p+1)-1}I_{2\times 1}=I_{2p+1}I_{2}$
+	
+	Dans tous les cas pour tout $n\geq 1,I_{n+2}=I_{n}I_{2}.$
+	
+	On en déduit que $f$ est noethérienne.
+\end{monexemple}
+
+\subsubsection{b) \underline{Caractérisation des filtrations E.P.}} 
+\begin{maproposition}
+	Soit $f=(I_{n})_{n \in \mathbb{Z}}\in \mathbb{F}(A),$. Soit $N \geqslant 1$.\\
+	On pose:
+	$H_{n}=\left\{ 
+	\begin{array}{c}
+		H_{n}=I_{n}\text{ si }n\leq N \\ 
+		H_{n}=\sum\limits_{j_{1}+2j_{2}+\cdots
+			+Nj_{N}=N}I_{1}^{j_{1}}I_{2}^{j2}\cdots I_{N}^{jN}\text{ si }n>N
+	\end{array}
+	\right. $
+	Alors: 
+	\begin{enumerate}
+		\item[(i)] $h$ est une filtration de $A$ telle que $h \geqslant f$
+		\item[(ii)] $h$ est $E.P.$
+		\item[(iii)] $f$ est $E.P.$ si et seulement si $f=h$
+	\end{enumerate}
+\end{maproposition}
+
 
 \begin{maremarque}(\cite{2})\\
 	Dans un anneau noethérien, nous avons la classification suivantes des filtrations \\ classiques $f$ où $I$ est un idéal de l'anneau $A$:

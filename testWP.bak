@@ -25,6 +25,12 @@
 %\input{tcilatex}
 %\input{tcilatex}
 %\input{tcilatex}
+%\input{tcilatex}
+%\input{tcilatex}
+%\input{tcilatex}
+%\input{tcilatex}
+%\input{tcilatex}
+%\input{tcilatex}
 
 
 \documentclass[11pt, twoside]{article}
@@ -54,7 +60,7 @@
 %TCIDATA{Version=5.50.0.2890}
 %TCIDATA{<META NAME="SaveForMode" CONTENT="1">}
 %TCIDATA{BibliographyScheme=Manual}
-%TCIDATA{LastRevised=Sunday, May 19, 2024 11:41:59}
+%TCIDATA{LastRevised=Thursday, May 23, 2024 22:37:04}
 %TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
 
 \bibliographystyle{agsm} 
@@ -62,12 +68,10 @@
 \definecolor{codegray} {rgb} {0.5,0.5,0.5}
 \definecolor{codepurple} {rgb} {0.58,0,0.82}
 \definecolor {backcolour} {rgb} {0.95,0.95,0.92}
-
-%\input{tcilatex}
-
+\input{tcilatex}
 \begin{document}
 
-f
+
 
 
 \end{document}
