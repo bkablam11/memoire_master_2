@@ -37,7 +37,7 @@
 \contentsline {subsubsection}{a) \relax $\@@underline {\hbox {Filtrations I-bonnes}}\mathsurround \z@ $\relax }{14}{section*.5}
 \contentsline {subsubsection}{b) \relax $\@@underline {\hbox {Filtrations A.P.}}\mathsurround \z@ $\relax }{14}{section*.6}
 \contentsline {subsubsection}{c) \relax $\@@underline {\hbox {Filtrations fortement A.P.}}\mathsurround \z@ $\relax }{14}{section*.7}
-\contentsline {subsubsection}{d) \relax $\@@underline {\hbox {Filtrations E.P}}\mathsurround \z@ $\relax }{14}{section*.8}
+\contentsline {subsubsection}{d) \relax $\@@underline {\hbox {Filtrations E.P.}}\mathsurround \z@ $\relax }{14}{section*.8}
 \contentsline {subsubsection}{e) \relax $\@@underline {\hbox {Filtrations noeth\IeC {\'e}riennes}}\mathsurround \z@ $\relax }{15}{section*.9}
 \contentsline {subsubsection}{f) \relax $\@@underline {\hbox {Filtrations fortement noeth\IeC {\'e}riennes}}\mathsurround \z@ $\relax }{15}{section*.10}
 \contentsline {subsection}{\numberline {1.6.5}Caract\IeC {\'e}risation des filtrations}{15}{subsection.1.6.5}
@@ -57,5 +57,5 @@
 \contentsline {subsection}{\numberline {3.3.1}R\IeC {\'e}duction au sens de Okon-Ratliff}{37}{subsection.3.3.1}
 \contentsline {subsection}{\numberline {3.3.2}R\IeC {\'e}duction au sens de Dichi-Sangar\IeC {\'e}}{39}{subsection.3.3.2}
 \contentsline {section}{\numberline {3.4}Filtrations f-bonnes}{43}{section.3.4}
-\contentsline {chapter}{\relax \fontsize {14.4}{18}\selectfont {Conclusion}}{49}{montheoreme.3.1}
-\contentsline {chapter}{\relax \fontsize {14.4}{18}\selectfont {Bibliographie}}{51}{chapter*.14}
+\contentsline {chapter}{\relax \fontsize {14.4}{18}\selectfont {Conclusion}}{50}{montheoreme.3.1}
+\contentsline {chapter}{\relax \fontsize {14.4}{18}\selectfont {Bibliographie}}{52}{chapter*.14}

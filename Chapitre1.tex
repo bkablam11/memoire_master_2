@@ -1,6 +1,6 @@
 \chapter{GÉNÉRALITÉS}
 \chaptermark{GÉNÉRALITÉS}
-Ce chapitre revêt la forme d'une rétrospective, visant à revisiter et consolider diverses définitions dans \cite{5} et propositions évoquées au sein des Unités d'Enseignement (U.E.) consacrées à l'Algèbre Commutative et à la Théorie des Filtrations. L'ensemble des résultats présentés dans ce chapitre s'enracine dans \cite{6}. Leur maîtrise s'avère incontournable pour une appréhension éclairée des sections à venir. Cependant, il convient de préciser que les démonstrations des propositions énoncées dans ce chapitre ne seront exposées que lorsqu'elles s'avéreront nécessaires. \\\\ Dans l'ensemble de ce mémoire, sauf mention contraire, les anneaux considérés sont supposés \textbf{commutatifs et unitaires}.
+Ce chapitre revêt la forme d'une rétrospective, visant à revisiter et consolider diverses définitions dans \cite{Di2} et propositions évoquées au sein des Unités d'Enseignement (U.E.) consacrées à l'Algèbre Commutative et à la Théorie des Filtrations. L'ensemble des résultats présentés dans ce chapitre s'enracine dans \cite{Di3}. Leur maîtrise s'avère incontournable pour une appréhension éclairée des sections à venir. Cependant, il convient de préciser que les démonstrations des propositions énoncées dans ce chapitre ne seront exposées que lorsqu'elles s'avéreront nécessaires. \\\\ Dans l'ensemble de ce mémoire, sauf mention contraire, les anneaux considérés sont supposés \textbf{commutatifs et unitaires}.
 \section{Relation d'équivalence, groupe et sous-groupe}
 \subsection{Relation d'équivalence}
 \begin{madefinition}
@@ -112,11 +112,11 @@ Ce chapitre revêt la forme d'une rétrospective, visant à revisiter et consoli
 		\item (E, $+$) est un groupe additif d'élément neutre noté $0_E$ ou $0$.
 		\item Les lois $+$ et $\times$ sont compatibles entre elles et avec les lois de la structure de corps de $\mathbb{K}$. C'est-à-dire qu'elle vérifient:
 		\begin{enumerate}
-			\item (a) $\forall \lambda \in \mathbb{K}, \forall u,v \in E, \lambda \times (u+v) = \lambda \times u + \lambda \times v$
-			\item (b) $\forall \lambda , \mu \in \mathbb{K}, \forall u \in E, (\lambda \times \mu)\times u 
+			\item  $\forall \lambda \in \mathbb{K}, \forall u,v \in E, \lambda \times (u+v) = \lambda \times u + \lambda \times v$
+			\item $\forall \lambda , \mu \in \mathbb{K}, \forall u \in E, (\lambda \times \mu)\times u 
 			= \lambda \times(\mu \times u) $
-			\item (c) $\forall \lambda, \mu \in \mathbb{K}, \forall u \in E, (\lambda + \mu)\times u = (\lambda \times u) + (\mu \times v)$
-			\item (d) $\forall u \in E, 1_{\mathbb{K}}.u=u$
+			\item $\forall \lambda, \mu \in \mathbb{K}, \forall u \in E, (\lambda + \mu)\times u = (\lambda \times u) + (\mu \times v)$
+			\item  $\forall u \in E, 1_{\mathbb{K}}.u=u$
 		\end{enumerate}
 	\end{enumerate}	
 \end{madefinition}
@@ -225,8 +225,7 @@ Ce chapitre revêt la forme d'une rétrospective, visant à revisiter et consoli
 \begin{madefinition}
 	Soit $M$ un $A$-module. $M$ est dit de type fini s'il admet un système générateur fini, $\exists \, \, x_1, \cdots ,x_r \in M$ tel que $\forall \,  x \in M, x = \displaystyle \sum_{i=1}^{r}{a_i x_i}$, $a_i \in A$.
 \end{madefinition}
-\begin{maproposition}
-	(Module noethérien) \\
+\begin{maproposition}(Module noethérien) \\
 	Soient $A$ un anneau et $M$ un $A-module$. On dit que $M$ est un module noethérien si l'une des trois assertions équivalentes sont vérifiée:
 	\begin{enumerate}
 		\item[(i)] Tout sous-module de $M$ est de type fini,
@@ -467,7 +466,7 @@ Soit I un idéal de l'anneau $A$ si $f_I$ est la filtration $I-adique$ alors l'a
 	La filtration $f = (I_n)_{n \in \mathbb{Z}}$ de l'anneau $A$ est dite \textbf{fortement Approximable par Puissances d'idéaux} (en abrégé \textbf{fortement A.P.}) s'il existe un entier $k \geqslant 1$ tel que :
 	\[ \forall \, n \in \mathbb{N}, \ I_{nk} = I_k^n \]
 \end{madefinition}
-\subsubsection{d) \underline{Filtrations E.P}}
+\subsubsection{d) \underline{Filtrations E.P.}}
 \begin{madefinition}
 	La filtration $f = (I_n)_{n \in \mathbb{Z}}$ de l'anneau $A$ est dite \textbf{Essentiellement par Puissances d'idéaux} (en abrégé \textbf{E.P}) s'il existe un entier $N \geqslant 1$ tel que :
 	\[ \forall \, n \geqslant N, \ I_n =\sum_{p=1}^{N} I_{n-p}I_p. \]
@@ -482,7 +481,7 @@ Soit I un idéal de l'anneau $A$ si $f_I$ est la filtration $I-adique$ alors l'a
 	\[ \forall \, m, n \in \mathbb{Z}, \ m, n \geqslant k, I_m I_n = I_{m+n} \]
 \end{madefinition}
 \begin{maremarque}
-	Il résulte des références \cite{4} , \cite{5}, \cite{6} que si $A$ est un anneau noethérien et $f=(I_n)_{n \in \mathbb{Z}} \in \mathbb{F}(A)$, les assertions suivantes sont équivalentes : 
+	Il résulte des références \cite{Di1} , \cite{Di3}, \cite{Di4} que si $A$ est un anneau noethérien et $f=(I_n)_{n \in \mathbb{Z}} \in \mathbb{F}(A)$, les assertions suivantes sont équivalentes : 
 	\begin{enumerate}
 		\item[(a)] $f$ est une $E.P.$ filtration
 		\item[(b)] $\exists k \in \mathbb{N}^{*}$ tel que $f$ soit la plus petite filtration ayant pour $k+1$ premiers $I_0, I_1,\dots, I_k $
@@ -492,7 +491,7 @@ Soit I un idéal de l'anneau $A$ si $f_I$ est la filtration $I-adique$ alors l'a
 		\item[(f)] L'anneau de Rees généralisé $\mathcal{R}(A,f)$ de $f$ est une $A-algèbre$ de type fini
 	\end{enumerate}
 \end{maremarque}
-\begin{maremarque}(\cite{2})\\
+\begin{maremarque}(\cite{Di3})\\
 	$\mathcal{R}(A,f)$ est noethérien si et seulement si $R(A,f)$ est noethérien.
 \end{maremarque}
 
@@ -550,7 +549,7 @@ Soit I un idéal de l'anneau $A$ si $f_I$ est la filtration $I-adique$ alors l'a
 \end{maproposition}
 
 
-\begin{maremarque}(\cite{2})\\
+\begin{maremarque}(\cite{Di3})\\
 	Dans un anneau noethérien, nous avons la classification suivantes des filtrations \\ classiques $f$ où $I$ est un idéal de l'anneau $A$:
 	\begin{center}
 		\begin{tikzpicture}
