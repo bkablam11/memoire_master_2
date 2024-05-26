@@ -236,14 +236,11 @@ PLAN DE PRÉSENTATION}
 	\framesubtitle{RÉSULTATS}
 	\begin{block}{Démonstration}
 			1)
-		
 		$(i)\Longleftrightarrow (vii).$
-		
-		Supposons $(i)$ et choisissons $k$ comme dans \ref{maprop4} (i) alors pour tout
-		entiers $m\geq 1$ et $n\geq k,$ $J_{m(k+n)}=J_{mk}I_{mn}$, ce qui entraîne $(vii).$
-		
+		Supposons $f$ est une réduction de $g$ et choisissons un entier $k$, $k \geqslant 1$ tel que $J_{k+n}  = J_{k}I_n$ pour tout $n \geqslant k$. Pour un tel entier $k$ et pour tout $m \geqslant 1$, $J_{mk}=J_{k}^{p}J_{(m-p)k}
+		$ pour tout $p=1,2,\cdots,m$ alors pour tout
+		entiers $m\geq 1$ et $n\geq k,$ $J_{m(k+n)}=J_{mk}I_{mn}$, ce qui entraîne que pour tout entier $m\geq 1$ tel que $f^{(m)}$ est une réduction de $g^{(m)}.$
 		La réciproque est évidente.
-		
 	\end{block}
 \end{frame}
 
@@ -251,7 +248,7 @@ PLAN DE PRÉSENTATION}
 	\framesubtitle{RÉSULTATS}
 	\begin{block}{Démonstration}
 		$(v)\Longrightarrow (vi).$
-		
+		Supposons qu'il existe un entier $k\geq 1$ tel que $g^{(k)}$ est $I_{k}-bonne$.
 		Posons $f^{(k)}=(H_{n});$ $g^{(k)}=(K_{n});$ $H_{n}=I_{nk};$ $K_{n}=J_{nk};$ 
 		$H_{1}=I_{k};$
 		
@@ -262,7 +259,7 @@ PLAN DE PRÉSENTATION}
 		Pour tout entier $m\geq 0,$ $K_{n_{0}+m}=H_{1}^{m}K_{n_{0}}\subseteq
 		H_{m}K_{n_{0}}\subseteq K_{n_{0}+m}.$
 		
-		Donc $K_{n_{0}+m}=K_{n_{0}}H_{m}$ pour tout entier $m.$ Et donc $f^{(k)}$
+		Donc $K_{n_{0}+m}=K_{n_{0}}H_{m}$ pour tout entier $m.$ Donc $f^{(k)}$
 		est une réduction de $g^{(k)}.$
 		
 	\end{block}
@@ -271,14 +268,12 @@ PLAN DE PRÉSENTATION}
 \begin{frame}{DÉPENDANCE INTÉGRALE, RÉDUCTION ET FILTRATION BONNE}
 	\framesubtitle{RÉSULTATS}
 	\begin{block}{Démonstration}
-		$(vi)\Longrightarrow (v).$
-		
+		$(vi)\Longrightarrow (v).$\\ Supposons qu'il existe un entier $r\geq 1$ tel que $f^{(r)}$ est une réduction de $g^{(r)}.$
 		Il suffit de montrer que si $f$ est une réduction de $g$ alors il existe 
 		$k\geq 1$ tel que $g^{(k)}$ est $I_{k}-bonne.$
 		
-		Posons $k$ comme dans \ref{maprop4} (i), alors pour tout entiers $m\geq 1$ et  $J_{k(m+1)}=J_{mk}I_{k}$, donc $g^{(k)}$ est $I_{k}-bonne.$
-		
-		Donc $(vi)\Longrightarrow (v).$
+		Posons un entier $k$, $k \geqslant 1$ tel que $J_{k+n}  = J_{k}I_n$ pour tout $n \geqslant k$. Pour un tel entier $k$ et pour tout $m \geqslant 1$, $J_{mk}=J_{k}^{p}J_{(m-p)k}
+		$ pour tout $p=1,2,\cdots,m$, alors pour tout entiers $m\geq 1$ et  $J_{k(m+1)}=J_{mk}I_{k}$, donc $g^{(k)}$ est $I_{k}-bonne.$
 	\end{block}
 \end{frame}
 
@@ -287,13 +282,11 @@ PLAN DE PRÉSENTATION}
 	\begin{block}{Démonstration}
 		$(viii)\Longleftrightarrow (xv).$
 		
-		Si $g$ est entière sur $f$ alors $f\leq g\leq P(f),$ ainsi $P(f)\leq
-		P(g)\leq P(P(f))=P(f),$ donc $P(g)=P(f).$
+		Si $g$ est entière sur $f$ alors $f\leq g\leq P(f),$ ainsi $P(f)\leq P(g)\leq P(P(f))=P(f),$ donc $P(g)=P(f).$
 		
 		Réciproquement si $P(f)=P(g)$ alors $g\leq P(g)=P(f)$ et donc $g$ est entière sur $f.$
 		
 		$(ii)\Longrightarrow (iii).$
-		
 		Évident.
 	\end{block}
 \end{frame}
@@ -301,15 +294,15 @@ PLAN DE PRÉSENTATION}
 \begin{frame}{DÉPENDANCE INTÉGRALE, RÉDUCTION ET FILTRATION BONNE}
 	\framesubtitle{RÉSULTATS}
 	\begin{block}{Démonstration}
-		$(iv)\Longrightarrow (i).$
-		
+		$(iv)\Longrightarrow (i).$\\
+		Supposons qu'il existe un entier $s\geq 1$ tel que pour tout $n\geq s,$ $J_{s+n}=J_{s}J_{n},$ $I_{s+n}=I_{s}I_{n},$ $J_{s}^{2}=I_{s}J_{s},$ $J_{s+p}I_{s}=I_{s+p}J_{s}$ pour tout $p=1,2,...,s-1$.\\
 		Posons $n\geq 2s$ et $n=qs+p$ avec $0\leq p<s.$
 		
 		Alors $J_{s+n}=J_{(q-2)s+2s+(s+p)}=J_{s}^{q-2}J_{2s+(s+p)}=J_{s}^{q-2}J_{s}^{2}J_{s+p}=J_{s}^{q-1}I_{s}J_{s+p}=J_{s}^{q-1}J_{s}I_{s+p}=J_{s}^{q}I_{s+p}=J_{s}I_{s}^{q-1}I_{s+p}\subseteq J_{s}I_{n}\subseteq J_{s+n}.
 		$
 		
-		Par suite $J_{s+n}=J_{s}I_{n}$ pour tout $n\geq 2s.$ Donc $%
-		J_{2s+n}=J_{2s}I_{n}$ pour tout $n\geq 2s.$ D'où $(i).$
+		Par suite $J_{s+n}=J_{s}I_{n}$ pour tout $n\geq 2s.$ Donc $
+		J_{2s+n}=J_{2s}I_{n}$ pour tout $n\geq 2s.$ D'où $f$ est une réduction de $g.$
 		
 		
 		
@@ -327,7 +320,7 @@ PLAN DE PRÉSENTATION}
 		
 		Évident
 		
-		$(ix)\Longrightarrow (xii)\Longrightarrow (xiii)$ en utilisant \ref{maprop6} (5)
+		$(ix)\Longrightarrow (xii)\Longrightarrow (xiii)$ en utilisant la proposition 3.6 (5)
 		
 	\end{block}
 \end{frame}
@@ -335,10 +328,11 @@ PLAN DE PRÉSENTATION}
 \begin{frame}{DÉPENDANCE INTÉGRALE, RÉDUCTION ET FILTRATION BONNE}
 	\framesubtitle{RÉSULTATS}
 	\begin{block}{Démonstration}
-				$(i)\Longrightarrow (x).$
-		
+		$(i)\Longrightarrow (x).$ \\
+		Supposons que $f$ est une réduction de $g.$\\
 		Pour tout entier $n\geq N=2k-1,$ posons $n=qk+r,$ avec $0\leq r<k$ où $k$
-		est comme dans $(4.3)$ $(i).$
+		est $k \geqslant 1$ tel que $J_{k+n}  = J_{k}I_n$ pour tout $n \geqslant k$. Pour un tel entier $k$ et pour tout $m \geqslant 1$, $J_{mk}=J_{k}^{p}J_{(m-p)k}
+		$ pour tout $p=1,2,\cdots,m$
 		
 		Alors $J_{n}=J_{k(q-1)}I_{k+r}.$
 		
@@ -347,9 +341,9 @@ PLAN DE PRÉSENTATION}
 		
 		Ce qui prouve que $g$ est $f-fine.$
 		
-		$(x)\Longrightarrow (xi)$ par \ref{maprop3}
+		$(x)\Longrightarrow (xi)$ car toute filtration f-bonne est f-fine
 		
-		$(xi)\Longrightarrow (xii)$ par \ref{maprop6} (1).
+		$(xi)\Longrightarrow (xii)$ en utilisant la proposition 3.6 (1)
 	\end{block}
 \end{frame}
 
@@ -364,9 +358,6 @@ PLAN DE PRÉSENTATION}
 \begin{frame}{CONCLUSION}
 	\framesubtitle{PERSPECTIVES}
 	\begin{block}{}	
-L'objectif de ce travail était l'étude de la dépendance intégrale et de la réduction par rapport aux idéaux à travers la filtration I-adique qui est une filtration I-bonne. \\
-Ensuite, nous avons montré les interactions entre la dépendance intégrale et la réduction des filtrations bonnes.\\
-
 Comme perspectives, nous projetons d'effectuer:\\
 		\begin{enumerate}
 			\item Une étude du nombre de réduction sur les filtrations bonnes i.e le nombre de Samuel.
