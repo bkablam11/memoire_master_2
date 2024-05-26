@@ -1,0 +1,200 @@
+\documentclass[12pt, a4paper, oneside]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[francais]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{arial}
+\usepackage{setspace}
+\usepackage{amsthm}
+\usepackage{hyperref}
+\usepackage{mathrsfs}
+\usepackage{amssymb}
+\usepackage{makeidx}
+\usepackage{graphicx}
+\usepackage{lmodern}
+\usepackage[left=2.8cm,right=2.8cm,top=3.5cm,bottom=3.5cm]{geometry}
+\usepackage{tocloft}
+\usepackage{stmaryrd}
+\hypersetup{colorlinks=true, urlcolor=blue,linkcolor=blue, breaklinks=true}
+\usepackage{tikz}
+\newtheorem{maremarque}{Remarque}
+\newtheorem{montheoreme}{Théorème}
+\newtheorem{madefinition}{Définition}
+\newtheorem{maproposition}{Proposition}
+\newtheorem{moncorollaire}{Corollaire}
+\newtheorem{monlemme}{Lemme}
+\newtheorem{monexemple}{Exemple}
+\newtheorem{maconsequence}{Consequence}
+\begin{document}
+	\section{A RETENIR}
+	\begin{madefinition} (Filtration tronqué d'ordre k de $f$) \\
+		Soient $A$ un anneau et $I$ un idéal de A. $f = (I_n)_{n\in \mathbb{Z}}$ une filtration de l'anneau A.\\
+		Soit $k \in \mathbb{N}^{*}$, on pose $f^{(k)} = (I_{nk})_{n\in \mathbb{N}}$ et $t_{k}f=(K_n)$ avec $K_n = I_{n+k}$ si $n \geqslant 1 $ et $K_n = A$ si $n \leqslant 0$.\\
+		Ainsi $t_{k}f$ est une filtration de $A$ appelé \textbf{filtration tronqué d'ordre k de $f$}.
+	\end{madefinition}
+	\begin{madefinition}(Filtrations I-bonnes)\\
+		Soient $A$ un anneau et $I$ un idéal de l'anneau $A$.\\
+		$f = (I_n)_{n \in \mathbb{Z}}$ de $A$. $f$ est dite $I$-bonne si :
+		\begin{enumerate}
+			\item[i)]$ II_n \subseteq I_{n+1} \, \forall n \in \mathbb{Z}$.
+			\item[ii)]$\exists \, n_0 \in \mathbb{N}$ tel que $II_n = I_{n+1}, \forall n \geqslant n_0$
+		\end{enumerate}
+	\end{madefinition}
+	\begin{madefinition} (Filtrations A.P.) \\
+		La filtration $f = (I_n)_{n \in \mathbb{Z}}$ de l'anneau $A$ est dite \textbf{Approximable par Puissances d'idéaux} (en abrégé \textbf{A.P.}) s'il existe un entier $(k_{n})_{n \in \mathbb{N}}$ une suite d'entiers naturels telle que :
+		\begin{enumerate}
+			\item[(i)] $\forall$ n,m $\in \mathbb{N}$, $I_{mk_n} \subset I_n^{m}$
+			\item[(ii)] $\underset{n\longrightarrow +\infty }{\lim }\dfrac{k_{n}}{n}=1$
+		\end{enumerate}
+	\end{madefinition}
+	\begin{madefinition}(Filtrations fortement A.P.)\\
+		La filtration $f = (I_n)_{n \in \mathbb{Z}}$ de l'anneau $A$ est dite \textbf{fortement Approximable par Puissances d'idéaux} (en abrégé \textbf{fortement A.P.}) s'il existe un entier $k \geqslant 1$ tel que :
+		\[ \forall \, n \in \mathbb{N}, \ I_{nk} = I_k^n \]
+	\end{madefinition}
+	\begin{madefinition}(Filtrations E.P.)\\
+		La filtration $f = (I_n)_{n \in \mathbb{Z}}$ de l'anneau $A$ est dite \textbf{Essentiellement par Puissances d'idéaux} (en abrégé \textbf{E.P}) s'il existe un entier $N \geqslant 1$ tel que :
+		\[ \forall \, n \geqslant N, \ I_n =\sum_{p=1}^{N} I_{n-p}I_p. \]
+	\end{madefinition}
+	\begin{madefinition}(Filtrations noethériennes) \\
+		La filtration $f = (I_n)_{n \in \mathbb{Z}}$ de l'anneau $A$ est dite \textbf{noethérienne} si son anneau de Rees ${R}(A,f)$ est noethérien.
+	\end{madefinition}
+	\begin{madefinition}(Filtrations fortement noethériennes) \\
+		La filtration $f = (I_n)_{n \in \mathbb{Z}}$ de l'anneau $A$ est dite \textbf{fortement noethérienne} s'il existe un entier $k \geqslant 1$ tel que:
+		\[ \forall \, m, n \in \mathbb{Z}, \ m, n \geqslant k, I_m I_n = I_{m+n} \]
+	\end{madefinition}
+	\begin{maproposition}(Caractérisation des filtrations noethériennes)\\
+		Soit $f=(I_{n})_{n \in \mathbb{Z}}\in \mathbb{F}(A),$ si $A$ est noethérien, alors les assertions suivantes sont équivalentes:
+		\begin{enumerate}
+			\item[(i)] $\mathcal{R}(A,f)$ est noethérien
+			\item[(ii)] $R(A,f)$ est noethérien
+			\item[(iii)] $f$ est $E.P.$
+			\item[(iv)] $\exists n \geqslant 1,\forall n \geqslant k, I_{n+k} = I_nI_k$
+		\end{enumerate}
+	\end{maproposition}
+	\begin{moncorollaire}(Clôture prüférienne)\\
+		Soit $f=(I_n)_{n \in \mathbb{N}} \in \mathbb{F}(A)$. Alors:\\
+		$\forall k \in \mathbb{N}, \text{ on pose: } P_k(f)=\left\{x \in A, x \text{ entier sur } f^{(k)}\right\}$ est un idéal de $A$ et la famille \\ $P(f)=(P_k(f))_{k \in \mathbb{N}}$ est une filtration de $A$ appelé \textbf{clôture prüférienne} de $f$.
+	\end{moncorollaire}
+	\begin{maremarque} (Clôture intégrale et clôture prüférienne) \\
+		La clôture intégrale d'un idéal $I$ de $A$ est : $I'=P_1(f_I)$
+	\end{maremarque}
+	\begin{madefinition}(filtration entière et fortement entière)\\
+		Soit $f=(I_n)_{n \in \mathbb{N}} , g = (J_n)_{n \in \mathbb{N}}\in \mathbb{F}(A)$.  Alors:\\
+		\begin{enumerate}
+			\item[(a)]$g$ est \textbf{entière sur} $f$ si $g \leqslant P(f)$ (où $P(f)$ est la clôture prüférienne de $f$). C'est à dire:
+			\[\forall n \geqslant 1, J_n \subseteq P_{n}(f) \]
+			\item[(b)]$g$ est \textbf{fortement entière sur} $f$ si $f \leqslant g$ et si $R(A,g)$ est un $R(A,f)-module$ de type fini.
+		\end{enumerate}
+	\end{madefinition}
+	\begin{madefinition} (réduction basique et réduction minimale) \\
+		Un idéal $I$ de l'anneau local noethérien $(A,m)$ est basique si la seule réduction de $I$ est $I$ lui-m\^{e}me. 
+		Northcott et Rees ont aussi défini la notion de réduction minimale
+		d'un idéal $J$:
+		
+		Un idéal $I$ est une réduction minimale de $J$ si $I$ est une réduction de $J$ et si I est $minimal$ au sens de l'inclusion ( $\subseteq$ ) parmi l'ensemble des réductions de J. 
+	\end{madefinition}
+	\begin{maremarque}
+		On prouve dans \cite{Di2} que la réduction minimale des filtrations $I$-bonne existe toujours dans un anneau local noethérien. Ce qui n'est pas le cas en générale pour une filtration quelconque.
+	\end{maremarque}
+	\begin{madefinition}($\alpha$-réduction ou réduction au sens de Okon-Ratliff)\\
+		Soient $f=(I_n)_{n \in \mathbb{N}}$, $g=(J_n)_{n \in \mathbb{N}}$ deux filtrations de $A$.\\
+		$f$ est une $\alpha$-réduction de $g$ si : \\
+		\begin{enumerate}
+			\item[i)] $f \leq g$
+			\item[ii)] $\exists \, N \geq 1$ tel que $\forall n \geq N ; J_n = \displaystyle \sum_{p=0}^{N}{I_{n-p} J_p}$.
+		\end{enumerate}
+	\end{madefinition}
+	\begin{madefinition}($\beta$-réduction ou réduction au sens de Dichi-Sangaré)\\
+		Soient $f = (I_n)_{n \in \mathbb{N}}$, $g = (J_n)_{n \in \mathbb{N}}$ deux filtrations de $A$.\\
+		$f$ est une $\beta$-réduction de $g$ si : \\
+		\begin{enumerate}
+			\item[i)] $f \leq g$
+			\item[ii)]  $\exists \, k \geq 1$ tel que $J_{n+k} = I_n J_k , \forall n \geq k$.
+		\end{enumerate}
+	\end{madefinition}
+	\begin{maremarque}($\alpha$-réduction et $\beta$-réduction)\\
+		Si $f$ est une $\beta$-réduction de $g$ alors $f$ est une $\alpha$-réduction de $g$.
+	\end{maremarque}
+	\begin{madefinition} (faiblement f-bonne, f-bonne et f-fine) \\
+		\label{maprop11}
+		Soient $A$ un anneau et $M$ un $A-module$.\\
+		On suppose que $\varphi=(M_n)_{n \in \mathbb{Z}}$ est $f-compatible$, avec $f \in \mathbb{F}(A)$. Alors:
+		\begin{itemize}
+			\item[(a)] $\varphi$ est \textbf{faiblement $f-$ bonne} s'il existe un entier naturel N $\geqslant 1$ tel que:
+			\[\forall n > N, M_{n}=\sum_{p=0}^{N}I_{n-p}M_{p} \]
+			\item[(b)] $\varphi$ est \textbf{$f-$ bonne} s'il existe un entier naturel N $\geqslant 1$ tel que:
+			\[\forall n > N, M_{n}=\sum_{p=1}^{N}I_{n-p}M_{p} \]
+			\item[(c)] $\varphi$ est \textbf{$f-$ fine} s'il existe un entier naturel N $\geqslant 1$ tel que:
+			\[\forall n > N, M_{n}=\sum_{p=1}^{N}I_{p}M_{n-p} \]
+		\end{itemize} 
+	\end{madefinition}
+	\begin{montheoreme}
+		Soient $f=(I_{n})_{_{n\in \mathbb{N}}}\leq $ $g=(J_{n})_{_{n\in \mathbb{N}}}$ des filtrations sur l'anneau $A.$ Nous
+		considérons les assertions suivantes:
+		
+		$i)$ $f$ est une réduction de $g.$
+		
+		$ii)$ $J_{n}^{2}=I_{n}J_{n}$ pour tout $n$ assez grand.
+		
+		$iii)$ $I_{n}$ est une réduction de $J_{n}$ pour tout $n$ assez grand.
+		
+		$iv)$ Il existe un entier $s\geq 1$ tel que pour tout $n\geq s,$ $J_{s+n}=J_{s}J_{n},$
+		
+		$I_{s+n}=I_{s}I_{n},$ $J_{s}^{2}=I_{s}J_{s},$ $J_{s+p}I_{s}=I_{s+p}J_{s}$ pour tout $p=1,2,...,s-1$
+		
+		$v)$ Il existe un entier $k\geq 1$ tel que $g^{(k)}$ est $I_{k}-bonne$
+		
+		$vi)$ Il existe un entier $r\geq 1$ tel que $f^{(r)}$ est une réduction de $g^{(r)}.$
+		
+		$vii)$ Pour tout entier $m\geq 1$ tel que $f^{(m)}$ est une réduction de $g^{(m)}.$
+		
+		$viii)$ $g$ est entière sur $f.$
+		
+		$ix)$ $g$ est fortement entière sur $f.$
+		
+		$x)$ $g$ est $f-fine.$
+		
+		$xi)$ $g$ est $f-bonne.$
+		
+		$xii)$ $g$ est $faiblement$ $f-bonne.$
+		
+		$xiii)$ Il existe un entier $N\geq 1$ tel que $t_{N}g\leq f\leq g$
+		
+		$xiv)$ Il existe un entier $N\geq 1$ tel que $t_{N}g^{\prime }\leq
+		t_{N}f^{\prime \text{ }}$ où $f^{\prime }$ est la clôture intégrale de $f.$
+		
+		$xv)$ $P(f)=P(g)$, où $P(f)$ est la clôture prüférienne de $f.$
+		
+		1) On a:
+		
+		$(i)$ $\Longleftrightarrow (vii)$ ; $(v)$ $\Longleftrightarrow (vi)$ ; $(viii)$ $\Longleftrightarrow (xv)$ ; $(ii)$ $\Longrightarrow (iii)$ ; $(iv)$ 
+		$\Longrightarrow (i)\Longrightarrow (v)$ ; $(ix)\Longrightarrow (vii),(xii)$
+		et $(xiii)$ ;
+		
+		$(i)\Longrightarrow (x)\Longrightarrow (xi)\Longrightarrow
+		(xii)\Longrightarrow (xiii)$
+		
+		2) Si de plus on suppose $A$ noethérien, alors:
+		
+		$(i)\Longleftrightarrow (xiv)$ ; $(i)\Longrightarrow (ix)\Longleftrightarrow
+		(xii)$ ; $(i)\Longrightarrow (ii)$
+		
+		3) Par ailleurs, si $f$ est $noeth\acute{e}rienne,$ alors $A$ est noethérien et les assertions suivantes sont équivalentes:
+		
+		$(ix)\Longleftrightarrow (x)\Longleftrightarrow (xi)\Longleftrightarrow
+		(xii)\Longleftrightarrow (xiii)$
+		
+		4) Si $f$ et $g$ sont noethériennes alors nous avons:
+		
+		$(iii)\Longrightarrow (viii)\Longleftrightarrow (ix)$ ; $(vi)\Longrightarrow (ix)$
+		
+		5) Si $f$ est fortement noethérienne et $g$ est noethérienne alors les quinze (15) assertions sont équivalentes et dans ce cas $g$ est fortement noethérienne
+		
+		$(i)\Longleftrightarrow (ii)\Longleftrightarrow (iii)\Longleftrightarrow
+		(iv)\Longleftrightarrow (v)\Longleftrightarrow (vi)\Longleftrightarrow
+		(vii)\Longleftrightarrow (viii)\Longleftrightarrow (ix)\Longleftrightarrow
+		(x)\Longleftrightarrow (xi)\Longleftrightarrow (xii)\Longleftrightarrow
+		(xiii)\Longleftrightarrow (xiv)\Longleftrightarrow (xv).$
+	\end{montheoreme}
+\end{document}
