@@ -1,0 +1,401 @@
+\documentclass[12pt, a4paper, oneside]{article}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[utf8]{inputenc}
+\usepackage[francais]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{arial}
+\usepackage{setspace}
+\usepackage{amsthm}
+\usepackage{hyperref}
+\usepackage{mathrsfs}
+\usepackage{amssymb}
+\usepackage{makeidx}
+\usepackage{graphicx}
+\usepackage{lmodern}
+\usepackage[left=2.8cm,right=2.8cm,top=3.5cm,bottom=3.5cm]{geometry}
+\usepackage{tocloft}
+\usepackage{stmaryrd}
+\usepackage{tikz}
+
+\setcounter{MaxMatrixCols}{10}
+
+
+\hypersetup{colorlinks=true, urlcolor=blue,linkcolor=blue, breaklinks=true}
+\newtheorem{maremarque}{Remarque}
+\newtheorem{montheoreme}{Théorème}
+
+
+\begin{document}
+
+\section{\underline{DÉCOMPOSITION DE CALDERON ZYGMUND}}
+
+\begin{montheoreme}
+	On suppose que $f\in L_{loc}^{1}$ tel que $Mf\in L^{p}\,,$ $p\leq 1$ et $
+	\alpha $ un nombre réel positif. Alors $f$ se décompose comme suit: $f=g+b$ où $b=\sum b_{k}$
+	et une famille de $(Q_{k}^{\ast })_{k}$ tel que:
+	\begin{enumerate}
+		\item[(i)] $g$ soit borné avec $g(x)\leq c\alpha $
+		\item[(ii)] Chaque $b_{k}$ est à support dans $Q_{k}^{\ast},\int\limits_{R^{n}}\mu _{0}(b_{k})^{p}(x)dx\leq \int\limits_{Q_{k}^{\ast}}Mf(x)^{p}dx$ et $\int b_{k}dx=0.$
+		\item[(iii)] La famille $(Q_{k}^{\ast })$ à la propriété d'intersection nulle à l'infini \\et $\cup _{k\in \mathbb{N}}Q_{k}^{\ast }=\{x:Mf(x)>\alpha \}.$
+	\end{enumerate} 
+\end{montheoreme}
+
+\begin{maremarque}
+	$Mf(x)=\underset{\phi \in S_{F}}{\sup }\left\vert f(x)\phi
+	(x)\right\vert \,\ ,S_{F}=\{\phi \in S:\left\Vert \phi \right\Vert _{\alpha
+		_{i},\beta _{i}}\leq 1,\forall \left\Vert .\right\Vert _{\alpha ,\beta }\in
+	F\}$ avec $F=\{\left\Vert .\right\Vert _{\alpha _{i},\beta _{i}}\}.$
+\end{maremarque}
+
+\begin{proof} 
+	$\bullet$ On pose $O=\{x:Mf(x)>\alpha \}=Mf^{-1}(]-\infty ;\alpha \lbrack )$ qui est
+	un ouvert car image réciproque par $Mf$ une application continue.
+	
+	D'après le théorème de la décomposition de Whitney, $\exists
+	(Q_{k})_{k}$ de boules tel que:
+	\begin{enumerate}
+		\item[(a)] les $Q_{k}$ soient disjoints
+		\item[(b)] $\cup _{k\in \mathbb{N}}Q_{k}^{\ast }=0=c_{F}$
+		\item[(c)] $Q_{k}^{\ast \ast }\cap F\neq \varnothing ,$ $\forall k\in \mathbb{N},$ où $Q_{k}^{\ast }=Q_{k}(x_{k},c^{\ast }l_{k})\,\ ,\overset{\thicksim }
+		{Q_{k}}=Q_{k}(x_{k},c^{\ast \ast }l_{k})$, avec $1<c^{\ast }<c^{\ast \ast }$
+		et $Q_{k}\subset Q_{k}^{\ast }\subset \overset{\thicksim }{Q_{k}}$
+	\end{enumerate}
+	
+	D'où le iii)
+	
+	$\bullet$ Soit $\xi $  une fonction positive fixé telle que: $\xi =1$ sur $c(0,1).$
+	
+	On pose $\forall k\in \mathbb{N},$ $\xi _{k}(x)=\xi (\frac{[x-x_{k}]}{l_{k}})$ et $\eta _{k}=\frac{\xi _{k}}{
+		\sum\limits_{j}\xi _{j}}$
+	
+	* $\eta _{k}$ est bien définie $\forall k\in \mathbb{N}.$
+	
+	Car $\exists j_{0}\in \mathbb{N}$ tel que $\frac{[x-x_{j_{0}}]}{l_{j_{0}}}\in Q_{j_{0}}$ $\Longrightarrow $ $
+	\xi _{j0}(x)=1,$ aussi $\sum\limits_{j\in \mathbb{N}}\xi _{j}\neq 0$
+	
+	* $(\eta _{k})_{k}$ forment une partition de l'unité subordonnée à la famille $(\overset{\thicksim }{Q_{k})}$
+	
+	- $\cup _{k\in \mathbb{N}}\overset{\thicksim }{Q_{k}}$ $\subset O$
+	
+	- $\sum\limits_{k\in \mathbb{N}}\eta _{k}=1$
+	
+	- $\eta _{k}$ est de classe $C^{\infty }$ et $\sup$ $\eta _{k}\subset 
+	\overset{\thicksim }{Q_{k}}$ $\forall k\in \mathbb{N}$.
+	
+	On a donc $\chi _{0}=\sum\limits_{k\in \mathbb{N}}\eta _{k}$ car $\forall x\in O,$ $\exists !k_{0}\in \mathbb{N},$ $x_{k}\in \overset{\thicksim }{O_{k_{0}}}$ ainsi $\sum\limits_{k\in \mathbb{N}}\eta _{k}(x)=\eta _{k_{0}}(x)=1.$
+	
+	$\forall \beta \in \mathbb{N}^{d},\left\vert \partial ^{\beta }\eta _{k}(x)\right\vert \leq c_{^{\beta
+	}}l_{k}^{-\left\vert \beta \right\vert },\forall k\in \mathbb{N}$ 
+	
+	car $\left\vert \partial ^{\beta }\eta _{k}(x)\right\vert =\left\vert\partial ^{\beta }(\frac{\xi _{k}(x)}{\sum\limits_{j}\xi _{j}(x)})\right\vert =\left\vert \partial ^{\beta }(\frac{\xi (\frac{[x-x_{k}]}{
+			l_{k}})}{\sum\limits_{j}\xi (\frac{[x-x_{j}]}{l_{j}})})\right\vert =$
+	
+	$\left\vert \sum\limits_{\left\vert \gamma \right\vert \leq \left\vert\beta \right\vert }\frac{\beta !}{\gamma !(\beta -\gamma )!}\partial^{\gamma }(\xi (\frac{[x-x_{k}]}{l_{k}}))\partial ^{\beta -\gamma }(\frac{1
+	}{\sum\limits_{j}\xi (\frac{[x-x_{j}]}{l_{j}})})\right\vert =$
+	
+	$\left\vert\sum\limits_{\left\vert \gamma \right\vert\leq \left\vert \beta\right\vert }\frac{\beta !}{\gamma !(\beta -\gamma )!}\partial ^{\gamma }(\frac{[x-x_{k}]}{l_{k}})(\partial ^{\gamma }\xi )(\frac{[x-x_{k}]}{l_{k}})\partial ^{\beta -\gamma }(\frac{1}{\sum\limits_{j}\xi (\frac{[x-x_{j}]}{l_{j}})})\right\vert \leq c_{^{\beta }}l_{k}^{-\left\vert \beta\right\vert }$
+	
+	On définit $b_{k}$ par $b_{k}=(f-c_{k})\eta _{k}$ où les constantes $ c_{k}=\frac{\int f\eta _{k}}{\int \eta _{k}}$ ainsi 
+	
+	En effet: $\exists j_{0}\in \mathbb{N}$ $\ $tel que $\sup\eta _{j_{0}}\subset \overset{\thicksim }{Q_{j_{0}}}$
+	et $\forall x\in \overset{\thicksim }{Q_{j_{0}}}$ ,$\eta _{j_{0}}(x)=1$
+	
+	D'où $\int b_{k}dx=\int (f-\frac{\int f\eta _{k}}{\int \eta _{k}})\eta _{k}dx=\int fdx-\int f\eta _{k}dx=\int f(1-\eta _{k})dx$ ,$\forall k\in \mathbb{N}.$ $\forall k\in \mathbb{N},\exists j_{0}\in \mathbb{N}
+	$ $\ $tel que $Q_{k}\subset \overset{\thicksim }{Q_{j_{0}}}$et  $\sup\eta_{j_{0}}\subset \overset{\thicksim }{Q_{j_{0}}}$ ,$\eta _{j_{0}}(x)=1$
+	
+	D'où $\int b_{k}dx=\int_{\overset{\thicksim }{Q_{j_{0}}}}f(1-\eta_{k})dx=0$
+	
+	$\forall \beta \in \mathbb{N}^{d},\left\vert \partial ^{\beta }\eta _{k}(x)\right\vert \leq c_{^{\beta
+	}}l_{k}^{-\left\vert \beta \right\vert },\forall k\in \mathbb{N}$ .
+	$\left\vert \int_{\mathbb{R}^{n}}\eta _{k}(x)dx\right\vert =\left\vert \int_{Q_{k}^{\ast }}\eta
+	_{k}(x)dx\right\vert \leq \int_{Q_{k}^{\ast }}\left\vert \eta
+	_{k}(x)\right\vert dx\leq \int_{Q_{k}^{\ast }}c_{^{\beta
+	}}l_{k}^{-\left\vert \beta \right\vert }dx\,\ ,\beta =(0,...,0)$
+	
+	$\left\vert \int_{\mathbb{R}^{n}}\eta _{k}(x)dx\right\vert \leq \ c\left\vert Q_{k}^{\ast }\right\vert
+	=cc^{\ast ^{n}}l_{k}^{n}$
+	
+	$\left\vert \int_{\mathbb{R}^{n}}\eta _{k}(x)dx\right\vert \leq \ c^{^{\prime }}l_{k}^{n}$
+	
+	D'où $\left\vert \int_{\mathbb{R}^{n}}\eta _{k}(x)dx\right\vert \simeq \left\vert Q_{k}^{\ast }\right\vert
+	\simeq l_{k}^{n}$
+	
+	On a: $\forall k\in \mathbb{N},\left\vert c_{k}\right\vert \leq c\alpha $ (2.2)
+	
+	En effet, si $\overset{-}{x}$ $\in O^{c}$ tel que $d(\overset{-}{x},a_{k})$ $
+	\simeq l_{k}.$
+	
+	Alors d'après (21), comme  $\eta _{k}$ est une fonction continue à support dans $Q_{k}^{\ast }.$
+	
+	On prend $\phi =\eta _{k}$ et $B=B(x_{k},cl_{k})$ avec $c$ assez grand de sorte que $Q_{k}^{\ast }\subset B_{k}$ , $\overset{-}{x}\in B_{k}$ et conformément à (21) (du document), on a:
+	
+	$\int f\eta _{k}\leq c\mu f(\overset{-}{x}),$ $\overset{-}{x}\in B_{k}$
+	
+	$\left\vert c_{k}\right\vert =\left\vert \int f\eta _{k}\left\vert \int
+	\eta _{k}\right\vert \right\vert \leq \frac{c}{\int \eta _{k}}\mu f(\overset
+	{-}{x})$ faisant correspondre $Q_{k}^{\ast }$ à $Q_{k}$ et $B_{k}$ à (23)
+	
+	$Q_{k}^{\ast }$ on obtient $\left\vert c_{k}\right\vert \leq c\mu f(\overset{
+		-}{x}),\forall \overset{-}{x}\in Q_{k}^{\ast }$
+	
+	A présent, on définit $g$ comme suit:
+	
+	$g(x)=\left\{ 
+	\begin{array}{c}
+		f(x)\text{ si }x\notin O \\ 
+		\sum\limits_{k}c_{k}\eta _{k}\text{ si }x\in O
+	\end{array}
+	\right. $
+	
+	* $x\notin O=\{x:Mf(x)>\alpha \}$
+	
+	$Mf(x)\leq \alpha $ alors $\forall t>0,$ $f^{\ast }\phi _{t}(x)\leq c\alpha $
+	
+	Par construction de $(\phi _{t})_{t>0},$ on obtient $\underset{
+		t\longrightarrow 0}{\lim }f^{\ast }\phi _{t}=f$
+	
+	$f(x)\leq c\alpha $ d'où $g(x)\leq c\alpha $
+	
+	* $x\in O$
+	
+	$\exists k_{0}\in \mathbb{N}\,,$tel que $x\in Q_{k_{0}}^{\ast }$
+	
+	$\left\vert g(x)\right\vert =\left\vert \sum\limits_{k}c_{k}\eta
+	_{k}(x)\right\vert =\left\vert c_{k_{0}}\eta _{k_{0}}(x)\right\vert \leq
+	\left\vert c_{k_{0}}\right\vert \leq c\alpha $ d'après (22)
+	
+	$\forall x,$ $g(x)\leq c\alpha $ d'où (i)
+	
+	On distingue deux cas.
+	
+	Cas 1: $\frac{n}{n+1}<p\leq 1$
+	
+	$\forall x\in O,$ $\mu _{0}(b_{k})(x)=\mu _{0}(f\eta _{k})-\mu
+	_{0}(c_{k}\eta _{k})$
+	
+	* $\mu _{0}(b_{k})(x)\leq c\mu f(x)$ si $x\in Q_{k}^{\ast }$ (24)
+	
+	En effet: $\forall k\in \mathbb{N},$ $(f\eta _{k}^{\ast }\Phi _{t})(x)=\int f(y)\eta _{k}(y)\Phi _{t}(x-y)dy$
+	
+	Pour $x\in Q_{k}^{\ast },$ on a soit $t\leq l_{k}$ soit $t>l_{k}$
+	
+	- Si $t\leq l_{k},$ On pose $\phi (y)=\eta _{k}(y)\Phi _{t}(x-y)$
+	
+	$\phi $ est une fonction continue et à support dans $B(x,t)$ car $\sup
+	p\Phi \subset B(0,1)$
+	
+	Aussi $\left\vert x-y\right\vert \leq t\leq l_{k}$ d'où $B(x,t)\subset
+	Q_{k}^{\ast }$
+	
+	En appliquant comme (21), où $\int \phi \times f\leq c\mu f(x)\,,~x\in
+	Q_{k}^{\ast }$
+	
+	c'est à dire, $(f_{x_{k}^{\ast }}\Phi _{t})(x)\leq c\mu f(x)\,,~x\in
+	Q_{k}^{\ast }$
+	
+	- Si $t>l_{k},$ on prend $B=B(x_{B},cl_{k})$ tel que  $Q_{k}^{\ast }\subset
+	B,$ ceci montre que 
+	
+	$\mu _{0}f(x_{k})(x)=\underset{t>l_{k}}{\sup }\left\vert f\eta _{k}^{\ast
+	}\Phi _{t}(x)\right\vert \leq c\mu f(x)\,,~x\in Q_{k}^{\ast }$
+	
+	$\forall k\in \mathbb{N}$, $\mu _{0}(c_{k}x_{k})(x)=\underset{t>0}{\sup }\left\vert c_{k}\eta
+	_{k}^{\ast }\Phi _{t}(x)\right\vert \leq \left\vert c_{k}\right\vert 
+	\underset{t>0}{\sup }\left\vert c_{k}\eta _{k}^{\ast }\Phi
+	_{t}(x)\right\vert \leq c\mu f(x)\,,~$d'après (23)
+	
+	Aussi $\mu _{0}(b_{k})(x)\leq c^{\prime }\mu f(x)\,$
+	
+	$-\mu _{0}(b_{k})(x)\leq c\alpha \frac{l^{n+1}}{\left\vert
+		x-x_{k}\right\vert ^{n+1}}$ si $x\notin Q_{k}^{\ast }.$
+	
+	On a: $\int b_{k}(y)\Phi _{t}(x-y)dy=\int b_{k}(y)[\Phi _{t}(x-y)-\Phi
+	_{t}(x-x_{k})]dy$ car $x$ alors $x-x_{k}\notin Q_{k}^{\ast }-x_{k}$
+	
+	D'où $\left\vert (x-x_{k})\right\vert >tl_{k}$ d'où $x-x_{k}$ $
+	\notin B(x,t)$ ainsi $\Phi _{t}(x-x_{k})=0.$
+	
+	On pose $I_{1}=\int f\eta _{k}[\Phi _{t}(x-y)-\Phi _{t}(x-x_{k})]dy$ et $
+	I_{2}=\int c_{k}\eta _{k}[\Phi _{t}(x-y)-\Phi _{t}(x-x_{k})]dy$ 
+	
+	Ainsi $\int b_{k}\eta _{k}\Phi _{t}(x-y)dy=I_{1}-I_{2}$ 
+	
+	On rappelle que $\sup$ $\eta _{k}\subset \overset{\thicksim }{Q_{j_{0}}}$
+	et nous avions pris $tQ_{k}\subset Q_{k}^{\ast }.$ Alors si $x\notin
+	Q_{k}^{\ast }$ alors $x-x_{k}\notin Q_{k}^{\ast }-x_{k}$
+	
+	$x-x_{k}\notin tQ_{k}-x_{k}$ désignent la boule centrée à l'origine de rayon $tl_{k}$
+	
+	Aussi $x-y\notin Q_{k}^{\ast }-y\subset Q_{k}^{\ast }-x_{k}$
+	
+	D'où $\exists \alpha >0$ tel que $\left\vert x-x_{k}\right\vert <\alpha
+	\left\vert x-y\right\vert $
+	
+	$\left\vert x-x_{k}\right\vert \simeq \left\vert x-y\right\vert $ 
+	
+	Et la propriété du support de $\Phi $ impose que $t$ vérifie: $
+	t\geq c\left\vert x-x_{k}\right\vert $
+	
+	Maintenant on prend $\phi (y)=\eta _{k}(y)[\Phi _{t}(x-y)-\Phi _{t}(x-x_{k})]
+	$
+	
+	$\partial ^{\alpha }\phi (y)=\partial ^{\alpha }(\eta _{k}(y)[\Phi
+	_{t}(x-y)-\Phi _{t}(x-x_{k})])=\partial ^{\alpha }(t^{-n}\eta _{k}(y)[\Phi
+	(t^{-1}(x-y))-\Phi _{t}(t^{-1}(x-x_{k}))])=$
+	
+	$t^{-n}\partial ^{\alpha }(\eta _{k}(y)[\Phi (t^{-1}(x-y))-\Phi
+	_{t}(t^{-1}(x-x_{k}))])$
+	
+	On a: $t^{-n}\leq c^{-n}\left\vert x-x_{k}\right\vert ^{-n}$ et $\forall \alpha \in \mathbb{N}^{d},\left\vert \partial ^{\alpha }\eta _{k}(x)\right\vert \leq c_{\alpha
+	}l_{k}^{-\left\vert \alpha \right\vert }$
+	
+	$\left\vert \partial ^{\alpha }\eta _{k}(x)\right\vert =\left\vert
+	t^{-n}\sum\limits_{\left\vert k^{\prime }\right\vert \leq \left\vert \alpha
+		\right\vert }\frac{\alpha !}{k^{\prime }!(\alpha -k^{\prime })!}\partial
+	^{k^{\prime }}\eta _{k}(x)\partial ^{\alpha -k^{\prime }}\Phi
+	(t^{-1}(x-y))\right\vert \leq $
+	
+	$c^{-n}\sum\limits_{\left\vert k^{\prime }\right\vert \leq \left\vert
+		\alpha \right\vert +1}\frac{\alpha !}{k^{\prime }!(\alpha -k^{\prime })!}
+	\left\vert \partial ^{k^{\prime }}\eta _{k}(x)\right\vert \left\Vert
+	\partial ^{\alpha -k^{\prime }}\Phi (t^{-1}(x-y))\right\Vert \leq
+	c^{-n}\times c_{\alpha }\left\vert x-x_{k}\right\vert ^{-n-\left\vert \alpha
+		\right\vert +1}l_{k}\leq a_{\alpha }\frac{1}{\left\vert x-x_{k}\right\vert
+		^{n}}l_{k}^{-\left\vert \alpha \right\vert +1}$ (26)
+	
+	Soit $x\notin Q_{k}^{\ast }$
+	
+	$\left\vert I_{1}\right\vert =\left\vert \int f\eta _{k}[\Phi
+	_{t}(x-y)-\Phi _{t}(x-x_{k})]dy\right\vert $
+	
+	On a: 
+	
+	$\forall \alpha \in \mathbb{N}^{d},\left\vert \partial ^{\alpha }\phi (y)\right\vert \leq a_{\alpha }
+	\frac{l_{k}}{\left\vert x-x_{k}\right\vert ^{n}}l_{k}^{-\left\vert \alpha
+		\right\vert }$ d'où $\left\vert \phi (y)\right\vert \leq c\frac{l_{k}}{
+		\left\vert x-x_{k}\right\vert ^{n+1}}$
+	
+	$\left\vert I_{1}\right\vert \leq \int\limits_{Q_{k}^{\ast }}\left\vert
+	f(y)\right\vert \left\vert \phi (y)\right\vert dy\leq c\frac{l_{k}}{
+		\left\vert x-x_{k}\right\vert ^{n+1}}\int\limits_{Q_{k}^{\ast }}\left\vert
+	f(y)\right\vert dy$ d'après (21) $\left\vert I_{1}\right\vert \leq
+	c^{\prime }\alpha \frac{l_{k}}{\left\vert x-x_{k}\right\vert ^{n+1}}$
+	
+	Combinant (26) et (22), on obtient $I_{2}=I_{1}-\int b_{k}(y)[(x-y)-\Phi
+	_{t}(x-x_{k})]dy$
+	
+	$\left\vert I_{2}\right\vert \leq \left\vert \int c_{k}(y)\eta _{k}(y)[\Phi
+	_{t}(x-y)-\Phi _{t}(x-x_{k})]dy\right\vert \leq \left\vert c_{k}\right\vert
+	\times \left\vert \int \eta _{k}(y)[\Phi _{t}(x-y)-\Phi
+	_{t}(x-x_{k})]dy\right\vert \leq c\alpha \frac{l_{k}}{\left\vert
+		x-x_{k}\right\vert ^{n+1}}$ d'après (22) et (26) car $\left\vert
+	c_{k}\right\vert \leq c\alpha $
+	
+	Soit $x\notin Q_{k}^{\ast }$
+	
+	$\left\vert \mu _{0}(b_{k})(x)\right\vert =\left\vert \mu _{0}(f\eta
+	_{k})(x)-\mu _{0}(c_{k}\eta _{k})(x)\right\vert =\left\vert \underset{t>0}{
+		\sup }\left\vert f\eta _{k}^{\ast }\Phi _{t}(x)\right\vert -\underset{t>0}{
+		\sup }\left\vert c_{k}\eta _{k}^{\ast }\Phi _{t}(x)\right\vert \right\vert
+	=\left\vert I_{1}-I_{2}\right\vert $ car ne dépend pas de $t$
+	
+	D'où $\left\vert \mu _{0}(b_{k})(x)\right\vert =\left\vert
+	I_{1}\right\vert +\left\vert I_{2}\right\vert \leq 2c\alpha \frac{l_{k}}{
+		\left\vert x-x_{k}\right\vert ^{n+1}}$ , $x\notin Q_{k}^{\ast }$
+	
+	$\int\limits_{\mathbb{R}^{n}}\mu _{0}(b_{k})^{p}dx=\int\limits_{Q_{k}^{\ast }}\mu_{0}(b_{k})^{p}dx+\int\limits_{Q_{k}^{\ast ^{c}}}\mu _{0}(b_{k})^{p}dx$
+	
+	Pour la première intégrale (24) et la seconde intégrale (25)
+	
+	(24)$\mu _{0}(b_{k})(x)\leq c\mu f(x)$ , $x\in Q_{k}^{\ast }$
+	
+	$\int\limits_{Q_{k}^{\ast }}\mu _{0}(b_{k})^{p}(x)dx\leq
+	c^{p}\int\limits_{Q_{k}^{\ast }}\mu f(x)^{p}dx$ 
+	
+	$\int\limits_{Q_{k}^{\ast }}\mu _{0}(b_{k})^{p}(x)dx\leq c^{p}\alpha
+	^{p}\int\limits_{Q_{k}^{\ast ^{c}}}(\frac{l_{k}^{\prime }}{\left\vert
+		x-x_{k}\right\vert })^{p(n+1)}dx$ avec $Q_{k}^{\ast ^{c}}=\{x:\left\vert
+	x-x_{k}\right\vert \geq cl_{k}\}$
+	
+	$\int\limits_{Q_{k}^{\ast }}\mu _{0}(b_{k})^{p}(x)dx\leq c^{\prime
+	}\alpha ^{p}l_{k}^{n}=c\alpha ^{p}\left\vert Q_{k}^{\ast }\right\vert $ car $
+	x\longmapsto \frac{1}{\left\vert x-x_{k}\right\vert ^{p(n+1)}}$ est intégrable dans $Q_{k}^{\ast ^{c}}$, $p(n+1)>n$
+	
+	et comme $x\in Q_{k}^{\prime }$ alors $Mf(x)\geq \alpha $ d'où $
+	Mf^{p}(x)\geq \alpha ^{p}.$ Ainsi $\int\limits_{Q_{k}^{\prime
+	}}Mf^{p}(x)dx\geq \alpha ^{p}\left\vert Q_{k}^{\prime }\right\vert $ et $
+	\frac{1}{\left\vert x-x_{k}\right\vert }\leq c^{-1}l_{k}^{-1}$
+	
+	D'où $(\frac{l_{k}}{\left\vert x-x_{k}\right\vert })^{p(n+1)}\leq
+	(l_{k}c^{-1}l_{k}^{-1})^{p(n+1)}$
+	
+	Ainsi $\int\limits_{\mathbb{R}^{n}}\mu _{0}(b_{k})^{p}dx\leq \int\limits_{Q_{k}^{\ast }}Mf^{p}dx$
+	
+	Cas 2: $\frac{n}{n+1}\geq p>0$
+	
+	Ici nous considérons $c_{k}$ comme un polynôme ayant pour degré $\leq d,$ ceci avec la condition: $\int (f-c_{k}c_{k})qdx=0$ pour
+	tout polynôme $q$ de degré $\leq d.$
+	
+	Soit $\mathcal{H} =\mathcal{H} _{k}$ l'espace Hilbertien des fonctions sur $Q_{k}^{\ast }$ avec, $
+	\left\Vert f\right\Vert ^{2}=\frac{\int \left\vert f(x)\right\vert ^{2}\eta
+		_{k}(x)dx}{\int \eta _{k}(x)dx}$
+	
+	Dans $\mathcal{H}$, considérons les sous-espaces de dimension finie défini $
+	\mathcal{H}_{k,d}$ avec les polynômes ayant pour degré $\leq d.$ Soit $
+	P_{k}$ la projection orthogonale sur le $\mathcal{H}_{k,d}$ sous-espace. Alors $
+	c_{k}=p_{k}(f).$
+	
+	De (22) et (23) on a:
+	
+	(22') $\left\vert c_{k}\eta _{k}\right\vert \leq c\alpha $ ,cette inégalité reste valable car $c_{k}$ s'écrivant comme polynôme et
+	chaque élément étant dominé comme dans (22) et (23). On a $
+	(22^{\prime })$ et $(23^{\prime })$ , $\left\vert c_{k}\eta _{k}\right\vert
+	\leq c\mu f(x),$ $\forall x\in Q_{k}^{\ast }$
+	
+	On note (27) $\underset{x\in Q_{k}^{\ast }}{\sup }\left\vert \partial
+	^{\alpha }q(x)\right\vert \leq c_{\alpha }l_{k}^{-\left\vert \alpha
+		\right\vert }\left\Vert q\right\Vert $ , pour tout polynôme de degré $\leq d$
+	
+	Soit $p(x,y)\in Ker(P_{k})$
+	
+	Alors $p(x,y)=\sum\limits_{j}e_{j}(x)\overset{-}{e_{j}}(y)$ avec $
+	(e_{j})_{j}$ une base de $\mathcal{H}_{k,d}$ et d'après (27), On a :
+	
+	$\underset{x\in Q_{k}^{\ast },\text{ }y\in Q_{k}^{\ast }}{\sup }\left\vert
+	\partial ^{\alpha }p(x,y)\right\vert \leq c_{\alpha }l_{k}^{-\left\vert
+		\alpha \right\vert }$
+	
+	or $c_{k}(x)=p_{k}(f)(x)=\int p(x,y)f(y)\eta _{k}(y)dy$
+	
+	On obtient donc la justification de (22) et de (23) ce qui prouve qu'en se
+	servant de ce qu'on a montré plus haut que: $\int b_{k}qd(x)=0$ (28)
+	
+	Chaque fois que $q$ est un polynôme de degré $\leq d.$
+	
+	Soit $x\notin Q_{k}^{\ast },$ on pose : $\phi (y)=\eta _{k}(y)[\Phi
+	_{t}(x-y)-q(y)]$
+	
+	On effectue le développement de Taylor au voisinage de $x_{k}=y.$
+	
+	Ainsi $\left\vert \partial ^{\alpha }\phi (y)\right\vert \leq c_{\alpha }
+	\frac{l_{k}^{d-\left\vert \alpha \right\vert }}{\left\vert
+		x-x_{k}\right\vert ^{n+d+1}}$
+	
+	Le résultat est donc:
+	
+	$\mu _{0}(b_{k})(x)\leq c\alpha \frac{l_{k}^{n+d+1}}{\left\vert
+		x-x_{k}\right\vert ^{n+d+1}}$, si $x\notin Q_{k}^{\ast }$ (25')
+	
+	En choisissant $d$ assez grand, on a $(n+d+1)p>n$
+	
+	d'où  $\int\limits_{\mathbb{R}^{n}}\mu _{0}(b_{k})^{p}(x)dx\leq (c\alpha )^{p}\int (\frac{l_{k}^{n+1}}{
+		\left\vert x-x_{k}\right\vert })^{p(n+d+1)}dx$
+	
+	Comme dans le cas 1, on a:
+	
+	$\int\limits_{\mathbb{R}^{n}}\mu _{0}(b_{k})^{p}(x)dx\leq c\int_{Q_{k}^{\ast ^{c}}}\mu f^{p}(x)dx$
+\end{proof}
+
+\end{document}

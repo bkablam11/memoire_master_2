@@ -101,25 +101,248 @@
 	
 \end{maproposition}
 
-\begin{maproposition}
-	\label{th1}
-	Soient $f=(I_n)_{n \in \mathbb{N}}$ et $g=(J_n)_{n \in \mathbb{N}}$ deux filtrations de $A$,\\ tel que $f \leqslant  g$. Nous considérons les assertions suivantes:\\
-	\begin{enumerate}
-			\item[(i)] $g$ est $f-bonne$
-			
-			\item[(ii)]  $g$ est $f-fine$
-			
-			\item[(iii)] $g$ est fortement entière sur $f$
-			
-			\item[(iv)] $g$ est faiblement $f-bonne$
-			
-			\item[(v)]  $\exists N \geqslant 1$ un entier tel que $t_Ng \leqslant f \leqslant g$.
-		\end{enumerate}
-\end{maproposition}
-\begin{maproposition}
-	Sous les hypothèses du théorème \eqref{th1} en admettant que $A$ est noethérien
-	et $f$ est noethérienne alors:
-	(i) $\Longleftrightarrow $ (ii) $\Longleftrightarrow $ (iii) $\Longleftrightarrow $ (vi) $\Longleftrightarrow $ (v). 
-\end{maproposition}
+\begin{montheoreme}
+	Soient $f=(I_{n})_{_{n\in \mathbb{N}}}\leq $ $g=(J_{n})_{_{n\in \mathbb{N}}}$ des filtrations sur l'anneau $A.$ Nous
+	considérons les assertions suivantes:
+	
+	$i)$ $f$ est une réduction de $g.$
+	
+	$ii)$ $J_{n}^{2}=I_{n}J_{n}$ pour tout $n$ assez grand.
+	
+	$iii)$ $I_{n}$ est une réduction de $J_{n}$ pour tout $n$ assez grand.
+	
+	$iv)$ Il existe un entier $s\geq 1$ tel que pour tout $n\geq s,$ $J_{s+n}=J_{s}J_{n},$
+	
+	$I_{s+n}=I_{s}I_{n},$ $J_{s}^{2}=I_{s}J_{s},$ $J_{s+p}I_{s}=I_{s+p}J_{s}$ pour tout $p=1,2,...,s-1$
+	
+	$v)$ Il existe un entier $k\geq 1$ tel que $g^{(k)}$ est $I_{k}-bonne$
+	
+	$vi)$ Il existe un entier $r\geq 1$ tel que $f^{(r)}$ est une réduction de $g^{(r)}.$
+	
+	$vii)$ Pour tout entier $m\geq 1$ tel que $f^{(m)}$ est une réduction de $g^{(m)}.$
+	
+	$viii)$ $g$ est $enti\grave{e}re$ sur $f.$
+	
+	$ix)$ $g$ est $\ fortement$ $enti\grave{e}re$ sur $f.$
+	
+	$x)$ $g$ est $f-fine.$
+	
+	$xi)$ $g$ est $f-bonne.$
+	
+	$xii)$ $g$ est $faiblement$ $f-bonne.$
+	
+	$xiii)$ Il existe un entier $N\geq 1$ tel que $t_{N}g\leq f\leq g$
+	
+	$xiv)$ Il existe un entier $N\geq 1$ tel que $t_{N}g^{\prime }\leq
+	t_{N}f^{\prime \text{ }}$ o\`{u} $f^{\prime }$ est la clôture intégrale de $f.$
+	
+	$xv)$ $P(f)=P(g)$, o\`{u} $P(f)$ est la clôture prüférien de $f.$
+	
+	1) On a:
+	
+	$(i)$ $\Longleftrightarrow (vii)$ ; $(v)$ $\Longleftrightarrow (vi)$ ; $(viii)$ $\Longleftrightarrow (xv)$ ; $(ii)$ $\Longrightarrow (iii)$ ; $(iv)$ 
+	$\Longrightarrow (i)\Longrightarrow (v)$ ; $(ix)\Longrightarrow (vii),(xii)$
+	et $(xiii)$ ;
+	
+	$(i)\Longrightarrow (x)\Longrightarrow (xi)\Longrightarrow
+	(xii)\Longrightarrow (xiii)$
+	
+	2) Si de plus on suppose $A$ noethérien, alors:
+	
+	$(i)\Longleftrightarrow (xiv)$ ; $(i)\Longrightarrow (ix)\Longleftrightarrow
+	(xii)$ ; $(i)\Longrightarrow (ii)$
+	
+	3) Par ailleurs, si $f$ est $noeth\acute{e}rienne,$ alors $A$ est noethérien et les assertions suivantes sont équivalentes:
+	
+	$(ix)\Longleftrightarrow (x)\Longleftrightarrow (xi)\Longleftrightarrow
+	(xii)\Longleftrightarrow (xiii)$
+	
+	4) Si $f$ et $g$ sont $noeth\acute{e}riennes$ alors nous avons:
+	
+	$(iii)\Longrightarrow (viii)\Longleftrightarrow (ix)$ ; $(vi)\Longrightarrow (ix)$
+	
+	5) Si $f$ est fortement $noeth\acute{e}rienne$ et $g$ est $noeth\acute{e}rien
+	$ alors les quinze (15) assertions sont équivalentes et dans ce cas $g$
+	est fortement $noeth\acute{e}rienne.$
+	
+	$(i)\Longleftrightarrow (ii)\Longleftrightarrow (iii)\Longleftrightarrow
+	(iv)\Longleftrightarrow (v)\Longleftrightarrow (vi)\Longleftrightarrow
+	(vii)\Longleftrightarrow (viii)\Longleftrightarrow (ix)\Longleftrightarrow
+	(x)\Longleftrightarrow (xi)\Longleftrightarrow (xii)\Longleftrightarrow
+	(xiii)\Longleftrightarrow (xiv)\Longleftrightarrow (xv).$
+\end{montheoreme}
+\begin{proof}
+	
+	1)
+	
+	$(i)\Longleftrightarrow (vii).$
+	
+	Supposons $(i)$ et choisissons $k$ comme dans \ref{maprop4} (i) alors pour tout
+	entiers $m\geq 1$ et $n\geq k,$ $J_{m(k+n)}=J_{mk}I_{mn}$, ce qui entraîne $(vii).$
+	
+	La réciproque est évidente.
+	
+	$(v)\Longrightarrow (vi).$
+	
+	Posons $f^{(k)}=(H_{n});$ $g^{(k)}=(K_{n});$ $H_{n}=I_{nk};$ $K_{n}=J_{nk};$ 
+	$H_{1}=I_{k};$
+	
+	Par hypothèse, $H_{1}K_{n}\subseteq K_{n+1}$ pour tout entier $n$ et il
+	existe un entier $n_{0}\geq 1$ tel que $H_{1}K_{n}=K_{n+1}$ pour tout $n\geq
+	n_{0}.$
+	
+	Pour tout entier $m\geq 0,$ $K_{n_{0}+m}=H_{1}^{m}K_{n_{0}}\subseteq
+	H_{m}K_{n_{0}}\subseteq K_{n_{0}+m}.$
+	
+	Donc $K_{n_{0}+m}=K_{n_{0}}H_{m}$ pour tout entier $m.$ Et donc $f^{(k)}$
+	est une réduction de $g^{(k)}.$
+	
+	$(vi)\Longrightarrow (v).$
+	
+	Il suffit de montrer que si $f$ est une réduction de $g$ alors il existe 
+	$k\geq 1$ tel que $g^{(k)}$ est $I_{k}-bonne.$
+	
+	Posons $k$ comme dans \ref{maprop4} (i), alors pour tout entiers $m\geq 1$ et  $J_{k(m+1)}=J_{mk}I_{k}$, donc $g^{(k)}$ est $I_{k}-bonne.$
+	
+	Donc $(vi)\Longrightarrow (v).$
+	
+	$(viii)\Longleftrightarrow (xv).$
+	
+	Si $g$ est entière sur $f$ alors $f\leq g\leq P(f),$ ainsi $P(f)\leq
+	P(g)\leq P(P(f))=P(f),$ donc $P(g)=P(f).$
+	
+	Réciproquement si $P(f)=P(g)$ alors $g\leq P(g)=P(f)$ et donc $g$ est entière sur $f.$
+	
+	$(ii)\Longrightarrow (iii).$
+	
+	Évident.
+	
+	$(iv)\Longrightarrow (i).$
+	
+	Posons $n\geq 2s$ et $n=qs+p$ avec $0\leq p<s.$
+	
+	Alors $J_{s+n}=J_{(q-2)s+2s+(s+p)}=J_{s}^{q-2}J_{2s+(s+p)}=J_{s}^{q-2}J_{s}^{2}J_{s+p}=J_{s}^{q-1}I_{s}J_{s+p}=J_{s}^{q-1}J_{s}I_{s+p}=J_{s}^{q}I_{s+p}=J_{s}I_{s}^{q-1}I_{s+p}\subseteq J_{s}I_{n}\subseteq J_{s+n}.
+	$
+	
+	Par suite $J_{s+n}=J_{s}I_{n}$ pour tout $n\geq 2s.$ Donc $%
+	J_{2s+n}=J_{2s}I_{n}$ pour tout $n\geq 2s.$ D'où $(i).$
+	
+	
+	$(i)\Longrightarrow (v)$
+	
+	Évident car $(vi)\Longrightarrow (v).$
+	
+	$(ix)\Longrightarrow (viii)$
+	
+	Évident
+	
+	$(ix)\Longrightarrow (xii)\Longrightarrow (xiii)$ en utilisant \ref{maprop6} (5)
+	
+	$(i)\Longrightarrow (x).$
+	
+	Pour tout entier $n\geq N=2k-1,$ posons $n=qk+r,$ avec $0\leq r<k$ où $k$
+	est comme dans $(4.3)$ $(i).$
+	
+	Alors $J_{n}=J_{k(q-1)}I_{k+r}.$
+	
+	Ainsi $1\leq k+r<2k-1,$ $J_{n}\subseteq
+	\sum\limits_{p=1}^{N}I_{p}J_{n-p}\subseteq J_{n}$, d'où $J_{n}=\sum\limits_{p=1}^{N}I_{p}J_{n-p}$ pour tout $n\geq N=2k-1$.
+	
+	Ce qui prouve que $g$ est $f-fine.$
+	
+	$(x)\Longrightarrow (xi)$ par \ref{maprop3}
+	
+	$(xi)\Longrightarrow (xii)$ par \ref{maprop6} (1).
+	
+	
+	2) 
+	
+	On suppose maintenant que $A$ est noethérien.
+	
+	Alors $(i)\Longrightarrow (ix)$ en utilisant \ref{maprop7}.
+	
+	$(i)\Longrightarrow (ii)$
+	
+	$f$ est noethérienne par $\ref{maprop7}$ donc il existe un entier $k^{\prime }$ tel que $I_{n+k^{\prime }}=I_{n}I_{k^{\prime }},$ pour tout $n\geq k^{\prime }$.
+	
+	Choisissons $k$ comme dans \ref{maprop4} (i) nous pouvons supposons que $k=k^{\prime }$ et même prendre $kk^{\prime }$ \`{a} la place de $k$ ou $k^{\prime }$ si nécessaire.
+	
+	Pour tout $n\geq 3k,$ posons $n=qk+r,$ avec $0\leq r<k.$ Alors $q=E(\frac{n}{k})\geq 3.$
+	
+	$J_{n}=J_{k}I_{(q-1)k+r}=J_{k}I_{k}^{q-2}I_{k+r}.$
+	
+	$J_{n}^{2}=J_{k}^{2}I_{k}^{q-3}(I_{k}^{q-1}I_{k+r})I_{k+r}\subseteq J_{2k}I_{(q-3)k}I_{n}I_{k+r}.$
+	
+	D'où $J_{n}^{2}\subseteq J_{n}I_{n}$
+	
+	Donc $J_{n}^{2}=J_{n}I_{n}$ pour tout $n\geq 3k.$
+	
+	$(i)\Longleftrightarrow (iv).$ 
+	
+	D'après 1) il suffit de montrer que $(i)\Longrightarrow (iv).$
+	
+	Nous avons vu que $(i)\Longrightarrow (ii).$ Alors il existe un entier $%
+	k^{\prime }\geq 1$ tel que $J_{n}^{2}=I_{n}J_{n}$ pour tout $n\geq k^{\prime}.$
+	
+	Dans la preuve de la même implication, nous avons aussi montrer qu'il existe un entier $k\geq 1$ tel que $J_{k+n}=J_{k}I_{n}=J_{k}J_{n}$ et que $I_{k+n}=I_{k}I_{n}$ pour tout $n\geq k.$
+	
+	Posons $n\geq 2kk^{\prime }=s,$ $k"=kk^{\prime }$ et $n=qk"+r$ avec $0\leq r<k".$ Alors $q\geq 2$ et:
+	
+	$J_{s+n}=J_{(q+2)k"+r}=J_{k"}^{3}J_{(q-1)k"+r}=I_{k"}^{2}J_{k"}J_{(q-1)k"+r}=I_{s}J_{n}.$
+	
+	$J_{s+n}=J_{s}I_{n}=J_{s}J_{n}$
+	
+	$I_{s+n}=I_{s}I_{n}$
+	
+	$J_{s}^{2}=I_{s}J_{s}$
+	
+	D'où $(iv).$
+	
+	$(ix)\Longleftrightarrow (xii)$ d'après \ref{maprop8}
+	
+	$(iii)\Longleftrightarrow (xiv)$
+	
+	Nous savons que pour tout idéal $I\subseteq J$ d'un anneau noethérien, $I$ est une réduction de $J$ si et seulement si $I^{\prime }=J^{\prime },$ où $I^{\prime }$est la clôture intégrale de $I.$ D'où l'équivalence. 
+	
+	3) Supposons que $f$ est noethérienne.
+	
+	Alors d'après \ref{maprop10}, $(ix)\Longleftrightarrow (xiii)$ et d'après $\ref{maprop9},$ 
+	
+	$(ix)\Longleftrightarrow (x)\Longleftrightarrow (xi)\Longleftrightarrow (xii)\Longleftrightarrow (xiii)$
+	
+	4) Supposons que $f$ et $g$ sont noethériens. Alors $(viii)\Longleftrightarrow (ix)$ d'après (\cite{Di1}, \ref{maprop11},(b)).
+	
+	$(iii)\Longrightarrow (viii).$
+	
+	Supposons que $I_{n}$ est une réduction de $J_{n}$ pour tout $n\geq n_{0}.$
+	
+	$f$ et $g$ sont noethérien d'où fortement $A.P.$ \`{a} partir d'un rang
+	commun $k.$
+	
+	L'idéal $J_{n_{0}k}$ est entière sur l'idéal $I_{n_{0}k}.$ D'où $g$ est entière sur $f$ d'après (\cite{Di1}, 4.5).
+	
+	$(vi)\Longrightarrow (ix).$
+	
+	Si $f^{(r)}$ est un réduction de $g^{(r)}$ alors $g^{(r)}$ est fortement entière sur $f^{(r)}$ d'après \ref{maprop7} (iii) et $g$ est fortement entière sur $f$ d'après \ref{maprop12}
+	
+	5) Supposons que $f$ est fortement noethérienne. D'après
+	l'implication précédente il est facile de montrer que $(xii)\Longrightarrow (i).$
+	
+	Supposons que $(xii),$ alors il existe un entier $N\geq 1$ tel que pour tout $n>N,$ $J_{n}=\sum\limits_{p=0}^{N}I_{n-p}J_{p}.$
+	
+	$f$ étant fortement noethérienne, il existe un entier $N^{\prime}\geq 1$ tel que $I_{m}I_{n}=I_{m+n}$ pour tout $m,n\geq N^{\prime }.$
+	
+	Posons $n\geq k=N+N^{\prime }.$
+	
+	Si $0\leq p\leq N,$ alors $N^{\prime }=k-N\leq k-p\leq n-p,$ $J_{n+k}=\sum\limits_{p=0}^{N}I_{n+k-p}J_{p}=\sum\limits_{p=0}^{N}I_{n+}I_{k-p}J_{p}=I_{n}J_{k}$ , et $f$ est une réduction de $g.$
+	
+	Pour compléter la preuve, nous avons montrer par exemple que si $f$ est une réduction de $g$ et si $f$ est fortement noethérienne alors $g$ est fortement noethérien.
+	
+	Soient $k,$ $k^{\prime }$ des entiers $\geq 1$ tel que $J_{k+n}=J_{k}I_{n}$
+	pour tout $n\geq k$ et $I_{m+n}=I_{m}I_{n}$ pour tout $m,n\geq k^{\prime }.$
+	
+	Posons $m,n\geq k^{\prime }.$ Alors $J_{m}J_{n}\subseteq
+	J_{m+n}=J_{k}I_{m+(n-k)}=J_{k}I_{m}I_{n-k}\subseteq J_{m}J_{n},$ d'où $J_{m+n}=J_{m}J_{n}$ pour tout $m,n\geq k+k^{\prime }$ et $g$ est fortement noethérienne.
+\end{proof}
 
 \end{document}

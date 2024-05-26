@@ -1,0 +1,182 @@
+\documentclass[11pt,a4paper]{beamer}
+\usepackage[utf8]{inputenc}
+\usepackage[francais]{babel}
+\usepackage{stmaryrd}
+\usepackage[T1]{fontenc}
+\usepackage{fancyhdr}
+\usepackage{tikz}
+\usetheme{Boadilla}
+\author{\textit{\textbf{KABLAM Edjabrou Ulrich Blanchard}}}
+\title{\textbf{SOUTENANCE DE MÉMOIRE DE MASTER \\ OPTION: ALGÈBRE COMMUTATIVE ET CRYPTOGRAPHIE\\ SPÉCIALITÉ: THÉORIE DES FILTRATIONS}}
+\institute{\textcolor{red}{\textbf{Université NANGUI ABROGOUA \\ UFR Sciences Fondamentales Appliquées}}}
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\usepackage{mwe}
+\logo{\includegraphics[width=0.7cm]{./img/UNA.png}}
+\date{10 Juillet 2024}
+
+\begin{document}
+\begin{frame}
+\maketitle
+\begin{block}{\begin{center}
+\emph{THÈME:} \textbf{DÉPENDANCE INTÉGRALE, RÉDUCTION ET FILTRATIONS BONNES }
+\end{center}}
+\begin{center}
+Directeur de Mémoire: Mr. ASSAN Abdoulaye \\
+Encadrant scientifique: Mr. BROU Kouadjo Pierre
+\end{center}
+\end{block}
+\end{frame}
+
+\begin{frame}{
+PLAN DE PRÉSENTATION}
+\begin{enumerate}
+\item \textcolor{blue}{INTRODUCTION}\\
+\item \textcolor{blue}{DÉPENDANCE INTÉGRALE, RÉDUCTION ET FILTRATION BONNES }\\
+\item \textcolor{blue}{CONCLUSION}\\
+\end{enumerate}
+\end{frame}
+\setbeamercovered{transparent}
+
+\begin{frame}{INTRODUCTION}
+\framesubtitle{FILTRATIONS}
+\begin{block}{}
+	\begin{enumerate}
+		\item[(i)] Une filtration de l'anneau $A$ est une suite $f=(I_n)_{n \in \mathbb{Z}}$ d'idéaux de $A$, décroissante pour l'inclusion et vérifiant $I_0 = A$ et $I_n I_m \subseteq I_{n+m}$.
+		\item[(ii)] Une filtration $f=(I_n)_{n \in \mathbb{Z}}$ est dite $I-bonne$ si pour tout $n \in \mathbb{N}, \quad II_n \subseteq I_{n+1}$ et s'il existe $k$ un entier tel que pour tout $n \geqslant k$, $II_n = I_{n+1}$.	
+	\end{enumerate}
+\end{block}
+\end{frame}
+
+\begin{frame}{INTRODUCTION}
+	\framesubtitle{PROPRIÉTÉ DE LA FILTRATION I-ADIQUE}
+	\begin{block}{}
+\begin{eqnarray*}
+	f \text{ I-adique } \Longrightarrow  f \text{ I-bonne } \Longrightarrow  f \text{ fortement A.P } \Longrightarrow f \text{ A.P.} \\
+\end{eqnarray*}
+	\end{block}
+\end{frame}
+
+\begin{frame}{INTRODUCTION}
+	\framesubtitle{ÉLÉMENT ENTIER ET RÉDUCTION}
+	\begin{block}{}
+		\begin{enumerate}
+			\item[(i)] Un élément $x$ de $A$ est dit entier sur $f$ s'il existe un entier $m \in \mathbb{N}$ tel que : $x^m + a_1 x^{m-1} + \cdots + a_m = x^m + \sum_{i=1}^{m} a_i x^{m-i} = 0,$\\$ m \in \mathbb{N^*} \ \text{où} \ a_i \in I_i,\, \forall i=1, \cdots ,m.$
+			\item[(ii)] $f$ est une $\beta$-réduction de $g$ si : \\
+			\begin{enumerate}
+				\item[a)] $f \leq g$
+				\item[b)]  $\exists \, k \geq 1$ tel que $J_{n+k} = I_n J_k , \forall n \geq k$.
+			\end{enumerate}
+		\end{enumerate}
+	\end{block}
+\end{frame}
+
+\begin{frame}{INTRODUCTION}
+	\framesubtitle{PROBLÉMATIQUE ET ANNONCE DU PLAN}
+	\begin{block}{}
+		\begin{enumerate}
+			\item[(i)] Comment étendre de manière rigoureuse les résultats obtenus dans le contexte restreint de la filtration I-adique à des filtrations bonnes 
+			\item[(i)] Comment ces notions interagissent-elles dans des environnements mathématiques variés ?
+		\end{enumerate}
+	\end{block}
+\end{frame}
+
+\begin{frame}
+\begin{enumerate}
+\item<0> \textcolor{blue}{INTRODUCTION}\\
+\item<1> \textcolor{blue}{DÉPENDANCE INTÉGRALE, RÉDUCTION ET FILTRATIONS BONNES }\\
+\item<0> \textcolor{blue}{CONCLUSION}\\
+\end{enumerate}
+\end{frame}
+
+\begin{frame}{DÉPENDANCE INTÉGRALE, RÉDUCTION ET FILTRATION BONNE}
+	\framesubtitle{ÉNONCE}
+	\begin{block}{Théorème Principal (1/4)}
+	Soient $f=(I_{n})_{_{n\in \mathbb{N}}}\leq $ $g=(J_{n})_{_{n\in \mathbb{N}}}$ des filtrations sur l'anneau $A.$ Nous considérons les assertions suivantes:
+		\begin{enumerate}
+			\item[(i)] $f$ est une réduction de $g.$
+			\item[(ii)] $J_{n}^{2}=I_{n}J_{n}$ pour tout $n$ assez grand.
+			\item[(iii)] $I_{n}$ est une réduction de $J_{n}$ pour tout $n$ assez grand.
+			\item[(iv)] Il existe un entier $s\geq 1$ tel que pour tout $n\geq s,$ $J_{s+n}=J_{s}J_{n},$
+			$I_{s+n}=I_{s}I_{n},$ $J_{s}^{2}=I_{s}J_{s},$ $J_{s+p}I_{s}=I_{s+p}J_{s}$ pour tout $p=1,2,...,s-1$
+			\item[(v)] Il existe un entier $k\geq 1$ tel que $g^{(k)}$ est $I_{k}-bonne$
+		\end{enumerate}
+	\end{block}
+\end{frame}
+
+\begin{frame}{DÉPENDANCE INTÉGRALE, RÉDUCTION ET FILTRATION BONNE}
+	\framesubtitle{ÉNONCE}
+	\begin{block}{Théorème Principal (2/4)}
+		\begin{enumerate}
+	\item[(vi)] Il existe un entier $r\geq 1$ tel que $f^{(r)}$ est une réduction de $g^{(r)}.$
+			\item[(vii)] Pour tout entier $m\geq 1$ tel que $f^{(m)}$ est une réduction de $g^{(m)}.$
+			\item[(viii)] $g$ est $enti\grave{e}re$ sur $f.$
+			\item[(ix)] $g$ est $\ fortement$ $enti\grave{e}re$ sur $f.$
+			\item[(x)] $g$ est $f-fine.$
+		\end{enumerate}
+	\end{block}
+\end{frame}
+
+\begin{frame}{DÉPENDANCE INTÉGRALE, RÉDUCTION ET FILTRATION BONNE}
+	\framesubtitle{ÉNONCE}
+	\begin{block}{Théorème Principal (3/4)}
+		\begin{enumerate}
+			\item[(xi)] $g$ est $f-bonne.$
+			\item[(xii)] $g$ est $faiblement$ $f-bonne.$
+			\item[(xiii)] Il existe un entier $N\geq 1$ tel que $t_{N}g\leq f\leq g$
+			\item[(xiv)] Il existe un entier $N\geq 1$ tel que $t_{N}g^{\prime }\leq
+			t_{N}f^{\prime \text{ }}$ o\`{u} $f^{\prime }$ est la clôture intégrale de $f.$
+			\item[(xv)] $P(f)=P(g)$, o\`{u} $P(f)$ est la clôture prüférienne de $f.$
+		\end{enumerate}
+	\end{block}
+\end{frame}
+
+\begin{frame}{DÉPENDANCE INTÉGRALE, RÉDUCTION ET FILTRATION BONNE}
+	\framesubtitle{RÉSULTAT}
+	\begin{block}{Théorème Principal (4/4)}
+		On a les résultats suivants:\\
+		(1)
+		\begin{enumerate}
+			\item[(a)] $f$ est une réduction de $g$ si et seulement si pour tout entier $m\geq 1$ tel que $f^{(m)}$ est une réduction de $g^{(m)}.$ 
+			\item[(b)] Il existe un entier $k\geq 1$ tel que $g^{(k)}$ est $I_{k}-bonne$ si et seulement s'il existe un entier $r\geq 1$ tel que $f^{(r)}$ est une réduction de $g^{(r)}.$
+			\item[(c)] $g$ est $enti\grave{e}re$ sur $f$ si et seulement si $P(f)=P(g)$, o\`{u} $P(f)$ est la clôture prüférienne de $f.$
+		\end{enumerate}
+	\end{block}
+\end{frame}
+
+\begin{frame}{DÉPENDANCE INTÉGRALE, RÉDUCTION ET FILTRATION BONNE}
+	\framesubtitle{RÉSULTAT}
+	\begin{block}{Théorème Principal (5/4)}
+		On a les résultats suivants:\\
+		(1)
+		\begin{enumerate}
+			\item[(d)]Si $J_{n}^{2}=I_{n}J_{n}$ pour tout $n$ assez grand alors $I_{n}$ est une réduction de $J_{n}$ pour tout $n$ assez grand. 
+			\item[(e)]S'il existe un entier $s\geq 1$ tel que pour tout $n\geq s,$ $J_{s+n}=J_{s}J_{n},$ $I_{s+n}=I_{s}I_{n},$ $J_{s}^{2}=I_{s}J_{s},$ $J_{s+p}I_{s}=I_{s+p}J_{s}$ pour tout $p=1,2,...,s-1$ alors $f$ est une réduction de $g.$
+			\item[(f)]Si $f$ est une réduction de $g$ alors il existe un entier $k\geq 1$ tel que $g^{(k)}$ est $I_{k}-bonne$
+		\end{enumerate}
+	\end{block}
+\end{frame}
+
+\begin{frame}{DÉPENDANCE INTÉGRALE, RÉDUCTION ET FILTRATION BONNE}
+	\framesubtitle{RÉSULTAT}
+	\begin{block}{Théorème Principal (6/4)}
+		On a les résultats suivants:\\
+		(1)
+		\begin{enumerate}
+			\item[(g)] Si $g$ est fortement entière sur $f$ alors:
+			\begin{enumerate}
+				\item[-] Pour tout entier $m\geq 1$ tel que $f^{(m)}$ est une réduction de $g^{(m)}.$
+				\item[-] $g$ est $faiblement$ $f-bonne.$
+				\item[-] Il existe un entier $N\geq 1$ tel que $t_{N}g\leq f\leq g$
+			\end{enumerate}
+		\end{enumerate}
+	\end{block}
+\end{frame}
+
+\begin{frame}
+\bigskip
+{\textcolor{blue}{\Large \textit{\textbf{\begin{center}
+MERCI POUR VOTRE AIMABLE ATTENTION
+\end{center}}}}}
+\end{frame}
+\end{document}
