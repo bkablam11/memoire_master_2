@@ -31,14 +31,14 @@
 	\begin{frame}{
 			PLAN DE PRÉSENTATION}
 		\begin{enumerate}
-			\item \textcolor{blue}{INTRODUCTION}\\
+			\item \textcolor{blue}{PRÉLIMINAIRE}\\
 			\item \textcolor{blue}{DÉPENDANCE INTÉGRALE, RÉDUCTION ET FILTRATION BONNES }\\
 			\item \textcolor{blue}{CONCLUSION}\\
 		\end{enumerate}
 	\end{frame}
 	\setbeamercovered{transparent}
 	
-	\begin{frame}{INTRODUCTION}
+	\begin{frame}{PRÉLIMINAIRE}
 		\framesubtitle{FILTRATIONS}
 		\begin{block}{}
 			\begin{enumerate}[(a)]
@@ -52,15 +52,14 @@
 		\end{block}
 	\end{frame}
 	
-		\begin{frame}{INTRODUCTION}
+		\begin{frame}{PRÉLIMINAIRE}
 		\framesubtitle{FILTRATIONS}
 		\begin{alertblock}{Remarque}
-		On peut remarquer que pour tout $n\leq 0, I_n = A$.\\ En effet, en utilisant la décroissance des idéaux (ii) et que $I_0 = A$ (i), il vient $I_n = A, n \leq 0$ car $\forall n \in \mathbb{Z}$, les $I_n$ sont des idéaux de $A$.\\		
+		On peut remarquer que pour tout $n\leq 0, I_n = A$.\\ En effet, en utilisant la décroissance des idéaux (ii) et que $I_0 = A$ (i), il vient $I_n = A, n \leq 0$ car $\forall n \in \mathbb{Z}$, les $I_n$ sont des idéaux de $A$.\\
 		Ainsi au lieu d'étudier la famille $f = (I_n)_{n \in \mathbb{Z}}$ nous pouvons nous ramener à étudier la famille $f = (I_n)_{n \in \mathbb{N}}$.
 		\end{alertblock}
 	\end{frame}
-	
-		\begin{frame}{INTRODUCTION}
+		\begin{frame}{PRÉLIMINAIRE}
 		\framesubtitle{CLASSES DES FILTRATIONS}
 		\begin{block}{}
 		\begin{center}
@@ -87,7 +86,7 @@
 	
 	
 	
-	\begin{frame}{INTRODUCTION}
+	\begin{frame}{PRÉLIMINAIRE}
 		\framesubtitle{PROPRIÉTÉ DES FILTRATIONS I-ADIQUES}
 		\begin{block}{}
 			\begin{center}
@@ -99,7 +98,7 @@
 					\node (D) at (6,-2) {f noethérienne};
 					\node (E) at (9,0) {f A.P};
 					\node (F) at (6,0) {f fortement A.P};
-					\node (G) at (2,-4) {f E.P};
+					\node (G) at (2,2) {f E.P};
 					
 					% Dessin des flèches avec des modifications pour les rendre plus visibles
 					\draw[->, ultra thick, >=stealth] (A) -- (B);
@@ -107,15 +106,72 @@
 					\draw[->, ultra thick, >=stealth] (B) -- (F);
 					\draw[->, ultra thick, >=stealth] (C) -- (D);
 					\draw[->, ultra thick, >=stealth] (F) -- (E);
-					\draw[<->, ultra thick, >=stealth] (F) -- (D);
-					\draw[->, ultra thick, >=stealth] (C) -- (G);
+					\draw[->, ultra thick, >=stealth] (F) -- (D);
+					\draw[->, ultra thick, >=stealth] (B) -- (G);
 				\end{tikzpicture}
 			\end{center}
 		\end{block}
 	\end{frame}
 	
+		\begin{frame}{PRÉLIMINAIRE}
+		\framesubtitle{DÉMONSTRATION}
+		\begin{block}{}
+			\begin{enumerate}[(i)]
+				\item Supposons que $f$ est $I-adique$ alors peu importe $n_0 \in \mathbb{N}$ choisi, $ II^n=I^{n+1},$ pour tout $ n \in \mathbb{N}.$ Donc $f$ est $I-bonne$.
+				\item De proche en proche, on a $I^{n}I_{n_0} = I_{n_{0}+n},$ pour tout $n \geqslant 1$.\\
+				En effet, $II_{n_0} = I_{n_{0}+1}$, en multipliant par $I$.\\ On a: $I^{2}I_{n_0} = II_{n_{0}+1}$ et $I^1I_{n_0+1} = I_{n_{0}+2}$. \\
+				
+			\end{enumerate}
+		\end{block}
+	\end{frame}
 	
-	\begin{frame}{INTRODUCTION}
+		\begin{frame}{PRÉLIMINAIRE}
+		\framesubtitle{DÉMONSTRATION}
+		\begin{block}{}
+			\begin{enumerate}[(iii)]
+				\item Supposons que $f$ est $I-bonne$ alors il existe $n_0 \in \mathbb{N}$ tel que pour tout $m\geqslant 1 $, $I^mI_n = I_{n+m}, \forall n \geqslant n_0.$\\
+				Posons $k=n_0+1,$ soient $m,n \in \mathbb{N}$ alors:\\
+				\begin{center}
+					$I_{m+n}=I^mI_n \subset I_1^mI_n \subset I_mI_n \subset I_{m+n}$
+				\end{center}
+				Donc $ \forall \, m, n \in \mathbb{Z}, \ m, n \geqslant k, I_m I_n = I_{m+n}$.\\
+				Par suite f est fortement noethérienne.
+			\end{enumerate}
+		\end{block}
+	\end{frame}
+			\begin{frame}{PRÉLIMINAIRE}
+		\framesubtitle{DÉMONSTRATION}
+		\begin{block}{}
+			\begin{enumerate}[(iv)]
+				\item Supposons que $f$ est $I-bonne$ alors il existe $n_0 \in \mathbb{N}$ tel que pour tout $m\geqslant 1 $, $I^mI_n = I_{n+m}, \forall n \geqslant n_0.$\\
+				Posons $k=N=n_0+1$.
+				\begin{center}
+					$\sum\limits_{p=1}^{N} I_{n-p}I_p= I_{n-1}I_1 + \sum\limits_{p=2}^{N} I_{n-p}I_p$
+				\end{center}
+				Prenons $n \geqslant N=n_0+1$ alors $n-1 \geqslant n_0$.\\
+				Alors $I_{n-1}I_1=I_n$.\\
+				D'où $I_n \subset \sum\limits_{p=1}^{N} I_{n-p}I_p \subset I_n$.\\
+				Par suite f est $E.P$
+			\end{enumerate}
+		\end{block}
+	\end{frame}
+	
+	\begin{frame}{PRÉLIMINAIRE}
+		\framesubtitle{DÉMONSTRATION}
+		\begin{block}{}
+			\begin{enumerate}[(v)]
+				\item Supposons que $f$ est $I-bonne$ alors il existe $n_0 \in \mathbb{N}$ tel que pour tout $m\geqslant 1 $, $I^mI_n = I_{n+m}, \forall n \geqslant n_0.$\\
+				Par récurrence sur $n \in \mathbb{N}$, montrons que $I_{nk} = I_k^n$.\\
+				Posons $k= n_0+1 \geqslant 1$\\
+				Initialisation: n=0, n=1, évident.\\
+				Prenons n= 2, $I_{2k} \subset I_kI_k=I_k^2 \subset I_{2k}$, donc $I_{2k} = I_k^2$.\\
+				Hérédité: Soit $n \geqslant 2$. Supposons que $I_{nk} = I_k^n$.\\
+				On a: $I_{(n+1)k}= I^kI_k^n\subset I_kI_k^n \subset I_k^{n+1}$, donc $I_{(n+1)k} = I_k^{n+1}$.\\
+				Par suite f fortement $A.P.$
+			\end{enumerate}
+		\end{block}
+	\end{frame}
+	\begin{frame}{PRÉLIMINAIRE}
 		\framesubtitle{ÉLÉMENT ENTIER ET RÉDUCTION}
 		\begin{block}{}
 			\begin{enumerate}
@@ -129,7 +185,7 @@
 		\end{block}
 	\end{frame}
 	
-	\begin{frame}{INTRODUCTION}
+	\begin{frame}{PRÉLIMINAIRE}
 		\framesubtitle{FILTRATIONS f-BONNES}
 		\begin{block}{}
 			Soient $\varphi=(M_n)_{n \in \mathbb{Z}}$ $\in$ $\mathbb{F}(M)$, $f-compatible$, avec $f \in \mathbb{F}(A)$.
@@ -145,26 +201,26 @@
 		\end{block}
 	\end{frame}
 	
-	\begin{frame}{INTRODUCTION}
-		\framesubtitle{PROBLÉMATIQUE ET ANNONCE DU PLAN}
-		\begin{block}{}
-			\begin{enumerate}
-				\item[(i)] Comment étendre les résultats des filtrations I-adiques aux filtrations bonnes?
-				\item[(ii)] Comment la dépendance intégrale et la réduction interagissent-elles avec les filtrations bonnes ?
-			\end{enumerate}
-		\end{block}
-	\end{frame}
+	
+%	\begin{frame}{PRÉLIMINAIRE}
+%		\framesubtitle{PROBLÉMATIQUE ET ANNONCE DU PLAN}
+%		\begin{block}{}
+%			\begin{enumerate}
+%				\item[(i)] Comment étendre les résultats des filtrations I-adiques aux filtrations bonnes?
+%				\item[(ii)] Comment la dépendance intégrale et la réduction interagissent-elles avec les filtrations bonnes ?
+%			\end{enumerate}
+%		\end{block}
+%	\end{frame}
 	
 	\begin{frame}
 		\begin{enumerate}
-			\item<0> \textcolor{blue}{INTRODUCTION}\\
+			\item<0> \textcolor{blue}{PRÉLIMINAIRE}\\
 			\item<1> \textcolor{blue}{DÉPENDANCE INTÉGRALE, RÉDUCTION ET FILTRATIONS BONNES }\\
 			\item<0> \textcolor{blue}{CONCLUSION}\\
 		\end{enumerate}
 	\end{frame}
 	
 	\begin{frame}{DÉPENDANCE INTÉGRALE, RÉDUCTION ET FILTRATION BONNE}
-		\framesubtitle{ÉNONCE}
 		\begin{block}{Théorème Principal}
 			Soient $A$ noethérien, $f=(I_{n})_{_{n\in \mathbb{N}}}\leq $ $g=(J_{n})_{_{n\in \mathbb{N}}}$ $ \in \mathbb{F}(A).$ \\ Si $f$ est fortement noethérienne et $g$ est noethérienne alors les assertions sont équivalentes et dans ce cas $g$ est fortement noethérienne:
 			\begin{enumerate}[(i)]
@@ -176,7 +232,6 @@
 	\end{frame}
 	
 	\begin{frame}{DÉPENDANCE INTÉGRALE, RÉDUCTION ET FILTRATION BONNE}
-		\framesubtitle{ÉNONCE}
 		\begin{block}{Théorème Principal}
 			\begin{enumerate}[(iv)]
 				\item $g$ est $enti\grave{e}re$ sur $f.$
@@ -191,7 +246,7 @@
 	
 	\begin{frame}
 		\begin{enumerate}
-			\item<0> \textcolor{blue}{INTRODUCTION}\\
+			\item<0> \textcolor{blue}{PRÉLIMINAIRE}\\
 			\item<0> \textcolor{blue}{DÉPENDANCE INTÉGRALE, RÉDUCTION ET FILTRATIONS BONNES }\\
 			\item<1> \textcolor{blue}{CONCLUSION}\\
 		\end{enumerate}

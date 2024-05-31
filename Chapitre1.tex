@@ -551,23 +551,25 @@ Ainsi au lieu d'étudier la famille $f = (I_n)_{n \in \mathbb{Z}}$ nous pouvons 
 	Dans un anneau noethérien, nous avons la classification suivantes des filtrations \\ classiques $f$ où $I$ est un idéal de l'anneau $A$:
 	\begin{center}
 		\begin{tikzpicture}
-			% Création des nœuds
-			\node (A) at (0,0) {f I-adique};
-			\node (B) at (4,0) {f I-bonne};
-			\node (C) at (4,-2) {f fortement noethérienne};
-			\node (D) at (10,-2) {f noethérienne};
-			\node (E) at (14,0) {f A.P};
-			\node (F) at (10,0) {f fortement A.P};
-			
-			% Dessin des flèches avec des modifications pour les rendre plus visibles
-			\draw[->, ultra thick, >=stealth] (A) -- (B);
-			\draw[->, ultra thick, >=stealth] (B) -- (C);
-			\draw[->, ultra thick, >=stealth] (B) -- (F);
-			\draw[->, ultra thick, >=stealth] (C) -- (D);
-			\draw[->, ultra thick, >=stealth] (F) -- (E);
-			\draw[<->, ultra thick, >=stealth] (F) -- (D);
+					\node (A) at (-1,0) {f I-adique};
+					\node (B) at (2,0) {f I-bonne};
+					\node (C) at (2,-2) {f fortement noethérienne};
+					\node (D) at (6,-2) {f noethérienne};
+					\node (E) at (9,0) {f A.P};
+					\node (F) at (6,0) {f fortement A.P};
+					\node (G) at (2,2) {f E.P};
+					
+					% Dessin des flèches avec des modifications pour les rendre plus visibles
+					\draw[->, ultra thick, >=stealth] (A) -- (B);
+					\draw[->, ultra thick, >=stealth] (B) -- (C);
+					\draw[->, ultra thick, >=stealth] (B) -- (F);
+					\draw[->, ultra thick, >=stealth] (C) -- (D);
+					\draw[->, ultra thick, >=stealth] (F) -- (E);
+					\draw[->, ultra thick, >=stealth] (F) -- (D);
+					\draw[->, ultra thick, >=stealth] (B) -- (G);
 		\end{tikzpicture}
 	\end{center}
 \end{maremarque}
+
 
 
