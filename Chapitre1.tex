@@ -1,29 +1,29 @@
 \chapter{GÉNÉRALITÉS}
 \chaptermark{GÉNÉRALITÉS}
-Ce chapitre revêt la forme d'une rétrospective, visant à revisiter et consolider diverses définitions dans \cite{Di2} et propositions évoquées au sein des Unités d'Enseignement (U.E.) consacrées à l'Algèbre Commutative et à la Théorie des Filtrations. L'ensemble des résultats présentés dans ce chapitre s'enracine dans \cite{Di3}. Leur maîtrise s'avère incontournable pour une appréhension éclairée des sections à venir. Cependant, il convient de préciser que les démonstrations des propositions énoncées dans ce chapitre ne seront exposées que lorsqu'elles s'avéreront nécessaires. \\\\ Dans l'ensemble de ce mémoire, sauf mention contraire, les anneaux considérés sont supposés \textbf{commutatifs et unitaires}.
+Ce chapitre revêt la forme d'une rétrospective, visant à revisiter et consolider diverses définitions dans \cite{Di2} et propositions évoquées au sein des Unités d'Enseignement (U.E.) consacrées à l'Algèbre Commutative et à la Théorie des Filtrations. L'ensemble des résultats présentés dans ce chapitre s'enracine dans \cite{Di3}. Leur maîtrise s'avère incontournable pour une appréhension éclairée des sections à venir.\\\\ Dans l'ensemble de ce mémoire, sauf mention contraire, les anneaux considérés sont supposés \textbf{commutatifs et unitaires}.
 \section{Relation d'équivalence, groupe et sous-groupe}
 \subsection{Relation d'équivalence}
 \begin{madefinition}
 	On appelle relation d’équivalence sur un ensemble non vide E, une relation
 	$\Re $ sur E vérifiant les conditions suivantes :
 	\begin{enumerate}
-		\item[a)] $\forall x \in E, x\Re x$ (réflexivité)
-		\item[b)] $\forall x,y \in E, x\Re y \Longleftrightarrow y\Re x $ (symétrie)
-		\item[c)] $\forall x,y,z \in E, (x\Re y)$ et $(y\Re z)$ $\Longrightarrow (x\Re z)$  (transitivité)
+		\item[a)] $\forall x \in E, x\Re x$ (réflexivité);
+		\item[b)] $\forall x,y \in E, x\Re y \Longleftrightarrow y\Re x $ (symétrie);
+		\item[c)] $\forall x,y,z \in E, (x\Re y)$ et $(y\Re z)$ $\Longrightarrow (x\Re z)$  (transitivité).
 	\end{enumerate}
 	La partie $C_x = \{y \in E,\quad x\Re y\}  $ de E est appelée la classe d’équivalence modulo $\Re $ de $x \in E$. Les	classes d’équivalence constituent une partition de E. Notons $\mathcal{P}(E)$ l’ensemble des parties de E. La famille $(C_x)_{x \in E}$ constitue un sous-ensemble de $\mathcal{P}(E)$ appelé l’ensemble quotient de E par R. On le note $E/\Re $. 
-	Dans la suite, la classe de $x \in E$ sera vue essentiellement comme élément de ce nouvel ensemble $E/\Re $ et sera notée $\bar{x}$
+	Dans la suite, la classe de $x \in E$ sera vue essentiellement comme élément de ce nouvel ensemble $E/\Re $ et sera notée $\bar{x}$.
 \end{madefinition}
 \subsection{Relation d'ordre}
 \begin{madefinition}
 	On appelle relation d’ordre sur un ensemble non vide E, une relation
 	$\Re $ sur E vérifiant les conditions suivantes :
 	\begin{enumerate}
-		\item[a)] $\forall x \in E, x\Re x$ (réflexivité)
-		\item[b)] $\forall x,y \in E, x\Re y $ et $y\Re x$ $ \Longleftrightarrow y = x $ (anti-symétrie)
-		\item[c)] $\forall x,y,z \in E, (x\Re y)$ et $(y\Re z)$ $\Longrightarrow (x\Re z)$  (transitivité)
+		\item[a)] $\forall x \in E, x\Re x$ (réflexivité);
+		\item[b)] $\forall x,y \in E, x\Re y $ et $y\Re x$ $ \Longleftrightarrow y = x $ (anti-symétrie);
+		\item[c)] $\forall x,y,z \in E, (x\Re y)$ et $(y\Re z)$ $\Longrightarrow (x\Re z)$  (transitivité).
 	\end{enumerate}
-	L'ensemble $(E, \Re )$ s'appelle alors ensemble ordonné. L'ordre est dit total si deux éléments sont toujours comparables (on dit aussi que l'ensemble est totalement ordonné). Dans le cas contraire, il est dit partiel.
+	L'ensemble $(E, \Re )$ s'appelle alors ensemble ordonné. L'ordre est dit total si deux éléments sont toujours comparables (on dit aussi que l'ensemble est totalement ordonné). Dans le cas contraire, il est dit partiellement ordonné.
 \end{madefinition}
 
 \subsection{Groupe}
@@ -32,14 +32,14 @@ Ce chapitre revêt la forme d'une rétrospective, visant à revisiter et consoli
 	Soit G un ensemble non vide.\\
 	On dit que $(G, \star)$ est un groupe si $\star$ est une loi de composition qui a tout élément de $G$ associe un élément dans $G$ vérifiant:
 	\begin{enumerate}
-		\item[(i)] La loi $\star$ est associative 
-		\[ a\star(b\star c) = (a\star b) \star a, \forall (a,b,c) \in G^3,\]
-		\item[(ii)] G possède un élément neutre $e$
-		\[ \exists!e \in G, e\star a = e =  a\star e, \forall a \in G,\]
-		\item[(iii)] Tout élément $a$ de $G$ admet un symétrique
-		\[ a\star b = e = b \star a, \forall (a,b) \in G^2.\]
-		\item [(vi)] Si de plus la loi $\star$ est commutative, 
-		\[ a\star b = b \star a, \forall (a,b) \in G^2,\]
+		\item[(i)] La loi $\star$ est associative: 
+		\[ a\star(b\star c) = (a\star b) \star a, \forall (a,b,c) \in G^3,\].
+		\item[(ii)] G possède un élément neutre $e$:
+		\[ \exists!e \in G, e\star a = e =  a\star e, \forall a \in G,\].
+		\item[(iii)] Tout élément $a$ de $G$ admet un symétrique:
+		\[ a\star b = e = b \star a, \forall (a,b) \in G^2,\]
+		\item [(vi)] Si de plus la loi $\star$ est commutative:
+		\[ a\star b = b \star a, \forall (a,b) \in G^2.\]
 		On dit que le groupe $(G,\star)$ est abélien ou commutatif.
 	\end{enumerate}
 \end{madefinition}
@@ -58,10 +58,10 @@ Ce chapitre revêt la forme d'une rétrospective, visant à revisiter et consoli
 \section{Anneau, Corps, Espace vectoriel et Morphisme d'anneaux}
 \subsection{Anneau}
 \begin{madefinition}
-	Soit $A$ un ensemble non vide muni de deux lois de compositions interne, $(A, +, \times)$. On dit que $(A, +, \times)$ est un anneau si :
+	Soit $A$ un ensemble non vide muni de deux lois de compositions internes. On dit que $(A, +, \times)$ est un anneau si :
 	\begin{enumerate}
-		\item[(i)] $(A,+)$ est un groupe abélien
-		\item[(ii)] La loi $\times$ est distributive par rapport à la loi $+$
+		\item[(i)] $(A,+)$ est un groupe abélien;
+		\item[(ii)] La loi $\times$ est distributive par rapport à la loi $+$;
 		\item[(iii)] La loi $\times$ est associative.
 	\end{enumerate}
 	L'anneau est dit commutatif si la loi $\times$ est commutatif.
@@ -82,7 +82,7 @@ Ce chapitre revêt la forme d'une rétrospective, visant à revisiter et consoli
 \end{madefinition}
 \begin{maproposition}
 	(Anneau noethérien)\\
-	Soient $A$ une anneau commutatif unitaire. On dit que $A$ est un anneau noethérien si l'une des trois assertions équivalentes sont vérifiée:
+	Soit $A$ une anneau commutatif unitaire. On dit que $A$ est un anneau noethérien si l'une des trois assertions équivalentes est vérifiée:
 	\begin{enumerate}
 		\item[(i)] Tout idéal de $A$ est de type fini,
 		\item[(ii)] Toute suite croissante d'idéaux de $A$ est stationnaire,
@@ -91,13 +91,7 @@ Ce chapitre revêt la forme d'une rétrospective, visant à revisiter et consoli
 \end{maproposition}
 \subsection{Corps}
 \begin{madefinition}
-	On appelle \textbf{corps} (commutatif), la donnée d'un ensemble $\mathbb{K}$ et de deux lois de composition interne l'une notée $+$ et l'autre multiplicative notée $\times$ sur $\mathbb{K}$ telles que:
-	\begin{enumerate}
-		\item $+$ est un groupe
-		\item $\times $ vérifie (i), (ii), (iii) pour tout élément \textbf{non nul} et distributive (à droite et à gauche) par rapport à la loi $+$ c'est-a-à-dire:
-		\[ (a+b)\times c = a \times c + b \times a \text{ et } c \times (a+b) = c \times a + c \times b \quad \forall (a,b,c) \in \mathbb{K}^3.\]
-		\item $\times $ est commutative.
-	\end{enumerate}
+	Un \textbf{corps} est un anneau dans lequel tout élément non nul est inversible.
 \end{madefinition}
 \begin{monexemple}
 	$\mathbb{Q}, \mathbb{R}$ et $\mathbb{C}$ sont des corps. 
@@ -109,8 +103,8 @@ Ce chapitre revêt la forme d'une rétrospective, visant à revisiter et consoli
 \begin{madefinition}
 	Soit $\mathbb{K}$ un corps. On dit qu’un ensemble $E$ est un $\mathbb{K}$-espace vectoriel lorsqu’il est muni d’une loi de composition interne commutative, notée + et d’une loi externe de $\mathbb{K}$, notée $\times$, telle que:
 	\begin{enumerate}
-		\item (E, $+$) est un groupe additif d'élément neutre noté $0_E$ ou $0$.
-		\item Les lois $+$ et $\times$ sont compatibles entre elles et avec les lois de la structure de corps de $\mathbb{K}$. C'est-à-dire qu'elle vérifient:
+		\item (E, $+$) est un groupe additif d'élément neutre noté $0_E$.
+		\item Les lois $+$ et $\times$ sont compatibles entre elles. C'est-à-dire qu'elle vérifient:
 		\begin{enumerate}
 			\item  $\forall \lambda \in \mathbb{K}, \forall u,v \in E, \lambda \times (u+v) = \lambda \times u + \lambda \times v$
 			\item $\forall \lambda , \mu \in \mathbb{K}, \forall u \in E, (\lambda \times \mu)\times u 
@@ -121,28 +115,29 @@ Ce chapitre revêt la forme d'une rétrospective, visant à revisiter et consoli
 	\end{enumerate}	
 \end{madefinition}
 \begin{monexemple}
-	Voici des exemples d'espaces vectoriels:
-	\begin{enumerate}
-		\item $\{0_E\}$ l'espace vectoriel réduit à $0$, sur n’importe quel corps $\mathbb{K}$. 
-		\item Le corps $\mathbb{K}$ lui-même est un espace vectoriel sur est $\mathbb{K}$.
-		\item  L'ensemble des polynômes $\mathbb{K}[X]$ en une indéterminée $X$ et à coefficients dans $\mathbb{K}$ est un $\mathbb{K}$-espace vectoriel.
-	\end{enumerate}
+
+		Soit $\mathbb{K}$ un corps. Alors: 
+		\begin{enumerate}
+			\item[(i)] $\mathbb{K}^n$ est un $\mathbb{K}$-espace vectoriel pour tout $n \in \mathbb{N}^{*}$.
+			\item[(ii)] $\mathbb{K}[X]$ est un $\mathbb{K}$-espace vectoriel.
+			\item[(iii)] $\mathcal{M}_n(\mathbb{K})$ est un espace vectoriel.
+		\end{enumerate}
 \end{monexemple}
-\begin{maremarque}
-	La notion d’espace vectoriel : pour en donner un aperçu intuitif ce sont des généralisations de l’ensemble $\mathbb{R}^n$ (produit cartésien de $\mathbb{R}$ avec lui-même $n$ fois), et des opérations linéaires sur cet ensemble. Plus précisément un espace vectoriel est défini à partir d’un ensemble $E$. Les éléments de $E$ sont appelés \textbf{vecteurs}. On associe implicitement à $E$ un \textbf{corps} de base noté $\mathbb{K}$ dont les éléments sont appelés les \textbf{scalaires} (pour $\mathbb{R}^n$ le corps $\mathbb{K}$ est égal à $\mathbb{R}$). On dit alors que $E$ est un $\mathbb{K}$-espace vectoriel si on peut effectuer dans $E$ des opérations $\mathbb{K}$-linéaires, c’est-à-dire si on sait définir le vecteur $\lambda.u+\mu.v$ à partir des données de deux vecteurs $u$ et $v$ et de deux scalaires $\lambda$ et $\mu$.
-\end{maremarque}
+%\begin{maremarque}
+%	La notion d’espace vectoriel : pour en donner un aperçu intuitif ce sont des généralisations de l’ensemble $\mathbb{R}^n$ (produit cartésien de $\mathbb{R}$ avec lui-même $n$ fois), et des opérations linéaires sur cet ensemble. Plus précisément un espace vectoriel est défini à partir d’un ensemble $E$. Les éléments de $E$ sont appelés \textbf{vecteurs}. On associe implicitement à $E$ un \textbf{corps} de base noté $\mathbb{K}$ dont les éléments sont appelés les \textbf{scalaires} (pour $\mathbb{R}^n$ le corps $\mathbb{K}$ est égal à $\mathbb{R}$). On dit alors que $E$ est un $\mathbb{K}$-espace vectoriel si on peut effectuer dans $E$ des opérations $\mathbb{K}$-linéaires, c’est-à-dire si on sait définir le vecteur $\lambda.u+\mu.v$ à partir des données de deux vecteurs $u$ et $v$ et de deux scalaires $\lambda$ et $\mu$.
+%\end{maremarque}
 
 \begin{madefinition}
-	Soient $E$ et $F$ deux $\mathbb{K}$-espaces vectoriels. Une application f :$E \longrightarrow F$ est dite linéaire si elle est compatible avec les structures de $\mathbb{K}$-espaces sur $E$ et sur $F$. Autrement dit si $f$ vérifie : 
+	Soient $E$ et $F$ deux $\mathbb{K}$-espaces vectoriels.\\ Une application f :$E \longrightarrow F$ est dite linéaire si elle est compatible avec les structures de $\mathbb{K}$-espaces sur $E$ et sur $F$. Autrement dit si $f$ vérifie : 
 	\begin{enumerate}
-		\item $\forall \lambda \in \mathbb{K}, \forall u \in E, f(\lambda \times u) = \lambda \times f(u)$
-		\item $\forall u,v \in E, f(u+v) = f(u)+f(v)$
+		\item $\forall \lambda \in \mathbb{K}, \forall u \in E, f(\lambda \times u) = \lambda \times f(u)$.
+		\item $\forall u,v \in E, f(u+v) = f(u)+f(v)$.
 	\end{enumerate}
 \end{madefinition}
 
-\begin{maremarque}
-	La notion d’applications linéaires entre espaces vectoriels. Ce sont des applications entre deux espaces vectoriels, disons $E$ et $F$, sur un même corps de base, disons $\mathbb{K}$. Pour être appelées linéaires, ces applications doivent être compatibles avec les opérations $\mathbb{K}$-linéaires. La définition de cette notion est très simple. Mais son utilisation est vraiment au cœur de l’algèbre linéaire. On peut même dire que toute l’algèbre consiste à manipuler des applications compatibles avec les structures algébriques (on parle de “morphismes” dans d’autres contextes)
-\end{maremarque}
+%\begin{maremarque}
+%	La notion d’applications linéaires entre espaces vectoriels. Ce sont des applications entre deux espaces vectoriels, disons $E$ et $F$, sur un même corps de base, disons $\mathbb{K}$. Pour être appelées linéaires, ces applications doivent être compatibles avec les opérations $\mathbb{K}$-linéaires. La définition de cette notion est très simple. Mais son utilisation est vraiment au cœur de l’algèbre linéaire. On peut même dire que toute l’algèbre consiste à manipuler des applications compatibles avec les structures algébriques (on parle de “morphismes” dans d’autres contextes)
+%\end{maremarque}
 \subsection{Morphisme d'anneaux}
 \begin{madefinition}
 	Soient deux anneaux $(A,\star, \circ )$ et $(B, \ast, \diamond)$.\\
@@ -155,7 +150,7 @@ Ce chapitre revêt la forme d'une rétrospective, visant à revisiter et consoli
 \begin{maproposition}
 	(Théorème d'isomorphisme d’anneaux) \\
 	Soit $\varphi:A \longrightarrow B$ un morphisme d'anneaux.\\
-	Son noyau Ker($\varphi$) est un idéal de $A$ et son image Im($\varphi$) est un sous-anneau de B.\\ De plus, on a que:
+	Son noyau Ker($\varphi$) est un idéal de $A$ et son image Im($\varphi$) est un sous-anneau de B.\\ De plus, on a:
 	\[ \dfrac{A}{Ker(\varphi)} \simeq  Im(\varphi).\]
 	Avec Ker($\varphi$) = $\left\{a \in A : \varphi(a) = 0 \right\}$ 
 	et Im($\varphi$) = $\left\{\varphi(a) : a \in A \right\}$.
@@ -165,19 +160,20 @@ Ce chapitre revêt la forme d'une rétrospective, visant à revisiter et consoli
 	Soit $A$ un anneau.\\
 	Une \textbf{graduation sur A} est une famille $(A_n)_{n \in \mathbb{Z}}$ de  sous-groupes stables de $(A,+)$ vérifiant:
 	\begin{enumerate}
-		\item[i)] $ A_p A_q \subset A_{p+q} $
-		\item[ii)] $ A =\displaystyle \bigoplus_{n \in \mathbb{Z}}{A_n} $
+		\item[i)] $ A_p A_q \subset A_{p+q} $;
+		\item[ii)] $ A =\displaystyle \bigoplus_{n \in \mathbb{Z}}{A_n} $.
 	\end{enumerate}
-	Si $\forall n < 0, A_n = \left\{0_A\right\}$, on dit que \textbf{A est positivement gradué} ou que \textbf{A est gradué de type n}. Ainsi $ A =\displaystyle \bigoplus_{n \in \mathbb{N}}{A_n} $. Les éléments de $A_n$, pour tout $n \in \mathbb{N} $ sont dits de degré $n$.\\
-	De plus $ A =\displaystyle \bigoplus_{n \in \mathbb{N}}{A_n} $ si et seulement si:
-	\[ \forall x \in A, \exists x_i \in A, \text{tel que } x = \sum_{finie}^{} x_i \text{ (Existence et Unicité)}. \]
+	Si pour tout $n < 0, A_n$ est nul, on dit que \textbf{A est positivement gradué} ou que \textbf{A est gradué de type} $\mathbb{N}$. Ainsi $ A =\displaystyle \bigoplus_{n \in \mathbb{N}}{A_n} $. Les éléments de $A_n$, pour tout $n \in \mathbb{N} $ sont dits de degré $n$.
+%	De plus si $ A =\displaystyle \bigoplus_{n \in \mathbb{Z}}{A_n} $ alors:
+%	\[ \forall x \in A, \exists x_i \in A_i, \text{tel que } x = \sum_{finie}^{} x_i ,\forall i \in \mathbb{Z}. \]
 \end{madefinition} 
 \begin{maremarque}
 	Si $ A =\displaystyle \bigoplus_{n \in \mathbb{N}}{A_n} $ alors:
 	$$  
 	\begin{cases}
 		1_A \in A_0,\\
-		A_0 \text{ est un sous-anneau de }A. 
+		A_0 \text{ est un sous-anneau de }A. \\
+		 A^{+} =\displaystyle \bigoplus_{n \geqslant 1}{A_n} \text{ est un idéal de }A.
 	\end{cases}
 	$$
 	\newline
@@ -202,16 +198,13 @@ Ce chapitre revêt la forme d'une rétrospective, visant à revisiter et consoli
 \begin{maremarque}
 	\begin{enumerate}
 		\item[(i)] Si $A$ est un anneau, alors $A$ est un $A-module$.
-		\item[(ii)] Un espace vectoriel sur $A$ est un module sur $A$, si $A$ est un corps.
-		\\ Cette propriété n'est pas vrai en générale.
+		\item[(ii)] Si $A$ est un corps, alors tout $A-module$ est un $A-$espace vectoriel.
 	\end{enumerate}
 \end{maremarque}
 \begin{monexemple}
 	\begin{enumerate}
-		\item[(i)] $M= {0} $ est un $A-module$ pour tout Anneau $A$, appelé \textbf{module nul}
-		\item[(ii)] L'anneau $A$ est un $A-module$. Les sous $A-modules$ sont les idéaux de $A$.
-		\item[(iii)] Si $A= \mathbb{Z}$, tout sous-groupe abélien peut être vu comme un $\mathbb{Z}-module$
-		\item[(iv)] Soit $k$ un corps.  Alors tout $k-espace$ $vectoriel$ est un $k-module$. 
+		\item L'anneau $A$ est un $A-module$.
+		\item Si $A= \mathbb{Z}$, tout sous-groupe abélien peut être vu comme un $\mathbb{Z}-module$
 	\end{enumerate}
 \end{monexemple}
 \begin{madefinition}
@@ -223,13 +216,17 @@ Ce chapitre revêt la forme d'une rétrospective, visant à revisiter et consoli
 	\end{enumerate}
 \end{madefinition}
 \begin{madefinition}
-	Soit $M$ un $A$-module. $M$ est dit de type fini s'il admet un système générateur fini, $\exists \, \, x_1, \cdots ,x_r \in M$ tel que $\forall \,  x \in M, x = \displaystyle \sum_{i=1}^{r}{a_i x_i}$, $a_i \in A$.
+	Soit $M$ un $A$-module. $M$ est dit de type fini s'il admet un système générateur fini:
+\begin{center}
+		 $\exists \, \, x_1, \cdots ,x_r \in M$ \text{ tel que } $\forall \,  x \in M, x = \displaystyle \sum_{i=1}^{r}{a_i x_i}$, $a_i \in A$.
+\end{center}
+	 
 \end{madefinition}
 \begin{maproposition}(Module noethérien) \\
-	Soient $A$ un anneau et $M$ un $A-module$. On dit que $M$ est un module noethérien si l'une des trois assertions équivalentes sont vérifiée:
+	Soient $A$ un anneau et $M$ un $A-module$. On dit que $M$ est un module noethérien si l'une des trois assertions équivalentes est vérifiée:
 	\begin{enumerate}
-		\item[(i)] Tout sous-module de $M$ est de type fini,
-		\item[(ii)] Toute suite croissante de sous-modules de $M$ est stationnaire,
+		\item[(i)] Tout sous-module de $M$ est de type fini;
+		\item[(ii)] Toute suite croissante de sous-modules de $M$ est stationnaire;
 		\item[(iii)] Tout ensemble non vide de sous-modules de $M$ admet un élément maximal pour l'inclusion.
 	\end{enumerate} 
 \end{maproposition}
@@ -237,9 +234,9 @@ Ce chapitre revêt la forme d'une rétrospective, visant à revisiter et consoli
 	Soit $A$ un anneau. \\
 	On dit que $B$ est une $A-algèbre$ de type fini si:
 	\begin{enumerate}
-		\item[(i)] $B$ est un $A-module$
-		\item[(ii)] $B$ est un anneau
-		\item[(iii)] $B = A [b_1, \cdots, b_r] \simeq \dfrac{A[X_1, \cdots, X_r]}{J}, \quad b_i \in B , \quad J$ idéal de $A[X_1, \cdots, X_r]$
+		\item[(i)] $B$ est un $A-module$;
+		\item[(ii)] $B$ est un anneau;
+		\item[(iii)] $B = A [b_1, \cdots, b_r] \simeq \dfrac{A[X_1, \cdots, X_r]}{J}, \quad b_i \in B , \quad J$ idéal de $A[X_1, \cdots, X_r]$.
 	\end{enumerate}
 \end{madefinition}
 \section{Idéal}
@@ -247,23 +244,23 @@ Ce chapitre revêt la forme d'une rétrospective, visant à revisiter et consoli
 	Soit $A$ un anneau.\\
 	Un idéal de $A$ est une partie $I$ de $A$ vérifiant les propriétés suivantes : \\
 	\begin{enumerate}
-		\item[(i)] $0_A \in I$,
-		\item[(ii)] $ Pour \ tout \ x, y \in I, x+y \in I$
+		\item[(i)] $0_A \in I$;
+		\item[(ii)] $ Pour \ tout \ x, y \in I, x+y \in I$;
 		\item[(iii)] $ Pour \ tout \ a \in A$ et $x \in I , ax \in I$.
 	\end{enumerate}
 \end{madefinition}
 \begin{monexemple}
 	\item[(i)] Les idéaux de $\mathbb{Z}$ sont de la forme $n\mathbb{Z}$, avec $n \in \mathbb{N}$.
-	\item[(ii)] Si $A$ est un corps (un anneau dans lequel tout élément non nul est inversible) alors $I= (0) $ ou $I=A$
+	\item[(ii)] Si $A$ est un corps alors $I$ est nulle ou $I$ est égale à $A$ tout entier.
 \end{monexemple}
 \subsection{Idéal premier}
 \begin{madefinition}
-	Soit $A$ un anneau. Un idéal $P$ de $A$ est dit \textbf{premier} s'il est strict et si pour tout $x,y$ deux éléments de $A$ tels que $xy \in P$ alors: $$x \in P \text{ \quad ou \quad} y\in P$$
+	Soit $A$ un anneau. Un idéal $P$ de $A$ est dit \textbf{premier} s'il est strict et si pour tout $x,y$ deux éléments de $A$ tels que $xy \in P$ alors: $$x \in P \text{ \quad ou \quad} y\in P.$$
 	On note $Spec(A)$ l’ensemble des idéaux premiers de l'anneau A. 
 \end{madefinition}
 \subsection{Idéal primaire}
 \begin{madefinition}
-	Soit $A$ un anneau. Un idéal $Q$ de $A$ est dit \textbf{primaire} s'il est strict et si pour tout $x,y$ deux éléments de $A$ tels que $xy \in Q$ alors: $$x \in Q \text{ \quad ou \quad} \exists n \in \mathbb{N}, y^{n} \in Q$$.
+	Soit $A$ un anneau. Un idéal $Q$ de $A$ est dit \textbf{primaire} s'il est strict et si pour tout $x,y$ deux éléments de $A$ tels que $xy \in Q$ alors: $$x \in Q \text{ \quad ou \quad} \exists n \in \mathbb{N}, y^{n} \in Q.$$
 \end{madefinition}
 \subsection{Idéal maximal}
 \begin{madefinition}
@@ -277,16 +274,16 @@ Ce chapitre revêt la forme d'une rétrospective, visant à revisiter et consoli
 	Soient $A$ un anneau, $I$ un idéal de $A$. On appelle radical de $I$
 	\[\sqrt[]{I} = \{ a \in A, \exists n \in \mathbb{N}, a^n \in I \} \]
 \end{madefinition}
+\begin{maremarque}
+	Si $I$ est un idéal de $A$, alors $\, \sqrt[]{I}$ est un idéal de $A$.
+\end{maremarque}
 \begin{maproposition}
 	Soient $A$ un anneau et $I$ un idéal de $A$.
 	\begin{enumerate}
-		\item[(i)] $\sqrt{\sqrt{I}} = \sqrt{I}$
-		
-		\item[(ii)] $\sqrt{IJ} = \sqrt{I\cap J}=\sqrt{I}\cap \sqrt{J}$
-		
-		\item[(iii)] $\sqrt{I+J} = \sqrt{\sqrt{I}+\sqrt{J}}$
-		
-		\item[(iv)] Si $P$ $\in Spec(A),\sqrt{P}=P$
+		\item[(i)] $\sqrt{\sqrt{I}} = \sqrt{I}$;
+		\item[(ii)] $\sqrt{IJ} = \sqrt{I\cap J}=\sqrt{I}\cap \sqrt{J}$;
+		\item[(iii)] $\sqrt{I+J} = \sqrt{\sqrt{I}+\sqrt{J}}$;
+		\item[(iv)] Si $P$ $\in Spec(A),\sqrt{P}=P$.
 	\end{enumerate}
 \end{maproposition}
 \begin{monexemple}
@@ -299,19 +296,18 @@ Ce chapitre revêt la forme d'une rétrospective, visant à revisiter et consoli
 \section{Filtrations}
 \subsection{Filtration sur un anneau}
 \begin{madefinition}
-	Soit $A$ un anneau. On appelle filtration de $A$ toute famille\\ $f = (I_n)_{n \in \mathbb{Z}}$ d'idéaux de $A$ telle que:\\
+	Soit $A$ un anneau. On appelle filtration de $A$ toute famille\\ $f = (I_n)_{n \in \mathbb{Z}}$ d'idéaux de $A$ telle que:
 	\begin{enumerate}
-		\item[(i)] $I_0 = A$ \\
-		\item[(ii)] Pour tout $n \in \mathbb{Z}, I_{n+1} \subseteq I_n$.\\
-		\item[(iii)] Pour tout $p,q \in \mathbb{Z}, I_pI_q \subseteq I_{p+q}$.\\
+		\item[(i)] $I_0 = A$;
+		\item[(ii)] Pour tout $n \in \mathbb{Z}, I_{n+1} \subset I_n$;
+		\item[(iii)] Pour tout $p,q \in \mathbb{Z}, I_pI_q \subset I_{p+q}$.
 	\end{enumerate}
 	L'ensemble des filtrations de l'anneau A est noté $\mathbb{F}(A)$. Pour tout $f,g \in \mathbb{F}(A)$, cet ensemble est ordonné par:
-	\[\forall n \in \mathbb{Z}, f = (I_n) \leqslant g = (J_n) \implies  I_n \subseteq J_n \]
+	\[f = (I_n) \leqslant g = (J_n) \implies  I_n \subseteq J_n , \forall n \in \mathbb{Z}.\]
 \end{madefinition}
-
 \begin{maremarque}
-	Dans la définition précédente, il est facile de remarquer que\\ $\forall n \leq 0, I^n = A$.\\ En effet, en utilisant la décroissance des idéaux (ii) et que $I_0 = A$ (i), il vient d'une part que: \\ $I_0 \subseteq I_n , \forall n \leq 0$ (ii). Ainsi $A \subseteq I_n$.\\
-	D'autre part, comme $\forall n \in \mathbb{Z}$, les $I_n$ sont des idéaux de $A$, alors $I_n \subseteq A$.\\
+	Dans la définition précédente, il est facile de remarquer que pour tout $n\leq 0, I_n = A$.\\ En effet, en utilisant la décroissance des idéaux (ii) et que $I_0 = A$ (i), il vient d'une part que: \\ $I_0 \subset I_n , \forall n \leq 0$ (ii). \\ Ainsi $A \subset I_n$.\\
+	D'autre part, comme pour tout $ n \in \mathbb{Z}$, les $I_n$ sont des idéaux de $A$, alors $I_n \subset A$.\\
 	Donc $I_n = A, n \leq 0$.
 \end{maremarque}
 Ainsi au lieu d'étudier la famille $f = (I_n)_{n \in \mathbb{Z}}$ nous pouvons nous ramener à étudier la famille $f = (I_n)_{n \in \mathbb{N}}$.
@@ -328,46 +324,41 @@ Ainsi au lieu d'étudier la famille $f = (I_n)_{n \in \mathbb{Z}}$ nous pouvons 
 \begin{madefinition}
 	On définit pour toutes filtrations $f=(I_n)$ et $g=(J_n)$ de $A$ les trois opérations suivantes: 
 	\begin{enumerate}
-		\item[(1)] le produit $fg=(I_nJ_n)$
-		\item[(2)] l'intersection $f \cap g = (I_n \cap J_n)$
-		\item[(3)] la somme $f+g=(K_n)$ où pour tout entier $n$, $K_n =\displaystyle  \sum_{k=0}^{n}I_{k}J_{n-k} $
+		\item[(1)] le produit $fg=(I_nJ_n)$;
+		\item[(2)] l'intersection $f \cap g = (I_n \cap J_n)$;
+		\item[(3)] la somme $f+g=(K_n)$ où pour tout entier $n$, $K_n =\displaystyle  \sum_{k=0}^{n}I_{k}J_{n-k} $.
 	\end{enumerate}
 	On vérifie que $fg, f \cap g, f + g$ sont des filtrations de $A$ et pour toutes filtrations \\ $f,g \in \mathbb{F}(A):$
-	\begin{enumerate}
-		\item[(4)] $\inf (f,g) = f \cap g$
-		\item[(5)] $\sup (f,g) = f+g $
-		\item[(6)] $fg \leqslant f \cap g \leqslant f \leqslant f+g$
-	\end{enumerate}
+	\begin{center}
+		$fg \leqslant f \cap g \leqslant f \leqslant f+g$.
+	\end{center}
 \end{madefinition}
 
 \subsection{Filtration sur un module}
 \begin{madefinition}
-	Soit $M$ un $A$-module. On appelle filtration de $M$ toute famille $\varphi = (M_n)_{n \in \mathbb{Z}}$ de sous-modules de $M$ telle que:\\
+	Soit $M$ un $A$-module. On appelle filtration de $M$ toute famille $\varphi = (M_n)_{n \in \mathbb{Z}}$ de sous-modules de $M$ telle que:
 	\begin{enumerate}
-		\item[i)] $M_0 = M$ \\
-		\item[ii)] pour tout $n \in \mathbb{Z}, M_{n+1} \subseteq M_n$.\\
+		\item[i)] $M_0 = M$;
+		\item[ii)] pour tout $n \in \mathbb{Z}, M_{n+1} \subset M_n$.
 	\end{enumerate}
 	
 	La filtration $f = (I_n)_{n \in \mathbb{Z}}$ de $A$ et la filtration $\varphi = (M_n)_{n \in \mathbb{Z}}$ du $A$-module $M$ sont dites compatibles si:
-	\[ I_p M_q \subseteq M_{p+q} ,\, \forall \, p, q \in \mathbb{Z}. \]
+	\[ I_p M_q \subset M_{p+q} ,\, \forall \, p, q \in \mathbb{Z}. \]
 \end{madefinition}
 \section{Anneaux gradués associés à une filtration}
 \subsection{Anneau de Rees d'une filtration}
 \begin{madefinition}
-	Soit $f=(I_n)_{n \in \mathbb{Z}}$ une filtration de l'anneau A.\\ X est une indéterminée.\\
+	Soit $f=(I_n)_{n \in \mathbb{Z}}$ une filtration de l'anneau A, X est une indéterminée.\\
 	On appelle \textbf{anneau de Rees} de f, l'anneau gradué noté R(A,f) tel que: 
 	\[ R(A,f)  =\displaystyle \bigoplus_{n \in \mathbb{N}}{I_n X^n}  \]
 	
 	On appelle \textbf{anneau de Rees généralisé} de f, l'anneau gradué noté $\mathcal{R}(A,f)$ tel que: 
 	\[ \mathcal{R}(A,f) = \displaystyle \bigoplus_{n \in \mathbb{Z}}{I_n X^n}  \]
-	On munit $R(A,f)$ et $\mathcal{R}(A,f)$ d'une structure de sous-anneau gradué de $A[X]$, l'ensemble des polynômes d'indéterminée $X$ à coefficients dans A dont les opérations sont définies par:
+	On munit $R(A,f)$ d'une structure de sous-anneau gradué de $A[X]$, l'ensemble des polynômes d'indéterminée $X$ à coefficients dans A dont les opérations sont définies pour des éléments de $R(A,f)$ par:
 	
 	\begin{enumerate}
-		\item la multiplication:	$(\sum\limits_{n=0}^{r}a_{n}X^{n})(\sum\limits_{k=0}^{s}b_{k}X^{k})=\sum%
-		\limits_{p=0}^{r+s}c_{p}X^{p}=$ $\sum\limits_{p=0}^{r+s}\sum%
-		\limits_{q=0}^{p}a_{p-q}b_{q}X^{p}$
-		\item l'addition:   $\sum\limits_{n=0}^{r}a_{n}X^{n}+\sum\limits_{k=0}^{s}b_{k}X^{k}=\sum%
-		\limits_{j=0}^{r}(a_{j}+b_{j})X^{j}$
+		\item La multiplication:	$(\sum\limits_{n=0}^{r}a_{n}X^{n})(\sum\limits_{k=0}^{s}b_{k}X^{k})=\sum\limits_{p=0}^{r+s}c_{p}X^{p}=$ $\sum\limits_{p=0}^{r+s}\sum\limits_{q=0}^{p}a_{p-q}b_{q}X^{p}$;
+		\item L'addition:   $\sum\limits_{n=0}^{r}a_{n}X^{n}+\sum\limits_{k=0}^{s}b_{k}X^{k}=\sum\limits_{j=0}^{r}(a_{j}+b_{j})X^{j}$.
 	\end{enumerate}
 \end{madefinition}
 \subsection{Anneau gradué d'une filtration}
@@ -387,15 +378,15 @@ Ainsi au lieu d'étudier la famille $f = (I_n)_{n \in \mathbb{Z}}$ nous pouvons 
 \begin{maproposition}
 	Soient A un anneau, I un idéal de A. Soient $f = (I_n)_{n \in \mathbb{Z}} \in \mathbb{F}(A)$ et $X$ une indéterminée.
 	\begin{enumerate}
-		\item[(i)] $A \subseteq R(A,f) \subseteq A[X]$
-		\item[(ii)] $R(A,f) \subseteq \mathcal{R}(A,f) \subseteq A[u,X]$ où $u = \dfrac{1}{X} = X^{-1}$
-		\item[(iii)] $\mathcal{R}(A,f) = R(A,f)[u] $
+		\item[(i)] $A \subset R(A,f) \subset A[X]$;
+		\item[(ii)] $R(A,f) \subset \mathcal{R}(A,f) \subset A[u,X]$ où $u = \dfrac{1}{X} = X^{-1}$;
+		\item[(iii)] $\mathcal{R}(A,f) = R(A,f)[u] $;
 		\item[(iv)] $u^n\mathcal{R}(A,f) \cap  A = I_n, \forall n \in \mathbb{Z}$
-		\item[(v)] $R(A,f) = A[I_1X,I_2X^2, \cdots, I_nX^n, \cdots] $
-		\item[(vi)] $u=\dfrac{1}{X} = X ^{-1}$ est régulier de degré -1 dans $\mathcal{R}(A,f)$ et on a: \[ \mathcal{R}(A,f) = A[u,I_1X,I_2X^2, \cdots, I_nX^n, \cdots ] \]
-		\item[(vii)] $ \dfrac{R(A,I)}{IR(A,I)} \simeq G_I(A) $ avec $R(A,I) = R(A, f_I) $ et $G_I(A) = G_{f_{I}}(A) = \displaystyle \bigoplus_{n \in \mathbb{N}}{\frac{I^{n}}{I^{n+1}}} $
-		\item[(viii)] $ \dfrac{\mathcal{R}(A,I)}{u\mathcal{R}(A,I)} \simeq G_I(A) $
-		\item[(ix)] $ \dfrac{\mathcal{R}(A,I)}{(u-1)\mathcal{R}(A,I)} \simeq A $
+		\item[(v)] $R(A,f) = A[I_1X,I_2X^2, \cdots, I_nX^n, \cdots] $;
+		\item[(vi)] $u=\dfrac{1}{X} = X ^{-1}$ est régulier de degré -1 dans $\mathcal{R}(A,f)$ et on a: \[ \mathcal{R}(A,f) = A[u,I_1X,I_2X^2, \cdots, I_nX^n, \cdots ]; \]
+		\item[(vii)] $ \dfrac{R(A,I)}{IR(A,I)} \simeq G_I(A) $ avec $R(A,I) = R(A, f_I) $ et $G_I(A) = G_{f_{I}}(A) = \displaystyle \bigoplus_{n \in\mathbb{N}}{\frac{I^{n}}{I^{n+1}}} $;
+		\item[(viii)] $ \dfrac{\mathcal{R}(A,I)}{u\mathcal{R}(A,I)} \simeq G_I(A) $;
+		\item[(ix)] $ \dfrac{\mathcal{R}(A,I)}{(u-1)\mathcal{R}(A,I)} \simeq A $.
 	\end{enumerate} 
 \end{maproposition}
 \subsection{Quelques exemples de filtrations}
@@ -404,35 +395,43 @@ Ainsi au lieu d'étudier la famille $f = (I_n)_{n \in \mathbb{Z}}$ nous pouvons 
 	Soient $A$ un anneau et $I$ un idéal de A.\\
 	La famille $f_I = (I^n)_{n\in \mathbb{Z}}$ telle que pour tout $n \leqslant 0, I^n = A$ est une filtration de A appelé \textbf{filtration I-adique} et noté $f_I$
 \end{madefinition}
-Soit I un idéal de l'anneau $A$ si $f_I$ est la filtration $I-adique$ alors l'anneau de Rees de $f_I$ sera simplement noté $R(A,I)$.
+\begin{maremarque}
+	Soit I un idéal de l'anneau $A$ si $f_I$ est la filtration $I-adique$ alors l'anneau de Rees de $f_I$ sera simplement noté $R(A,I)$.
+\end{maremarque}
 \begin{maproposition}
 	Soient I un idéal de l'anneau $A$ et $f_I$ est la filtration $I-adique$.
 	Si $I$ est de type fini avec $I = (a_1, a_2, \cdots, a_r)$ alors $R(A,I) = A[a_1X,a_2X, \cdots, a_rX] $
 \end{maproposition}
 \begin{maconsequence}
-	Si $A$ est un anneau \textbf{noethérien} alors $R(A,I)$ est aussi \textbf{noethérien}. \\
-	Cependant, il est important de noter que si $A$ n'est pas noethérien alors $R(A,f)$ n'est pas \textbf{nécessairement} noethérien.
+	Si $A$ est un anneau \textbf{noethérien} alors $R(A,I)$ est aussi \textbf{noethérien}.
+%	Cependant, il est important de noter que si $A$ n'est pas noethérien alors $R(A,f)$ n'est pas \textbf{nécessairement} noethérien.
 \end{maconsequence}
-\begin{monexemple}
-	En effet, supposons que $A$ n'est pas noethérien.
-	Posons $I = (0)$, l'idéal nul. Alors $R(A,I) = A$ et donc $R(A,I)$ n'est pas noethérien
-\end{monexemple}
+%\begin{monexemple}
+%	En effet, supposons que $A$ n'est pas noethérien.
+%	Posons $I = (0)$, l'idéal nul. Alors $R(A,I) = A$ et donc $R(A,I)$ n'est pas noethérien
+%\end{monexemple}
 
 
 \subsubsection{b) \underline{Filtration tronqué d'ordre k de $f$}}
 \begin{madefinition}
-	Soient $A$ un anneau et $I$ un idéal de A.\\
-	$f = (I_n)_{n\in \mathbb{Z}}$ une filtration de l'anneau A.\\
-	Soit $k \in \mathbb{N}^{*}$, on pose $f^{(k)} = (I_{nk})_{n\in \mathbb{N}}$ et $t_{k}f=(K_n)$ avec $K_n = I_{n+k}$ si $n \geqslant 1 $ et $K_n = A$ si $n \leqslant 0$.\\
+	Soient $A$ un anneau ,$I$ un idéal de A et $f = (I_n)_{n\in \mathbb{Z}}$ une filtration de l'anneau A.\\
+	Soit $k \in \mathbb{N}^{*}$, on pose $t_{k}f=(K_n)$ avec $K_n = I_{n+k}$ si $n \geqslant 1 $ et $K_n = A$ si $n \leqslant 0$.\\
 	Ainsi $t_{k}f$ est une filtration de $A$ appelé \textbf{filtration tronqué d'ordre k de $f$}.
 \end{madefinition}
 
-\subsubsection{c) \underline{Filtration définie par une graduation}}
+\subsubsection{c) \underline{Filtration extraite d'ordre k de $f$}}
+\begin{madefinition}
+	Soient $A$ un anneau, $I$ un idéal de A et $f = (I_n)_{n\in \mathbb{Z}}$ une filtration de l'anneau A.\\
+	Soit $k \in \mathbb{N}^{*}$, on pose $f^{(k)} = (I_{nk})_{n\in \mathbb{N}}$.\\ 
+	Ainsi $f^{(k)}$ est une filtration de $A$ appelé \textbf{filtration extraite d'ordre k de $f$}.
+\end{madefinition}
+
+\subsubsection{d) \underline{Filtration définie par une graduation}}
 \begin{madefinition}
 	Soit $A = \displaystyle \bigoplus_{n \in \mathbb{N}}{A_n}$ un anneau gradué de type $n$.\\ Posons $J_n = \displaystyle \bigoplus_{n \geqslant p }{A_p}$.\\
 	$f=(J_n)_{n \in \mathbb{N}}$ est une filtration de A. 
 \end{madefinition}
-\subsubsection{d) \underline{Filtration de type fini}}
+\subsubsection{) \underline{Filtration de type fini}}
 \begin{madefinition}
 	Soient $A$ un anneau et $I$ un idéal de A.\\
 	$f = (I_n)_{n\in \mathbb{Z}}$ une filtration de l'anneau A.\\
@@ -443,10 +442,10 @@ Soit I un idéal de l'anneau $A$ si $f_I$ est la filtration $I-adique$ alors l'a
 \subsubsection{a) \underline{Filtrations I-bonnes}} 
 \begin{madefinition}
 	Soient $A$ un anneau et $I$ un idéal de l'anneau $A$.\\
-	$f = (I_n)_{n \in \mathbb{Z}}$ de $A$. $f$ est dite $I$-bonne si : \\
+	$f = (I_n)_{n \in \mathbb{Z}}$ de $A$. $f$ est dite $I$-bonne si:
 	\begin{enumerate}
-		\item[i)]$ II_n \subseteq I_{n+1} \, \forall n \in \mathbb{Z}$.\\
-		\item[ii)]$\exists \, n_0 \in \mathbb{N}$ tel que $II_n = I_{n+1}, \forall n \geqslant n_0$
+		\item[i)]$ II_n \subset I_{n+1} \, \forall n \in \mathbb{Z}$,
+		\item[ii)]$\exists \, n_0 \in \mathbb{N}$ tel que $II_n = I_{n+1}, \forall n \geqslant n_0.$
 	\end{enumerate}
 \end{madefinition}
 \begin{maconsequence}
@@ -483,12 +482,12 @@ Soit I un idéal de l'anneau $A$ si $f_I$ est la filtration $I-adique$ alors l'a
 \begin{maremarque}
 	Il résulte des références \cite{Di1} , \cite{Di3}, \cite{Di4} que si $A$ est un anneau noethérien et $f=(I_n)_{n \in \mathbb{Z}} \in \mathbb{F}(A)$, les assertions suivantes sont équivalentes : 
 	\begin{enumerate}
-		\item[(a)] $f$ est une $E.P.$ filtration
-		\item[(b)] $\exists k \in \mathbb{N}^{*}$ tel que $f$ soit la plus petite filtration ayant pour $k+1$ premiers $I_0, I_1,\dots, I_k $
-		\item[(c)] $f$ est noethérienne
-		\item[(d)] $\exists m \in \mathbb{N}^{*}$ tel que $\forall j \geqslant m, I_{j+m} = I_{j}I_{m}$
-		\item[(e)] L'anneau de Rees $R(A,f)$ de $f$ est une $A-algèbre$ de type fini
-		\item[(f)] L'anneau de Rees généralisé $\mathcal{R}(A,f)$ de $f$ est une $A-algèbre$ de type fini
+		\item[(a)] $f$ est une $E.P.$ filtration;
+		\item[(b)] $\exists k \in \mathbb{N}^{*}$ tel que $f$ soit la plus petite filtration ayant pour $k+1$ premiers $I_0, I_1,\dots, I_k $;
+		\item[(c)] $f$ est noethérienne;
+		\item[(d)] $\exists m \in \mathbb{N}^{*}$ tel que $\forall j \geqslant m, I_{j+m} = I_{j}I_{m}$;
+		\item[(e)] L'anneau de Rees $R(A,f)$ de $f$ est une $A-algèbre$ de type fini;
+		\item[(f)] L'anneau de Rees généralisé $\mathcal{R}(A,f)$ de $f$ est une $A-algèbre$ de type fini.
 	\end{enumerate}
 \end{maremarque}
 \begin{maremarque}(\cite{Di3})\\
@@ -498,12 +497,12 @@ Soit I un idéal de l'anneau $A$ si $f_I$ est la filtration $I-adique$ alors l'a
 \subsection{Caractérisation des filtrations}
 \subsubsection{a) \underline{Caractérisation des filtrations noethériennes}} 
 \begin{maproposition}
-	Soit $f=(I_{n})_{n \in \mathbb{Z}}\in \mathbb{F}(A),$ si $A$ est noethérien, alors les assertions suivantes sont équivalentes:
+	Soit $f=(I_{n})_{n \in \mathbb{Z}}\in \mathbb{F}(A).$ \\ Si $A$ est noethérien, alors les assertions suivantes sont équivalentes:
 	\begin{enumerate}
-		\item[(i)] $\mathcal{R}(A,f)$ est noethérien
-		\item[(ii)] $R(A,f)$ est noethérien
-		\item[(iii)] $f$ est $E.P.$
-		\item[(iv)] $\exists n \geqslant 1,\forall n \geqslant k, I_{n+k} = I_nI_k$
+		\item[(i)] $\mathcal{R}(A,f)$ est noethérien;
+		\item[(ii)] $R(A,f)$ est noethérien;
+		\item[(iii)] $f$ est $E.P.$;
+		\item[(iv)] $\exists n \geqslant 1,\forall n \geqslant k, I_{n+k} = I_nI_k$.
 	\end{enumerate}
 \end{maproposition}
 \begin{monexemple}
@@ -520,7 +519,7 @@ Soit I un idéal de l'anneau $A$ si $f_I$ est la filtration $I-adique$ alors l'a
 	Suivant la parité de $n,$ il vient $n=2p$ ou $n=2p+1,$ $p\in \mathbb{N}.$
 	
 	* Si $n=2p$ \\
-	$I_{2p+2}=I_{2(p+1)}=I^{p+1}=I^{p}I=I_{2p}I_{2}$ (car $I^{k}\subseteq I_{k}$) \\
+	$I_{2p+2}=I_{2(p+1)}=I^{p+1}=I^{p}I=I_{2p}I_{2}$ (car $I^{k}\subset I_{k}$) \\
 	* Si $n=2p+1$ \\
 	$I_{2p+1+2}=I_{2(p+1)+1}=I_{2(p+2)-1}=I^{p+2}=I^{p+1}I^{1}=I_{2(p+1)-1}I_{2\times 1}=I_{2p+1}I_{2}$
 	
@@ -531,23 +530,22 @@ Soit I un idéal de l'anneau $A$ si $f_I$ est la filtration $I-adique$ alors l'a
 
 \subsubsection{b) \underline{Caractérisation des filtrations E.P.}} 
 \begin{maproposition}
-	Soit $f=(I_{n})_{n \in \mathbb{Z}}\in \mathbb{F}(A),$. Soit $N \geqslant 1$.\\
+	Soit $f=(I_{n})_{n \in \mathbb{Z}}\in \mathbb{F}(A)$. Soit $N \geqslant 1$.\\
 	On pose:
 	$H_{n}=\left\{ 
 	\begin{array}{c}
-		H_{n}=I_{n}\text{ si }n\leq N \\ 
-		H_{n}=\sum\limits_{j_{1}+2j_{2}+\cdots
+		I_{n}\text{ si }n\leq N \\ 
+		\sum\limits_{j_{1}+2j_{2}+\cdots
 			+Nj_{N}=N}I_{1}^{j_{1}}I_{2}^{j2}\cdots I_{N}^{jN}\text{ si }n>N
 	\end{array}
 	\right. $
-	Alors: 
+	\\Alors: 
 	\begin{enumerate}
-		\item[(i)] $h$ est une filtration de $A$ telle que $h \geqslant f$
-		\item[(ii)] $h$ est $E.P.$
-		\item[(iii)] $f$ est $E.P.$ si et seulement si $f=h$
+		\item[(i)] $h$ est une filtration de $A$ telle que $h \geqslant f$;
+		\item[(ii)] $h$ est $E.P.$;
+		\item[(iii)] $f$ est $E.P.$ si et seulement si $f=h$.
 	\end{enumerate}
 \end{maproposition}
-
 
 \begin{maremarque}(\cite{Di3})\\
 	Dans un anneau noethérien, nous avons la classification suivantes des filtrations \\ classiques $f$ où $I$ est un idéal de l'anneau $A$:
@@ -570,8 +568,6 @@ Soit I un idéal de l'anneau $A$ si $f_I$ est la filtration $I-adique$ alors l'a
 			\draw[<->, ultra thick, >=stealth] (F) -- (D);
 		\end{tikzpicture}
 	\end{center}
-	
-	
 \end{maremarque}
 
 

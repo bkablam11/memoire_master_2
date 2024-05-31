@@ -22,8 +22,8 @@
 \emph{THÈME:} \textbf{DÉPENDANCE INTÉGRALE, RÉDUCTION ET FILTRATIONS BONNES }
 \end{center}}
 \begin{center}
-Directeur de Mémoire: Mr. ASSAN Abdoulaye \\
-Encadrant scientifique: Mr. BROU Kouadjo Pierre
+Directeur de Mémoire: Mr. ASSAN Abdoulaye, M.C. \\
+Encadrant scientifique: Mr. BROU Kouadjo Pierre, M.A.
 \end{center}
 \end{block}
 \end{frame}
@@ -42,20 +42,37 @@ PLAN DE PRÉSENTATION}
 \framesubtitle{FILTRATIONS}
 \begin{block}{}
 	\begin{enumerate}
-		\item[(i)] Une filtration de l'anneau $A$ est une suite $f=(I_n)_{n \in \mathbb{Z}}$ d'idéaux de $A$, décroissante pour l'inclusion et vérifiant $I_0 = A$ et $I_n I_m \subseteq I_{n+m}$.
+		\item[(i)]$f=(I_n)_{n \in \mathbb{Z}} \in \mathbb{F}(A)$, décroissante pour l'inclusion et vérifiant $I_0 = A$ et $I_n I_m \subseteq I_{n+m}$.
 		\item[(ii)] Une filtration $f=(I_n)_{n \in \mathbb{Z}}$ est dite $I-bonne$ si pour tout $n \in \mathbb{N}, \quad II_n \subseteq I_{n+1}$ et s'il existe $k$ un entier tel que pour tout $n \geqslant k$, $II_n = I_{n+1}$.	
 	\end{enumerate}
 \end{block}
 \end{frame}
 
 \begin{frame}{INTRODUCTION}
-	\framesubtitle{PROPRIÉTÉ DE LA FILTRATION I-ADIQUE}
+	\framesubtitle{PROPRIÉTÉ DES FILTRATIONS I-ADIQUES}
 	\begin{block}{}
-\begin{eqnarray*}
-	f \text{ I-adique } \Longrightarrow  f \text{ I-bonne } \Longrightarrow  f \text{ fortement A.P. } \Longrightarrow f \text{ A.P.} \\
-\end{eqnarray*}
+	\begin{center}
+	\begin{tikzpicture}
+		% Création des nœuds
+		\node (A) at (-1,0) {f I-adique};
+		\node (B) at (2,0) {f I-bonne};
+		\node (C) at (2,-2) {f fortement noethérienne};
+		\node (D) at (6,-2) {f noethérienne};
+		\node (E) at (9,0) {f A.P};
+		\node (F) at (6,0) {f fortement A.P};
+		
+		% Dessin des flèches avec des modifications pour les rendre plus visibles
+		\draw[->, ultra thick, >=stealth] (A) -- (B);
+		\draw[->, ultra thick, >=stealth] (B) -- (C);
+		\draw[->, ultra thick, >=stealth] (B) -- (F);
+		\draw[->, ultra thick, >=stealth] (C) -- (D);
+		\draw[->, ultra thick, >=stealth] (F) -- (E);
+		\draw[<->, ultra thick, >=stealth] (F) -- (D);
+	\end{tikzpicture}
+\end{center}
 	\end{block}
 \end{frame}
+
 
 \begin{frame}{INTRODUCTION}
 	\framesubtitle{ÉLÉMENT ENTIER ET RÉDUCTION}
@@ -72,11 +89,20 @@ PLAN DE PRÉSENTATION}
 \end{frame}
 
 \begin{frame}{INTRODUCTION}
+	\framesubtitle{FILTRATIONS f-BONNES}
+	\begin{block}{}
+			Soient $\varphi=(M_n)_{n \in \mathbb{Z}}$ $\in$ $\mathbb{F}(M)$, $f-compatible$, avec $f \in \mathbb{F}(A)$.\\
+			$\varphi$ est \textbf{$f-$ bonne} s'il existe un entier naturel N $\geqslant 1$ tel que:
+				\[\forall n > N, M_{n}=\sum_{p=1}^{N}I_{n-p}M_{p} \]
+	\end{block}
+\end{frame}
+
+\begin{frame}{INTRODUCTION}
 	\framesubtitle{PROBLÉMATIQUE ET ANNONCE DU PLAN}
 	\begin{block}{}
 		\begin{enumerate}
-			\item[(i)] Comment étendre de manière rigoureuse les résultats obtenus dans le contexte restreint de la filtration I-adique à des filtrations bonnes 
-			\item[(i)] Comment ces notions interagissent-elles dans des environnements mathématiques variés ?
+			\item[(i)] Comment étendre les résultats des filtrations I-adiques aux filtrations bonnes?
+			\item[(ii)] Comment la dépendance intégrale et la réduction interagissent-elles avec les filtrations bonnes ?
 		\end{enumerate}
 	\end{block}
 \end{frame}
@@ -356,12 +382,11 @@ PLAN DE PRÉSENTATION}
 \end{frame}
 
 \begin{frame}{CONCLUSION}
-	\framesubtitle{PERSPECTIVES}
+	\framesubtitle{BILAN ET PERSPECTIVES}
 	\begin{block}{}	
-Comme perspectives, nous projetons d'effectuer:\\
 		\begin{enumerate}
-			\item Une étude du nombre de réduction sur les filtrations bonnes i.e le nombre de Samuel.
-			\item Une étude de la largeur analytique qui représente le lien entre la dépendance intégrale et la réduction des filtrations bonnes.
+			\item Propriétés des $f_I$ et réduction minimale des filtrations bonnes
+			\item Étendre ces résultats aux autres classes de filtration.
 		\end{enumerate}
 	\end{block}
 \end{frame}

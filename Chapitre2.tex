@@ -1,7 +1,7 @@
-\chapter{DÉPENDANCE INTÉGRALE, RÉDUCTION ET FILTRATION I-BONNE}
+\chapter{DÉPENDANCE INTÉGRALE, RÉDUCTION ET FILTRATION I-ADIQUE}
 \chaptermark{DÉPENDANCE, RÉDUCTION ET FILTRATION I-BONNE}
 
-Dans ce second chapitre, notre étude se concentre sur les filtrations I-adiques, également connues sous le terme de filtrations I-bonnes, lesquelles représentent un cas spécifique de filtrations bonnes. Ensuite, dans le troisième chapitre, nous élargirons la portée de ces résultats en les généralisant à toute filtration g-bonne.
+Dans ce second chapitre, notre étude se concentrera sur les filtrations I-adiques, lesquelles représentent un cas spécifique de filtrations bonnes.
 
 \section{Dépendance intégrale}
 \subsection{Dépendance intégrale sur les anneaux}
@@ -10,10 +10,11 @@ Dans ce second chapitre, notre étude se concentre sur les filtrations I-adiques
 	Un élément $x$ de $B$ est dit \textbf{entier} sur $A$ s'il est \textbf{racine d'un polynôme unitaire à coefficient dans} $A$.\\
 	En d'autres termes, s'ils existent $a_1, a_2, \cdots , a_n$ éléments de $A$ tels que :\\
 	\begin{equation}
+		\label{eq1}
 		x^n + a_1 x^{n-1} +\cdots+a_i x^{n-i} +\cdots + a_n = x^n + \sum_{i=1}^{n} a_i x^{n-i} = 0, \; n \in \mathbb{N^*}
 	\end{equation}
 	
-	Cette relation (2.1) est appelée \textbf{équation de dépendance intégrale} de $x$ sur $A$.\\
+	Cette relation (\ref{eq1}) est appelée \textbf{équation de dépendance intégrale} de $x$ sur $A$.\\
 	On dit que $B$ est entier sur $A$ lorsque tous les éléments de $B$ sont entiers sur $A$.
 \end{madefinition}
 
@@ -152,11 +153,11 @@ Dans ce second chapitre, notre étude se concentre sur les filtrations I-adiques
 \end{proof}
 \begin{moncorollaire}
 	Soient $A$ et $B$ deux anneaux tels que $A \subseteq  B$ et $x_1, x_2, \cdots, x_n \in B$.\\
-	Alors les assertions suivantes sont équivalentes: \\
+	Alors les assertions suivantes sont équivalentes:
 	\begin{enumerate}
-		\item[i)]$\forall \ 1 \leqslant i \leqslant n, x_i$ est entier sur $A$,
-		\item[ii)]$A[x_1, x_2, \cdots, x_n]$ est un $A$-module de type fini,
-		\item[iii)]Il existe un $A-module$ de type fini $C \subseteq  B$ tel que $x_i C \subseteq  C, \forall \ 1 \leqslant i \leqslant n$.
+		\item[i)]$\forall i \in \llbracket 1, n \rrbracket, x_i$ est entier sur $A$;
+		\item[ii)]$A[x_1, x_2, \cdots, x_n]$ est un $A$-module de type fini;
+		\item[iii)]Il existe un $A-module$ de type fini $C \subseteq  B$ tel que $x_i C \subseteq  C, \forall i \in \llbracket 1, n \rrbracket$.
 	\end{enumerate}
 \end{moncorollaire}
 
@@ -209,9 +210,9 @@ Dans ce second chapitre, notre étude se concentre sur les filtrations I-adiques
 	Soit $x\in C.$
 	
 	Comme $x$ est entier sur $B$ alors il existe $n\in \mathbb{N}^{\ast },x^{n}=\sum\limits_{i=1}^{n}(-b_{i})x^{n-i},$ pour tout $b_{i}\in
-	B,i\in \llbracket 1, n \rrbracket.$
+	B,i\in \llbracket 1; n \rrbracket.$
 	
-	Soit $i\in \llbracket 1, n \rrbracket,$ $A[b_{i}]$ est un $A-$module de type fini
+	Soit $i\in \llbracket 1; n \rrbracket,$ $A[b_{i}]$ est un $A-$module de type fini
 	(car $B$ entier sur $A)$
 	
 	Donc $A[b_{1},b_{2},...,b_{n}]$ est un $A-$module de type fini.
@@ -259,44 +260,44 @@ Dans ce second chapitre, notre étude se concentre sur les filtrations I-adiques
 	
 	Par suite $C$ entier sur $A.$
 \end{proof}
-\begin{maproposition}
-	Soit $A \subseteq B$ une inclusion d'anneaux tel que $B$ entier sur $A$. Alors:\\
-	\begin{enumerate}
-		\item[i)] Si $J$ est un idéal de $B$ alors:
-		\[ \dfrac{B}{J} \text{ est entier sur } \dfrac{A}{J \cap A}\]
-		\item[ii)] Pour toute partie multiplicative $S$ de $A$
-		\[ S^{-1}B \text{ est entier sur } S^{-1}A.\]
-	\end{enumerate}
-\end{maproposition}
-
-\begin{proof}
-	$i)$ $B$ entier sur $A$ 
-	
-	Soit $x\in B,$ alors il existe $n\in \mathbb{N}^{\ast },x^{n}+\sum\limits_{i=1}^{n}a_{i}x^{n-i}=0,$ pour tout $a_{i}\in
-	A,i\in \llbracket 1, n \rrbracket.$
-	
-	Ainsi $(x+J)^{n}+\sum\limits_{i=1}^{n}(a_{i}+J\cap
-	A)(x+J)^{n-i}=x^{n}+J+\sum\limits_{i=1}^{n}a_{i}x^{n-i}+J=(x^{n}+\sum\limits_{i=1}^{n}a_{i}x^{n-i})+J=0+J=0_{J\cap A}$
-	
-	Donc $x+J$ est entier sur $\frac{A}{J\cap A}$
-	
-	Donc $\frac{B}{J}$est entier sur $\frac{A}{J\cap A}.$
-	
-	
-	
-	$ii)$ Supposons $B$ entier sur $A$
-	
-	Soit $\frac{x}{s}\in S^{-1}B,$ $x\in B$ et $s\in S$
-	
-	Comme $x$ est entier sur $A$ alors il existe $n\in \mathbb{N}^{\ast },x^{n}+\sum\limits_{i=1}^{n}a_{i}x^{n-i}=0,$ pour tout $a_{i}\in
-	A,i\in \llbracket 1, n \rrbracket.$
-	
-	D'où, $(\frac{x}{s})^{n}+\sum\limits_{i=1}^{n}(\frac{a_{i}}{s_{i}})(\frac{x}{s})^{n-i}=\frac{0}{1}$
-	
-	Donc $\frac{x}{s}$ est entier sur $S^{-1}A.$
-	
-	Par suite $S^{-1}B$ est entier sur $S^{-1}A.$
-\end{proof}
+%\begin{maproposition}
+%	Soit $A \subseteq B$ une inclusion d'anneaux tel que $B$ entier sur $A$. Alors:\\
+%	\begin{enumerate}
+%		\item[i)] Si $J$ est un idéal de $B$ alors:
+%		\[ \dfrac{B}{J} \text{ est entier sur } \dfrac{A}{J \cap A};\]
+%		\item[ii)] Pour toute partie multiplicative $S$ de $A$
+%		\[ S^{-1}B \text{ est entier sur } S^{-1}A.\]
+%	\end{enumerate}
+%\end{maproposition}
+%
+%\begin{proof}
+%	$i)$ $B$ entier sur $A$ 
+%	
+%	Soit $x\in B,$ alors il existe $n\in \mathbb{N}^{\ast },x^{n}+\sum\limits_{i=1}^{n}a_{i}x^{n-i}=0,$ pour tout $a_{i}\in
+%	A,i\in \llbracket 1; n \rrbracket.$
+%	
+%	Ainsi $(x+J)^{n}+\sum\limits_{i=1}^{n}(a_{i}+J\cap
+%	A)(x+J)^{n-i}=x^{n}+J+\sum\limits_{i=1}^{n}a_{i}x^{n-i}+J=(x^{n}+\sum\limits_{i=1}^{n}a_{i}x^{n-i})+J=0+J=0_{J\cap A}$
+%	
+%	Donc $x+J$ est entier sur $\frac{A}{J\cap A}$
+%	
+%	Donc $\frac{B}{J}$est entier sur $\frac{A}{J\cap A}.$
+%	
+%	
+%	
+%	$ii)$ Supposons $B$ entier sur $A$
+%	
+%	Soit $\frac{x}{s}\in S^{-1}B,$ $x\in B$ et $s\in S$
+%	
+%	Comme $x$ est entier sur $A$ alors il existe $n\in \mathbb{N}^{\ast },x^{n}+\sum\limits_{i=1}^{n}a_{i}x^{n-i}=0,$ pour tout $a_{i}\in
+%	A,i\in \llbracket 1, n \rrbracket.$
+%	
+%	D'où, $(\frac{x}{s})^{n}+\sum\limits_{i=1}^{n}(\frac{a_{i}}{s_{i}})(\frac{x}{s})^{n-i}=\frac{0}{1}$
+%	
+%	Donc $\frac{x}{s}$ est entier sur $S^{-1}A.$
+%	
+%	Par suite $S^{-1}B$ est entier sur $S^{-1}A.$
+%\end{proof}
 \begin{maproposition}
 	Soit $A \subseteq B$ une inclusion d'anneaux tel que $B$ entier sur $A$.
 	\[ B \text{ corps} \Longleftrightarrow  A \text{ corps} \]
@@ -422,8 +423,8 @@ Dans ce second chapitre, notre étude se concentre sur les filtrations I-adiques
 \begin{moncorollaire}\textbf{(Clôture intégrale d'idéaux)}\cite{Di2}\\
 	Soient $A$ un anneau et $I$ un idéal de $A$.
 	L'ensemble noté: 
-	\[ I'=\{x \in A, x \; entier \; sur \; A \} = \bar{I} \]
-	Est un idéal de $A$ appelé \textbf{clôture intégrale de I}.
+	\[ I'=\{x \in A, x \; entier \; sur \; A \} \]
+	est un idéal de $A$ appelé \textbf{clôture intégrale de I}.
 \end{moncorollaire}
 \begin{proof}
 	$i)$ Par construction, $I^{\prime }\subset A.$
@@ -452,8 +453,8 @@ Dans ce second chapitre, notre étude se concentre sur les filtrations I-adiques
 \begin{maremarque}\textbf{(Clôture intégrale d'idéaux et radical)}\cite{Di2} \\
 	Soient $A$ un anneau et $I$ et $J$ des idéaux de $A$.
 	\begin{enumerate}
-		\item[1] ) $I \subseteq J \implies I' \subseteq J' $.
-		\item[2] ) $I \subseteq I' \subseteq \sqrt[]{I} $.
+		\item[1] ) $I \subseteq J \implies I' \subseteq J' $;
+		\item[2] ) $I \subseteq I' \subseteq \sqrt[]{I} $;
 		\item[3] ) $\sqrt[]{I} = \; \sqrt[]{I'} $.
 	\end{enumerate}
 \end{maremarque}
@@ -497,13 +498,13 @@ Dans ce second chapitre, notre étude se concentre sur les filtrations I-adiques
 	Soient $A$ un anneau commutatif unitaire, $I$ et $J$ deux id\'eaux de $A$.
 	On dit que $I$ est une réduction de $J$ si :\\
 	\begin{enumerate}
-		\item[i)] I $\subseteq$ J,
+		\item[i)] I $\subseteq$ J;
 		\item[ii)] $\exists \, r\in \mathbb{N}^{*} \text{, tel que } J^{r+1} = IJ^{r}$.
 	\end{enumerate}
 \end{madefinition}
 \begin{monexemple}
 	\begin{enumerate}
-		\item[1)] $I$ est une réduction de $I$ lui-même.
+		\item[1)] $I$ est une réduction de $I$ lui-même;
 		\item[2)] $A =\mathbb{K}[X,Y]$ avec $\mathbb{K}$ corps.\\
 		$I = (X^2, Y^2)$\\
 		$J = (X,Y)^2 = (X^2, Y^2, XY) $ D'où $I \subseteq J$.
@@ -604,11 +605,11 @@ Dans ce second chapitre, notre étude se concentre sur les filtrations I-adiques
 \begin{maproposition}
 	Soit $A$ un anneau noethérien, $I$ et $J$ deux idéaux de $A$ tels que $I \subseteq J$. Les assertions suivantes sont équivalentes: 
 	\begin{enumerate}
-		\item[i] ) $I$ est une réduction de $J$.
-		\item[ii] ) $R(A,J)$ est un $R(A,I)$-module de type fini.
-		\item[iii] ) $R(A,J)$ est entier sur $R(A,I)$
-		\item[iv] ) $\forall n \in \mathbb{N^*}$, $J^n$ est entier sur $I^n$.
-		\item[v] ) $J$ est entier sur $I$
+		\item[i] ) $I$ est une réduction de $J$;
+		\item[ii] ) $R(A,J)$ est un $R(A,I)$-module de type fini;
+		\item[iii] ) $R(A,J)$ est entier sur $R(A,I)$;
+		\item[iv] ) $\forall n \in \mathbb{N^*}$, $J^n$ est entier sur $I^n$;
+		\item[v] ) $J$ est entier sur $I$.
 	\end{enumerate}
 \end{maproposition}
 \begin{proof}
@@ -647,23 +648,23 @@ Dans ce second chapitre, notre étude se concentre sur les filtrations I-adiques
 	Soient I, J deux idéaux de A. Alors:
 	\[ I'J' \subseteq (IJ)' \]
 \end{moncorollaire}
-\begin{montheoreme}
-	Soit $A$ un anneau noethérien.
-	Pour tout idéal $I$ de $A$, il existe un idéal $\hat{I}$ (nécessairement unique) ayant les propriétés suivantes : \\
-	$(i)$ $I$ est une réduction de $\hat{I}$;\\
-	$(ii)$ Tout idéal ayant $I$ comme réduction est contenu dans $\hat{I}$.
-\end{montheoreme}
-\begin{proof}
-	Notons $\displaystyle \sum$ l'ensemble de tous les idéaux qui ont $I$ comme réduction. $I$ étant une réduction de lui-même alors, $I \in \displaystyle \sum$ donc $\displaystyle \sum \neq \emptyset$. Puisque la condition de maximalité des idéaux est valable dans notre anneau, on peut trouver un idéal $\hat{I} \in \displaystyle \sum$ et qui est maximal dans $\displaystyle \sum$.\\
-	Soit $I_1 \in \displaystyle \sum$, alors $I$ est une réduction de $I_1$ et $I$ est une réduction de $\hat{I}$. Ainsi d'après le Lemme précédent $I+I=I$ est une réduction de $I_1+\hat{I}$. Cela montre que $I_1+\hat{I} \in \displaystyle \sum$. Mais $\hat{I} \subseteq I_1+\hat{I}$ d'où $\hat{I} = I_1+\hat{I}$, par choix de $\hat{I}$ donc $I_1 \subseteq \hat{I}$. Ce qui achève la preuve.
-\end{proof} 
-\begin{moncorollaire}
-	Soient $A$ un anneau noethérien et $I$, $J$ deux idéaux de $A$. Si $I$ est une réduction de $J$, alors $\hat{I} = \hat{J}$.
-\end{moncorollaire}
-\begin{proof}
-	D'une part $I$ est une réduction de $J$ et $J$ est une réduction de $\hat{J}$ alors, d'après (1.1.2 Proposition) $I$ est une réduction de $\hat{J}$ par conséquent $\hat{J} \subseteq \hat{I}$, par le Théorème précédent. D'autre part $I \subseteq J \subseteq \hat{J} \subseteq \hat{I}$ et comme $I$ est une réduction de $\hat{I}$, alors il existe $n \in \mathbb{N^*}$ tel que $\hat{I}^{n+1} = I \hat{I}^n$.\\
-	$I \subseteq J \Rightarrow I \hat{I}^n \subseteq J \hat{I}^n$ or $\hat{I}^{n+1} = I \hat{I}^n$ donc $\hat{I}^{n+1} \subseteq J \hat{I}^n$. De plus $J \subseteq \hat{I} \Rightarrow  J \hat{I}^n \subseteq \hat{I}^{n+1}$, ainsi $\hat{I}^{n+1} = J \hat{I}^n$ par conséquent $J$ devient également une réduction de $\hat{I}$. Il s'ensuit que $\hat{I} \subseteq \hat{J}$, on obtient donc le résultat souhaité.
-\end{proof}
+%\begin{montheoreme}
+%	Soit $A$ un anneau noethérien.
+%	Pour tout idéal $I$ de $A$, il existe un idéal $\hat{I}$ (nécessairement unique) ayant les propriétés suivantes : \\
+%	$(i)$ $I$ est une réduction de $\hat{I}$;\\
+%	$(ii)$ Tout idéal ayant $I$ comme réduction est contenu dans $\hat{I}$.
+%\end{montheoreme}
+%\begin{proof}
+%	Notons $\displaystyle \sum$ l'ensemble de tous les idéaux qui ont $I$ comme réduction. $I$ étant une réduction de lui-même alors, $I \in \displaystyle \sum$ donc $\displaystyle \sum \neq \emptyset$. Puisque la condition de maximalité des idéaux est valable dans notre anneau, on peut trouver un idéal $\hat{I} \in \displaystyle \sum$ et qui est maximal dans $\displaystyle \sum$.\\
+%	Soit $I_1 \in \displaystyle \sum$, alors $I$ est une réduction de $I_1$ et $I$ est une réduction de $\hat{I}$. Ainsi d'après le Lemme précédent $I+I=I$ est une réduction de $I_1+\hat{I}$. Cela montre que $I_1+\hat{I} \in \displaystyle \sum$. Mais $\hat{I} \subseteq I_1+\hat{I}$ d'où $\hat{I} = I_1+\hat{I}$, par choix de $\hat{I}$ donc $I_1 \subseteq \hat{I}$. Ce qui achève la preuve.
+%\end{proof} 
+%\begin{moncorollaire}
+%	Soient $A$ un anneau noethérien et $I$, $J$ deux idéaux de $A$. Si $I$ est une réduction de $J$, alors $\hat{I} = \hat{J}$.
+%\end{moncorollaire}
+%\begin{proof}
+%	D'une part $I$ est une réduction de $J$ et $J$ est une réduction de $\hat{J}$ alors, d'après (1.1.2 Proposition) $I$ est une réduction de $\hat{J}$ par conséquent $\hat{J} \subseteq \hat{I}$, par le Théorème précédent. D'autre part $I \subseteq J \subseteq \hat{J} \subseteq \hat{I}$ et comme $I$ est une réduction de $\hat{I}$, alors il existe $n \in \mathbb{N^*}$ tel que $\hat{I}^{n+1} = I \hat{I}^n$.\\
+%	$I \subseteq J \Rightarrow I \hat{I}^n \subseteq J \hat{I}^n$ or $\hat{I}^{n+1} = I \hat{I}^n$ donc $\hat{I}^{n+1} \subseteq J \hat{I}^n$. De plus $J \subseteq \hat{I} \Rightarrow  J \hat{I}^n \subseteq \hat{I}^{n+1}$, ainsi $\hat{I}^{n+1} = J \hat{I}^n$ par conséquent $J$ devient également une réduction de $\hat{I}$. Il s'ensuit que $\hat{I} \subseteq \hat{J}$, on obtient donc le résultat souhaité.
+%\end{proof}
 \subsection{Réduction minimale d'un idéal}
 La notion d'idéal basique a été introduite et étudiée par Northcott et Rees \cite{No}.
 \begin{madefinition}
@@ -673,6 +674,28 @@ La notion d'idéal basique a été introduite et étudiée par Northcott et Rees
 	
 	Un idéal $I$ est une réduction minimale de $J$ si $I$ est une réduction de $J$ et si I est $minimal$ au sens de l'inclusion ( $\subseteq$ ) parmi l'ensemble des réductions de J. 
 \end{madefinition}
+\begin{maremarque}
+	Bien qu'on puisse parler de réduction minimale pour un idéal quelconque sur un anneau local, cela n'est pas possible pour toutes les filtrations. On montre ainsi dans cet exemple que toutes les filtrations n'admettent pas de réduction minimale.
+\end{maremarque}
+\begin{monexemple}
+	Soient l'anneau $A = k\left[ X\right]$ où $k$ est un corps et $I = (X)$ un idéal de $A$.\\
+	Considérons la filtration $f = (A, I, I, I^2, I^2, I^3, I^3, \cdots)$\\
+	$I_{2n} = I_{2n-1} = I^n, \forall n \in \mathbb{N}$\\
+	Montrons que $f$ est une filtration noethérienne mais pas une filtration $I$-bonne.\\
+	$\bullet$La filtration $f$ est fortement AP car, \\en prenant $k = 2$ on a: $I_{2n} = I^n = I_2^n$.\\
+	L’anneau $A$ étant noethérien alors la filtration $f$ est noethérienne.\\
+	$\bullet$ Supposons que la filtration $f$ est fortement noethérienne alors, il existe $k \geq 1$ tel que pour tous $m, n \geq k$ on a: $I_{m+n} = I_m I_n$.\\
+	Posons $m = 2k+1$ et $n = 2p+1$ où $p \geq k$\\
+	$I_{m+n} = I_{2k+1+2p+1} = I_{2(k+p+1)} = I^{k+p+1}$.\\
+	$I_m I_n =  I_{2k+1}  I_{2p+1} =  I_{2(k+1)-1}  I_{2(p+1)-1} = I^{k+1} I^{p+1} = I^{k+p+2}$
+	\begin{align*}
+		I_{m+n} = I_m I_n &\Rightarrow I^{k+p+1} = I^{k+p+2}\\
+		& \Rightarrow (X)^{k+p+2} = (X)^{k+p+1}\\
+		&\Rightarrow X^{k+p+1} = QX^{k+p+2}\\
+		&\Rightarrow 1_A = XQ
+	\end{align*}
+	Ainsi on a donc $X$ inversible ce qui est absurde, par suite la filtration $f$ n'est pas noethérienne. Comme la filtration $f$ n'est pas noethérienne alors elle n'est pas $I$-bonne.\\ De plus il existe pas d'entier $r \geq 1$ tel que $I_r$ soit idempotent, par conséquent notre filtration $f$ n'admet pas de réduction minimale.
+\end{monexemple}
 \begin{maremarque}
 	On prouve dans \cite{Di2} que la réduction minimale des filtrations $I$-bonne existe toujours dans un anneau local noethérien. Ce qui n'est pas le cas en générale pour une filtration quelconque.
 \end{maremarque}
@@ -744,9 +767,8 @@ Concernant la question (b), nous avons obtenu le résultat suivant:
 	
 	Étant données deux filtrations $f,g$ de A vérifiant $f\leq g$, on a:
 	\begin{enumerate}
-		\item[(i)]  $\mathcal{R}(A,g)$ est entier sur $\mathcal{R}(A,f)\Longleftrightarrow $ R(A,g) est entier
-		sur R(A,f)
-		\item[(ii)] $\mathcal{R}(A,g)$ est entier sur $\mathcal{R}(A,f)-$ algèbre de type fini $\Longleftrightarrow $ R(A,g) est entier sur $R(A,f)-algèbre$ de type fini
+		\item[(i)]  $\mathcal{R}(A,g)$ est entier sur $\mathcal{R}(A,f)\Longleftrightarrow $ R(A,g) est entier	sur R(A,f);
+		\item[(ii)] $\mathcal{R}(A,g)$ est entier sur $\mathcal{R}(A,f)-$ algèbre de type fini $\Longleftrightarrow $ R(A,g) est entier sur $R(A,f)-algèbre$ de type fini.
 	\end{enumerate}
 	Concernant la noethérianité des anneaux de Rees, une preuve astucieuse de l'équivalence entre la noethérianité de l'anneau $\mathcal{R}(A,f)$ et celle de l'anneau $R(A,f)$ pour toute filtration $f$ de l'anneau noethérien $A$ a été donnée dans \cite{Ra2}. Nous l'exposons brièvement ici. Il est clair que si l'anneau de Rees de $f$ est noethérien, il en est de m\^{e}me de son anneau de Rees généralisé. La réciproque est donc triviale. Par conséquent, l'anneau de Rees $R(A,f)$ de $f$ est noethérien.
 	

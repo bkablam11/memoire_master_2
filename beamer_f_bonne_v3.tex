@@ -1,0 +1,216 @@
+\documentclass[11pt,a4paper]{beamer}
+\usepackage[utf8]{inputenc}
+\usepackage[francais]{babel}
+\usepackage{stmaryrd}
+\usepackage[T1]{fontenc}
+\usepackage{fancyhdr}
+\usepackage{tikz}
+\usetheme{Boadilla}
+\author{\textit{\textbf{KABLAM Edjabrou Ulrich Blanchard}}}
+\title{\textbf{SOUTENANCE DE MÉMOIRE DE MASTER \\ OPTION: ALGÈBRE COMMUTATIVE ET CRYPTOGRAPHIE\\ SPÉCIALITÉ: THÉORIE DES FILTRATIONS}}
+\institute{\textcolor{red}{\textbf{Université NANGUI ABROGOUA \\ UFR Sciences Fondamentales Appliquées}}}
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\usepackage{mwe}
+\logo{\includegraphics[width=0.7cm]{./img/UNA.png}}
+\date{10 Juillet 2024}
+
+\begin{document}
+	\begin{frame}
+		\maketitle
+		\begin{block}{\begin{center}
+					\emph{THÈME:} \textbf{DÉPENDANCE INTÉGRALE, RÉDUCTION ET FILTRATIONS BONNES }
+			\end{center}}
+			\begin{center}
+				Directeur de Mémoire: Mr. ASSAN Abdoulaye, M.C. \\
+				Encadrant scientifique: Mr. BROU Kouadjo Pierre, M.A.
+			\end{center}
+		\end{block}
+	\end{frame}
+	
+	\begin{frame}{
+			PLAN DE PRÉSENTATION}
+		\begin{enumerate}
+			\item \textcolor{blue}{INTRODUCTION}\\
+			\item \textcolor{blue}{DÉPENDANCE INTÉGRALE, RÉDUCTION ET FILTRATION BONNES }\\
+			\item \textcolor{blue}{CONCLUSION}\\
+		\end{enumerate}
+	\end{frame}
+	\setbeamercovered{transparent}
+	
+	\begin{frame}{INTRODUCTION}
+		\framesubtitle{FILTRATIONS}
+		\begin{block}{}
+			\begin{enumerate}[(a)]
+				\item $f=(I_n)_{n \in \mathbb{Z}} \in \mathbb{F}(A)$ si: 
+				\begin{enumerate}[(i)]
+					\item $I_0 = A$
+					\item $I_{n+1} \subset I_n, \forall n \in \mathbb{Z}$
+					\item $I_{p}I_{q} \subset I_{p+q}, \forall p,q \in \mathbb{Z}$
+				\end{enumerate}
+			\end{enumerate}
+		\end{block}
+	\end{frame}
+	
+		\begin{frame}{INTRODUCTION}
+		\framesubtitle{FILTRATIONS}
+		\begin{alertblock}{Remarque}
+		On peut remarquer que pour tout $n\leq 0, I_n = A$.\\ En effet, en utilisant la décroissance des idéaux (ii) et que $I_0 = A$ (i), il vient $I_n = A, n \leq 0$ car $\forall n \in \mathbb{Z}$, les $I_n$ sont des idéaux de $A$.\\		
+		Ainsi au lieu d'étudier la famille $f = (I_n)_{n \in \mathbb{Z}}$ nous pouvons nous ramener à étudier la famille $f = (I_n)_{n \in \mathbb{N}}$.
+		\end{alertblock}
+	\end{frame}
+	
+		\begin{frame}{INTRODUCTION}
+		\framesubtitle{CLASSES DES FILTRATIONS}
+		\begin{block}{}
+		\begin{center}
+			\begin{tabular}{|l|c|}
+				\hline
+				f $I-adique$ &$I_n=I^n,\forall n \in \mathbb{N}^*$\\
+				\hline
+				f $I-bonne$ &$\exists \, n_0 \in \mathbb{N}$ tel que $II_n = I_{n+1}, \forall n \geqslant n_0.$\\
+				\hline
+				f $A.P.$ &$\exists \, (k_n)_{n\in \mathbb{N}} $ tel que $\forall$ n,m $\in \mathbb{N}$, $I_{mk_n} \subset I_n^{m}$ et $\underset{n\longrightarrow +\infty }{\lim }\dfrac{k_{n}}{n}=1$\\
+				\hline
+				f f.$A.P.$ &$\exists k\geqslant 1, \forall \, n \in \mathbb{N}, \ I_{nk} = I_k^n$\\
+				\hline
+				f noeth. & son anneau de Rees ${R}(A,f)$ est noethérien.\\
+				\hline
+				f f. noeth. & $\exists k\geqslant 1, \forall \, m, n \in \mathbb{Z}, \ m, n \geqslant k, I_m I_n = I_{m+n}$\\
+				\hline
+				f E.P & $\exists N\geqslant 1, \forall \, n \geqslant N, \ I_n =\sum\limits_{p=1}^{N} I_{n-p}I_p. $\\
+				\hline
+			\end{tabular}
+		\end{center}
+		\end{block}
+	\end{frame}
+	
+	
+	
+	\begin{frame}{INTRODUCTION}
+		\framesubtitle{PROPRIÉTÉ DES FILTRATIONS I-ADIQUES}
+		\begin{block}{}
+			\begin{center}
+				\begin{tikzpicture}
+					% Création des nœuds
+					\node (A) at (-1,0) {f I-adique};
+					\node (B) at (2,0) {f I-bonne};
+					\node (C) at (2,-2) {f fortement noethérienne};
+					\node (D) at (6,-2) {f noethérienne};
+					\node (E) at (9,0) {f A.P};
+					\node (F) at (6,0) {f fortement A.P};
+					\node (G) at (2,-4) {f E.P};
+					
+					% Dessin des flèches avec des modifications pour les rendre plus visibles
+					\draw[->, ultra thick, >=stealth] (A) -- (B);
+					\draw[->, ultra thick, >=stealth] (B) -- (C);
+					\draw[->, ultra thick, >=stealth] (B) -- (F);
+					\draw[->, ultra thick, >=stealth] (C) -- (D);
+					\draw[->, ultra thick, >=stealth] (F) -- (E);
+					\draw[<->, ultra thick, >=stealth] (F) -- (D);
+					\draw[->, ultra thick, >=stealth] (C) -- (G);
+				\end{tikzpicture}
+			\end{center}
+		\end{block}
+	\end{frame}
+	
+	
+	\begin{frame}{INTRODUCTION}
+		\framesubtitle{ÉLÉMENT ENTIER ET RÉDUCTION}
+		\begin{block}{}
+			\begin{enumerate}
+				\item[(i)] Un élément $x$ de $A$ est dit entier sur $f$ s'il existe un entier $m \in \mathbb{N}$ tel que : $x^m + a_1 x^{m-1} + \cdots + a_m = x^m + \sum_{i=1}^{m} a_i x^{m-i} = 0,$\\$ m \in \mathbb{N^*} \ \text{où} \ a_i \in I_i,\, \forall i=1, \cdots ,m.$
+				\item[(ii)] $f$ est une $\beta$-réduction de $g$ si : \\
+				\begin{enumerate}
+					\item[a)] $f \leq g$
+					\item[b)]  $\exists \, k \geq 1$ tel que $J_{n+k} = I_n J_k , \forall n \geq k$.
+				\end{enumerate}
+			\end{enumerate}
+		\end{block}
+	\end{frame}
+	
+	\begin{frame}{INTRODUCTION}
+		\framesubtitle{FILTRATIONS f-BONNES}
+		\begin{block}{}
+			Soient $\varphi=(M_n)_{n \in \mathbb{Z}}$ $\in$ $\mathbb{F}(M)$, $f-compatible$, avec $f \in \mathbb{F}(A)$.
+			\begin{enumerate}[(a)]
+				\item $\varphi$ est \textbf{$f-$ bonne} s'il existe un entier naturel N $\geqslant 1$ tel que:
+				\[\forall n > N, M_{n}=\sum_{p=1}^{N}I_{n-p}M_{p} \]
+				\item Une filtration $f=(I_n)_{n \in \mathbb{Z}}$ est dite $I-bonne$ si: 
+				\begin{enumerate}[(i)]
+					\item $\forall n \in \mathbb{N}, \quad II_n \subseteq I_{n+1}$;
+					\item $\exists k \in \mathbb{N}$, $II_n = I_{n+1}, n\geqslant k$.
+				\end{enumerate}
+			\end{enumerate}
+		\end{block}
+	\end{frame}
+	
+	\begin{frame}{INTRODUCTION}
+		\framesubtitle{PROBLÉMATIQUE ET ANNONCE DU PLAN}
+		\begin{block}{}
+			\begin{enumerate}
+				\item[(i)] Comment étendre les résultats des filtrations I-adiques aux filtrations bonnes?
+				\item[(ii)] Comment la dépendance intégrale et la réduction interagissent-elles avec les filtrations bonnes ?
+			\end{enumerate}
+		\end{block}
+	\end{frame}
+	
+	\begin{frame}
+		\begin{enumerate}
+			\item<0> \textcolor{blue}{INTRODUCTION}\\
+			\item<1> \textcolor{blue}{DÉPENDANCE INTÉGRALE, RÉDUCTION ET FILTRATIONS BONNES }\\
+			\item<0> \textcolor{blue}{CONCLUSION}\\
+		\end{enumerate}
+	\end{frame}
+	
+	\begin{frame}{DÉPENDANCE INTÉGRALE, RÉDUCTION ET FILTRATION BONNE}
+		\framesubtitle{ÉNONCE}
+		\begin{block}{Théorème Principal}
+			Soient $A$ noethérien, $f=(I_{n})_{_{n\in \mathbb{N}}}\leq $ $g=(J_{n})_{_{n\in \mathbb{N}}}$ $ \in \mathbb{F}(A).$ \\ Si $f$ est fortement noethérienne et $g$ est noethérienne alors les assertions sont équivalentes et dans ce cas $g$ est fortement noethérienne:
+			\begin{enumerate}[(i)]
+				\item $f$ est une réduction de $g.$
+				\item $I_{n}$ est une réduction de $J_{n}$ pour tout $n$ assez grand.
+				\item Il existe un entier $k\geq 1$ tel que $g^{(k)}$ est $I_{k}-bonne$
+			\end{enumerate}
+		\end{block}
+	\end{frame}
+	
+	\begin{frame}{DÉPENDANCE INTÉGRALE, RÉDUCTION ET FILTRATION BONNE}
+		\framesubtitle{ÉNONCE}
+		\begin{block}{Théorème Principal}
+			\begin{enumerate}[(iv)]
+				\item $g$ est $enti\grave{e}re$ sur $f.$
+				\item $g$ est $\ fortement$ $enti\grave{e}re$ sur $f.$
+				\item $g$ est $f-fine.$
+				\item $g$ est $f-bonne.$
+				\item $g$ est $faiblement$ $f-bonne.$
+				\item $P(f)=P(g)$
+			\end{enumerate}
+		\end{block}
+	\end{frame}
+	
+	\begin{frame}
+		\begin{enumerate}
+			\item<0> \textcolor{blue}{INTRODUCTION}\\
+			\item<0> \textcolor{blue}{DÉPENDANCE INTÉGRALE, RÉDUCTION ET FILTRATIONS BONNES }\\
+			\item<1> \textcolor{blue}{CONCLUSION}\\
+		\end{enumerate}
+	\end{frame}
+	
+	\begin{frame}{CONCLUSION}
+		\framesubtitle{BILAN ET PERSPECTIVES}
+		\begin{block}{}	
+			\begin{enumerate}
+				\item Propriétés des $f_I$ et réduction minimale des filtrations bonnes
+				\item Étendre ces résultats aux autres classes de filtration.
+			\end{enumerate}
+		\end{block}
+	\end{frame}
+	
+	\begin{frame}
+		\bigskip
+		{\textcolor{blue}{\Large \textit{\textbf{\begin{center}
+							MERCI POUR VOTRE AIMABLE ATTENTION
+		\end{center}}}}}
+	\end{frame}
+\end{document}
