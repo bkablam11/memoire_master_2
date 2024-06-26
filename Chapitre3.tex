@@ -18,33 +18,33 @@ Après avoir étudier les propriétés des filtrations I-bonnes, nous verrons da
 		\item[iii)] $xX^n(\in A[X])$ est entier sur $ \mathcal{R}(A,f)$.
 	\end{enumerate}
 	\begin{proof}
-		i)$\Rightarrow$ ii)
+		i)$\implies$ ii)
 		
 		Supposons $x$ entier sur $f^{(n)}$.
 		
-		Alors il existe $r\geq 1,$ $x^{r}+\sum\limits_{i=1}^{r}a_{i}x^{r-i}=0,$ $a_{i}\in I_{n_{i}}$.
+		Alors il existe $r\geq 1,$ $x^{r}+\sum\limits_{i=1}^{r}a_{i}x^{r-i}=0,$ $a_{i}\in I_{ni}$.
 		
 		Alors il existe $r\geq 1,$ $(xX^{n})^{r}+\sum
-		\limits_{i=1}^{r}a_{i}X^{n_{i}}(xX^{n})^{r-i}=0,$ $a_{i}\in X^{n_{i}}I_{n_{i}}\subset R(A,f)$.
+		\limits_{i=1}^{r}a_{i}X^{ni}(xX^{n})^{r-i}=0,$ $a_{i}\in I_{ni} X^{ni} \subset R(A,f)$.
 		
 		Donc $xX^{n}$ est entier sur $R(A,f).$ \\
 		
-		ii)$\Rightarrow$ iii) Évident car $R(A,f)\subset \mathcal{R}(A,f).$ \\
-		iii)$\Rightarrow$ i) Supposons $xX^{n}$ est entier sur $\mathcal{R}(A,f).$
+		ii)$\implies$ iii) Évident car $R(A,f)\subset \mathcal{R}(A,f).$ \\
+		iii)$\implies$ i) Supposons $xX^{n}$ est entier sur $\mathcal{R}(A,f).$
 		
 		Alors il existe $m\geq 1,$ $(xX^{n})^{m}+\sum\limits_{i=1}^{m}a_{i}(xX^{n})^{m-i}=0,$ $a_{i}\in \mathcal{R}(A,f)$.
 		
-		D'où $\deg ((xX^{n})^{m})=nm$ alors $\deg (a_{i})=n_{i}.$
+		D'où $\deg ((xX^{n})^{m})=nm$ alors $\deg (a_{i})=ni.$
 		
-		Ainsi $a_{i}\in I_{n_{i}}X^{n_{i}},$ alors $a_{i}=\alpha _{i}X^{n_{i}}$ ,$\alpha _{i}\in I_{n_{i}}$.
+		Ainsi $a_{i}\in I_{ni}X^{ni},$ alors $a_{i}=\alpha _{i}X^{ni}$ ,$\alpha _{i}\in I_{ni}$.
 		
 		Donc il existe $m\geq 1,$ $(xX^{n})^{m}+\sum\limits_{i=1}^{m}(\alpha
-		_{i}X^{n_{i}})(xX^{n})^{m-i}=0,$ $\alpha _{i}\in I_{n_{i}}$.
+		_{i}X^{ni})(xX^{n})^{m-i}=0,$ $\alpha _{i}\in I_{ni}$.
 		
 		Alors, il existe $m\geq 1,$ $X^{nm}[x^{m}+\sum\limits_{i=1}^{m}\alpha
-		_{i}x^{m-i}]=0X^{nm},$ $\alpha _{i}\in I_{n_{i}}$.
+		_{i}x^{m-i}]=0X^{nm},$ $\alpha _{i}\in I_{ni}$.
 		
-		Par identification, il vient, il existe $m\geq 1,$ $ x^{m}+\sum\limits_{i=1}^{m}\alpha _{i}x^{m-i}=0,\alpha _{i}\in I_{n_{i}}$.
+		Par identification, il existe $m\geq 1,$ $ x^{m}+\sum\limits_{i=1}^{m}\alpha _{i}x^{m-i}=0,\alpha _{i}\in I_{ni}$.
 		
 		Par suite, $x$ est entier sur $f^{(n)}$.
 	\end{proof}
@@ -171,7 +171,7 @@ Après avoir étudier les propriétés des filtrations I-bonnes, nous verrons da
 	
 	ii) Montrons que $P(P(f))=P(f).$
 	
-	A) D'après i), $f\leq P(f)\Rightarrow P(f)\subset P(P(f))$ d'où $P(f)\subset P(P(f))$.
+	A) D'après i), $f\leq P(f)\text{ alors } P(f)\subset P(P(f))$.
 	
 	B) Posons $g=P(f)=(J_{n})_{n\in \mathbb{N}}$ avec $J_{n}=P_{n}(f)$.
 	
@@ -206,9 +206,9 @@ Après avoir étudier les propriétés des filtrations I-bonnes, nous verrons da
 	
 	iii) Montrons que $P(f)=P(f^{\prime })$.
 	
-	D'après i) on a $f\leq f^{\prime }\Rightarrow P(f)\leq P(f^{\prime })$.
+	D'après i) on a $f\leq f^{\prime }\text{ alors } P(f)\leq P(f^{\prime })$.
 	
-	Réciproquement, $f^{\prime }\leq P(f)\Rightarrow P(f^{\prime })\leq
+	Réciproquement, $f^{\prime }\leq P(f)\text{ alors } P(f^{\prime })\leq
 	P(P(f))=P(f)$.
 	
 	D'où $P(f)\leq P(f^{\prime })\leq P(f)$.
@@ -236,7 +236,7 @@ Après avoir étudier les propriétés des filtrations I-bonnes, nous verrons da
 	
 	a) Soit $x\in A.$
 	
-	On a: $x^{1}+a_{1}=x^{1}+(-x)=0\Rightarrow x\in A^{\prime }.$
+	On a: $x^{1}+a_{1}=x^{1}+(-x)=0\text{ alors } x\in A^{\prime }.$
 	
 	Donc $A\subset A^{\prime }.$
 	
@@ -248,10 +248,10 @@ Après avoir étudier les propriétés des filtrations I-bonnes, nous verrons da
 	
 	Par suite $A \subset A^{\prime }\subset B$.
 	
-	ii) D'après i) $A\subset A^{\prime }\Rightarrow A^{\prime }\subset
+	ii) D'après i) $A\subset A^{\prime }\text{ alors } A^{\prime }\subset
 	A^{\prime \prime }$ (Par croissance).
 	
-	Réciproquement soit $x\in A^{\prime \prime }\Rightarrow x$ entier sur $
+	Réciproquement soit $x\in A^{\prime \prime }\text{ alors } x$ entier sur $
 	A^{\prime }$.
 	
 	Ainsi il existe $n\geq 1,$ tel que  $x^{n}+\sum
@@ -272,7 +272,7 @@ Après avoir étudier les propriétés des filtrations I-bonnes, nous verrons da
 	
 	des A-modules de type fini, alors 
 	
-	$A[a_{1},a_{2}]=A(a_{1}^{i}a_{2}^{j})_{\substack{ 1\leq i\leq n-1 \\ 1\leq
+	$A[a_{1},a_{2}]=A(a_{1}^{i}a_{2}^{j})_{\substack{ 0\leq i\leq n-1 \\ 0\leq
 			j\leq m-1}}$.
 	
 	En procédant de proche en proche, il vient $A[a_{1},a_{2},...,a_{n}]$
@@ -418,10 +418,10 @@ Après avoir étudier les propriétés des filtrations I-bonnes, nous verrons da
 \begin{madefinition}
 	($\alpha$-réduction ou réduction au sens de Okon-Ratliff\cite{Ok} )\\
 	Soient $f=(I_n)_{n \in \mathbb{N}}$, $g=(J_n)_{n \in \mathbb{N}}$ deux filtrations de $A$.\\
-	$f$ est une $\alpha$-réduction de $g$ si : \\
+	$f$ est une $\alpha$-réduction de $g$ si :
 	\begin{enumerate}
 		\item[i)] $f \leq g$;
-		\item[ii)] $\text{ il existe } \, N \geq 1$ tel que $\text{ pour tout } n \geq N ; J_n = \displaystyle \sum_{p=0}^{N}{I_{n-p} J_p}$.
+		\item[ii)] $\text{ il existe } \, N \geq 1$ tel que $\text{ pour tout } n \geq N , J_n = \displaystyle \sum_{p=0}^{N}{I_{n-p} J_p}$.
 	\end{enumerate}
 \end{madefinition}
 \begin{maremarque}
@@ -476,12 +476,12 @@ Après avoir étudier les propriétés des filtrations I-bonnes, nous verrons da
 	Supposons que $f$ est une $\alpha$-réduction de $g$.\\
 	Alors $f \leq g$ et $\text{ il existe } \, N \geq 1$ tel que $\text{ pour tout } n \geq N ; J_n = \displaystyle \sum_{p=0}^{N}{I_{n-p} J_p}$.\\
 	Prouvons que $R(A,g) = R(A,f)(J_0, J_1X_1, \cdots , J_NX_N) = M$.\\
-	$J_nX_n \subset R(A,g), \text{ pour tout } n \in \mathbb{N} \Rightarrow R(A,f) \subset R(A,g)$ car $f \leq g$,
+	$J_nX_n \subset R(A,g), \text{ pour tout } n \in \mathbb{N} \text{ alors } R(A,f) \subset R(A,g)$ car $f \leq g$,
 	Donc $M \subset R(A,g)$.\\
 	Montrons par récurrence que $\text{ pour tout } n \in \mathbb{N}, J_nX^n \subset M$
 	Si $n \leq N, J_nX^n \subset M$, par construction.\\
 	Soit $n \geq N$, supposons la propriété vraie et montrons que $J_{n+1}X^{n+1} \subset M$.\\
-	$J_{n+1} = \displaystyle \sum_{p=0}^{N}{I_{n+1-p} J_p} \Rightarrow J_{n+1}X^{n+1} = \displaystyle \sum_{p=0}^{N}{I_{n+1-p} J_pX^{n+1}}$, \\
+	$J_{n+1} = \displaystyle \sum_{p=0}^{N}{I_{n+1-p} J_p} \text{ alors } J_{n+1}X^{n+1} = \displaystyle \sum_{p=0}^{N}{I_{n+1-p} J_pX^{n+1}}$, \\
 	D’où $ J_{n+1}X^{n+1} = \displaystyle \sum_{p=0}^{N}{I_{n+1-p}X^{n+1-p} J_pX^{p}} \subset M$.\\
 	Ainsi $R(A,g)$ est un $R(A,f)$-module de type fini.\\
 	Supposons que $R(A,g)$ est un $R(A,f)$-module de type fini.\\
@@ -492,10 +492,10 @@ Après avoir étudier les propriétés des filtrations I-bonnes, nous verrons da
 	$R(A,g) = R(A,f)(1, Z_1, \cdots , Z_r), Z_i \in R(A,g)$ et les $Z_i$ sont homogènes de degré $i$.\\
 	Posons $N=r$.\\
 	Soit $z \in J_n$.\\
-	$z \in J_n \Rightarrow zX^n \in J_nX^n \subset R(A,g)$, d'où $zX^n = \displaystyle \sum_{p=0}^{r}{h_p Z_p}$ , $h_p \in R(A,f)$ et $Z_0 = 1$.\\
-	$h_p$ homogène de degré $n-p \Rightarrow h_p \in I_{n-p}X^{n-p}$ , on déduit de cela que:\\ $h_p = a_{n-p}X^{n-p} \in I_{n-p}X^{n-p}$.\\
-	Aussi $Z_p$ est homogène de degré $p \Rightarrow Z_p = b_{p}X^{p} \in J_pX^p$.\\
-	Ainsi $zX^n = \displaystyle \sum_{p=0}^{r}{a_{n-p}X^{n-p} b_{p}X^{p}} \Rightarrow zX^n = \displaystyle \sum_{p=0}^{r}{a_{n-p}X^{n} b_{p}}$, ce qui implique que \\ $z = \displaystyle \sum_{p=0}^{r}{a_{n-p} b_{p}} \in \displaystyle \sum_{p=0}^{r}{I_{n-p} J_{p}}$, par conséquent $J_n \subset \displaystyle \sum_{p=0}^{r}{I_{n-p} J_{p}} \subset J_n$.\\
+	$z \in J_n \text{ alors } zX^n \in J_nX^n \subset R(A,g)$, d'où $zX^n = \displaystyle \sum_{p=0}^{r}{h_p Z_p}$ , $h_p \in R(A,f)$ et $Z_0 = 1$.\\
+	$h_p$ homogène de degré $n-p \text{ alors } h_p \in I_{n-p}X^{n-p}$ , on déduit de cela que:\\ $h_p = a_{n-p}X^{n-p} \in I_{n-p}X^{n-p}$.\\
+	Aussi $Z_p$ est homogène de degré $p \text{ alors } Z_p = b_{p}X^{p} \in J_pX^p$.\\
+	Ainsi $zX^n = \displaystyle \sum_{p=0}^{r}{a_{n-p}X^{n-p} b_{p}X^{p}} \text{ alors } zX^n = \displaystyle \sum_{p=0}^{r}{a_{n-p}X^{n} b_{p}}$, ce qui implique que \\ $z = \displaystyle \sum_{p=0}^{r}{a_{n-p} b_{p}} \in \displaystyle \sum_{p=0}^{r}{I_{n-p} J_{p}}$, par conséquent $J_n \subset \displaystyle \sum_{p=0}^{r}{I_{n-p} J_{p}} \subset J_n$.\\
 	En somme, $J_n = \displaystyle \sum_{p=0}^{r}{I_{n-p} J_{p}}$, donc $f$ est une $\alpha$-réduction de $g$.
 \end{proof}
 \subsection{Réduction au sens de Dichi-Sangaré}
@@ -516,8 +516,8 @@ Après avoir étudier les propriétés des filtrations I-bonnes, nous verrons da
 	Alors $f \leq g$ et $\text{ il existe } \, k \geq 1$ tel que $I_{n+k} = I_n J_k , \text{ pour tout } n \geq k$.\\
 	Posons $N = 2k$.\\
 	Soit $n \geq N= 2k$.\\
-	$\displaystyle \sum_{p=0}^{2k}{I_{n-p} J_{p}} = \displaystyle \sum_{p=0}^{k-1}{I_{n-p} J_{p}} + I_{n-k} J_k + \displaystyle \sum_{p=0}^{k+1}{I_{n-p} J_{p}}$, or $n \geq  2k \Rightarrow n-k \geq k$ et comme $f$ est une $\beta$-réduction de $g$ alors, $I_{n-k} J_k = J_n$.\\
-	Donc $\displaystyle \sum_{p=0}^{2k}{I_{n-p} J_{p}} = \displaystyle \sum_{p=0}^{k-1}{I_{n-p} J_{p}} + J_n + \displaystyle \sum_{p=0}^{k+1}{I_{n-p} J_{p}} \Rightarrow J_n \subset \displaystyle \sum_{p=0}^{2k}{I_{n-p} J_{p}}$.\\
+	$\displaystyle \sum_{p=0}^{2k}{I_{n-p} J_{p}} = \displaystyle \sum_{p=0}^{k-1}{I_{n-p} J_{p}} + I_{n-k} J_k + \displaystyle \sum_{p=0}^{k+1}{I_{n-p} J_{p}}$, or $n \geq  2k \text{ alors } n-k \geq k$ et comme $f$ est une $\beta$-réduction de $g$ alors, $I_{n-k} J_k = J_n$.\\
+	Donc $\displaystyle \sum_{p=0}^{2k}{I_{n-p} J_{p}} = \displaystyle \sum_{p=0}^{k-1}{I_{n-p} J_{p}} + J_k + \displaystyle \sum_{p=0}^{k+1}{I_{n-p} J_{p}} \text{ alors } J_n \subset \displaystyle \sum_{p=0}^{2k}{I_{n-p} J_{p}}$.\\
 	De plus on a : $\displaystyle \sum_{p=0}^{2k}{I_{n-p} J_{p}} \subset J_n$. 
 	Par conséquent $J_n = \displaystyle \sum_{p=0}^{2k}{I_{n-p} J_{p}}$.\\
 	On déduit donc de tout ce qui précède que $f$ est une $\alpha$-réduction de $g$.
@@ -530,23 +530,23 @@ Après avoir étudier les propriétés des filtrations I-bonnes, nous verrons da
 	$iii)$ $f_I$ est une $\beta$-réduction de $f_J$.
 \end{maproposition}
 \begin{proof}
-	$i) \Rightarrow ii)$.\\
+	$i) \implies ii)$.\\
 	Supposons que $I$ est une réduction de $J$.\\
-	Alors $\text{ il existe } N \in \mathbb{N^*}$ tel que $J^{N+1} = IJ^N$.\\ $I \subset J \Rightarrow I^n \subset J^n , \text{ pour tout } n \in \mathbb{N}$, d'où $f_I \leq f_J$.\\
+	Alors $\text{ il existe } N \in \mathbb{N^*}$ tel que $J^{N+1} = IJ^N$.\\ $I \subset J \text{ alors } I^n \subset J^n , \text{ pour tout } n \in \mathbb{N}$, d'où $f_I \leq f_J$.\\
 	Posons $N_0 = N+1$.\\
 	Soit $n \geq N_0$.\\
 	$\displaystyle \sum_{p=0}^{N+1}{I^{n-p} J^{p}} = \displaystyle \sum_{p=0}^{N}{I^{n-p} J^{p}} + I^{n-N-1} J^{N+1}$, comme $I$ est une réduction de $J$ alors\\ $I^{n-N-1} J^{N+1} = J^{n-N-1+N+1} = J^n$. Donc $\displaystyle \sum_{p=0}^{N+1}{I^{n-p} J^{p}} = \displaystyle \sum_{p=0}^{N}{I^{n-p} J^{p}} + J^{n}$.\\ Ainsi $J^n \subset \displaystyle \sum_{p=0}^{N+1}{I^{n-p} J^{p}} \subset J^n$.\\
 	$f_I$ est donc une $\alpha$-réduction de $f_J$.\\
-	$ii) \Rightarrow iii)$.\\
+	$ii) \implies iii)$.\\
 	Supposons que $f_I$ est une $\alpha$-réduction de $f_J$.\\
-	Alors $f_I \leq f_J$ et $\text{ il existe } \, N_0 \in \mathbb{N^*} , \text{ pour tout } \, n \geq N_0 \, J^n = \displaystyle \sum_{p=0}^{N_0}{I^{n-p} J^{p}}$.\\
+	Alors $f_I \leq f_J$ et $\text{ il existe } \, N_0 \in \mathbb{N^*} , \text{ pour tout } \, n \geq N_0, \, J^n = \displaystyle \sum_{p=0}^{N_0}{I^{n-p} J^{p}}$.\\
 	Posons $N = N_0$.\\
 	Soit $n \geq N$. \\
-	$I^n J^{N_0} = \displaystyle \sum_{p=0}^{N_0}{I^n I^{N_0-p} J^{p}} = \displaystyle \sum_{p=0}^{N_0}{I^{n+N_0-p} J^{p}} = J^{N_0+n} \Rightarrow I^n J^{N_0} = J^{N_0+n}$.\\D'où $f_I$ est une $\beta$-réduction de $f_J$.\\
-	$iii) \Rightarrow i)$
+	$I^n J^{N_0} = \displaystyle \sum_{p=0}^{N_0}{I^n I^{N_0-p} J^{p}} = \displaystyle \sum_{p=0}^{N_0}{I^{n+N_0-p} J^{p}} = J^{N_0+n} \text{ alors } I^n J^{N_0} = J^{N_0+n}$.\\D'où $f_I$ est une $\beta$-réduction de $f_J$.\\
+	$iii) \implies i)$
 	Supposons que $f_I$ est une $\beta$-réduction de $f_J$.\\
 	$f_I \leq f_J$ et $\text{ il existe } N_0 \in \mathbb{N^*}$ tel que $\text{ pour tout } n \geq N_0 , J^{n+N_0} = I^n J^{N_0}$.\\
-	$f_I \leq f_J \Rightarrow I \subset J$.\\
+	$f_I \leq f_J \text{ alors } I \subset J$.\\
 	Posons $N = 2N_0$\\
 	$J^{N+1} = J^{2N_0+1} = J^{N_0+N_0+1} = I^{N_0+1} J^N_0 = I I^{N_0} J^{N_0} = IJ^{2N_0}$.\\ Donc $J^{N+1}= IJ^{N}$ ce qui fait que $I$ est une réduction de $J$.
 \end{proof}
@@ -556,7 +556,7 @@ Après avoir étudier les propriétés des filtrations I-bonnes, nous verrons da
 \begin{proof}
 	Supposons que $f_I$ est une $\beta$-réduction de $g$.\\
 	Cela implique que $f_I \leq g$ et $\text{ il existe } \, N_0 \in \mathbb{N^*} , \text{ tel que pour tout } n \geq N_0 \\ J_{n+N_0} = I^n J_{N_0}$.\\
-	$f_I \leq g \Rightarrow \text{ pour tout } n \in \mathbb{N} , IJ_n \subset J_{n+1}$.\\
+	$f_I \leq g \text{ alors } \text{ pour tout } n \in \mathbb{N} , IJ_n \subset J_{n+1}$.\\
 	Posons $N = 2N_0$\\
 	Soit $n \geq N$. 
 	\begin{align*}
@@ -568,7 +568,9 @@ Après avoir étudier les propriétés des filtrations I-bonnes, nous verrons da
 	\end{align*}
 	D'où $\text{ pour tout } n \geq 2N_0$, $IJ_n = J_{n+1}$, $g$ est donc $I$-bonne. 
 \end{proof}
-
+\begin{maremarque}
+	La $\beta$-réduction étant plus générale que la $\alpha$-réduction, nous parlerons de $\beta$-réduction lorsque nous emploierons le terme réduction.
+\end{maremarque}
 
 \begin{maproposition}
 	Soit $f,g \in \mathbb{F}(A),$ telles que $f \leqslant g$.
@@ -596,7 +598,7 @@ Après avoir étudier les propriétés des filtrations I-bonnes, nous verrons da
 	ii) Supposons que $f$ est une réduction de $g$ et $g$ une réduction
 	de $h.$
 	
-	* $f\leq g\leq h\Rightarrow f\leq h$.
+	* $f\leq g\leq h\text{ alors } f\leq h$.
 	
 	* Comme $\ g$ est une réduction de $h$ alors, il existe $k^{\prime }\geq
 	1,$ $H_{k^{\prime }+n}=H_{k^{\prime }}J_{n},$ pour tout $n\geq k^{\prime }.$
@@ -787,7 +789,7 @@ Après avoir étudier les propriétés des filtrations I-bonnes, nous verrons da
 	Soient $f=(I_{n})_{_{n\in \mathbb{N}}},g=(J_{n})_{_{n\in\mathbb{N}}}\in \mathbb{F}(A).$
 	
 	Alors il existe un entier $N\geq 1$ tel que $I_{n}\subset J_{n}\subset
-	I_{n-N}\subset J_{n-N}$ pour tout $N\geq 1.$
+	I_{n-N}\subset J_{n-N}$ pour tout $n> N.$
 	
 	Si $f$ est $A.P.$ alors il existe une suite d'entiers $(k_{n})_{n\in \mathbb{N}}$ telle que $\underset{n\longrightarrow \infty }{\lim }\frac{k_{n}}{n}=1$ et $I_{k_{n}m}\subset I_{n}^{m}$,
 	pour tout $m,n\in \mathbb{N}.$
@@ -800,21 +802,21 @@ Après avoir étudier les propriétés des filtrations I-bonnes, nous verrons da
 	
 	Et $\underset{n\longrightarrow \infty }{\lim }\frac{k_{n}^{\prime }+N}{n}=1,f$ est $A.P.$
 \end{proof}
-\begin{maproposition}
-	\label{maprop10}
-	Soient $A$ un anneau noethérien, $f=(I_n) , g=(J_n)$ deux filtrations de $A$. Si $f$ est noethérienne alors les assertions suivantes sont équivalentes:
-	\begin{enumerate}
-		\item[(i)] $g$ est fortement entière sur $f$;
-		\item[(ii)] Il existe un entier $N \geqslant 1$, tel que $t_Ng \leqslant f \leqslant g$.
-	\end{enumerate}
-\end{maproposition}
-\begin{proof}
-	D'après \ref{maprop6} (3), il suffit de montrer que $(ii) \implies (i)$. Ce qui est une conséquence de \ref{maprop8} et de (\cite{Ok},2.9)
-\end{proof}
-\begin{maremarque}
-	\label{maprop12}
-	Sous certaines conditions (voir \cite{Di1}, 3.1 (2), (b)) certaines propositions sur les filtrations entières sont équivalentes avec des filtrations fortement entières. 
-\end{maremarque}
+%\begin{maproposition}
+%	\label{maprop10}
+%	Soient $A$ un anneau noethérien, $f=(I_n) , g=(J_n)$ deux filtrations de $A$. Si $f$ est noethérienne alors les assertions suivantes sont équivalentes:
+%	\begin{enumerate}
+%		\item[(i)] $g$ est fortement entière sur $f$;
+%		\item[(ii)] Il existe un entier $N \geqslant 1$, tel que $t_Ng \leqslant f \leqslant g$.
+%	\end{enumerate}
+%\end{maproposition}
+%\begin{proof}
+%	D'après \ref{maprop6} (3), il suffit de montrer que $(ii) \text{ alors } (i)$. Ce qui est une conséquence de \ref{maprop8} et de (\cite{Ok},2.9)
+%\end{proof}
+%\begin{maremarque}
+%	\label{maprop12}
+%	Sous certaines conditions (voir \cite{Di1}, 3.1 (2), (b)) certaines propositions sur les filtrations entières sont équivalentes avec des filtrations fortement entières. 
+%\end{maremarque}
 %\begin{maproposition}
 %	Soit A un anneau noethérien et $g$ une filtration de $A$ fortement entière sur $f$ ou $g$ est fortement $A.P.$ de rang $r$, alors pour tout entier naturel $m \geqslant 1$, $g^{(rm)}$ est fortement entière sur $f^{(rm)}$.  
 %\end{maproposition}

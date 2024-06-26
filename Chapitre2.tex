@@ -1,5 +1,5 @@
 \chapter{DÉPENDANCE INTÉGRALE, RÉDUCTION ET FILTRATION I-ADIQUE}
-\chaptermark{DÉPENDANCE, RÉDUCTION ET FILTRATION I-BONNE}
+\chaptermark{DÉPENDANCE, RÉDUCTION ET FILTRATION I-ADIQUE}
 
 Dans ce second chapitre, notre étude se concentrera sur les filtrations I-adiques, lesquelles représentent un cas spécifique de filtrations bonnes.
 
@@ -20,15 +20,18 @@ Dans ce second chapitre, notre étude se concentrera sur les filtrations I-adiqu
 
 \begin{monexemple}
 	Posons $B = \mathbb{R}$ et $A = \mathbb{Z}$. $A$ est un sous-anneau de $B$.\\
-	$\bullet$ $x = \sqrt{5}$ est solution de l'équation $x^2 - 5$. Donc $\sqrt{5}$ est entier sur $\mathbb{Z}$.\\
-	$\bullet$ $x = \sqrt{2}+1$ est solution de l'équation $x^2 - 2x -1$. Donc $x = \sqrt{2}+1$ est entier sur $\mathbb{Z}$.\\
-	$\bullet$ $\dfrac{1}{2}$ n'est pas entier sur $\mathbb{Z}$.\\
-	En effet, si $\dfrac{1}{2}$ est entier sur $\mathbb{Z}$, alors $\dfrac{1}{2}$ est solution d'une équation de dépendance intégrale. Alors: \\
-	$\text{ il existe }$ n $\geq 1 , \left(\dfrac{1}{2} \right)^n + \sum_{i=1}^{n} a_i \left(\dfrac{1}{2} \right)^{n-i} = 0$ , $a_i \in\mathbb{Z}$.\\
-	D'où $\left(\dfrac{1}{2} \right)^n \left[1+\sum_{i=1}^{n} a_i \left(\dfrac{1}{2} \right)^{-i}\right] = 0$.\\
-	Comme $\left(\dfrac{1}{2} \right)^n \neq 0$ alors $1+\sum_{i=1}^{n} a_i2^{i} = 0.$\\D'où $1+\sum_{i=1}^{n} a_i2^{i} = 0.$\\ Donc $1 = 2\left(\sum_{i=1}^{n} -a_i 2^{i-1}\right).$\\Par suite, $ 1\in 2\mathbb{Z}.$ Ce qui est \textbf{Absurde}. 
+	$\bullet$ $x = \sqrt{5}$ est solution de l'équation $x^2 - 5=0$. Donc $\sqrt{5}$ est entier sur $\mathbb{Z}$.\\
+	$\bullet$ $x = \sqrt{2}+1$ est solution de l'équation $x^2 - 2x -1=0$.\\Donc $x = \sqrt{2}+1$ est entier sur $\mathbb{Z}$.\\
 \end{monexemple}
+\begin{moncontreexemple}
+	Cependant, $\dfrac{1}{2}$ n'est pas entier sur $\mathbb{Z}$.\\
+	En effet, si $\dfrac{1}{2}$ est entier sur $\mathbb{Z}$, alors $\dfrac{1}{2}$ est solution d'une équation de dépendance intégrale. Alors: \\
+	$\text{ il existe }$ n $\geq 1 , \left(\dfrac{1}{2} \right)^n + \sum\limits_{i=1}^{n} a_i \left(\dfrac{1}{2} \right)^{n-i} = 0$ , $a_i \in\mathbb{Z}$.\\
+	D'où $\left(\dfrac{1}{2} \right)^n \left[1+\sum\limits_{i=1}^{n} a_i \left(\dfrac{1}{2} \right)^{-i}\right] = 0$.\\
+	Comme $\left(\dfrac{1}{2} \right)^n \neq 0$ alors $1+\sum\limits_{i=1}^{n} a_i2^{i} = 0.$\\D'où $1+\sum\limits_{i=1}^{n} a_i2^{i} = 0.$\\ Donc $1 = 2\left(\sum\limits_{i=1}^{n} -a_i 2^{i-1}\right).$\\Par suite, $ 1\in 2\mathbb{Z}.$ Ce qui est \textbf{Absurde}.
+\end{moncontreexemple}
 \begin{maproposition}
+	\label{maprop12}
 	Soient $B$ un anneau et $A$ un sous-anneau de $B$ ($A \subset B$).\\
 	Soit $x \in B$. \\
 	Les assertions suivantes sont équivalentes:
@@ -161,7 +164,7 @@ Dans ce second chapitre, notre étude se concentrera sur les filtrations I-adiqu
 	\end{enumerate}
 \end{moncorollaire}
 \begin{proof}
-	En faisant comme démonstration de la proposition 2.1 et en procédant de proche en proche. 
+	En faisant comme démonstration de la proposition (\ref{maprop12}) et en procédant de proche en proche. 
 \end{proof}
 
 \begin{madefinition}
@@ -331,13 +334,13 @@ Dans ce second chapitre, notre étude se concentrera sur les filtrations I-adiqu
 	
 	Par stabilité $x^{-1}\in A$.
 	
-	Donc $A$ corps.
+	Donc $A$ est un corps.
 	
 	$ii)\implies i)$ Supposons que $A$ soit un corps.
 	
 	Soit $x\in B\backslash \{0\}.$
 	
-	Comme $B$ entier sur $A,$alors il existe $n\in \mathbb{N}^{\ast },x^{n}+\sum\limits_{i=1}^{n}a_{i}x^{n-i}=0,$\\ pour tout $a_{i}\in
+	Comme $B$ entier sur $A,$ alors il existe $n\in \mathbb{N}^{\ast },x^{n}+\sum\limits_{i=1}^{n}a_{i}x^{n-i}=0,$\\ pour tout $a_{i}\in
 	A,i\in \llbracket 1; n \rrbracket.$
 
 	Par récurrence sur $n$, montrons que $x\in A.$
@@ -599,7 +602,7 @@ Dans ce second chapitre, notre étude se concentrera sur les filtrations I-adiqu
 		(x)(I+(x))^{n-1} &= (x)^n + I\displaystyle \sum_{i=0}^{n-2}{I^i (x)^{n-1-i}}.
 	\end{align*}
 	Donc $(x)(I+(x))^{n-1} = (x)^n + \displaystyle \sum_{i=0}^{n-2}{I^i (x)^{n-1-i}} \subset (x)^n + \displaystyle \sum_{i=0}^{n-1}{I^i (x)^{n-1-i}}$.\\
-	d'où $(x)(I+(x))^{n-1} \subset (x)^n + I(I+(x))^{n-1}$.\\ Et comme, \\$x^n = \displaystyle \sum_{i=1}^{n}{a_i x^{n-i}} \in \displaystyle \sum_{i=1}^{n}{I^i x^{n-i}} \text{ alors } x^n \in I\displaystyle \sum_{i=1}^{n}{I^{i-1} x^{n-i}} = I\displaystyle \sum_{i=0}^{n}{I^i x^{n-1-i}} =I(I+(x))^{n-1}.$\\ Alors $(x)^n \in I(I+(x))^{n-1} \text{ alors } (x)^n + I(I+(x))^{n-1} = I(I+(x))^{n-1}$.\\
+	d'où $(x)(I+(x))^{n-1} \subset (x)^n + I(I+(x))^{n-1}$.\\ Et comme, \\$x^n = \displaystyle \sum_{i=1}^{n}{a_i x^{n-i}} \in \displaystyle \sum_{i=1}^{n}{I^i x^{n-i}} \text{ alors } x^n \in I\displaystyle \sum_{i=1}^{n}{I^{i-1} x^{n-i}} = I\displaystyle \sum_{i=0}^{n-1}{I^i x^{n-1-i}} =I(I+(x))^{n-1}.$\\ Alors $(x)^n \in I(I+(x))^{n-1} \text{ alors } (x)^n + I(I+(x))^{n-1} = I(I+(x))^{n-1}$.\\
 	En somme $(x)(I+(x))^{n-1} \subset I(I+(x))^{n-1} \text{ alors } (I+(x))^{n} = I(I+(x))^{n-1}$.\\
 	Par conséquent $I$ est une réduction de $I + (x)$.\\
 	$(ii)$ Supposons que $I$ est une réduction de $I + (x)$.\\

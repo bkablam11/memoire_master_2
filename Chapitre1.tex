@@ -12,7 +12,7 @@ nous explorons les structures algébriques notamment les anneaux et les modules.
 		\item[b)] $\text{ pour tout } x,y \in E, x\Re y \Longleftrightarrow y\Re x $ (symétrie);
 		\item[c)] $\text{ pour tout } x,y,z \in E, (x\Re y)$ et $(y\Re z)$ $\Longrightarrow (x\Re z)$  (transitivité).
 	\end{enumerate}
-	La partie $C_x = \{y \in E,\quad x\Re y\}  $ de E est appelée la classe d’équivalence modulo $\Re $ de $x \in E$. Les	classes d’équivalence constituent une partition de E. Notons $\mathcal{P}(E)$ l’ensemble des parties de E. La famille $(C_x)_{x \in E}$ constitue un sous-ensemble de $\mathcal{P}(E)$ appelé l’ensemble quotient de E par R. On le note $E/\Re $. 
+	La partie $C_x = \{y \in E,\; x\Re y\}  $ de E est appelée la classe d’équivalence modulo $\Re $ de $x \in E$. Les	classes d’équivalence constituent une partition de E. Notons $\mathcal{P}(E)$ l’ensemble des parties de E. La famille $(C_x)_{x \in E}$ constitue un sous-ensemble de $\mathcal{P}(E)$ appelé l’ensemble quotient de E par R. On le note $E/\Re $. 
 	Dans la suite, la classe de $x \in E$ sera vue essentiellement comme élément de ce nouvel ensemble $E/\Re $ et sera notée $\bar{x}$.
 \end{madefinition}
 \subsection{Relation d'ordre}
@@ -34,11 +34,11 @@ nous explorons les structures algébriques notamment les anneaux et les modules.
 	On dit que $(G, \star)$ est un groupe si $\star$ est une loi de composition qui a tout élément de $G$ associe un élément dans $G$ vérifiant:
 	\begin{enumerate}
 		\item[(i)] La loi $\star$ est associative: 
-		\[ a\star(b\star c) = (a\star b) \star a, \text{ pour tout } (a,b,c) \in G^3;\].
+		\[ a\star(b\star c) = (a\star b) \star c, \text{ pour tout } (a,b,c) \in G^3;\].
 		\item[(ii)] G possède un élément neutre $e$:
-		\[ \text{ il existe }!e \in G, e\star a = e =  a\star e, \text{ pour tout } a \in G;\].
+		\[ \text{ il existe }!e \in G,\; e\star a = e =  a\star e, \text{ pour tout } a \in G;\].
 		\item[(iii)] Tout élément $a$ de $G$ admet un symétrique:
-		\[ a\star b = e = b \star a, \text{ pour tout } (a,b) \in G^2;\]
+		\[ \text{ il existe }b \in G,\; a\star b = e = b \star a;\]
 		\item [(vi)] Si de plus la loi $\star$ est commutative:
 		\[ a\star b = b \star a, \text{ pour tout } (a,b) \in G^2.\]
 		On dit que le groupe $(G,\star)$ est abélien ou commutatif.
@@ -47,7 +47,7 @@ nous explorons les structures algébriques notamment les anneaux et les modules.
 \subsection{Sous-groupe}
 \begin{madefinition}
 	Soit $(G, \star)$ un groupe. \\
-	On dit que $H \subset G$ est un sous-groupe de $G$ si et seulement si:
+	On dit que $H \subset G$ est un sous-groupe de $G$ si:
 	\begin{enumerate}
 		\item[(i)] e $\in$ H, où $e$ est l'élément neutre de $G$
 		\item[(ii)] La partie H est stable par la loi $\star$ :
@@ -135,11 +135,11 @@ nous explorons les structures algébriques notamment les anneaux et les modules.
 \subsection{Morphisme d'anneaux}
 \begin{madefinition}
 	Soient deux anneaux $(A,\star, \circ )$ et $(B, \ast, \diamond)$.\\
-	Une application $f:A \longrightarrow B$ est un morphisme d'anneaux  ou homomorphisme si et seulement si:
-	\[ f(x \star y) = f(x) \ast f(y) \quad et \quad f(x \circ y) = f(x) \diamond f(y), \text{ pour tout } (x,y) \in A^2.\]
+	Une application $f:A \longrightarrow B$ est un morphisme d'anneaux  ou homomorphisme si:
+	\[ f(x \star y) = f(x) \ast f(y) \; et \; f(x \circ y) = f(x) \diamond f(y), \text{ pour tout } (x,y) \in A^2.\]
 	On dit de plus que f est un :\\
 	- Endomorphisme lorsque A = B.\\
-	- Isomorphisme lorsque $f$ admet une fonction réciproque $g$ telle que $f \circ g = Id_B$ et $g \circ f = Id_A$. 
+	- Isomorphisme lorsque $f$ admet une application réciproque $g$ telle que $f \circ g = Id_B$ et $g \circ f = Id_A$. 
 \end{madefinition}
 \begin{maproposition}
 	(Théorème d'isomorphisme d’anneaux) \\
@@ -167,7 +167,7 @@ nous explorons les structures algébriques notamment les anneaux et les modules.
 	\begin{cases}
 		1_A \in A_0,\\
 		A_0 \text{ est un sous-anneau de }A. \\
-		 A^{+} =\displaystyle \bigoplus_{n \geqslant 1}{A_n} \text{ est un idéal de }A.
+		 A_{+} =\displaystyle \bigoplus_{n \geqslant 1}{A_n} \text{ est un idéal de }A.
 	\end{cases}
 	$$
 	\newline
@@ -196,8 +196,7 @@ nous explorons les structures algébriques notamment les anneaux et les modules.
 \end{maremarque}
 \begin{monexemple}
 	\begin{enumerate}
-		\item L'anneau $A$ est un $A-module$.
-		\item Si $A= \mathbb{Z}$, tout sous-groupe abélien peut être vu comme un $\mathbb{Z}-module.$
+		\item Si $A= \mathbb{Z}$, tout sous-groupe abélien peut être vu comme \\ un $\mathbb{Z}-module.$
 	\end{enumerate}
 \end{monexemple}
 \begin{madefinition}
@@ -229,7 +228,7 @@ nous explorons les structures algébriques notamment les anneaux et les modules.
 	\begin{enumerate}
 		\item[(i)] $B$ est un $A-module$;
 		\item[(ii)] $B$ est un anneau;
-		\item[(iii)] $B = A [b_1, \cdots, b_r] \simeq \dfrac{A[X_1, \cdots, X_r]}{J}, \quad b_i \in B , \quad J$ idéal de $A[X_1, \cdots, X_r]$.
+		\item[(iii)] $B = A [b_1, \cdots, b_r] \simeq \dfrac{A[X_1, \cdots, X_r]}{J}, \; b_i \in B , \; J$ idéal de $A[X_1, \cdots, X_r]$.
 	\end{enumerate}
 \end{madefinition}
 \section{Idéal}
@@ -244,16 +243,16 @@ nous explorons les structures algébriques notamment les anneaux et les modules.
 \end{madefinition}
 \begin{monexemple}
 	\item[(i)] Les idéaux de $\mathbb{Z}$ sont de la forme $n\mathbb{Z}$, avec $n \in \mathbb{N}$.
-	\item[(ii)] Si $A$ est un corps alors $I$ est nulle ou $I$ est égale à $A$ tout entier.
+	\item[(ii)] Si $A$ est un corps alors tout idéal $I$ de $A$ est nulle ou $I$ est égale à $A$ tout entier.
 \end{monexemple}
 \subsection{Idéal premier}
 \begin{madefinition}
-	Soit $A$ un anneau. Un idéal $P$ de $A$ est dit \textbf{premier} s'il est strict et si pour tout $x,y$ deux éléments de $A$ tels que $xy \in P$ alors: $$x \in P \text{ \quad ou \quad} y\in P.$$
+	Soit $A$ un anneau. Un idéal $P$ de $A$ est dit \textbf{premier} s'il est strict et si pour tout $x,y$ deux éléments de $A$ tels que $xy \in P$, alors: $$x \in P \text{ \; ou \;} y\in P.$$
 	On note $Spec(A)$ l’ensemble des idéaux premiers de l'anneau A. 
 \end{madefinition}
 \subsection{Idéal primaire}
 \begin{madefinition}
-	Soit $A$ un anneau. Un idéal $Q$ de $A$ est dit \textbf{primaire} s'il est strict et si pour tout $x,y$ deux éléments de $A$ tels que $xy \in Q$ alors: $$x \in Q \text{ \quad ou \quad} \text{ il existe } n \in \mathbb{N}, y^{n} \in Q.$$
+	Soit $A$ un anneau. Un idéal $Q$ de $A$ est dit \textbf{primaire} s'il est strict et si pour tout $x,y$ deux éléments de $A$ tels que $xy \in Q, \; x \notin Q $ alors: $$\text{ il existe } n \in \mathbb{N} \;, y^{n} \in Q.$$
 \end{madefinition}
 \subsection{Idéal maximal}
 \begin{madefinition}
@@ -307,10 +306,10 @@ nous explorons les structures algébriques notamment les anneaux et les modules.
 	\end{enumerate}
 	L'ensemble des filtrations de l'anneau A est noté $\mathbb{F}(A)$.\\
 	Pour tout $f,g \in \mathbb{F}(A)$, cet ensemble est ordonné par:
-	\[f = (I_n) \leqslant g = (J_n) \implies  I_n \subseteq J_n , \text{ pour tout } n \in \mathbb{Z}.\]
+	\[f = (I_n) \leqslant g = (J_n) \Longleftrightarrow  I_n \subseteq J_n , \text{ pour tout } n \in \mathbb{Z}.\]
 \end{madefinition}
 \begin{maremarque}
-	Dans la définition [$\ref{def1}$], il est facile de remarquer que pour tout $n\leq 0, I_n = A$.\\ En effet, en utilisant la décroissance des idéaux (ii) et que $I_0 = A$ (i), il vient d'une part que: \\ $I_0 \subset I_n , \text{ pour tout } n \leq 0$ (ii). \\ Ainsi $A \subset I_n$.\\
+	Dans la définition ($\ref{def1}$), il est facile de remarquer que pour tout $n\leq 0, I_n = A$.\\ En effet, en utilisant la décroissance des idéaux (ii) et que $I_0 = A$ (i), il vient d'une part que: \\ $I_0 \subset I_n , \text{ pour tout } n \leq 0$ (ii). \\ Ainsi $A \subset I_n$.\\
 	D'autre part, comme pour tout $ n \in \mathbb{Z}$, les $I_n$ sont des idéaux de $A$, alors $I_n \subset A$.\\
 	Donc $I_n = A, n \leq 0$.
 \end{maremarque}
@@ -322,7 +321,7 @@ Ainsi au lieu d'étudier la famille $f = (I_n)_{n \in \mathbb{Z}}$ nous pouvons 
 		$$I_{3n} = I_{3n-1} = I_{3n-2} =I^{n}. $$
 		\item 	Soit $A = \dfrac{\mathbb{Z}}{4 \mathbb{Z}} $ et $f=(I_n)_{n \in \mathbb{Z}}$ telle que pour tout $n \in \mathbb{Z}$:
 		$$I_1 = I_2 = (\bar{2})$$
-		$$I_n = (\bar{0})  \text{ pour tout} \quad n \geqslant 3. $$
+		$$I_n = (\bar{0})  \text{ pour tout} \; n \geqslant 3. $$
 	\end{enumerate}
 \end{monexemple}
 \begin{madefinition}
@@ -340,7 +339,7 @@ Ainsi au lieu d'étudier la famille $f = (I_n)_{n \in \mathbb{Z}}$ nous pouvons 
 
 \subsection{Filtration sur un module}
 \begin{madefinition}
-	Soit $M$ un $A$-module. On appelle filtration de $M$ toute famille $\varphi = (M_n)_{n \in \mathbb{Z}}$ de sous-modules de $M$ telle que:
+	Soit $M$ un $A$-module. On appelle filtration de $M$ toute famille \\ $\varphi = (M_n)_{n \in \mathbb{Z}}$ de sous-modules de $M$ telle que:
 	\begin{enumerate}
 		\item[i)] $M_0 = M$;
 		\item[ii)] pour tout $n \in \mathbb{Z}, M_{n+1} \subset M_n$.
@@ -375,7 +374,7 @@ Ainsi au lieu d'étudier la famille $f = (I_n)_{n \in \mathbb{Z}}$ nous pouvons 
 	$G(A, \phi)=G_{\phi }(M)=\displaystyle \bigoplus_{n \in \mathbb{Z}}{\frac{M_{n}}{M_{n+1}}}.$
 	
 	$G_{f}(A)$ est muni d'une structure d'anneau gradué dont la multiplication est définie par:
-	Pour tout $a_{n}+I_{n+1},b_{p}+I_{p+1},$ deux éléments homogènes de degré $n$ de $G_{f}(A),$ On pose:
+	Pour tout $a_{n}+I_{n+1},b_{p}+I_{p+1},$ deux éléments homogènes de degré $\mathbb{N}$ de $G_{f}(A),$ On pose:
 	
 	$(a_{n}+I_{n+1})(b_{p}+I_{p+1})=a_{n}b_{p}+I_{n+p+1}.$
 \end{madefinition}
@@ -425,14 +424,14 @@ Ainsi au lieu d'étudier la famille $f = (I_n)_{n \in \mathbb{Z}}$ nous pouvons 
 
 \subsubsection{c) \underline{Filtration extraite d'ordre k de $f$}}
 \begin{madefinition}
-	Soient $A$ un anneau, $I$ un idéal de A et $f = (I_n)_{n\in \mathbb{Z}}$ une filtration de l'anneau A.\\
+	Soient $A$ un anneau et $f = (I_n)_{n\in \mathbb{Z}}$ une filtration de l'anneau A.\\
 	Soit $k \in \mathbb{N}^{*}$, on pose $f^{(k)} = (I_{nk})_{n\in \mathbb{N}}$.\\ 
 	Ainsi $f^{(k)}$ est une filtration de $A$ appelé \textbf{filtration extraite d'ordre k de $f$}.
 \end{madefinition}
 
 \subsubsection{d) \underline{Filtration définie par une graduation}}
 \begin{madefinition}
-	Soit $A = \displaystyle \bigoplus_{n \in \mathbb{N}}{A_n}$ un anneau gradué de type $n$.\\ Posons $J_n = \displaystyle \bigoplus_{n \geqslant p }{A_p}$.\\
+	Soit $A = \displaystyle \bigoplus_{n \in \mathbb{N}}{A_n}$ un anneau gradué de type $\mathbb{N}$.\\ Posons $J_n = \displaystyle \bigoplus_{n \geqslant p }{A_p}$.\\
 	$f=(J_n)_{n \in \mathbb{N}}$ est une filtration de A. 
 \end{madefinition}
 \subsubsection{e) \underline{Filtration de type fini}}
@@ -458,7 +457,7 @@ Ainsi au lieu d'étudier la famille $f = (I_n)_{n \in \mathbb{Z}}$ nous pouvons 
 \end{maconsequence}
 \subsubsection{b) \underline{Filtrations A.P.}}
 \begin{madefinition}
-	La filtration $f = (I_n)_{n \in \mathbb{Z}}$ de l'anneau $A$ est dite \textbf{Approximable par Puissances d'idéaux} (en abrégé \textbf{A.P.}) s'il existe un entier $(k_{n})_{n \in \mathbb{N}}$ une suite d'entiers naturels telle que :
+	La filtration $f = (I_n)_{n \in \mathbb{Z}}$ de l'anneau $A$ est dite \textbf{Approximable par des Puissances d'idéaux} (en abrégé \textbf{A.P.}) s'il existe $(k_{n})_{n \in \mathbb{N}}$ une suite d'entiers naturels telle que :
 	\begin{enumerate}
 		\item[(i)] $\text{ pour tout }$ n,m $\in \mathbb{N}$, $I_{mk_n} \subset I_n^{m}$;
 		\item[(ii)] $\underset{n\longrightarrow +\infty }{\lim }\dfrac{k_{n}}{n}=1$.
@@ -466,12 +465,12 @@ Ainsi au lieu d'étudier la famille $f = (I_n)_{n \in \mathbb{Z}}$ nous pouvons 
 \end{madefinition}
 \subsubsection{c) \underline{Filtrations fortement A.P.}}
 \begin{madefinition}
-	La filtration $f = (I_n)_{n \in \mathbb{Z}}$ de l'anneau $A$ est dite \\ \textbf{fortement Approximable par Puissances d'idéaux} (en abrégé \textbf{fortement A.P.}) s'il existe un entier $k \geqslant 1$ tel que :
+	La filtration $f = (I_n)_{n \in \mathbb{Z}}$ de l'anneau $A$ est dite \\ \textbf{fortement Approximable par des Puissances d'idéaux} (en abrégé \textbf{fortement A.P.}) s'il existe un entier $k \geqslant 1$ tel que :
 	\[ \text{ pour tout } \, n \in \mathbb{N}, \ I_{nk} = I_k^n. \]
 \end{madefinition}
 \subsubsection{d) \underline{Filtrations E.P.}}
 \begin{madefinition}
-	La filtration $f = (I_n)_{n \in \mathbb{Z}}$ de l'anneau $A$ est dite \textbf{Essentiellement par Puissances d'idéaux} (en abrégé \textbf{E.P}) s'il existe un entier $N \geqslant 1$ tel que :
+	La filtration $f = (I_n)_{n \in \mathbb{Z}}$ de l'anneau $A$ est dite \textbf{Essentiellement par des Puissances d'idéaux} (en abrégé \textbf{E.P}) s'il existe un entier $N \geqslant 1$ tel que :
 	\[ \text{ pour tout } \, n \geqslant N, \ I_n =\sum_{p=1}^{N} I_{n-p}I_p. \]
 \end{madefinition}
 \subsubsection{e) \underline{Filtrations noethériennes}}
@@ -481,7 +480,7 @@ Ainsi au lieu d'étudier la famille $f = (I_n)_{n \in \mathbb{Z}}$ nous pouvons 
 \subsubsection{f) \underline{Filtrations fortement noethériennes}}
 \begin{madefinition}
 	La filtration $f = (I_n)_{n \in \mathbb{Z}}$ de l'anneau $A$ est dite \\ \textbf{fortement noethérienne} s'il existe un entier $k \geqslant 1$ tel que:
-	\[ \text{ pour tout } \, m, n \in \mathbb{Z}, \ m, n \geqslant k, I_m I_n = I_{m+n}. \]
+	\[ \text{ pour tout } \, m, n \in \mathbb{Z}, \ m, n \geqslant k, \text{ entraîne } I_m I_n = I_{m+n}. \]
 \end{madefinition}
 \begin{maremarque}
 	Il résulte des références \cite{Di1} , \cite{Di3}, \cite{Di4} que si $A$ est un anneau noethérien et $f=(I_n)_{n \in \mathbb{Z}} \in \mathbb{F}(A)$, les assertions suivantes sont équivalentes : 
