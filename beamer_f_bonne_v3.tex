@@ -53,7 +53,7 @@
 		\framesubtitle{EXEMPLE DE FILTRATIONS}
 		\begin{alertblock}{Exemple}
 			\begin{enumerate}[(1)]
-				\item On pose $A= \dfrac{\mathbb{Z}}{4\mathbb{Z}}, I_0 = A, I_1=I_2 = (\bar{2}), I_n = (\bar{0})$ pour tout $n \geqslant 1.$ \\ Ainsi $f=(I_n)_{n \in \mathbb{N}}$ est une filtration;
+				\item On pose $A= \dfrac{\mathbb{Z}}{4\mathbb{Z}}, I_0 = A, I_1=I_2 = (\bar{2}), I_n = (\bar{0})$ pour tout $n \geqslant 3.$ \\ Ainsi $f=(I_n)_{n \in \mathbb{N}}$ est une filtration.
 				\item On pose $A= \mathbb{Z}[X], I_0 = A, I_{2n}=I_{2n-1} = I^n=(X)^n $ pour tout $n \geqslant 1.$ \\ Ainsi $f=(I_n)_{n \in \mathbb{N}}$ est une filtration.
 			\end{enumerate}
 		\end{alertblock}
@@ -231,6 +231,18 @@
 	\end{frame}
 	
 		\begin{frame}{PRÉLIMINAIRES}
+		\framesubtitle{FILTRATIONS f- ENTIÈRES}
+		\begin{block}{}
+			Soit $f=(I_n)_{n \in \mathbb{N}} , g = (J_n)_{n \in \mathbb{N}}\in \mathbb{F}(A)$.  Alors:\\
+			\begin{enumerate}[(b)]
+					\item $g$ est \textbf{entière sur} $f$ si $g \leqslant P(f)$. C'est à dire:
+				\[\text{ pour tout } n \geqslant 1, J_n \subset P_{n}(f). \]
+			\end{enumerate}
+			avec pour tout $k \in \mathbb{N}, P(f)=(P_k(f))_{k \in \mathbb{N}} =\left\{x \in A, x \text{ entier sur } f^{(n)} = (I_{nk})_{n \in \mathbb{N}}\right\}.$
+		\end{block}
+	\end{frame}
+	
+		\begin{frame}{PRÉLIMINAIRES}
 		\framesubtitle{RELATION ENTRE ÉLÉMENT ENTIER, RÉDUCTION ET FILTRATION I-ADIQUE}
 		\begin{block}{Proposition}
 				Soient $A$ un anneau, $I$ un idéal de $A$ et $x \in A$.
@@ -241,27 +253,27 @@
 	\end{frame}
 			\begin{frame}{Démonstration}
 		\begin{block}{}
-	$(i)$ Supposons que $x$ est entier sur $I$. Alors il existe $n \in \mathbb{N^*}$ tel que $x^n = \displaystyle \sum_{i=1}^{n}{(-a_i) x^{n-i}}$, avec $a_i \in I^i, i=1, \cdots ,n$.\\ Ainsi $x^n = \displaystyle \sum_{i=1}^{n}{(-a_i) x^{n-i}} \in \displaystyle \sum_{i=1}^{n}{I^i x^{n-i}} = I \displaystyle \sum_{i=0}^{n-1}{I^i x^{n-1-i}} $. (14)\\ Alors $ x^n \in I(I+(x))^{n-1}.$\\
-	Montrons que $I$ est une réduction de $I + (x)$. C'est à dire que $(I+(x))^{n} = I(I+(x))^{n-1}$ (15).\\ On rappelle que pour tout $n \in \mathbb{N}, nI = I.$\\
+	$(i)$ Supposons que $x$ est entier sur $I$. Alors il existe $n \in \mathbb{N^*}$ tel que $x^n = \displaystyle \sum_{i=1}^{n}{(-a_i) x^{n-i}}$, avec $a_i \in I^i, i=1, \cdots ,n$.\\ Ainsi $x^n = \displaystyle \sum_{i=1}^{n}{(-a_i) x^{n-i}} \in \displaystyle \sum_{i=1}^{n}{I^i x^{n-i}} = I \displaystyle \sum_{i=0}^{n-1}{I^i x^{n-1-i}} $. (14)\\ Alors $ x^n \in I(I+(x))^{n-1}.$ (15)\\
+	Montrons que $I$ est une réduction de $I + (x)$. C'est à dire que $(I+(x))^{n} = I(I+(x))^{n-1}$ (16).\\ On rappelle que pour tout $n \in \mathbb{N}, nI = I.$ (17)\\
 	%Ainsi : $(I+(x))^n = (I+(x))(I+(x))^{n-1}= I(I+(x))^{n-1} + (x)(I+(x))^{n-1}.$
-	Ainsi : $(I+(x))^n = I(I+(x))^{n-1} + (x)(I+(x))^{n-1}. \quad (16)$
+	Ainsi : $(I+(x))^n = I(I+(x))^{n-1} + (x)(I+(x))^{n-1}. \quad (18)$
 		\end{block}
 	\end{frame}
 
 	
 			\begin{frame}{Démonstration}
 		\begin{block}{}
-			En prouvant que $(x)(I+(x))^{n-1} \subset I(I+(x))^{n-1}$ (17) on aura:
+			En prouvant que $(x)(I+(x))^{n-1} \subset I(I+(x))^{n-1}$ (19) on aura:
 			\begin{center}
-				$(I+(x))^n = I(I+(x))^{n-1}$. (18)
+				$(I+(x))^n = I(I+(x))^{n-1}$. (20)
 			\end{center}
 		\end{block}
 	\end{frame}
 	\begin{frame}{Démonstration}
 		\begin{block}{}
-			$(x)(I+(x))^{n-1} = (x)^n + I\displaystyle \sum_{i=0}^{n-2}{I^i (x)^{n-1-i}} \subset (x)^n + \displaystyle \sum_{i=0}^{n-1}{I^i (x)^{n-1-i}}$. (19)\\
-			D'où $(x)(I+(x))^{n-1} \subset (x)^n + I(I+(x))^{n-1}.$ (20)\\
-			En somme $(x)(I+(x))^{n-1} \subset I(I+(x))^{n-1}.$ (21) \\ D'où $ (I+(x))^{n} = I(I+(x))^{n-1}$. (22)\\
+			$(x)(I+(x))^{n-1} = (x)^n + I\displaystyle \sum_{i=0}^{n-2}{I^i (x)^{n-1-i}} \subset (x)^n + \displaystyle \sum_{i=0}^{n-1}{I^i (x)^{n-1-i}}$. (21)\\
+			D'où $(x)(I+(x))^{n-1} \subset (x)^n + I(I+(x))^{n-1}.$ (22)\\
+			En somme $(x)(I+(x))^{n-1} \subset I(I+(x))^{n-1}.$ (23) \\ D'où $ (I+(x))^{n} = I(I+(x))^{n-1}$. (24)\\
 			Par conséquent $I$ est une réduction de $I + (x)$.
 		\end{block}
 	\end{frame}
@@ -270,9 +282,9 @@
 					\begin{frame}{Démonstration}
 		\begin{block}{}
 				$(ii)$ Supposons que $I$ est une réduction de $I + (x)$.\\
-			Alors il existe $ n \in \mathbb{N^*}$ tel que $(I + (x))^{n+1} = I(I + (x))^{n}$. (23)\\
-			On a : $x^{n+1} \in (I + (x))^{n+1} = I(I + (x))^{n}$. (24)\\Alors $x^{n+1} \in I\displaystyle \sum_{i=0}^{n}{I^i (x)^{n-i}} = \displaystyle \sum_{i=0}^{n}{I^{i+1} (x)^{n-i}}$. (25)\\
-			D'où $x^{n+1} \in \displaystyle \sum_{i=1}^{n+1}{I^i (x)^{n+1-i}}$. (26)\\ Alors $ x^{n+1} =  \displaystyle \sum_{i=1}^{n+1}{a_i x^{n+1-i}}$, avec $a_i \in I^i$. (27)\\ Ainsi $x$ est donc entier sur $I$.
+			Alors il existe $ n \in \mathbb{N^*}$ tel que $(I + (x))^{n+1} = I(I + (x))^{n}$. (25)\\
+			On a : $x^{n+1} \in (I + (x))^{n+1} = I(I + (x))^{n}$. (26)\\Alors $x^{n+1} \in I\displaystyle \sum_{i=0}^{n}{I^i (x)^{n-i}} = \displaystyle \sum_{i=0}^{n}{I^{i+1} (x)^{n-i}}$. (27)\\
+			D'où $x^{n+1} \in \displaystyle \sum_{i=1}^{n+1}{I^i (x)^{n+1-i}}$. (26)\\ Alors $ x^{n+1} =  \displaystyle \sum_{i=1}^{n+1}{a_i x^{n+1-i}}$, avec $a_i \in I^i$. (28)\\ Ainsi $x$ est donc entier sur $I$.
 		\end{block}
 	\end{frame}
 	
@@ -296,7 +308,7 @@
 		\end{enumerate}
 	\end{frame}
 	
-	\begin{frame}{DÉPENDANCE INTÉGRALE, RÉDUCTION ET FILTRATION BONNE}
+	\begin{frame}{DÉPENDANCE INTÉGRALE, RÉDUCTION ET FILTRATIONS BONNES}
 		\begin{block}{Résultats}
 			Soient $A$ noethérien, $f=(I_{n})_{_{n\in \mathbb{N}}}\leq $ $g=(J_{n})_{_{n\in \mathbb{N}}}$ $ \in \mathbb{F}(A).$ \\ Si $f$ est fortement noethérienne et $g$ est noethérienne alors les assertions sont équivalentes et dans ce cas $g$ est fortement noethérienne:
 			\begin{enumerate}[(i)]
@@ -304,7 +316,7 @@
 				%\item Il existe un entier $k\geq 1$ tel que $g^{(k)}$ est $I_{k}-bonne$
 				\item $g$ est $enti\grave{e}re$ sur $f.$
 				\item $g$ est $f-bonne.$
-				\item $P(f)=P(g)$
+				%\item $P(f)=P(g)$
 			\end{enumerate}
 		\end{block}
 	\end{frame}
