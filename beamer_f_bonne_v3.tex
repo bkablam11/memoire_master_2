@@ -276,10 +276,10 @@
 		Soit $M$ un $A$-module. On appelle filtration de $M$ toute famille $\varphi = (M_n)_{n \in \mathbb{Z}}$ de sous-modules de $M$ telle que:
 			\begin{enumerate}[(a)]
 				\item $M_0 = M$;
-				\item Pour tout $n \in \mathbb{Z}, M_{n+1} \subset M_n$. (11)
+				\item Pour tout $n \in \mathbb{Z}, M_{n+1} \subset M_n$. (13)
 			\end{enumerate}
 			La filtration $f = (I_n)_{n \in \mathbb{Z}}$ de $A$ et la filtration $\varphi = (M_n)_{n \in \mathbb{Z}}$ du $A$-module $M$ sont dites compatibles si:
-			\[ I_p M_q \subset M_{p+q} ,\, \forall \, p, q \in \mathbb{Z}. \quad (12)\]
+			\[ I_p M_q \subset M_{p+q} ,\, \forall \, p, q \in \mathbb{Z}. \quad (14)\]
 		\end{block}
 	\end{frame}
 	
@@ -289,7 +289,7 @@
 			Soit $\varphi=(M_n)_{n \in \mathbb{Z}}$ une filtration de module $M$, $f-compatible$, avec $f$, une filtration d'anneau $A$.
 			\begin{enumerate}[(a)]
 				\item $\varphi$ est \text{$f-$ bonne} s'il existe un entier naturel N supérieur ou égal à 1 tel que
-				\[\forall n > N, M_{n}=\sum_{p=1}^{N}I_{n-p}M_{p}. \quad (13)\]
+				\[\forall n > N, M_{n}=\sum_{p=1}^{N}I_{n-p}M_{p}. \quad (15)\]
 %				\item Une filtration $f=(I_n)_{n \in \mathbb{Z}}$ est dite $I-bonne$ si: 
 %				\begin{enumerate}[(i)]
 %					\item $\forall n \in \mathbb{N}, \quad II_n \subseteq I_{n+1}$;
@@ -305,7 +305,7 @@
 			Soit $f=(I_n)_{n \in \mathbb{N}} , g = (J_n)_{n \in \mathbb{N}}$ deux filtrations de $A$.  Alors:\\
 			\begin{enumerate}[(b)]
 					\item $g$ est \text{entière sur} $f$ si $g \leqslant P(f)$. Autrement dit,
-				\[\forall n \geqslant 1, J_n \subset P_{n}(f). \]
+				\[\forall n \geqslant 1, J_n \subset P_{n}(f). \quad (16) \]
 			\end{enumerate}
 			$\forall k \in \mathbb{N}, P(f)=(P_k(f))_{k \in \mathbb{N}} =\left\{x \in A, x \text{ entier sur } f^{(n)} = (I_{nk})_{n \in \mathbb{N}}\right\}.$
 		\end{block}
@@ -322,27 +322,27 @@
 	\end{frame}
 			\begin{frame}{Démonstration}
 		\begin{block}{}
-	$(i)$ Supposons que $x$ est entier sur $I$. Alors il existe $n $ appartenant à $ \mathbb{N^*}$ tel que \\ $x^n = \displaystyle \sum_{i=1}^{n}{(-a_i) x^{n-i}}$,  $a_i \in I^i, i=1, \cdots ,n$.\\ Ainsi \\ $x^n = \displaystyle \sum_{i=1}^{n}{(-a_i) x^{n-i}} \in \displaystyle \sum_{i=1}^{n}{I^i x^{n-i}} = I \displaystyle \sum_{i=0}^{n-1}{I^i x^{n-1-i}} $. (14)\\ Alors \\ $ x^n \in I(I+(x))^{n-1}.$ (15)\\
+	$(i)$ Supposons que $x$ est entier sur $I$. Alors il existe $n $ appartenant à $ \mathbb{N^*}$ tel que \\ $x^n = \displaystyle \sum_{i=1}^{n}{(-a_i) x^{n-i}}$,  $a_i \in I^i, i=1, \cdots ,n$.\\ Ainsi \\ $x^n = \displaystyle \sum_{i=1}^{n}{(-a_i) x^{n-i}} \in \displaystyle \sum_{i=1}^{n}{I^i x^{n-i}} = I \displaystyle \sum_{i=0}^{n-1}{I^i x^{n-1-i}} $. (17)\\ Alors \\ $ x^n \in I(I+(x))^{n-1}.$ (18)\\
 	%Ainsi : $(I+(x))^n = (I+(x))(I+(x))^{n-1}= I(I+(x))^{n-1} + (x)(I+(x))^{n-1}.$
-	Ainsi : $(I+(x))^n = I(I+(x))^{n-1} + (x)(I+(x))^{n-1}. \quad (18)$
+	Ainsi : $(I+(x))^n = I(I+(x))^{n-1} + (x)(I+(x))^{n-1}. \quad (19)$
 		\end{block}
 	\end{frame}
 
 	
 			\begin{frame}{Démonstration}
 		\begin{block}{}
-			Montrons que $I$ est une réduction de $I + (x)$. C'est à dire que $(I+(x))^{n} = I(I+(x))^{n-1}$ (16).\\ On rappelle que pour tout $n $ appartenant à $ \mathbb{N}, nI = I.$ (17)\\
-			En prouvant que $(x)(I+(x))^{n-1} $ est contenu dans $ I(I+(x))^{n-1}$ (19) on aura
+			Montrons que $I$ est une réduction de $I + (x)$. C'est à dire que $(I+(x))^{n} = I(I+(x))^{n-1}$ (20).\\ On rappelle que pour tout $n $ appartenant à $ \mathbb{N}, nI = I.$ (21)\\
+			En prouvant que $(x)(I+(x))^{n-1} $ est contenu dans $ I(I+(x))^{n-1}$ (22) on aura
 			\begin{center}
-				$(I+(x))^n = I(I+(x))^{n-1}$. (20)
+				$(I+(x))^n = I(I+(x))^{n-1}$. (23)
 			\end{center}
 		\end{block}
 	\end{frame}
 	\begin{frame}{Démonstration}
 		\begin{block}{}
-			$(x)(I+(x))^{n-1} = (x)^n + I\displaystyle \sum_{i=0}^{n-2}{I^i (x)^{n-1-i}} \subset (x)^n + \displaystyle \sum_{i=0}^{n-1}{I^i (x)^{n-1-i}}$. (21)\\
-			D'où \\$(x)(I+(x))^{n-1} \subset (x)^n + I(I+(x))^{n-1}.$ (22)\\
-			En somme \\$(x)(I+(x))^{n-1} \subset I(I+(x))^{n-1}.$ (23) \\ D'où \\$ (I+(x))^{n} = I(I+(x))^{n-1}$. (24)\\
+			$(x)(I+(x))^{n-1} = (x)^n + I\displaystyle \sum_{i=0}^{n-2}{I^i (x)^{n-1-i}} \subset (x)^n + \displaystyle \sum_{i=0}^{n-1}{I^i (x)^{n-1-i}}$. (24)\\
+			D'où \\$(x)(I+(x))^{n-1} \subset (x)^n + I(I+(x))^{n-1}.$ (25)\\
+			En somme \\$(x)(I+(x))^{n-1} \subset I(I+(x))^{n-1}.$ (26) \\ D'où \\$ (I+(x))^{n} = I(I+(x))^{n-1}$. (27)\\
 			Par conséquent $I$ est une réduction de $I + (x)$.
 		\end{block}
 	\end{frame}
@@ -351,9 +351,9 @@
 					\begin{frame}{Démonstration}
 		\begin{block}{}
 				$(ii)$ Supposons que $I$ est une réduction de $I + (x)$.\\
-			Alors il existe $ n $ appartenant à $ \mathbb{N^*}$ tel que \\ $(I + (x))^{n+1} = I(I + (x))^{n}$. (25)\\
-			On a \\ $x^{n+1} \in (I + (x))^{n+1} = I(I + (x))^{n}$. \\Alors \\ $x^{n+1} \in I\displaystyle \sum_{i=0}^{n}{I^i (x)^{n-i}} = \displaystyle \sum_{i=0}^{n}{I^{i+1} (x)^{n-i}}$. (26)\\
-			D'où \\$x^{n+1} \in \displaystyle \sum_{i=1}^{n+1}{I^i (x)^{n+1-i}}$. (27)\\ Alors \\$ x^{n+1} =  \displaystyle \sum_{i=1}^{n+1}{a_i x^{n+1-i}}$,  $a_i \in I^i$. (28)\\ Ainsi $x$ est donc entier sur $I$.
+			Alors il existe $ n $ appartenant à $ \mathbb{N^*}$ tel que \\ $(I + (x))^{n+1} = I(I + (x))^{n}$. (28)\\
+			On a \\ $x^{n+1} \in (I + (x))^{n+1} = I(I + (x))^{n}$. \\Alors \\ $x^{n+1} \in I\displaystyle \sum_{i=0}^{n}{I^i (x)^{n-i}} = \displaystyle \sum_{i=0}^{n}{I^{i+1} (x)^{n-i}}$. (29)\\
+			D'où \\$x^{n+1} \in \displaystyle \sum_{i=1}^{n+1}{I^i (x)^{n+1-i}}$. (30)\\ Alors \\$ x^{n+1} =  \displaystyle \sum_{i=1}^{n+1}{a_i x^{n+1-i}}$,  $a_i \in I^i$. (31)\\ Ainsi $x$ est donc entier sur $I$.
 		\end{block}
 	\end{frame}
 	
