@@ -5,8 +5,8 @@ Dans ce second chapitre, notre étude se concentrera sur les filtrations I-adiqu
 
 \section{Dépendance intégrale}
 \subsection{Dépendance intégrale sur les anneaux}
-\begin{madefinition}\textbf{(Élément Entier)}\cite{Di2} \\
-	Soient $B$ un anneau et $A$ un sous-anneau de $B$ ($A \subset B$).\\
+\begin{madefinition}\textbf{(Élément Entier)} \\
+	Soient $B$ un anneau et $A$ un sous-anneau de $B$ ($A $ est contenu dans $ B$).\\
 	Un élément $x$ de $B$ est dit \textbf{entier} sur $A$ s'il est \textbf{racine d'un polynôme unitaire à coefficient dans} $A$.\\
 	En d'autres termes, s'ils existent $a_1, a_2, \cdots , a_n$ éléments de $A$ tels que :\\
 	\begin{equation}
@@ -26,14 +26,14 @@ Dans ce second chapitre, notre étude se concentrera sur les filtrations I-adiqu
 \begin{moncontreexemple}
 	Cependant, $\dfrac{1}{2}$ n'est pas entier sur $\mathbb{Z}$.\\
 	En effet, si $\dfrac{1}{2}$ est entier sur $\mathbb{Z}$, alors $\dfrac{1}{2}$ est solution d'une équation de dépendance intégrale. Alors: \\
-	$\text{ il existe }$ n $\geq 1 , \left(\dfrac{1}{2} \right)^n + \sum\limits_{i=1}^{n} a_i \left(\dfrac{1}{2} \right)^{n-i} = 0$ , $a_i \in\mathbb{Z}$.\\
+	$\exists$ n $\geq 1 , \left(\dfrac{1}{2} \right)^n + \sum\limits_{i=1}^{n} a_i \left(\dfrac{1}{2} \right)^{n-i} = 0$ , $a_i \in\mathbb{Z}$.\\
 	D'où $\left(\dfrac{1}{2} \right)^n \left[1+\sum\limits_{i=1}^{n} a_i \left(\dfrac{1}{2} \right)^{-i}\right] = 0$.\\
-	Comme $\left(\dfrac{1}{2} \right)^n \neq 0$ alors $1+\sum\limits_{i=1}^{n} a_i2^{i} = 0.$\\D'où $1+\sum\limits_{i=1}^{n} a_i2^{i} = 0.$\\ Donc $1 = 2\left(\sum\limits_{i=1}^{n} -a_i 2^{i-1}\right).$\\Par suite, $ 1\in 2\mathbb{Z}.$ Ce qui est \textbf{Absurde}.
+	Comme $\left(\dfrac{1}{2} \right)^n \neq 0$ alors $1+\sum\limits_{i=1}^{n} a_i2^{i} = 0.$\\D'où $1+\sum\limits_{i=1}^{n} a_i2^{i} = 0.$\\ Donc $1 = 2\left(\sum\limits_{i=1}^{n} -a_i 2^{i-1}\right).$\\Par suite, $ 1$ appartient à $ 2\mathbb{Z}.$ Ce qui est \textbf{Absurde}.
 \end{moncontreexemple}
 \begin{maproposition}
 	\label{maprop12}
-	Soient $B$ un anneau et $A$ un sous-anneau de $B$ ($A \subset B$).\\
-	Soit $x \in B$. \\
+	Soient $B$ un anneau et $A$ un sous-anneau de $B$ ($A $ est contenu dans $ B$).\\
+	Soit $x $ appartenant à $ B$. \\
 	Les assertions suivantes sont équivalentes:
 	\begin{enumerate}
 		\item[i)]$x$ est entier sur $A$;
@@ -52,12 +52,12 @@ Dans ce second chapitre, notre étude se concentrera sur les filtrations I-adiqu
 	
 	Donc il existe $n$ $\in \mathbb{N}^{\ast },$ tel que $x^{n}\in A(1_A,x,x^{2},...,x^{n-1})=A[x].$\\
 	$\bullet$ Montrons que $A(1_A,x,x^{2},...,x^{n-1})=A[x].$\\
-	a) Par construction, $A(1_A,x,x^{2},...,x^{n-1})\subset A[x].$\\
-	b) Réciproquement, montrons par récurrence sur $m$\\ que pour tout $m	\in \mathbb{N},x^{m}\in A(1_A,x,x^{2},...,x^{n-1}).$
+	a) Par construction, $A(1_A,x,x^{2},...,x^{n-1})$ est contenu dans $ A[x].$\\
+	b) Réciproquement, montrons par récurrence sur $m$ que pour tout \\ $m	\in \mathbb{N},x^{m}\in A(1_A,x,x^{2},...,x^{n-1}).$
 	
-	* si $m\in \llbracket 0; n-1 \rrbracket ,$ alors $x^{m}\in A(1_A,x,x^{2},...,x^{n-1}).$
+	* Si $m\in \llbracket 0; n-1 \rrbracket ,$ alors $x^{m}\in A(1_A,x,x^{2},...,x^{n-1}).$
 	
-	* si $m\geq n$, alors $m=n+p,$ $p\geq 0.$
+	* Si $m\geq n$, alors $m=n+p,$ $p\geq 0.$
 	
 	\underline{Initialisation}
 	
@@ -99,7 +99,7 @@ Dans ce second chapitre, notre étude se concentrera sur les filtrations I-adiqu
 	
 	Soit $x\in A.$
 	
-	$A[x]\subset C=A(y_{1},y_{2},...,y_{r})$ de type fini.
+	$A[x]$ est contenu dans $ C=A(y_{1},y_{2},...,y_{r})$ de type fini.
 	
 	Ainsi, pour tout $i\in \llbracket 1; r \rrbracket ,$ $xy_{i}\in C.$ On
 	a:
@@ -155,12 +155,12 @@ Dans ce second chapitre, notre étude se concentrera sur les filtrations I-adiqu
 	
 \end{proof}
 \begin{moncorollaire}
-	Soient $A$ et $B$ deux anneaux tels que $A \subset  B$ et $x_1, x_2, \cdots, x_n \in B$.\\
+	Soient $A$ et $B$ deux anneaux tels que $A $ est contenu dans $  B$ et $x_1, x_2, \cdots, x_n $ appartenant à $ B$.\\
 	Alors les assertions suivantes sont équivalentes:
 	\begin{enumerate}
-		\item[i)]$\text{ pour tout } i \in \llbracket 1; n \rrbracket, x_i$ est entier sur $A$;
+		\item[i)]$\text{ pour tout } i $ appartenant à $ \llbracket 1; n \rrbracket, x_i$ est entier sur $A$;
 		\item[ii)]$A[x_1, x_2, \cdots, x_n]$ est un $A$-module de type fini;
-		\item[iii)]Il existe un $A-module$ de type fini $C \subset  B$ tel que $x_i C \subset  C, \text{ pour tout } i \in \llbracket 1; n \rrbracket$.
+		\item[iii)]Il existe un $A-module$ de type fini $C $ est contenu dans $  B$ tel que $x_i C $ est contenu dans $  C, \text{ pour tout } i $ appartenant à $ \llbracket 1; n \rrbracket$.
 	\end{enumerate}
 \end{moncorollaire}
 \begin{proof}
@@ -168,31 +168,32 @@ Dans ce second chapitre, notre étude se concentrera sur les filtrations I-adiqu
 \end{proof}
 
 \begin{madefinition}
-	Soit $A \subset B$ une inclusion d'anneaux.\\
+	Soit $A $ contenu dans $ B$ une inclusion d'anneaux.\\
 	On qualifie $B$ d'une \textbf{A-algèbre} lorsque $B$ peut être appréhendé simultanément en tant que module sur A et en tant qu'anneau.\\
 	De plus, B est dit \textbf{de type fini} si $B$ est un $A-module$ de type fini.
 \end{madefinition}
 
 %\begin{maproposition}
-%	Soit $A \subset B$ une inclusion d'anneaux.\\
+%	Soit $A $ contenu dans $ B$ une inclusion d'anneaux.\\
 %	Si B est une \textbf{A-algèbre de type fini} alors:
 %	\[ B \simeq \dfrac{A[X_1, X_2, \cdots, X_r]}{J} \]
 %	Où $J$ est un idéal de $A[X_1, X_2, \cdots, X_r]$
 %\end{maproposition}
 \begin{moncorollaire}\textbf{(Clôture intégrale d'anneaux)}\cite{Di2}\\
-	Soit $A \subset B$ une inclusion d'anneaux.\\
+	Soit $A $ contenu dans $ B$ une inclusion d'anneaux.\\
 	L'ensemble des éléments de B entiers sur A est un sous-anneau de B contenant A appelé \textbf{clôture intégrale} de $B$ dans $A$ notée $A'$.
 \end{moncorollaire}
 \begin{proof}
 	Il s'agit de montrer que $A^{\prime }$ est un sous anneau de $B.$
 	
-	$i)$$1_B \in A \text{ et } x-1_B = 0 \text{ donc } 1_B\in A',\text{ d'où } A\subset A^{\prime }\subset B.$
+	$i)$ $1_B $ appartient à $ A \text{ et } x-1_B $ est nul $ \text{ donc } 1_B$ appartient à $ A'.$ \\
+	$\text{ D'où } A\subset A^{\prime }\subset B.$
 	
-	$ii)$ Soient $x,y\in A^{\prime }.$
+	$ii)$ Soient $x,y$ appartenant à $ A^{\prime }.$
 	
-	$x\in A^{\prime }$ alors $A[x]$ est un $A-$module de type fini.
+	$x$ appartient à $ A^{\prime }$ alors $A[x]$ est un $A-$module de type fini.
 	
-	$y\in A^{\prime }$ alors $A[y]$ est un $A-$module de type fini.
+	$y$ appartient à $ A^{\prime }$ alors $A[y]$ est un $A-$module de type fini.
 	
 	Posons $C=A[x,y]=A[x][y].$
 	
@@ -204,11 +205,11 @@ Dans ce second chapitre, notre étude se concentrera sur les filtrations I-adiqu
 	Donc $C=A(x^{j}y^{i})_{1\leq i\leq r,1\leq j\leq s,}$ est un système de générateur fini de $C.$
 	
 	Par suite, $C$ est un $A-$module de type fini.\\
-	De plus $A[x+y] \subset C$ ainsi $A[x+y]$ est de type fini et donc $x+y$ est entier sur $A$.\\ Par suite $x+y \in A'$. De même $A[xy]$ est de type fini et donc $xy$ est entier sur $A$.\\ Par suite $xy \in A'$. \\ On en déduit que $A'$ est un sous anneau de $B$.
+	De plus $A[x+y] $ est contenu dans $ C$ ainsi $A[x+y]$ est de type fini et donc $x+y$ est entier sur $A$.\\ Par suite $x+y \in A'$. De même $A[xy]$ est de type fini et donc $xy$ est entier sur $A$.\\ Par suite $xy \in A'$. \\ On en déduit que $A'$ est un sous anneau de $B$.
 \end{proof}
 
 \begin{moncorollaire}
-	Soient $A \subset B \subset C $ deux inclusions d'anneaux.\\
+	Soient $A $ contenu dans $ B$ et $B$ contenu dans $ C $ deux inclusions d'anneaux.\\
 	Si $C$ est entier sur $B$ et $B$ est entier sur $A$ alors $C$ est entier sur $A$.
 \end{moncorollaire}
 \begin{proof}
@@ -258,17 +259,17 @@ Dans ce second chapitre, notre étude se concentrera sur les filtrations I-adiqu
 	Posons $H=A[b_{1}x^{n-1},b_{2}x^{n-2},...,b_{n}]$ et $H^{\prime
 	}=A(1,x,...,x^{n-1},z_{1},z_{2},...,z_{s})$.
 	
-	$H^{\prime }$ est un $A-$module de type fini tel que $A[x]\subset H^{\prime
-	}\subset C.$
+	$H^{\prime }$ est un $A-$module de type fini tel que $A[x]$ est contenu dans $ H^{\prime
+	}$ et $H'$ est contenu dans $ C.$
 	
 	Donc $x$ est entier sur $A.$
 	
 	Par suite $C$ entier sur $A.$
 \end{proof}
 \begin{maproposition}
-	Soit $A \subset B$ une inclusion d'anneaux tel que $B$ entier sur $A$.\\
+	Soit $A $ contenu dans $ B$ une inclusion d'anneaux tel que $B$ entier sur $A$.\\
 		Si $J$ est un idéal de $B$ alors:
-		\[ \dfrac{B}{J} \text{ est entier sur } \dfrac{A}{J \cap A};\]
+		\[ \dfrac{B}{J} \text{  est entier sur } \dfrac{A}{J \cap A};\]
 %		\item[ii)] Pour toute partie multiplicative $S$ de $A$
 %		\[ S^{-1}B \text{ est entier sur } S^{-1}A.\]
 
@@ -277,15 +278,15 @@ Dans ce second chapitre, notre étude se concentrera sur les filtrations I-adiqu
 \begin{proof}
 	$i)$ $B$ entier sur $A.$ 
 	
-	Soit $x\in B,$ alors il existe $n\in \mathbb{N}^{\ast },x^{n}+\sum\limits_{i=1}^{n}a_{i}x^{n-i}=0,$ pour tout $a_{i}\in	A,i\in \llbracket 1; n \rrbracket.$
+	Soit $x$ appartenant à $ B,$ alors il existe $n\in \mathbb{N}^{\ast },x^{n}+\sum\limits_{i=1}^{n}a_{i}x^{n-i}=0,$ pour tout $a_{i}\in	A,i\in \llbracket 1; n \rrbracket.$
 	
 	Ainsi $(x+J)^{n}+\sum\limits_{i=1}^{n}(a_{i}+J\cap
 	A)(x+J)^{n-i}=x^{n}+J+\sum\limits_{i=1}^{n}a_{i}x^{n-i}+J=\\
 	(x^{n}+\sum\limits_{i=1}^{n}a_{i}x^{n-i})+J=0+J=0_{J\cap A}.$
 	
-	Donc $x+J$ est entier sur $\frac{A}{J\cap A}.$
+	Donc $x+J$ est entier sur $\dfrac{A}{J\cap A}.$
 	
-	Ainsi $\frac{B}{J}$est entier sur $\frac{A}{J\cap A}.$
+	Ainsi $\dfrac{B}{J}$ est entier sur $\dfrac{A}{J\cap A}.$
 	
 	
 	
@@ -303,66 +304,66 @@ Dans ce second chapitre, notre étude se concentrera sur les filtrations I-adiqu
 %	Par suite $S^{-1}B$ est entier sur $S^{-1}A.$
 \end{proof}
 \begin{maproposition}
-	Soit $A \subset B$ une inclusion d'anneaux tel que $B$ soit entier sur $A$.
-	\[ B \text{ corps} \text{ si et seulement si }  A \text{ corps}.\]
+	Soit $A $ contenu dans $ B$ une inclusion d'anneaux tel que $B$ soit entier sur $A$.
+	\[ B \text{ est un corps} \text{ si et seulement si }  A \text{ est un corps}.\]
 \end{maproposition}
 \begin{proof}
 	$i)\implies ii)$ Supposons $B$ corps.
 	
-	Soit $x\in A\backslash \{0\}.$
+	Soit $x$ appartenant à $ A\backslash \{0\}.$
 	
-	Comme $A\subset B$ alors $x\in B\backslash \{0\}$. Donc $x$ est inversible d'inverse $x^{-1}\in B.$
+	Comme $A$ est contenu dans $ B$ alors $x$ appartenant à $ B\backslash \{0\}$. Donc $x$ est inversible d'inverse $x^{-1}$ appartenant à $ B.$
 	
-	De plus $B$ entier sur $A,$alors il existe $n\in \mathbb{N}^{\ast },(x^{-1})^{n}+\sum\limits_{i=1}^{n}a_{i}(x^{-1})^{n-i}=0,$ pour tout 
-	$a_{i}\in A,i\in \llbracket 1; n \rrbracket.$
+	De plus $B$ entier sur $A,$ alors il existe $n$ appartenant à $ \mathbb{N}^{\ast }, \\ (x^{-1})^{n}+\sum\limits_{i=1}^{n}a_{i}(x^{-1})^{n-i}=0,$ pour tout 
+	$a_{i}$ appartenant à $ A,i$ appartenant à $ \llbracket 1; n \rrbracket.$
 	
 	Ainsi $(x^{-1})^{n}=\sum\limits_{i=1}^{n}(-a_{i})(x^{-1})^{n-i},$ pour tout $
-	a_{i}\in A,i\in \llbracket 1; n \rrbracket.$
+	a_{i}$ appartenant à $ A,i$ appartenant à $ \llbracket 1; n \rrbracket.$
 	
 	$(x^{-1})\times (x^{-1})^{n-1}=\sum\limits_{i=1}^{n}(-a_{i})(x^{-1})^{n-i},$
-	pour tout $a_{i}\in A,i\in \llbracket 1; n \rrbracket.$
+	pour tout $a_{i}$ appartenant à $ A,i$ appartenant à $ \llbracket 1; n \rrbracket.$
 	
 	$(x^{-1})=\sum\limits_{i=1}^{n}(-a_{i})(x^{-1})^{n-i}(x^{-1})^{-n+1},$ pour
-	tout $a_{i}\in A,i\in \llbracket 1; n \rrbracket.$
+	tout $a_{i}$ appartenant à $ A,i$ appartenant à $ \llbracket 1; n \rrbracket.$
 	
-	$x^{-1}=\sum\limits_{i=1}^{n}(-a_{i})x^{i-1},$ pour tout $a_{i}\in A,i\in
+	$x^{-1}=\sum\limits_{i=1}^{n}(-a_{i})x^{i-1},$ pour tout $a_{i}$ appartenant à $ A,i$ appartenant à $
 	\llbracket 1; n \rrbracket.$
 	
 	Comme $1\leq i\leq n$ alors $0\leq i-1\leq n-1$.
 	
-	Donc $x^{i-1}\in A$.
+	Donc $x^{i-1}$ appartient à $ A$.
 	
-	Par stabilité $x^{-1}\in A$.
+	Par stabilité $x^{-1}$ appartient à $ A$.
 	
 	Donc $A$ est un corps.
 	
 	$ii)\implies i)$ Supposons que $A$ soit un corps.
 	
-	Soit $x\in B\backslash \{0\}.$
+	Soit $x$ appartenant à $ B\backslash \{0\}.$
 	
-	Comme $B$ entier sur $A,$ alors il existe $n\in \mathbb{N}^{\ast },x^{n}+\sum\limits_{i=1}^{n}a_{i}x^{n-i}=0,$\\ pour tout $a_{i}\in
-	A,i\in \llbracket 1; n \rrbracket.$
+	Comme $B$ entier sur $A,$ alors il existe $n$ appartenant à $ \mathbb{N}^{\ast },x^{n}+\sum\limits_{i=1}^{n}a_{i}x^{n-i}=0,$\\ pour tout $a_{i}$ appartenant à $
+	A,i$ appartenant à $ \llbracket 1; n \rrbracket.$
 
-	Par récurrence sur $n$, montrons que $x\in A.$
+	Par récurrence sur $n$, montrons que $x$ appartient à $ A.$
 	
 	\underline{Initialisation} $(n=1)$.
 	
 	L'équation de dépendance intégrale devient, $x+a_{1}=0
-	\text{ alors } x=-a_{1}\in A\backslash \{0\}.$
+	\text{ alors } x=-a_{1}$ appartenant à $ A\backslash \{0\}.$
 	
-	Donc $x$ est inversible dans $A\subset B.$ Donc $x$ est inversible dans $B.$
+	Donc $x$ est inversible dans $A$ contenu dans $ B.$ Donc $x$ est inversible dans $B.$
 	
 	\underline{Hérédité} $(n\geq 1)$.
 	
 	Supposons que la propriété est vraie jusqu'à l'ordre $n.$
 	
-	Alors $x^{n}+\sum\limits_{i=1}^{n}a_{i}x^{n-i}=0\text{ alors } x\in A.$
+	Alors $x^{n}+\sum\limits_{i=1}^{n}a_{i}x^{n-i}=0\text{ alors } x$ appartient à $ A.$
 	
 	Ainsi $x^{n+1}+\sum\limits_{i=1}^{n+1}a_{i}x^{n+1-i}=0\text{ alors } 
 	x(x^{n}+\sum\limits_{i=1}^{n}a_{i}x^{n-i})+a_{n+1}=0\text{ alors } \\
 	x(x^{n}+\sum\limits_{i=1}^{n}a_{i}x^{n-i})=-a_{n+1}.$
 	
-	* si $-a_{n+1}\neq 0$ alors $x$ est inversible dans $A\subset B.$ Donc $x$
+	* Si $-a_{n+1}\neq 0$ alors $x$ est inversible dans $A$ contenu dans $ B.$ Donc $x$
 	est inversible dans $B.$
 	
 	* si $-a_{n+1}=0,$ alors $x(x^{n}+\sum\limits_{i=1}^{n}a_{i}x^{n-i})=0 \text{ alors } x^{n}+\sum\limits_{i=1}^{n}a_{i}x^{n-i}=0$\\ (car $x\neq 0$ et $B$ intègre).
@@ -370,23 +371,23 @@ Dans ce second chapitre, notre étude se concentrera sur les filtrations I-adiqu
 	Ainsi $x^{n}+\sum\limits_{i=1}^{n}a_{i}x^{n-i}=0\text{ alors }
 	x(x^{n-1}+\sum\limits_{i=1}^{n-1}a_{i}x^{n-1-i})=-a_{n+2}.$
 	
-	* si $-a_{n+2}\neq 0$ alors $x$ est inversible dans $A\subset B.$ Donc $x$ est inversible dans $B.$
+	* si $-a_{n+2}\neq 0$ alors $x$ est inversible dans $A$ contenu dans $ B.$ Donc $x$ est inversible dans $B.$
 	
-	* sinon de proche en proche, il vient que $x+a_{1}=0\text{ alors } x=-a_{1}\in
+	* sinon de proche en proche, il vient que $x+a_{1}=0\text{ alors } x=-a_{1}$ appartient à $
 	A\backslash \{0\}$
 	
-	Donc $x$ est inversible dans $A\subset B.$ Donc $x$ est inversible dans $B$
+	Donc $x$ est inversible dans $A$ contenu dans $ B.$ Donc $x$ est inversible dans $B$
 	
 	Dans tous les cas, il vient $B$ corps.
 \end{proof}
 \subsection{Dépendance intégrale sur un idéal}
 \begin{madefinition}
-	Soient $A$ un anneau commutatif unitaire et $I$ un idéal de $A$.\\ Un élément $x$ de $A$ est dit entier sur $I$ s'il existe un entier $m \in \mathbb{N}$ tel que : 
-	\[ 	x^m + a_1 x^{m-1} + \cdots + a_m = 0\text{, avec} \ a_i \in I^i,\, \text{ pour tout } i=1, \cdots ,m. \]	
+	Soient $A$ un anneau commutatif unitaire et $I$ un idéal de $A$.\\ Un élément $x$ de $A$ est dit entier sur $I$ s'il existe un entier $m \in \mathbb{N}$ tel que  
+	\[ 	x^m + a_1 x^{m-1} + \cdots + a_m = 0\text{, } \ a_i \in I^i,\, \forall i=1, \cdots ,m. \]	
 \end{madefinition}
 \begin{maproposition}
 	Soient $A$ un anneau et $I$ un idéal de $A$.
-	\[ x \ entier \ sur \ I \text{ si et seulement si } Le \ monôme \ xX \ \in A[x] \ est \ entier \ sur \ R(A, I) = \displaystyle \bigoplus_{n \in \mathbb{N}}{I^nX^n} \]
+	\[ x \ entier \ sur \ I \text{ si et seulement si } le \ monôme \ xX  \ est \ entier \ sur \ R(A, I) \]
 \end{maproposition}
 \begin{proof}
 	$i) \implies ii)$
@@ -432,7 +433,7 @@ Dans ce second chapitre, notre étude se concentrera sur les filtrations I-adiqu
 \end{moncorollaire}
 \begin{proof}
 	
-	$i)$ Par construction, $I^{\prime }\subset A.$
+	$i)$ Par construction, $I^{\prime }$ est contenu dans $ A.$
 	
 	$ii)$ $0^{1}+0=0$, donc $0\in I^{\prime }.$
 	
@@ -465,21 +466,21 @@ Dans ce second chapitre, notre étude se concentrera sur les filtrations I-adiqu
 \end{maremarque}
 \begin{proof}
 	$i)$ Soit $x \in I'$ alors $x$ est entier sur $I$ ainsi pour tout $n \in \mathbb{N}^*,\\ x^n + \sum\limits_{k=1}^{n} a_k x^{n-k}=0$, avec $a_k \in I^k$, pour tout $k \in \llbracket 1; n \rrbracket.$\\ 
-	Or $I \subset J$ d'où $I^k \subset J^k$, pour tout $k \in \llbracket 1; n \rrbracket$.\\
+	Or $I $ est contenu dans $ J$ d'où $I^k $ est contenu dans $ J^k$, pour tout $k \in \llbracket 1; n \rrbracket$.\\
 	Par suite, pour tout $n \in \mathbb{N}^*,\\ x^n + \sum\limits_{k=1}^{n} a_k x^{n-k}=0$, avec $a_k \in J^k$.\\
-	Donc $x$ est entier sur $J$.\\ Par suite, $I' \subset J'$.\\
+	Donc $x$ est entier sur $J$.\\ Par suite, $I' $ est contenu dans $ J'$.\\
 	$ii)$ Soit $x\in I.$
 	
 	Alors $x^{1}-x=0$ ,où $a_{1}=-x^{1}\in I^{1}.$
 	
-	D'où $x\in I^{\prime }.$ Donc $I\subset I^{\prime }.$
+	D'où $x\in I^{\prime }.$ Donc $I$ est contenu dans $ I^{\prime }.$
 	
 	$iii)$ Soit $x\in I^{\prime }.$
 	
 	Alors il existe $n\in \mathbb{N}^{\ast },x^{n}+\sum\limits_{i=1}^{n}a_{i}x^{n-i}=0,$avec $a_{i}\in I^{i}.$
 	
 	Ainsi pour tout $i\in \llbracket 1; n \rrbracket,$ $a_{i}\in I^{i}\text{ alors }
-	a_{i}x^{n-i}\in I^{i}\subset I.$
+	a_{i}x^{n-i}\in I^{i}$ est contenu dans $ I.$
 	
 	Par stabilité, il vient, qu'il existe $n\in \mathbb{N}^{\ast },x^{n}=\sum\limits_{i=1}^{n}(-a_{i})x^{n-i}\in I.$
 	
@@ -508,15 +509,16 @@ Dans ce second chapitre, notre étude se concentrera sur les filtrations I-adiqu
 	On dit que $I$ est une réduction de $J$ si :
 	\begin{enumerate}
 		\item[i)] I $\subset$ J;
-		\item[ii)] $\text{ il existe } \, r\in \mathbb{N}^{*} \text{, tel que } J^{r+1} = IJ^{r}$.
+		\item[ii)] $\exists\, r\in \mathbb{N}^{*} \text{, } J^{r+1} = IJ^{r}$.
 	\end{enumerate}
 \end{madefinition}
 \begin{monexemple}
-	\begin{enumerate}
+		%\\
 		\item[1)] $I$ est une réduction de $I$ lui-même;
 		\item[2)] $A =\mathbb{K}[X,Y]$ avec $\mathbb{K}$ corps.\\
 		$I = (X^2, Y^2)$.\\
-		$J = (X,Y)^2 = (X^2, Y^2, XY) $ D'où $I \subset J$.
+		$J = (X,Y)^2 = (X^2, Y^2, XY) $.\\
+		D'où $I \subset J$.
 		\begin{align*}
 			IJ&= (X^{2},Y^{2})(X,Y)^{2}.\\
 			IJ&= (X^{2},Y^{2})(X^{2},XY,Y^{2}).\\
@@ -529,7 +531,6 @@ Dans ce second chapitre, notre étude se concentrera sur les filtrations I-adiqu
 		\end{align*}
 		Donc $J^{1+1} = J^2 = IJ $ avec $r=1$.\\
 		Par suite $I$ est une réduction de $J$.
-	\end{enumerate}
 \end{monexemple}
 \begin{maremarque}
 	$\text{ Pour tout } \, r\geq n$, on a $J^{r+1} = IJ^{r}$.\\
@@ -538,11 +539,11 @@ Dans ce second chapitre, notre étude se concentrera sur les filtrations I-adiqu
 
 \begin{maproposition}
 	Soient $A$ un anneau, $I$, $J$ et $K$ trois id\'eaux de $A$ \\ tels que 
-	$I \subset J \subset K $.\\ Si $I$ est une réduction de $J$ et $J$ est une réduction de $K$ alors $ I \text{est une réduction de }  K $.
+	$I $ est contenu dans $ J $ et $J$ est contenu dans $ K $.\\ Si $I$ est une réduction de $J$ et $J$ est une réduction de $K$ alors $ I \text{est une réduction de }  K $.
 \end{maproposition}
 \begin{proof}
 	Supposons que $I$ est une réduction de $J$ et $J$ est une réduction de $K$.\\
-	$I$ est une réduction de $J$ alors $I \subset J$ et $\text{ il existe } \, n\in \mathbb{N}^{*}$ tel que $J^{m+1} = IJ^{m}$, de même $J$ est une réduction de $K$ alors $J \subset K$ et $\text{ il existe } \, n\in \mathbb{N}^{*}$ tel que $K^{n+1} = JK^{n}$.\\
+	$I$ est une réduction de $J$ alors $I $ est contenu dans $ J$ et $\text{il existe } \, n$ appartenant à $ \mathbb{N}^{*}$ tel que $J^{m+1} = IJ^{m}$, de même $J$ est une réduction de $K$ alors $J \subset K$ et $\text{ il existe } \, n$ appartenant à $ \mathbb{N}^{*}$ tel que $K^{n+1} = JK^{n}$.\\
 	Posons $r = mn+n+m \in \mathbb{N}^{*}$.
 	\begin{align*}
 		K^{r+1} = K^{mn+n+m+1}& = (K^{n+1})^{m+1}.\\
@@ -557,27 +558,27 @@ Dans ce second chapitre, notre étude se concentrera sur les filtrations I-adiqu
 		K^{r+1} & = IK^{mn+n+m}.\\
 		K^{r+1} & = IK^r.          
 	\end{align*}
-	Il existe donc $r\in \mathbb{N}^{*}$ tel que $K^{r+1} = IK^{r}$ ainsi $I$ est une réduction de $K$.
+	Il existe donc $r $ appartenant à $ \mathbb{N}^{*}$ tel que $K^{r+1} = IK^{r}$ ainsi $I$ est une réduction de $K$.
 \end{proof}
 \begin{monlemme}
 	Soit $I_1, I_2, J_1$ et $J_2$ des idéaux de $A$ alors, \\ si $I_1$ est  une réduction de $J_1$ et $I_2$ est une réduction de $J_2$ alors $I_1+I_2$ est une réduction de $J_1+J_2$.
 \end{monlemme}
 \begin{proof}
 	Supposons que $I_1$ est une réduction de $J_1$ et $I_2$ est une réduction de $J_2$.\\
-	$I_1$ est une réduction de $J_1$ alors $I_1 \subset J_1$ et $\text{ il existe } \, m \in \mathbb{N^*}$ tel que $J_1^{m+1} = I_1 J_1^m$.\\
-	$I_2$ est une réduction de $J_2$ alors $I_2 \subset J_2$ et $\text{ il existe } \, n \in \mathbb{N^*}$ tel que $J_2^{n+1} = I_2 J_2^n$.\\
+	$I_1$ est une réduction de $J_1$ alors $I_1 $ est contenu dans $ J_1$ et $\text{ il existe } \, m \in \mathbb{N^*}$ tel que $J_1^{m+1} = I_1 J_1^m$.\\
+	$I_2$ est une réduction de $J_2$ alors $I_2 $ est contenu dans $ J_2$ et $\text{ il existe } \, n \in \mathbb{N^*}$ tel que $J_2^{n+1} = I_2 J_2^n$.\\
 	Posons $r=m+n \in \mathbb{N^*} $.\\
 	\begin{align*}
 		I_1(J_1+J_2)^{m+n}& = \displaystyle \sum_{k=0}^{m+n}{I_1 J_1^k J_2^{m+n-k}}.\\
 		I_1(J_1+J_2)^{m+n}& = \displaystyle \sum_{k=0}^{m-1}{I_1 J_1^k J_2^{m+n-k}} + \displaystyle \sum_{k=m}^{m+n}{I_1 J_1^k J_2^{m+n-k}}.
 	\end{align*}
-	Or $I_1$ est une réduction de $J_1$ donc $\text{ pour tout } \, k\geq m$ on a $J_1^{k+1} = I_1 J_1^{k}.$
+	Or $I_1$ est une réduction de $J_1$ donc $\text{ pour tout } \, k$ supérieur ou égal à $ m$, on a \\ $J_1^{k+1} = I_1 J_1^{k}.$
 	\begin{align*}
 		I_1(J_1+J_2)^{m+n}& = \displaystyle \sum_{k=0}^{m+n}{I_1 J_1^k J_2^{m+n-k}}.\\
 		I_1(J_1+J_2)^{m+n}& = \displaystyle \sum_{k=0}^{m-1}{I_1 J_1^k J_2^{m+n-k}} + \displaystyle \sum_{k=m}^{m+n}{J_1^{k+1} J_2^{m+n-k}}.
 	\end{align*}
-	Ainsi donc on a $\displaystyle \sum_{k=m}^{m+n}{J_1^{k+1} J_2^{m+n-k}} \subset  I_1(J_1+J_2)^{m+n}$.\\
-	De façon similaire on montre que $\displaystyle \sum_{k=0}^{m}{J_1^{k} J_2^{m+n-k+1}} \subset  I_2(J_1+J_2)^{m+n}.$\\
+	Ainsi donc on a $\displaystyle \sum_{k=m}^{m+n}{J_1^{k+1} J_2^{m+n-k}} $ est contenu dans $  I_1(J_1+J_2)^{m+n}$.\\
+	De façon similaire on montre que $\displaystyle \sum_{k=0}^{m}{J_1^{k} J_2^{m+n-k+1}} $ est contenu dans $  I_2(J_1+J_2)^{m+n}.$\\
 	D'où $\displaystyle \sum_{k=m}^{m+n}{J_1^{k+1} J_2^{m+n-k}} + \displaystyle \sum_{k=0}^{m}{J_1^{k} J_2^{m+n-k+1}} \subset I_1(J_1+J_2)^{m+n} + I_2(J_1+J_2)^{m+n}$.\\ Alors $\displaystyle \sum_{k=0}^{m+n+1}{J_1^{k} J_2^{m+n+1-k}} = (J_1+J_2)^{m+n+1} \subset (I_1+I_2)(J_1+J_2)^{m+n}$.\\
 	Par hypothèse on a $I_1 \subset J_1$ et $I_2 \subset J_2 \text{ alors } I_1+I_2 \subset J_1+J_2$.\\
 	Par suite on a $(I_1+I_2)(J_1+J_2)^{m+n} \subset (J_1+J_2)^{m+n+1}$.\\ Par conséquent $(J_1+J_2)^{m+n+1} = (I_1+I_2)(J_1+J_2)^{m+n}$ , on a donc trouver $r$ tel que $(J_1+J_2)^{r+1} = (I_1+I_2)(J_1+J_2)^{r}$ ce qui fait de $I_1+I_2$  une réduction de $J_1+J_2$.
@@ -611,7 +612,7 @@ Dans ce second chapitre, notre étude se concentrera sur les filtrations I-adiqu
 	D'où $x^{n+1} \in \displaystyle \sum_{i=1}^{n+1}{I^i (x)^{n+1-i}} \text{ alors } x^{n+1} =  \displaystyle \sum_{i=1}^{n+1}{a_i x^{n+1-i}}$, avec $a_i \in I^i$. Ainsi $x$ est donc entier sur $I$.\\
 \end{proof}
 \begin{maproposition}
-	Soit $A$ un anneau noethérien, $I$ et $J$ deux idéaux de $A$ tels que $I \subset J$. Les assertions suivantes sont équivalentes: 
+	Soit $A$ un anneau noethérien, $I$ et $J$ deux idéaux de $A$ tels que $I $ est contenu dans $ J$. Les assertions suivantes sont équivalentes: 
 	\begin{enumerate}
 		\item[i] ) $I$ est une réduction de $J$;
 		\item[ii] ) $R(A,J)$ est un $R(A,I)$-module de type fini;
@@ -681,7 +682,7 @@ La notion d'idéal basique a été introduite et étudiée par Northcott et Rees
 	Un idéal $I$ de l'anneau local noethérien $(A,m)$ est basique si la seule réduction de $I$ est $I$ lui-m\^{e}me. 
 	Northcott et Rees ont aussi défini la notion de réduction minimale d'un idéal $J$:
 	
-	Un idéal $I$ est une réduction minimale de $J$ si $I$ est une réduction de $J$ et si I est $minimal$ au sens de l'inclusion ( $\subset$ ) parmi l'ensemble des réductions de J. 
+	Un idéal $I$ est une réduction minimale de $J$ si $I$ est une réduction de $J$ et si I est $minimal$ au sens de l'inclusion parmi l'ensemble des réductions de J. 
 \end{madefinition}
 \begin{maremarque}
 	Bien qu'on puisse parler de réduction minimale pour un idéal quelconque sur un anneau local, cela n'est pas possible pour toutes les filtrations. On montre ainsi dans cet exemple que toutes les filtrations n'admettent pas de réduction minimale.
