@@ -41,7 +41,7 @@
 	\hfill
 	\begin{minipage}{0.3\textwidth}
 		\centering
-		\includegraphics[scale=0.300]{SFA}
+		\includegraphics[scale=0.400]{SFA}
 		\DeclareGraphicsExtensions{.png,.jpg} 
 	\end{minipage}
 } 
@@ -77,10 +77,10 @@
 		\begin{frame}{INTRODUCTION}
 		\begin{block}{}
 			\begin{enumerate}
-				\item Historique de la notion de dépendance intégrale
-				\item Historique de la notion de réduction
-				\item Utilité des filtrations
-				\item Problématique et plan de travail
+				\item Historique de la notion de dépendance intégrale.
+				\item Historique de la notion de réduction.
+				\item Utilité des filtrations.
+				\item Problématique et plan de travail.
 			\end{enumerate}
 		\end{block}
 	\end{frame}
@@ -311,6 +311,15 @@
 		\end{block}
 	\end{frame}
 	
+			\begin{frame}
+		\begin{enumerate}
+			\item<0> \textcolor{blue}{INTRODUCTION}\\
+			\item<0> \textcolor{blue}{PRÉLIMINAIRES}\\
+			\item<1> \textcolor{blue}{DÉPENDANCE INTÉGRALE, RÉDUCTION ET FILTRATIONS BONNES }\\
+			\item<0> \textcolor{blue}{CONCLUSION}\\
+		\end{enumerate}
+	\end{frame}
+	
 		\begin{frame}{DÉPENDANCE INTÉGRALE, RÉDUCTION ET FILTRATIONS BONNES}
 		\framesubtitle{CAS PARTICULIER DES FILTRATIONS I-ADIQUES}
 		\begin{block}{Proposition 1}
@@ -331,7 +340,7 @@
 	
 			\begin{frame}{Démonstration}
 		\begin{block}{}
-			Montrons que $I$ est une réduction de $I + (x)$. C'est à dire que $(I+(x))^{n} = I(I+(x))^{n-1}$ (20).\\ On rappelle que pour tout $n $ appartenant à $ \mathbb{N}, nI = I.$ (21)\\
+			Montrons que $I$ est une réduction de $I + (x)$. C'est à dire que $(I+(x))^{n} = I(I+(x))^{n-1}$ (20).\\ On rappelle que pour tout $n $ appartenant à $ \mathbb{N}^*, nI = I.$ (21)\\
 			En prouvant que $(x)(I+(x))^{n-1} $ est contenu dans $ I(I+(x))^{n-1}$ (22) on aura
 			\begin{center}
 				$(I+(x))^n = I(I+(x))^{n-1}$. (23)
@@ -340,7 +349,8 @@
 	\end{frame}
 	\begin{frame}{Démonstration}
 		\begin{block}{}
-			$(x)(I+(x))^{n-1} = (x)^n + I\displaystyle \sum_{i=0}^{n-2}{I^i (x)^{n-1-i}} \subset (x)^n + \displaystyle \sum_{i=0}^{n-1}{I^i (x)^{n-1-i}}$. (24)\\
+			$(x)(I+(x))^{n-1} = \displaystyle \sum_{i=0}^{n-1}{I^i (x)^{n-i}}$ \\
+			$(x)(I+(x))^{n-1} = (x)^n + I\displaystyle \sum_{i=0}^{n-2}{I^i (x)^{n-1-i}} \subset (x)^n + \displaystyle I\sum_{i=0}^{n-1}{I^i (x)^{n-1-i}}$. (24)\\
 			D'où \\$(x)(I+(x))^{n-1} \subset (x)^n + I(I+(x))^{n-1}.$ (25)\\
 			En somme \\$(x)(I+(x))^{n-1} \subset I(I+(x))^{n-1}.$ (26) \\ D'où \\$ (I+(x))^{n} = I(I+(x))^{n-1}$. (27)\\
 			Par conséquent $I$ est une réduction de $I + (x)$.
