@@ -333,14 +333,14 @@
 		\begin{block}{}
 	$(i)$ Supposons que $x$ est entier sur $I$. Alors il existe $n $ appartenant à $ \mathbb{N^*}$ tel que \\ $x^n = \displaystyle \sum_{i=1}^{n}{(-a_i) x^{n-i}}$,  $a_i \in I^i, i=1, \cdots ,n$.\\ Ainsi \\ $x^n = \displaystyle \sum_{i=1}^{n}{(-a_i) x^{n-i}} \in \displaystyle \sum_{i=1}^{n}{I^i x^{n-i}} = I \displaystyle \sum_{i=0}^{n-1}{I^i x^{n-1-i}} $. (17)\\ Alors \\ $ x^n \in I(I+(x))^{n-1}.$ (18)\\
 	%Ainsi : $(I+(x))^n = (I+(x))(I+(x))^{n-1}= I(I+(x))^{n-1} + (x)(I+(x))^{n-1}.$
-	Ainsi : $(I+(x))^n = I(I+(x))^{n-1} + (x)(I+(x))^{n-1}. \quad (19)$
+	Ainsi  $(I+(x))^n = I(I+(x))^{n-1} + (x)(I+(x))^{n-1}. \quad (19)$
 		\end{block}
 	\end{frame}
 
 	
 			\begin{frame}{Démonstration}
 		\begin{block}{}
-			Montrons que $I$ est une réduction de $I + (x)$. C'est à dire que $(I+(x))^{n} = I(I+(x))^{n-1}$ (20).\\ On rappelle que pour tout $n $ appartenant à $ \mathbb{N}^*, nI = I.$ (21)\\
+			Montrons que $I$ est une réduction de $I + (x)$. (20)\\ On rappelle que pour tout $n $ appartenant à $ \mathbb{N}^*, nI = I.$ (21)\\
 			En prouvant que $(x)(I+(x))^{n-1} $ est contenu dans $ I(I+(x))^{n-1}$ (22) on aura
 			\begin{center}
 				$(I+(x))^n = I(I+(x))^{n-1}$. (23)
@@ -352,7 +352,8 @@
 			$(x)(I+(x))^{n-1} = \displaystyle \sum_{i=0}^{n-1}{I^i (x)^{n-i}}$ \\
 			$(x)(I+(x))^{n-1} = (x)^n + I\displaystyle \sum_{i=0}^{n-2}{I^i (x)^{n-1-i}} \subset (x)^n + \displaystyle I\sum_{i=0}^{n-1}{I^i (x)^{n-1-i}}$. (24)\\
 			D'où \\$(x)(I+(x))^{n-1} \subset (x)^n + I(I+(x))^{n-1}.$ (25)\\
-			En somme \\$(x)(I+(x))^{n-1} \subset I(I+(x))^{n-1}.$ (26) \\ D'où \\$ (I+(x))^{n} = I(I+(x))^{n-1}$. (27)\\
+			En utilisant (18), il vient
+			\\$(x)(I+(x))^{n-1} \subset I(I+(x))^{n-1}.$ (26) \\ D'où \\$ (I+(x))^{n} = I(I+(x))^{n-1}$. (27)\\
 			Par conséquent $I$ est une réduction de $I + (x)$.
 		\end{block}
 	\end{frame}
